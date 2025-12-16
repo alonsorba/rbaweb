@@ -1,8 +1,8 @@
 :root {
-    --bg: #f7f7f8;
-    --fg: #0b0b0c;
-    --muted: #6c6c72;
-    --primary: #0d6efd;
+    --bg: #f5f7fb;
+    --fg: #0f1b2e;
+    --muted: #6a7689;
+    --primary: #0b3f6a;
     --card: #ffffff;
     --shadow: 0 20px 60px rgba(0, 0, 0, 0.06);
     --radius: 18px;
@@ -13,7 +13,7 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "SF Pro Display", sans-serif;
+    font-family: "Segoe UI", "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif;
     background: var(--bg);
     color: var(--fg);
     line-height: 1.6;
@@ -33,7 +33,7 @@ a {
     z-index: 1030;
     padding: 14px 0;
     background: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .nav-link {
@@ -60,19 +60,20 @@ a {
 }
 
 .hero {
-    min-height: 90vh;
+    min-height: 70vh;
     display: flex;
     align-items: center;
 }
 
-.gradient-bg {
+.hero-banner {
+    background: url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+    color: #fff;
+}
+
+.hero-overlay {
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at 20% 20%, rgba(13, 110, 253, 0.18), transparent 35%),
-                radial-gradient(circle at 80% 10%, rgba(13, 110, 253, 0.16), transparent 40%),
-                radial-gradient(circle at 50% 90%, rgba(13, 110, 253, 0.12), transparent 40%);
-    filter: blur(30px);
-    opacity: 0.8;
+    background: linear-gradient(120deg, rgba(6, 36, 66, 0.8), rgba(11, 63, 106, 0.6));
 }
 
 .glass-card {
@@ -100,18 +101,12 @@ a {
     box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
 }
 
-.badge.bg-primary-soft {
-    background: rgba(13, 110, 253, 0.12);
-    color: #0d6efd;
-    border-radius: 999px;
-}
-
 .check-icon {
     width: 18px;
     height: 18px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #0d6efd, #467bff);
-    box-shadow: 0 8px 20px rgba(13, 110, 253, 0.25);
+    background: linear-gradient(135deg, #0b3f6a, #0f62a7);
+    box-shadow: 0 8px 20px rgba(11, 63, 106, 0.25);
 }
 
 .metric-card {
@@ -134,13 +129,33 @@ a {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background: #0d6efd;
-    box-shadow: 0 0 0 8px rgba(13, 110, 253, 0.1);
+    background: var(--primary);
+    box-shadow: 0 0 0 8px rgba(11, 63, 106, 0.1);
 }
 
 .btn {
     border-radius: 12px;
     font-weight: 600;
+}
+
+.btn-primary {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover {
+    background: #093357;
+    border-color: #093357;
+}
+
+.btn-outline-light {
+    color: #fff;
+    border-color: #fff;
+}
+
+.btn-outline-light:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
 }
 
 .btn-outline-secondary {
@@ -153,11 +168,74 @@ a {
     color: var(--fg);
 }
 
-@media (max-width: 991px) {
-    .navbar {
-        background: rgba(255, 255, 255, 0.95);
-    }
+.badge.bg-primary-soft {
+    background: rgba(11, 63, 106, 0.12);
+    color: var(--primary);
+    border-radius: 999px;
+}
 
+.assurance-strip {
+    background: #f8fafc;
+}
+
+.assurance-image {
+    min-height: 240px;
+    border-radius: 12px;
+    background: url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+}
+
+.strip-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(248, 250, 252, 1), rgba(248, 250, 252, 0.4));
+}
+
+.icon-card {
+    padding: 1.5rem 0.5rem;
+}
+
+.icon-circle {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(11, 63, 106, 0.08);
+    font-size: 28px;
+}
+
+.contact-hero {
+    background: url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+}
+
+.contact-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(8, 28, 52, 0.7);
+}
+
+.contact-form .form-control {
+    border-radius: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.contact-form .form-control:focus {
+    box-shadow: none;
+    border-color: #fff;
+}
+
+.contact-form .form-label {
+    font-weight: 600;
+}
+
+.contact-form .link-light:hover {
+    color: #dbeafe;
+}
+
+@media (max-width: 991px) {
     .hero {
         padding-top: 120px;
     }

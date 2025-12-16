@@ -1,13 +1,4 @@
 (() => {
-    const navbar = document.querySelector('.navbar');
-    const handleScroll = () => {
-        if (!navbar) return;
-        navbar.classList.toggle('scrolled', window.scrollY > 10);
-    };
-
-    handleScroll();
-    window.addEventListener('scroll', handleScroll);
-
     // Smooth scroll for internal anchors
     document.querySelectorAll('a[href^="#"]').forEach(link => {
         link.addEventListener('click', event => {
