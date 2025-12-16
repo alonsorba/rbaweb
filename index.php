@@ -23,8 +23,7 @@
     <nav class="navbar navbar-expand-lg py-3" id="topNav">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-primary" href="#hero">
-          <span class="brand-mark">RB</span>
-          <span class="text-dark">RBA Seguros &amp; Fianzas</span>
+          <img src="assets/img/R BAIDON V3 RGB (WEB).png" class="brand-logo" alt="RBA Seguros &amp; Fianzas">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
