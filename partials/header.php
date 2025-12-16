@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body>
-    <header class="navbar navbar-expand-lg navbar-light fixed-top bg-transparent">
+    <header class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand fw-semibold" href="/">
                 <span class="brand-mark">RBA</span> Seguros
