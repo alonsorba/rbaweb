@@ -22,9 +22,9 @@
   <header class="shadow-sm sticky-top bg-white">
     <nav class="navbar navbar-expand-lg py-3" id="topNav">
       <div class="container">
-        <a class="navbar-brand d-flex align-items-center gap-3 fw-bold text-primary" href="#hero">
-          <img src="assets/css/img/R%20BAID%C3%93N%20V3%20RGB%20(WEB).png" class="brand-logo" alt="R. Baidon Seguros y Fianzas">
-          <span class="visually-hidden">RBA Seguros &amp; Fianzas</span>
+        <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-primary" href="#hero">
+          <span class="brand-mark">RB</span>
+          <span class="text-dark">RBA Seguros &amp; Fianzas</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
