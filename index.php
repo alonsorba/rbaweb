@@ -350,21 +350,62 @@
     </section>
   </main>
 
-  <footer class="py-4 border-top">
-    <div class="container d-flex flex-column flex-lg-row justify-content-between gap-3 align-items-center">
-      <div class="d-flex align-items-center gap-2">
-        <span class="brand-mark">RB</span>
-        <div>
-          <div class="fw-semibold">RBA Seguros y Fianzas</div>
-          <small class="text-muted">Asesoría especializada en seguros y fianzas</small>
+  <footer class="footer-main">
+    <div class="container py-5">
+      <div class="row g-4">
+        <div class="col-6 col-md-4 col-lg-2">
+          <h6 class="footer-heading">Nuestros Servicios</h6>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#servicios">Seguros Personales</a></li>
+            <li><a href="#servicios">Seguros Empresariales</a></li>
+            <li><a href="#servicios">Seguros de Gobierno</a></li>
+            <li><a href="#servicios">Fianzas</a></li>
+            <li><a href="#servicios">Seguro RC USA</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <h6 class="footer-heading">Quienes Somos?</h6>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#ventajas">Sobre Nosotros</a></li>
+            <li><a href="#ventajas">Mensaje del Director</a></li>
+            <li><a href="#ventajas">Alianzas</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <h6 class="footer-heading">Servicio al cliente</h6>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#contacto">Reclamaciones</a></li>
+            <li><a href="#contacto">Siniestros</a></li>
+            <li><a href="#testimonios">Preguntas Frecuentes</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <h6 class="footer-heading">Contacto</h6>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#contacto">Formulario de Contacto</a></li>
+            <li><a href="#">Aviso de Privacidad</a></li>
+            <li><a href="#contacto">Ubicacion</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-4 col-lg-2">
+          <h6 class="footer-heading">
+            <a class="footer-heading-link" href="#">Acceso a Clientes</a>
+          </h6>
         </div>
       </div>
-      <div class="d-flex gap-3 align-items-center text-muted small">
-        <span>&copy; <?php echo $year; ?> RBA Seguros</span>
-        <span>|</span>
-        <a class="link-secondary" href="#">Aviso de Privacidad</a>
-        <span>|</span>
-        <a class="link-secondary" href="#hero">Volver arriba</a>
+      <div class="footer-bottom pt-4 mt-3 border-top">
+        <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center gap-3">
+          <div class="d-flex align-items-center gap-3">
+            <img src="assets/img/R BAIDON V3 RGB (WEB).png" class="footer-logo" alt="RBA Seguros &amp; Fianzas">
+            <div>
+              <div class="fw-semibold">R. Baidon</div>
+              <small class="text-muted">Asesoria | Seguros | Fianzas</small>
+            </div>
+          </div>
+          <div class="text-muted small text-center text-lg-end">
+            &copy; <?php echo $year; ?> R. Baidon Agente de Seguros y de Fianzas.
+          </div>
+        </div>
       </div>
     </div>
   </footer>
@@ -373,3 +414,4 @@
   <script src="assets/js/main.js"></script>
 </body>
 </html>
+
