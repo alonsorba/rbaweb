@@ -44,63 +44,6 @@
   </header>
 
   <main>
-    <section id="hero" class="position-relative overflow-hidden text-white">
-      <div class="shape-blur"></div>
-      <div class="container py-5">
-        <div class="row align-items-center">
-          <div class="col-lg-6">
-            <div class="eyebrow">Seguros empresariales y personales</div>
-            <h1 class="display-4 fw-semibold lh-tight mb-3">Protegemos lo que valoras con un servicio que se siente premium.</h1>
-            <p class="lead text-white-80 mb-4">Asesoría experta, respuesta inmediata y productos a la medida respaldados por las mejores aseguradoras y afianzadoras.</p>
-            <div class="d-flex flex-wrap gap-3">
-              <a class="btn btn-lg btn-gradient" href="#contacto">Habla con un asesor</a>
-              <a class="btn btn-lg btn-outline-light" href="#servicios">Ver coberturas</a>
-            </div>
-            <div class="d-flex align-items-center gap-3 mt-4 text-white-80">
-              <div class="d-flex align-items-center gap-2"><i class="bi bi-shield-check text-white"></i><span>Respaldo integral</span></div>
-              <div class="d-flex align-items-center gap-2"><i class="bi bi-clock-history text-white"></i><span>Atención 24/7</span></div>
-            </div>
-          </div>
-          <div class="col-lg-6 text-center mt-5 mt-lg-0">
-            <div class="glass-card p-4">
-              <div class="d-flex justify-content-between align-items-center">
-                <div>
-                  <p class="text-white-80 small mb-1"><?php echo $ctaMessage; ?></p>
-                  <h3 class="fw-semibold mb-0">Recibe tu propuesta hoy</h3>
-                </div>
-                <span class="badge bg-light text-primary">VIP</span>
-              </div>
-              <hr class="border-light">
-              <form class="row g-3">
-                <div class="col-12">
-                  <label class="form-label text-white-80">Nombre</label>
-                  <input type="text" class="form-control form-control-lg" placeholder="Escribe tu nombre" required>
-                </div>
-                <div class="col-12">
-                  <label class="form-label text-white-80">Correo</label>
-                  <input type="email" class="form-control form-control-lg" placeholder="nombre@correo.com" required>
-                </div>
-                <div class="col-12">
-                  <label class="form-label text-white-80">Interés</label>
-                  <select class="form-select form-select-lg">
-                    <option>Seguros Empresariales</option>
-                    <option>Gastos Médicos</option>
-                    <option>Vida</option>
-                    <option>Autos</option>
-                    <option>Fianzas</option>
-                  </select>
-                </div>
-                <div class="col-12 d-grid">
-                  <button type="submit" class="btn btn-lg btn-gradient">Recibir asesoría</button>
-                </div>
-                <p class="small text-white-60 mb-0">Protegemos tus datos conforme a nuestro Aviso de Privacidad.</p>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section id="servicios" class="py-5">
       <div class="container">
         <div class="row align-items-center mb-4">
@@ -172,6 +115,63 @@
               <h5 class="fw-semibold">Respuesta a Siniestros</h5>
               <p class="text-muted">Acompañamiento inmediato, coordinación con ajustadores y gestión hasta el pago.</p>
               <a class="link-primary fw-semibold" href="#contacto">Reportar ahora</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <section id="hero" class="position-relative overflow-hidden text-white">
+      <div class="shape-blur"></div>
+      <div class="container py-5">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="eyebrow">Seguros empresariales y personales</div>
+            <h1 class="display-4 fw-semibold lh-tight mb-3">Protegemos lo que valoras con un servicio que se siente premium.</h1>
+            <p class="lead text-white-80 mb-4">Asesoría experta, respuesta inmediata y productos a la medida respaldados por las mejores aseguradoras y afianzadoras.</p>
+            <div class="d-flex flex-wrap gap-3">
+              <a class="btn btn-lg btn-gradient" href="#contacto">Habla con un asesor</a>
+              <a class="btn btn-lg btn-outline-light" href="#servicios">Ver coberturas</a>
+            </div>
+            <div class="d-flex align-items-center gap-3 mt-4 text-white-80">
+              <div class="d-flex align-items-center gap-2"><i class="bi bi-shield-check text-white"></i><span>Respaldo integral</span></div>
+              <div class="d-flex align-items-center gap-2"><i class="bi bi-clock-history text-white"></i><span>Atención 24/7</span></div>
+            </div>
+          </div>
+          <div class="col-lg-6 text-center mt-5 mt-lg-0">
+            <div class="glass-card p-4">
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <p class="text-white-80 small mb-1"><?php echo $ctaMessage; ?></p>
+                  <h3 class="fw-semibold mb-0">Recibe tu propuesta hoy</h3>
+                </div>
+                <span class="badge bg-light text-primary">VIP</span>
+              </div>
+              <hr class="border-light">
+              <form class="row g-3">
+                <div class="col-12">
+                  <label class="form-label text-white-80">Nombre</label>
+                  <input type="text" class="form-control form-control-lg" placeholder="Escribe tu nombre" required>
+                </div>
+                <div class="col-12">
+                  <label class="form-label text-white-80">Correo</label>
+                  <input type="email" class="form-control form-control-lg" placeholder="nombre@correo.com" required>
+                </div>
+                <div class="col-12">
+                  <label class="form-label text-white-80">Interés</label>
+                  <select class="form-select form-select-lg">
+                    <option>Seguros Empresariales</option>
+                    <option>Gastos Médicos</option>
+                    <option>Vida</option>
+                    <option>Autos</option>
+                    <option>Fianzas</option>
+                  </select>
+                </div>
+                <div class="col-12 d-grid">
+                  <button type="submit" class="btn btn-lg btn-gradient">Recibir asesoría</button>
+                </div>
+                <p class="small text-white-60 mb-0">Protegemos tus datos conforme a nuestro Aviso de Privacidad.</p>
+              </form>
             </div>
           </div>
         </div>
@@ -414,4 +414,3 @@
   <script src="assets/js/main.js"></script>
 </body>
 </html>
-
