@@ -44,6 +44,39 @@
   </header>
 
   <main>
+    <section class="hero-carousel py-4">
+      <div class="container">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="hover">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Imagen 1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Imagen 2"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Imagen 3"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Imagen 4"></button>
+          </div>
+          <div class="carousel-inner rounded-4 shadow-lg overflow-hidden">
+            <div class="carousel-item active">
+              <img src="assets/img/01.jpg" class="d-block w-100 hero-carousel-img" alt="Oficinas RBA 1">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/img/02.jpg" class="d-block w-100 hero-carousel-img" alt="Oficinas RBA 2">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/img/03.jpg" class="d-block w-100 hero-carousel-img" alt="Oficinas RBA 3">
+            </div>
+            <div class="carousel-item">
+              <img src="assets/img/04.jpg" class="d-block w-100 hero-carousel-img" alt="Oficinas RBA 4">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev" aria-label="Anterior">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next" aria-label="Siguiente">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
     <section id="servicios" class="py-5">
       <div class="container">
         <div class="row align-items-center mb-4">

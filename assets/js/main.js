@@ -28,4 +28,16 @@
       statCard.classList.toggle('collapsed');
     });
   }
+
+  // Inicializa carrusel principal con auto-rotaci¢n y controles activos
+  const heroCarouselEl = document.getElementById('heroCarousel');
+  if (heroCarouselEl && window.bootstrap?.Carousel) {
+    new bootstrap.Carousel(heroCarouselEl, {
+      interval: 3000,
+      ride: 'carousel',
+      pause: 'hover',
+      touch: true,
+      wrap: true
+    });
+  }
 });
