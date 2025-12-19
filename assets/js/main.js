@@ -1,4 +1,4 @@
-﻿document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
   const nav = document.getElementById('topNav');
   const shrinkOn = 20;
   const onScroll = () => {
@@ -26,18 +26,6 @@
   if (statCard && statToggle) {
     statToggle.addEventListener('click', () => {
       statCard.classList.toggle('collapsed');
-    });
-  }
-
-  // Inicializa carrusel principal con auto-rotaci¢n y controles activos
-  const heroCarouselEl = document.getElementById('heroCarousel');
-  if (heroCarouselEl && window.bootstrap?.Carousel) {
-    new bootstrap.Carousel(heroCarouselEl, {
-      interval: 3000,
-      ride: 'carousel',
-      pause: 'hover',
-      touch: true,
-      wrap: true
     });
   }
 });

@@ -20,9 +20,9 @@
 </head>
 <body>
   <header class="shadow-sm sticky-top bg-white">
-    <nav class="navbar navbar-expand-lg py-3" id="topNav">
-      <div class="container">
-        <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-primary" href="#hero">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" id="topNav">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-primary">
           <img src="assets/img/R BAIDON V3 RGB (WEB).png" class="brand-logo" alt="RBA Seguros &amp; Fianzas">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,12 +30,12 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
-            <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
-            <li class="nav-item"><a class="nav-link" href="#ventajas">Ventajas</a></li>
-            <li class="nav-item"><a class="nav-link" href="#testimonios">Clientes</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+            <li class="nav-item"><a class="nav-link" href="#servicios">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="servicios.php#portafolio">Nuestros servicios</a></li>
+            <li class="nav-item"><a class="nav-link" href="#testimonios">Quienes somos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contacto">Servicio al cliente</a></li>
             <li class="nav-item ms-lg-2">
-              <a class="btn btn-gradient" href="tel:<?php echo $phone; ?>">Llámanos</a>
+              <a class="btn btn-gradient" href="tel:<?php echo $phone; ?>">Contacto</a>
             </li>
           </ul>
         </div>
@@ -44,46 +44,13 @@
   </header>
 
   <main>
-    <section class="hero-carousel py-4">
-      <div class="container">
-        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="hover">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Imagen 1"></button>
-            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Imagen 2"></button>
-            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Imagen 3"></button>
-            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3" aria-label="Imagen 4"></button>
-          </div>
-          <div class="carousel-inner rounded-4 shadow-lg overflow-hidden">
-            <div class="carousel-item active">
-              <img src="assets/img/01.jpg" class="d-block w-100 hero-carousel-img" alt="Oficinas RBA 1">
-            </div>
-            <div class="carousel-item">
-              <img src="assets/img/02.jpg" class="d-block w-100 hero-carousel-img" alt="Oficinas RBA 2">
-            </div>
-            <div class="carousel-item">
-              <img src="assets/img/03.jpg" class="d-block w-100 hero-carousel-img" alt="Oficinas RBA 3">
-            </div>
-            <div class="carousel-item">
-              <img src="assets/img/04.jpg" class="d-block w-100 hero-carousel-img" alt="Oficinas RBA 4">
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev" aria-label="Anterior">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next" aria-label="Siguiente">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          </button>
-        </div>
-      </div>
-    </section>
-
     <section id="servicios" class="py-5">
       <div class="container">
         <div class="row align-items-center mb-4">
           <div class="col-lg-8">
             <div class="eyebrow text-primary">Portafolio</div>
             <h2 class="fw-semibold">Coberturas diseñadas para empresas y familias.</h2>
-            <p class="text-muted lead">Simplificamos la contratación y administración de seguros para que tu operación siga sin fricciones.</p>
+            <p class="text-muted lead">Simplificamos la contratacion y administracion de seguros para que tu operacion siga sin fricciones.</p>
           </div>
           <div class="col-lg-4 text-lg-end">
             <a class="btn btn-outline-primary btn-lg" href="#contacto">Agenda una llamada</a>
@@ -96,7 +63,7 @@
                 <i class="bi bi-building-check"></i>
               </div>
               <h5 class="fw-semibold">Seguros Empresariales</h5>
-              <p class="text-muted">Protección patrimonial, responsabilidad civil, transporte y riesgos especiales con planes a medida.</p>
+              <p class="text-muted">Proteccion patrimonial, responsabilidad civil, transporte y riesgos especiales con planes a medida.</p>
               <a class="link-primary fw-semibold" href="#contacto">Hablar con un especialista</a>
             </div>
           </div>
@@ -105,9 +72,9 @@
               <div class="icon-circle">
                 <i class="bi bi-heart-pulse"></i>
               </div>
-              <h5 class="fw-semibold">Gastos Médicos</h5>
+              <h5 class="fw-semibold">Gastos Medicos</h5>
               <p class="text-muted">Cobertura nacional e internacional, red hospitalaria premium y concierge de salud.</p>
-              <a class="link-primary fw-semibold" href="#contacto">Solicitar guía médica</a>
+              <a class="link-primary fw-semibold" href="#contacto">Solicitar guia medica</a>
             </div>
           </div>
           <div class="col-sm-6 col-lg-4">
@@ -116,7 +83,7 @@
                 <i class="bi bi-shield-fill-check"></i>
               </div>
               <h5 class="fw-semibold">Vida y Ahorro</h5>
-              <p class="text-muted">Soluciones de previsión, ahorro y retiro con acompañamiento humano y transparente.</p>
+              <p class="text-muted">Soluciones de prevision, ahorro y retiro con acompañamiento humano y transparente.</p>
               <a class="link-primary fw-semibold" href="#contacto">Conocer planes</a>
             </div>
           </div>
@@ -136,7 +103,7 @@
                 <i class="bi bi-cash-coin"></i>
               </div>
               <h5 class="fw-semibold">Fianzas</h5>
-              <p class="text-muted">Cumplimiento, fidelidad y licitaciones con respaldo de afianzadoras líderes.</p>
+              <p class="text-muted">Cumplimiento, fidelidad y licitaciones con respaldo de afianzadoras lideres.</p>
               <a class="link-primary fw-semibold" href="#contacto">Subir requisitos</a>
             </div>
           </div>
@@ -146,7 +113,7 @@
                 <i class="bi bi-lightning-charge"></i>
               </div>
               <h5 class="fw-semibold">Respuesta a Siniestros</h5>
-              <p class="text-muted">Acompañamiento inmediato, coordinación con ajustadores y gestión hasta el pago.</p>
+              <p class="text-muted">Acompañamiento inmediato, coordinacion con ajustadores y gestion hasta el pago.</p>
               <a class="link-primary fw-semibold" href="#contacto">Reportar ahora</a>
             </div>
           </div>
@@ -154,21 +121,21 @@
       </div>
     </section>
 
-        <section id="hero" class="position-relative overflow-hidden text-white">
+    <section id="hero" class="position-relative overflow-hidden text-white">
       <div class="shape-blur"></div>
       <div class="container py-5">
         <div class="row align-items-center">
           <div class="col-lg-6">
             <div class="eyebrow">Seguros empresariales y personales</div>
             <h1 class="display-4 fw-semibold lh-tight mb-3">Protegemos lo que valoras con un servicio que se siente premium.</h1>
-            <p class="lead text-white-80 mb-4">Asesoría experta, respuesta inmediata y productos a la medida respaldados por las mejores aseguradoras y afianzadoras.</p>
+            <p class="lead text-white-80 mb-4">Asesoria experta, respuesta inmediata y productos a la medida respaldados por las mejores aseguradoras y afianzadoras.</p>
             <div class="d-flex flex-wrap gap-3">
               <a class="btn btn-lg btn-gradient" href="#contacto">Habla con un asesor</a>
-              <a class="btn btn-lg btn-outline-light" href="#servicios">Ver coberturas</a>
+              <a class="btn btn-lg btn-outline-light" href="servicios.php#portafolio">Ver coberturas</a>
             </div>
             <div class="d-flex align-items-center gap-3 mt-4 text-white-80">
               <div class="d-flex align-items-center gap-2"><i class="bi bi-shield-check text-white"></i><span>Respaldo integral</span></div>
-              <div class="d-flex align-items-center gap-2"><i class="bi bi-clock-history text-white"></i><span>Atención 24/7</span></div>
+              <div class="d-flex align-items-center gap-2"><i class="bi bi-clock-history text-white"></i><span>Atencion 24/7</span></div>
             </div>
           </div>
           <div class="col-lg-6 text-center mt-5 mt-lg-0">
@@ -191,17 +158,17 @@
                   <input type="email" class="form-control form-control-lg" placeholder="nombre@correo.com" required>
                 </div>
                 <div class="col-12">
-                  <label class="form-label text-white-80">Interés</label>
+                  <label class="form-label text-white-80">Interes</label>
                   <select class="form-select form-select-lg">
                     <option>Seguros Empresariales</option>
-                    <option>Gastos Médicos</option>
+                    <option>Gastos Medicos</option>
                     <option>Vida</option>
                     <option>Autos</option>
                     <option>Fianzas</option>
                   </select>
                 </div>
                 <div class="col-12 d-grid">
-                  <button type="submit" class="btn btn-lg btn-gradient">Recibir asesoría</button>
+                  <button type="submit" class="btn btn-lg btn-gradient">Recibir asesoria</button>
                 </div>
                 <p class="small text-white-60 mb-0">Protegemos tus datos conforme a nuestro Aviso de Privacidad.</p>
               </form>
@@ -215,13 +182,13 @@
       <div class="container">
         <div class="row g-5 align-items-center">
           <div class="col-lg-6">
-            <div class="eyebrow text-primary">Por qué elegirnos</div>
-            <h2 class="fw-semibold mb-4">Un trato humano con estándares de servicio de marcas de lujo.</h2>
+            <div class="eyebrow text-primary">Por que elegirnos</div>
+            <h2 class="fw-semibold mb-4">Un trato humano con estandares de servicio de marcas de lujo.</h2>
             <ul class="list-unstyled d-grid gap-3">
               <li class="d-flex gap-3 align-items-start">
                 <div class="check-circle"><i class="bi bi-check-lg"></i></div>
                 <div>
-                  <h6 class="mb-1 fw-semibold">Diseño y tecnología</h6>
+                  <h6 class="mb-1 fw-semibold">Diseño y tecnologia</h6>
                   <p class="mb-0 text-muted">Paneles, recordatorios y reportes listos para integrarse a tu ERP o CRM.</p>
                 </div>
               </li>
@@ -229,7 +196,7 @@
                 <div class="check-circle"><i class="bi bi-check-lg"></i></div>
                 <div>
                   <h6 class="mb-1 fw-semibold">Equipo especialista</h6>
-                  <p class="mb-0 text-muted">Suscripción, siniestros y afinación de pólizas con consultores senior.</p>
+                  <p class="mb-0 text-muted">Suscripcion, siniestros y afinacion de polizas con consultores senior.</p>
                 </div>
               </li>
               <li class="d-flex gap-3 align-items-start">
@@ -242,22 +209,12 @@
             </ul>
             <div class="d-flex gap-3 mt-4">
               <a class="btn btn-gradient" href="#contacto">Programar onboarding</a>
-              <a class="btn btn-outline-primary" href="mailto:<?php echo $email; ?>">Escríbenos</a>
+              <a class="btn btn-outline-primary" href="mailto:<?php echo $email; ?>">Escribenos</a>
             </div>
           </div>
           <div class="col-lg-6">
             <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow-lg">
               <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80" class="w-100 h-100 object-fit-cover" alt="Equipo de seguros">
-            </div>
-            <div class="stat-card shadow-sm" id="statCard">
-              <button class="stat-toggle" type="button" aria-label="Alternar ficha de respuesta">
-                <i class="bi bi-chevron-left"></i>
-              </button>
-              <div class="stat-content">
-                <p class="text-white-80 small mb-1 mb-lg-0">Tiempo promedio de respuesta</p>
-                <h4 class="mb-0">&lt; 15 minutos</h4>
-              </div>
-              <span class="badge bg-light text-primary">24/7</span>
             </div>
           </div>
         </div>
@@ -281,7 +238,7 @@
                   <small class="text-muted">Directora de Finanzas</small>
                 </div>
               </div>
-              <p class="mb-0 text-muted">“Migramos toda la póliza corporativa sin interrupciones. El seguimiento a siniestros es impecable.”</p>
+              <p class="mb-0 text-muted">"Migramos toda la poliza corporativa sin interrupciones. El seguimiento a siniestros es impecable."</p>
             </div>
           </div>
           <div class="col-md-4">
@@ -293,7 +250,7 @@
                   <small class="text-muted">Emprendedor</small>
                 </div>
               </div>
-              <p class="mb-0 text-muted">“Me explicaron cada opción de vida y ahorro con claridad. Se siente un servicio boutique.”</p>
+              <p class="mb-0 text-muted">"Me explicaron cada opcion de vida y ahorro con claridad. Se siente un servicio boutique."</p>
             </div>
           </div>
           <div class="col-md-4">
@@ -305,7 +262,7 @@
                   <small class="text-muted">Operaciones</small>
                 </div>
               </div>
-              <p class="mb-0 text-muted">“Reporté un siniestro nocturno y respondieron en minutos. Todo quedó resuelto rápido.”</p>
+              <p class="mb-0 text-muted">"Reporte un siniestro nocturno y respondieron en minutos. Todo quedo resuelto rapido."</p>
             </div>
           </div>
         </div>
@@ -316,11 +273,11 @@
       <div class="shape-blur"></div>
       <div class="container position-relative">
         <div class="eyebrow text-white-80">Listos cuando nos necesites</div>
-        <h2 class="fw-semibold">Hablemos de tu próximo proyecto o póliza.</h2>
-        <p class="lead text-white-80 mb-4">Deja que nuestro equipo prepare una propuesta que proteja tu operación y tu gente.</p>
+        <h2 class="fw-semibold">Hablemos de tu proximo proyecto o poliza.</h2>
+        <p class="lead text-white-80 mb-4">Deja que nuestro equipo prepare una propuesta que proteja tu operacion y tu gente.</p>
         <div class="d-flex flex-wrap gap-3 justify-content-center">
-          <a class="btn btn-lg btn-light text-primary" href="tel:<?php echo $phone; ?>">Llámanos</a>
-          <a class="btn btn-lg btn-outline-light" href="mailto:<?php echo $email; ?>">Escríbenos</a>
+          <a class="btn btn-lg btn-light text-primary" href="tel:<?php echo $phone; ?>">Llamanos</a>
+          <a class="btn btn-lg btn-outline-light" href="mailto:<?php echo $email; ?>">Escribenos</a>
         </div>
       </div>
     </section>
@@ -335,7 +292,7 @@
             <div class="d-flex flex-column gap-3">
               <div class="d-flex gap-3 align-items-center"><i class="bi bi-telephone-forward text-primary fs-4"></i><span><?php echo $phone; ?></span></div>
               <div class="d-flex gap-3 align-items-center"><i class="bi bi-envelope-open text-primary fs-4"></i><span><?php echo $email; ?></span></div>
-              <div class="d-flex gap-3 align-items-center"><i class="bi bi-geo-alt text-primary fs-4"></i><span>CDMX y atención nacional</span></div>
+              <div class="d-flex gap-3 align-items-center"><i class="bi bi-geo-alt text-primary fs-4"></i><span>CDMX y atencion nacional</span></div>
             </div>
           </div>
           <div class="col-lg-6">
@@ -350,14 +307,14 @@
                   <input type="email" name="correo" class="form-control" placeholder="correo@ejemplo.com" required>
                 </div>
                 <div class="col-md-6">
-                  <label class="form-label">Teléfono</label>
+                  <label class="form-label">Telefono</label>
                   <input type="tel" name="telefono" class="form-control" placeholder="55 0000 0000" required>
                 </div>
                 <div class="col-12">
-                  <label class="form-label">Servicio de interés</label>
+                  <label class="form-label">Servicio de interes</label>
                   <select name="servicio" class="form-select">
                     <option>Seguros Empresariales</option>
-                    <option>Gastos Médicos</option>
+                    <option>Gastos Medicos</option>
                     <option>Autos</option>
                     <option>Vida</option>
                     <option>Fianzas</option>
@@ -366,7 +323,7 @@
                 </div>
                 <div class="col-12">
                   <label class="form-label">Mensaje</label>
-                  <textarea name="mensaje" rows="4" class="form-control" placeholder="Cuéntanos qué necesitas" required></textarea>
+                  <textarea name="mensaje" rows="4" class="form-control" placeholder="Cu‚ntanos qu‚ necesitas" required></textarea>
                 </div>
                 <div class="col-12 d-flex justify-content-between align-items-center">
                   <div class="form-check">
@@ -389,11 +346,11 @@
         <div class="col-6 col-md-4 col-lg-2">
           <h6 class="footer-heading">Nuestros Servicios</h6>
           <ul class="list-unstyled footer-links">
-            <li><a href="#servicios">Seguros Personales</a></li>
-            <li><a href="#servicios">Seguros Empresariales</a></li>
-            <li><a href="#servicios">Seguros de Gobierno</a></li>
-            <li><a href="#servicios">Fianzas</a></li>
-            <li><a href="#servicios">Seguro RC USA</a></li>
+            <li><a href="servicios.php#personales">Seguros Personales</a></li>
+            <li><a href="servicios.php#empresariales">Seguros Empresariales</a></li>
+            <li><a href="servicios.php#gobierno">Seguros de Gobierno</a></li>
+            <li><a href="servicios.php#fianzas">Fianzas</a></li>
+            <li><a href="servicios.php#rcusa">Seguro RC USA</a></li>
           </ul>
         </div>
         <div class="col-6 col-md-4 col-lg-2">
@@ -430,10 +387,6 @@
         <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center gap-3">
           <div class="d-flex align-items-center gap-3">
             <img src="assets/img/R BAIDON V3 RGB (WEB).png" class="footer-logo" alt="RBA Seguros &amp; Fianzas">
-            <div>
-              <div class="fw-semibold">R. Baidon</div>
-              <small class="text-muted">Asesoria | Seguros | Fianzas</small>
-            </div>
           </div>
           <div class="text-muted small text-center text-lg-end">
             &copy; <?php echo $year; ?> R. Baidon Agente de Seguros y de Fianzas.
