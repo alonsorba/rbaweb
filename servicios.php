@@ -33,7 +33,7 @@
           <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
             <li class="nav-item"><a class="nav-link" href="index.php#servicios">Inicio</a></li>
             <li class="nav-item"><a class="nav-link active" aria-current="page" href="servicios.php#portafolio">Nuestros servicios</a></li>
-            <li class="nav-item"><a class="nav-link" href="index.php#testimonios">Quienes somos</a></li>
+            <li class="nav-item"><a class="nav-link" href="quienes.php#nosotros">Quienes somos</a></li>
             <li class="nav-item"><a class="nav-link" href="index.php#contacto">Servicio al cliente</a></li>
             <li class="nav-item ms-lg-2">
               <a class="btn btn-gradient" href="tel:<?php echo $phone; ?>">Contacto</a>
@@ -242,9 +242,9 @@
         <div class="col-6 col-md-4 col-lg-2">
           <h6 class="footer-heading">Quienes Somos?</h6>
           <ul class="list-unstyled footer-links">
-            <li><a href="index.php#ventajas">Sobre Nosotros</a></li>
-            <li><a href="index.php#ventajas">Mensaje del Director</a></li>
-            <li><a href="index.php#ventajas">Alianzas</a></li>
+            <li><a href="quienes.php#nosotros">Sobre Nosotros</a></li>
+            <li><a href="quienes.php#equipo">Mensaje del Director</a></li>
+            <li><a href="quienes.php#alianzas">Alianzas</a></li>
           </ul>
         </div>
         <div class="col-6 col-md-4 col-lg-2">
