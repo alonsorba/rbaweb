@@ -33,7 +33,7 @@
             <li class="nav-item"><a class="nav-link" href="index.php#servicios">Inicio</a></li>
             <li class="nav-item"><a class="nav-link" href="servicios.php#portafolio">Nuestros servicios</a></li>
             <li class="nav-item"><a class="nav-link active" aria-current="page" href="quienes.php#nosotros">Quienes somos</a></li>
-            <li class="nav-item"><a class="nav-link" href="index.php#contacto">Servicio al cliente</a></li>
+            <li class="nav-item"><a class="nav-link" href="servicio-cliente.php#soporte">Servicio al cliente</a></li>
             <li class="nav-item ms-lg-2">
               <a class="btn btn-gradient" href="tel:<?php echo $phone; ?>">Contacto</a>
             </li>
@@ -298,9 +298,9 @@
         <div class="col-6 col-md-4 col-lg-2">
           <h6 class="footer-heading">Servicio al cliente</h6>
           <ul class="list-unstyled footer-links">
-            <li><a href="index.php#contacto">Reclamaciones</a></li>
-            <li><a href="index.php#contacto">Siniestros</a></li>
-            <li><a href="index.php#testimonios">Preguntas Frecuentes</a></li>
+            <li><a href="servicio-cliente.php#reclamaciones">Reclamaciones</a></li>
+            <li><a href="servicio-cliente.php#siniestros">Siniestros</a></li>
+            <li><a href="servicio-cliente.php#faq">Preguntas Frecuentes</a></li>
           </ul>
         </div>
         <div class="col-6 col-md-4 col-lg-2">
