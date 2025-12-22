@@ -16,7 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=2">
 </head>
 <body>
   <header class="shadow-sm sticky-top bg-white">
@@ -41,231 +41,82 @@
   </header>
 
   <main>
-    <section id="nosotros" class="page-hero py-5">
-      <div class="container">
-        <div class="row align-items-center g-4">
+    <section class="qs-hero py-5 position-relative overflow-hidden">
+      <div class="container py-4">
+        <div class="row align-items-end">
           <div class="col-lg-7">
-            <div class="eyebrow text-white-80">Sobre RBA</div>
-            <h1 class="display-5 fw-semibold lh-tight mb-3">Somos un equipo que protege personas, proyectos y reputacion.</h1>
-            <p class="lead text-white-80 mb-4">Por mas de 15 anos hemos disenado programas de seguros y fianzas que combinan analisis tecnico y un servicio tan cercano como el de un concierge.</p>
-            <div class="d-flex flex-wrap gap-3">
-              <a class="btn btn-lg btn-light text-primary" href="index.php#contacto">Agenda una llamada</a>
-              <a class="btn btn-lg btn-outline-light" href="servicios.php#portafolio">Ver coberturas</a>
-            </div>
-            <div class="d-flex align-items-center gap-3 mt-4 text-white-80 small">
-              <div class="d-flex align-items-center gap-2"><i class="bi bi-people"></i><span>Equipo senior multidisciplinario</span></div>
-              <div class="d-flex align-items-center gap-2"><i class="bi bi-patch-check"></i><span>Procesos auditados y medibles</span></div>
-            </div>
-          </div>
-          <div class="col-lg-5">
-            <div class="tile shadow-lg">
-              <p class="text-primary fw-semibold mb-1"><?php echo $ctaMessage; ?></p>
-              <h5 class="fw-semibold">Nuestra promesa</h5>
-              <ul class="list-unstyled feature-list d-grid gap-2 small text-muted mb-0">
-                <li class="d-flex gap-2 align-items-start"><i class="bi bi-check-circle-fill"></i><span>Te asignamos gestores con experiencia en tu industria.</span></li>
-                <li class="d-flex gap-2 align-items-start"><i class="bi bi-check-circle-fill"></i><span>Te acompanamos en siniestros y renovaciones con tableros claros.</span></li>
-                <li class="d-flex gap-2 align-items-start"><i class="bi bi-check-circle-fill"></i><span>Tomamos decisiones respaldadas por datos y aseguradoras lideres.</span></li>
-              </ul>
+            <div class="eyebrow text-white-80">Quienes Somos</div>
+            <h1 class="display-5 fw-semibold lh-tight text-white mb-3">Comprometidos con su tranquilidad.</h1>
+            <p class="lead text-white-80 mb-4">Protegemos a nuestros clientes con alternativas de prevision y proteccion justas, acompanandolos en cada tramite y siniestro.</p>
+            <div class="d-flex flex-wrap gap-3 text-white-80 small">
+              <div class="pill-highlight d-flex align-items-center gap-2"><i class="bi bi-shield-check"></i><span>Pago justo y servicio cercano</span></div>
+              <div class="pill-highlight d-flex align-items-center gap-2"><i class="bi bi-people"></i><span>Equipo humano profesional</span></div>
+              <div class="pill-highlight d-flex align-items-center gap-2"><i class="bi bi-lightning-charge"></i><span>Respuesta rapida y clara</span></div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="historia" class="py-5">
+    <section class="py-5 mission-vision">
       <div class="container">
-        <div class="row g-4 align-items-center">
+        <div class="row g-5 align-items-start">
           <div class="col-lg-6">
-            <div class="eyebrow text-primary">Trayectoria</div>
-            <h3 class="fw-semibold mb-3">Crecimos atendiendo empresas y familias que buscan claridad.</h3>
-            <p class="text-muted mb-3">Nacimos como un despacho boutique y hoy operamos con procesos de clase empresarial: evaluaciones de riesgo, colocacion multiaseguradora y mesas de servicio 24/7.</p>
-            <p class="text-muted mb-4">Cada cuenta tiene un responsable ejecutivo y un equipo especializado en suscripcion, operacion y siniestros.</p>
-            <div class="d-flex gap-3">
-              <a class="btn btn-gradient" href="servicios.php#portafolio">Explorar portafolio</a>
-              <a class="btn btn-outline-primary" href="index.php#contacto">Hablar con direccion</a>
+            <div class="section-title-line">
+              <h3 class="fw-semibold">Nuestra Mision</h3>
             </div>
+            <p class="text-muted mb-0">Proporcionar a nuestros clientes las mejores alternativas de prevision y proteccion, asi como el pago mas justo en el caso de presentarse una eventualidad, tratando siempre de satisfacer al maximo sus necesidades de costo, coberturas, condiciones y servicios competitivos, desarrollando productos y servicios de calidad con un equipo humano profesional, capaz e innovador que garantice la permanencia y crecimiento de nuestros clientes, colaboradores, accionistas y de nuestro pais.</p>
           </div>
           <div class="col-lg-6">
-            <div class="row g-3">
-              <div class="col-sm-6">
-                <div class="tile h-100">
-                  <div class="icon-circle"><i class="bi bi-graph-up-arrow"></i></div>
-                  <h6 class="fw-semibold mb-1">Enfoque empresarial</h6>
-                  <p class="text-muted small mb-0">Programas por unidad de negocio, sitio y proyectos especiales.</p>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="tile h-100">
-                  <div class="icon-circle"><i class="bi bi-heart-pulse"></i></div>
-                  <h6 class="fw-semibold mb-1">Cuidado personal</h6>
-                  <p class="text-muted small mb-0">Gestion humana para familias, patrimonio y salud.</p>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="tile h-100">
-                  <div class="icon-circle"><i class="bi bi-lightning-charge"></i></div>
-                  <h6 class="fw-semibold mb-1">Mesa de respuesta</h6>
-                  <p class="text-muted small mb-0">Siniestros atendidos por un equipo que sigue indicadores.</p>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="tile h-100">
-                  <div class="icon-circle"><i class="bi bi-shield-lock"></i></div>
-                  <h6 class="fw-semibold mb-1">Gobernanza</h6>
-                  <p class="text-muted small mb-0">Cumplimiento documental y auditorias recurrentes.</p>
-                </div>
-              </div>
+            <div class="section-title-line">
+              <h3 class="fw-semibold">Nuestra Vision</h3>
             </div>
+            <p class="text-muted mb-0">Lograr el liderazgo en la region noroeste del pais, con calidad de servicio global, contando con un equipo humano profesional, capaz e innovador y con infraestructura y tecnologia de alto nivel.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="equipo" class="py-5 bg-soft">
-      <div class="container">
-        <div class="text-center mb-4">
-          <div class="eyebrow text-primary">Equipo</div>
-          <h3 class="fw-semibold">Liderazgo cercano y accesible.</h3>
-          <p class="text-muted">Direccion que participa en cada cuenta y equipos operativos dedicados por sector.</p>
-        </div>
-        <div class="row g-4">
-          <div class="col-md-4">
-            <div class="tile h-100">
-              <div class="d-flex align-items-center gap-3 mb-2">
-                <div class="avatar">RB</div>
-                <div>
-                  <h6 class="mb-0 fw-semibold">Rodrigo Baidon</h6>
-                  <small class="text-muted">Director General</small>
-                </div>
-              </div>
-              <p class="text-muted small mb-3">Mas de 20 anos en seguros y fianzas dirigiendo programas corporativos y patrimoniales.</p>
-              <a class="link-primary fw-semibold small" href="index.php#contacto">Coordinar mensaje</a>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="tile h-100">
-              <div class="d-flex align-items-center gap-3 mb-2">
-                <div class="avatar">SG</div>
-                <div>
-                  <h6 class="mb-0 fw-semibold">Mesa de Siniestros</h6>
-                  <small class="text-muted">Respuesta 24/7</small>
-                </div>
-              </div>
-              <p class="text-muted small mb-3">Coordinadores y ajustadores aliados que activan polizas y entregables sin esperas.</p>
-              <a class="link-primary fw-semibold small" href="index.php#contacto">Reportar caso</a>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="tile h-100">
-              <div class="d-flex align-items-center gap-3 mb-2">
-                <div class="avatar">CS</div>
-                <div>
-                  <h6 class="mb-0 fw-semibold">Consultoria Sectorial</h6>
-                  <small class="text-muted">Industria, retail y gobierno</small>
-                </div>
-              </div>
-              <p class="text-muted small mb-3">Consultores por vertical con benchmarks, comparativos y seguimiento a KPIs de riesgo.</p>
-              <a class="link-primary fw-semibold small" href="servicios.php#empresariales">Ver enfoque</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="valores" class="py-5">
-      <div class="container">
-        <div class="row g-4 align-items-center">
-          <div class="col-lg-5">
-            <div class="eyebrow text-primary">Valores</div>
-            <h3 class="fw-semibold mb-3">Principios que guian cada renovacion y cada siniestro.</h3>
-            <p class="text-muted mb-3">Creamos relaciones de largo plazo con compromisos medibles y reportes periodicos.</p>
-            <p class="text-muted mb-4">Creemos en decisiones basadas en datos, transparencia y acompanamiento humano.</p>
-          </div>
-          <div class="col-lg-7">
-            <div class="row g-3">
-              <div class="col-sm-6">
-                <div class="tile h-100">
-                  <div class="icon-circle"><i class="bi bi-clipboard2-check"></i></div>
-                  <h6 class="fw-semibold mb-1">Claridad</h6>
-                  <p class="text-muted small mb-0">Explicamos escenarios y exclusiones con lenguaje simple.</p>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="tile h-100">
-                  <div class="icon-circle"><i class="bi bi-speedometer2"></i></div>
-                  <h6 class="fw-semibold mb-1">Agilidad</h6>
-                  <p class="text-muted small mb-0">Respuestas en minutos y compromisos de seguimiento por escrito.</p>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="tile h-100">
-                  <div class="icon-circle"><i class="bi bi-people-fill"></i></div>
-                  <h6 class="fw-semibold mb-1">Empatia</h6>
-                  <p class="text-muted small mb-0">Un gestor acompana cada tramite y siniestro.</p>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="tile h-100">
-                  <div class="icon-circle"><i class="bi bi-stars"></i></div>
-                  <h6 class="fw-semibold mb-1">Excelencia</h6>
-                  <p class="text-muted small mb-0">Procesos auditados y mediciones de satisfaccion.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="alianzas" class="py-5 bg-soft">
-      <div class="container">
-        <div class="text-center mb-4">
-          <div class="eyebrow text-primary">Alianzas</div>
-          <h3 class="fw-semibold">Trabajamos con aseguradoras y afianzadoras lideres.</h3>
-          <p class="text-muted">Seleccionamos la combinacion correcta segun tu riesgo y velocidad de respuesta requerida.</p>
-        </div>
-        <div class="row g-3">
-          <div class="col-6 col-md-3">
-            <div class="tile text-center h-100">
-              <div class="icon-circle mx-auto"><i class="bi bi-building"></i></div>
-              <p class="mb-0 fw-semibold">Aseguradoras top</p>
-              <small class="text-muted">Programas corporativos</small>
-            </div>
-          </div>
-          <div class="col-6 col-md-3">
-            <div class="tile text-center h-100">
-              <div class="icon-circle mx-auto"><i class="bi bi-shield-check"></i></div>
-              <p class="mb-0 fw-semibold">Afianzadoras</p>
-              <small class="text-muted">Fianzas a la medida</small>
-            </div>
-          </div>
-          <div class="col-6 col-md-3">
-            <div class="tile text-center h-100">
-              <div class="icon-circle mx-auto"><i class="bi bi-cpu"></i></div>
-              <p class="mb-0 fw-semibold">Herramientas</p>
-              <small class="text-muted">Paneles y reportes</small>
-            </div>
-          </div>
-          <div class="col-6 col-md-3">
-            <div class="tile text-center h-100">
-              <div class="icon-circle mx-auto"><i class="bi bi-geo-alt"></i></div>
-              <p class="mb-0 fw-semibold">Cobertura nacional</p>
-              <small class="text-muted">Red de ajustadores</small>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="cta" class="py-5 text-center text-white position-relative overflow-hidden">
-      <div class="shape-blur"></div>
+    <section class="values-banner position-relative py-5 overflow-hidden text-white">
       <div class="container position-relative">
-        <div class="eyebrow text-white-80">Listos para apoyarte</div>
-        <h2 class="fw-semibold">Conectemos para entender tu situacion y priorizar riesgos.</h2>
-        <p class="lead text-white-80 mb-4">Un asesor senior se encargara personalmente de tu caso.</p>
-        <div class="d-flex flex-wrap gap-3 justify-content-center">
-          <a class="btn btn-lg btn-light text-primary" href="tel:<?php echo $phone; ?>">Llamanos</a>
-          <a class="btn btn-lg btn-outline-light" href="index.php#contacto">Escribir al equipo</a>
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6">
+            <h3 class="fw-semibold mb-3">Nuestros Valores</h3>
+            <p class="text-white-80 mb-4">Cuidamos la relacion de largo plazo con cada cliente, colocando sus intereses por encima de los nuestros.</p>
+          </div>
+          <div class="col-lg-6">
+            <ul class="values-list list-unstyled mb-0">
+              <li>Servicio</li>
+              <li>Responsabilidad</li>
+              <li>Liderazgo</li>
+              <li>Efectividad</li>
+              <li>Honestidad</li>
+              <li>Innovacion</li>
+              <li>Mejora Continua</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="director-banner position-relative py-5 text-white overflow-hidden">
+      <div class="container position-relative">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-4">
+            <div class="director-heading">Mensaje del Director</div>
+          </div>
+          <div class="col-lg-8">
+            <div class="glass-card director-card p-4 p-lg-5 text-white">
+              <p class="mb-3">En R. Baidon estamos "Comprometidos con su Tranquilidad", nuestro compromiso es satisfacer al maximo las necesidades de proteccion de Usted, su familia y su negocio.</p>
+              <p class="mb-3">Nos interesa mucho establecer una relacion de largo plazo con Usted, una relacion basada en cuidar siempre sus intereses aun por encima de los nuestros.</p>
+              <p class="mb-3">Ademas, nos comprometemos a seguir buscando nuevas y mejores formas de resolver sus necesidades de proteccion y ofrecerle un excelente servicio en la contratacion de su seguro.</p>
+              <p class="mb-4">Asi mismo, nos comprometemos a estar siempre disponibles para apoyarlo en caso de presentarse un siniestro o reclamacion y asegurarnos asi de que usted reciba la mejor atencion y el pago mas justo.</p>
+              <div class="director-signature">
+                <div class="title">Ing. Rogelio Baidon Olvera</div>
+                <div class="subtitle">Director General</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

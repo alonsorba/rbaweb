@@ -16,13 +16,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=2">
 </head>
 <body>
   <header class="shadow-sm sticky-top bg-white">
     <nav class="navbar navbar-expand-lg bg-body-tertiary" id="topNav">
       <div class="container-fluid">
-        <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-primary">
+        <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-primary" href="index.php">
           <img src="assets/img/R BAIDON V3 RGB (WEB).png" class="brand-logo" alt="RBA Seguros &amp; Fianzas">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,7 +30,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
-            <li class="nav-item"><a class="nav-link" href="">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.php">Inicio</a></li>
             <li class="nav-item"><a class="nav-link" href="servicios.php">Nuestros servicios</a></li>
             <li class="nav-item"><a class="nav-link" href="quienes.php">Quienes somos</a></li>
             <li class="nav-item"><a class="nav-link" href="servicio-cliente.php">Servicio al cliente</a></li>

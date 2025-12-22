@@ -26,9 +26,13 @@ body {
   font-weight: 700;
   letter-spacing: 0.5px;
 }
+.navbar { padding-top: 0.65rem; padding-bottom: 0.65rem; }
+.navbar-brand { padding-top: 0; padding-bottom: 0; }
+.navbar-nav .nav-link { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+.navbar#topNav { min-height: 78px; }
 .brand-logo {
-  height: 20%;
-  width: 20%;
+  height: 48px;
+  width: auto;
   display: block;
 }
 
@@ -46,11 +50,23 @@ body {
     url('../img/EDIFICIO-RBA-DIA.png') center center / cover no-repeat;
   min-height: 80vh;
 }
+.qs-hero {
+  background:
+    linear-gradient(120deg, rgba(11,48,95,0.5), rgba(19,92,138,0.5)),
+    url('../img/01.jpg') center center / cover no-repeat;
+  min-height: 60vh;
+}
+.pill-highlight {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+}
 .page-hero {
     background:
       linear-gradient(130deg, rgba(11,48,95,0.88), rgba(27,132,198,0.78)),
       url('../img/EDIFICIO-RBA-DIA.png') center center / cover no-repeat;
-    color: #ff0000;
+    color: #f7f3f3;
   }
 .page-hero .lead { color: rgba(255,255,255,0.85); }
 .page-hero .tile {
@@ -243,6 +259,97 @@ footer .brand-mark {
 .privacy-list li strong { color: var(--brand-800); }
 
 @media (max-width: 992px) {
-  .stat-card { position: relative; right: 0; bottom: 0; margin-top: 1rem; display: flex; }
+.stat-card { position: relative; right: 0; bottom: 0; margin-top: 1rem; display: flex; }
   #hero { min-height: auto; }
+}
+
+.mission-vision .section-title-line {
+  border-bottom: 2px solid var(--brand-700);
+  display: inline-block;
+  padding-bottom: 0.35rem;
+  margin-bottom: 1rem;
+  color: #0c3259;
+}
+
+.values-banner {
+  background:
+    radial-gradient(140% 90% at 20% 20%, rgba(255,255,255,0.08), transparent),
+    radial-gradient(140% 90% at 80% 80%, rgba(255,255,255,0.06), transparent),
+    linear-gradient(130deg, rgba(11,48,95,0.9), rgba(19,92,138,0.82));
+}
+.values-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem 1.5rem;
+  font-weight: 600;
+}
+.values-list li {
+  position: relative;
+  padding-left: 1.2rem;
+}
+.values-list li::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  top: 10px;
+}
+
+.director-banner {
+  background:
+    linear-gradient(120deg, rgba(11,48,95,0.5), rgba(19,92,138,0.5)),
+    url('../img/EDIFICIO-RBA-DIA.png') center center / cover no-repeat;
+  background-blend-mode: normal;
+}
+.director-card {
+  background: rgba(255, 255, 255, 0.719);
+  border: 1px solid rgba(255, 255, 255, 0.158);
+  border-radius: 18px;
+}
+.director-heading {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: clamp(2rem, 2vw + 1.5rem, 2.8rem);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  line-height: 1.1;
+  word-break: keep-all;
+}
+.director-heading::after {
+  content: '';
+  height: 2px;
+  background: rgba(255,255,255,0.75);
+  flex: 1 1 120px;
+  min-width: 80px;
+}
+.director-card p {
+  color: #0c3259;
+  line-height: 1.7;
+}
+.director-signature {
+  text-align: right;
+  margin-top: 1.5rem;
+  color: #0c3259;
+}
+.director-signature .title {
+  font-weight: 700;
+}
+.director-signature .subtitle {
+  color: #0c3259;
+  font-size: 0.95rem;
+}
+@media (max-width: 768px) {
+  .director-heading {
+    font-size: 1.6rem;
+    gap: 0.9rem;
+  }
+  .director-heading::after {
+    display: none;
+  }
 }
