@@ -34,9 +34,6 @@
             <li class="nav-item"><a class="nav-link" href="servicios.php#portafolio">Nuestros servicios</a></li>
             <li class="nav-item"><a class="nav-link active" aria-current="page" href="quienes.php#nosotros">Quienes somos</a></li>
             <li class="nav-item"><a class="nav-link" href="servicio-cliente.php#soporte">Servicio al cliente</a></li>
-            <li class="nav-item ms-lg-2">
-              <a class="btn btn-gradient" href="tel:<?php echo $phone; ?>">Contacto</a>
-            </li>
           </ul>
         </div>
       </div>
@@ -307,7 +304,7 @@
           <h6 class="footer-heading">Contacto</h6>
           <ul class="list-unstyled footer-links">
             <li><a href="index.php#contacto">Formulario de Contacto</a></li>
-            <li><a href="#">Aviso de Privacidad</a></li>
+            <li><a href="aviso-privacidad.php">Aviso de Privacidad</a></li>
             <li><a href="index.php#contacto">Ubicacion</a></li>
           </ul>
         </div>

@@ -34,9 +34,6 @@
             <li class="nav-item"><a class="nav-link" href="servicios.php#portafolio">Nuestros servicios</a></li>
             <li class="nav-item"><a class="nav-link" href="quienes.php#nosotros">Quienes somos</a></li>
             <li class="nav-item"><a class="nav-link" href="servicio-cliente.php#soporte">Servicio al cliente</a></li>
-            <li class="nav-item ms-lg-2">
-              <a class="btn btn-gradient" href="tel:<?php echo $phone; ?>">Contacto</a>
-            </li>
           </ul>
         </div>
       </div>
@@ -170,7 +167,7 @@
                 <div class="col-12 d-grid">
                   <button type="submit" class="btn btn-lg btn-gradient">Recibir asesoria</button>
                 </div>
-                <p class="small text-white-60 mb-0">Protegemos tus datos conforme a nuestro Aviso de Privacidad.</p>
+                <p class="small text-white-60 mb-0">Protegemos tus datos conforme a nuestro <a class="text-white" href="aviso-privacidad.php">Aviso de Privacidad</a>.</p>
               </form>
             </div>
           </div>
@@ -323,12 +320,12 @@
                 </div>
                 <div class="col-12">
                   <label class="form-label">Mensaje</label>
-                  <textarea name="mensaje" rows="4" class="form-control" placeholder="Cu‚ntanos qu‚ necesitas" required></textarea>
+                  <textarea name="mensaje" rows="4" class="form-control" placeholder="Cuentanos que necesitas" required></textarea>
                 </div>
                 <div class="col-12 d-flex justify-content-between align-items-center">
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="1" id="aviso" required>
-                    <label class="form-check-label" for="aviso">Acepto el Aviso de Privacidad</label>
+                    <label class="form-check-label" for="aviso">Acepto el <a class="link-primary" href="aviso-privacidad.php">Aviso de Privacidad</a></label>
                   </div>
                   <button type="submit" class="btn btn-gradient">Enviar</button>
                 </div>
@@ -373,7 +370,7 @@
           <h6 class="footer-heading">Contacto</h6>
           <ul class="list-unstyled footer-links">
             <li><a href="#contacto">Formulario de Contacto</a></li>
-            <li><a href="#">Aviso de Privacidad</a></li>
+            <li><a href="aviso-privacidad.php">Aviso de Privacidad</a></li>
             <li><a href="#contacto">Ubicacion</a></li>
           </ul>
         </div>
