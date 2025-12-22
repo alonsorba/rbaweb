@@ -31,10 +31,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
-            <li class="nav-item"><a class="nav-link" href="index.php#servicios">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link active" aria-current="page" href="servicios.php#portafolio">Nuestros servicios</a></li>
-            <li class="nav-item"><a class="nav-link" href="quienes.php#nosotros">Quienes somos</a></li>
-            <li class="nav-item"><a class="nav-link" href="servicio-cliente.php#soporte">Servicio al cliente</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.php">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="servicios.php">Nuestros servicios</a></li>
+            <li class="nav-item"><a class="nav-link" href="quienes.php">Quienes somos</a></li>
+            <li class="nav-item"><a class="nav-link" href="servicio-cliente.php">Servicio al cliente</a></li>
           </ul>
         </div>
       </div>
