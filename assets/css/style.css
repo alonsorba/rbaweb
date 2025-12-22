@@ -52,7 +52,7 @@ body {
 }
 .qs-hero {
   background:
-    linear-gradient(120deg, rgba(11,48,95,0.5), rgba(19,92,138,0.5)),
+    linear-gradient(120deg, rgba(11, 47, 95, 0.699), rgba(19, 92, 138, 0.644)),
     url('../img/01.jpg') center center / cover no-repeat;
   min-height: 60vh;
 }
@@ -257,6 +257,37 @@ footer .brand-mark {
 .privacy-list { padding-left: 1.1rem; }
 .privacy-list li { margin-bottom: 0.65rem; color: var(--text-dark); }
 .privacy-list li strong { color: var(--brand-800); }
+
+.location-card {
+  background: #fff;
+  border: 1px solid #e6edf5;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(12,46,84,0.12);
+}
+.location-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.location-info {
+  padding: 2rem 1.5rem;
+}
+.location-info p {
+  color: var(--muted);
+}
+.location-pill {
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(27,132,198,0.12);
+  color: var(--brand-700);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+.location-header .btn {
+  white-space: nowrap;
+}
 
 @media (max-width: 992px) {
 .stat-card { position: relative; right: 0; bottom: 0; margin-top: 1rem; display: flex; }

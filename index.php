@@ -371,7 +371,7 @@
           <ul class="list-unstyled footer-links">
             <li><a href="#contacto">Formulario de Contacto</a></li>
             <li><a href="aviso-privacidad.php">Aviso de Privacidad</a></li>
-            <li><a href="#contacto">Ubicacion</a></li>
+            <li><a href="ubicacion.php#cd-obregon">Ubicacion</a></li>
           </ul>
         </div>
         <div class="col-6 col-md-4 col-lg-2">

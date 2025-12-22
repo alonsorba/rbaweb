@@ -2,7 +2,6 @@
   $siteTitle = 'RBA Seguros y Fianzas';
   $phone = '+52 55 1234 5678';
   $email = 'contacto@rbaseguros.mx';
-  $ctaMessage = 'Acompanamiento cercano';
   $year = date('Y');
 ?>
 <!DOCTYPE html>
@@ -10,7 +9,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><?php echo $siteTitle; ?> | Quienes somos</title>
+  <title><?php echo $siteTitle; ?> | Ubicacion</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -32,7 +31,7 @@
           <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
             <li class="nav-item"><a class="nav-link" href="index.php">Inicio</a></li>
             <li class="nav-item"><a class="nav-link" href="servicios.php">Nuestros servicios</a></li>
-            <li class="nav-item"><a class="nav-link active" aria-current="page" href="quienes.php">Quienes somos</a></li>
+            <li class="nav-item"><a class="nav-link" href="quienes.php">Quienes somos</a></li>
             <li class="nav-item"><a class="nav-link" href="servicio-cliente.php">Servicio al cliente</a></li>
           </ul>
         </div>
@@ -41,81 +40,77 @@
   </header>
 
   <main>
-    <section class="qs-hero py-5 position-relative overflow-hidden">
-      <div class="container py-4">
-        <div class="row align-items-end">
-          <div class="col-lg-7">
-            <div class="eyebrow text-white-80">Quienes Somos</div>
-            <h1 class="display-5 fw-semibold lh-tight text-white mb-3">Comprometidos con su tranquilidad.</h1>
-            <p class="lead text-white-80 mb-4">Protegemos a nuestros clientes con alternativas de prevision y proteccion justas, acompanandolos en cada tramite y siniestro.</p>
-            <div class="d-flex flex-wrap gap-3 text-white-80 small">
-              <div class="pill-highlight d-flex align-items-center gap-2"><i class="bi bi-shield-check"></i><span>Pago justo y servicio cercano</span></div>
-              <div class="pill-highlight d-flex align-items-center gap-2"><i class="bi bi-people"></i><span>Equipo humano profesional</span></div>
-              <div class="pill-highlight d-flex align-items-center gap-2"><i class="bi bi-lightning-charge"></i><span>Respuesta rapida y clara</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="py-5 mission-vision">
+    <section class="page-hero py-5">
       <div class="container">
-        <div class="row g-5 align-items-start">
-          <div class="col-lg-6">
-            <div class="section-title-line">
-              <h3 class="fw-semibold">Nuestra Mision</h3>
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7">
+            <div class="eyebrow text-white-80">Ubicacion</div>
+            <h1 class="display-5 fw-semibold lh-tight mb-3">Estamos cerca de ti con oficinas en Sonora.</h1>
+            <p class="lead text-white-80 mb-4">Cd. Obregon es nuestra oficina matriz y Hermosillo extiende nuestra atencion en el estado.</p>
+            <div class="d-flex flex-wrap gap-3">
+              <a class="btn btn-lg btn-light text-primary" href="#cd-obregon">Ver oficina matriz</a>
+              <a class="btn btn-lg btn-outline-light" href="#hermosillo">Ver oficina Hermosillo</a>
             </div>
-            <p class="text-muted mb-0">Proporcionar a nuestros clientes las mejores alternativas de prevision y proteccion, asi como el pago mas justo en el caso de presentarse una eventualidad, tratando siempre de satisfacer al maximo sus necesidades de costo, coberturas, condiciones y servicios competitivos, desarrollando productos y servicios de calidad con un equipo humano profesional, capaz e innovador que garantice la permanencia y crecimiento de nuestros clientes, colaboradores, accionistas y de nuestro pais.</p>
           </div>
-          <div class="col-lg-6">
-            <div class="section-title-line">
-              <h3 class="fw-semibold">Nuestra Vision</h3>
+          <div class="col-lg-5">
+            <div class="tile shadow-lg">
+              <p class="text-primary fw-semibold mb-1">Contactanos directo</p>
+              <h5 class="fw-semibold">Telefonos y correos</h5>
+              <ul class="list-unstyled feature-list d-grid gap-2 small text-muted mb-0">
+                <li class="d-flex gap-2 align-items-start"><i class="bi bi-geo-alt-fill"></i><span>Cd. Obregon (oficina matriz): <a href="tel:+526444108600" class="link-primary fw-semibold">(644) 410 8600</a> · <a href="mailto:obregon@rbaidon.com.mx" class="link-primary fw-semibold">obregon@rbaidon.com.mx</a></span></li>
+                <li class="d-flex gap-2 align-items-start"><i class="bi bi-geo-alt-fill"></i><span>Hermosillo: <a href="tel:+526222105870" class="link-primary fw-semibold">(622) 210 58 70</a> · <a href="mailto:hermosillo@rbaidon.com.mx" class="link-primary fw-semibold">hermosillo@rbaidon.com.mx</a></span></li>
+                <li class="d-flex gap-2 align-items-start"><i class="bi bi-clock-history"></i><span>Atencion personalizada y seguimiento en sitio cuando lo necesites.</span></li>
+              </ul>
             </div>
-            <p class="text-muted mb-0">Lograr el liderazgo en la region noroeste del pais, con calidad de servicio global, contando con un equipo humano profesional, capaz e innovador y con infraestructura y tecnologia de alto nivel.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="values-banner position-relative py-5 overflow-hidden text-white">
-      <div class="container position-relative">
-        <div class="row g-4 align-items-center">
-          <div class="col-lg-6">
-            <h3 class="fw-semibold mb-3">Nuestros Valores</h3>
-            <p class="text-white-80 mb-4">Cuidamos la relacion de largo plazo con cada cliente, colocando sus intereses por encima de los nuestros.</p>
+    <section class="py-5" id="cd-obregon">
+      <div class="container">
+        <div class="location-header d-flex flex-wrap justify-content-between align-items-center gap-3 mb-3">
+          <div>
+            <div class="location-pill">Oficina matriz</div>
+            <h2 class="fw-semibold mb-1">Cd. Obregon</h2>
+            <p class="text-muted mb-0">Nuestra sede principal y punto de atencion central para clientes.</p>
           </div>
-          <div class="col-lg-6">
-            <ul class="values-list list-unstyled mb-0">
-              <li>Servicio</li>
-              <li>Responsabilidad</li>
-              <li>Liderazgo</li>
-              <li>Efectividad</li>
-              <li>Honestidad</li>
-              <li>Innovacion</li>
-              <li>Mejora Continua</li>
-            </ul>
+          <a class="btn btn-outline-primary btn-sm" href="https://maps.app.goo.gl/vNUhqXXGTEnwPeto8" target="_blank" rel="noopener">Abrir en Google Maps</a>
+        </div>
+        <div class="location-card mb-4">
+          <div class="ratio ratio-21x9 location-map">
+            <iframe src="https://www.google.com/maps?q=R.+Baidon,+Av.+Jose+Maria+Morelos+y+Pavon+522,+Norte,+Urb.+No.+4,+85000+Cd.+Obregon,+Sonora&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="location-info text-center">
+            <h5 class="fw-semibold mb-1">Morelos No. 522 Ote. Col. Zona Norte</h5>
+            <p class="text-muted mb-1">Cd. Obregon, Sonora C.P. 85010</p>
+            <p class="mb-2">Tel. (644) 410 8600</p>
+            <a class="link-primary fw-semibold" href="mailto:obregon@rbaidon.com.mx">obregon@rbaidon.com.mx</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="director-banner position-relative py-5 text-white overflow-hidden">
-      <div class="container position-relative">
-        <div class="row g-4 align-items-center">
-          <div class="col-lg-4">
-            <div class="director-heading">Mensaje del Director</div>
+    <section class="py-5 bg-soft" id="hermosillo">
+      <div class="container">
+        <div class="location-header d-flex flex-wrap justify-content-between align-items-center gap-3 mb-3">
+          <div>
+            <div class="location-pill">Oficina</div>
+            <h2 class="fw-semibold mb-1">Hermosillo</h2>
+            <p class="text-muted mb-0">Equipo local para visitas y seguimiento en la capital del estado.</p>
           </div>
-          <div class="col-lg-8">
-            <div class="glass-card director-card p-4 p-lg-5 text-white">
-              <p class="mb-3">En R. Baidon estamos "Comprometidos con su Tranquilidad", nuestro compromiso es satisfacer al maximo las necesidades de proteccion de Usted, su familia y su negocio.</p>
-              <p class="mb-3">Nos interesa mucho establecer una relacion de largo plazo con Usted, una relacion basada en cuidar siempre sus intereses aun por encima de los nuestros.</p>
-              <p class="mb-3">Ademas, nos comprometemos a seguir buscando nuevas y mejores formas de resolver sus necesidades de proteccion y ofrecerle un excelente servicio en la contratacion de su seguro.</p>
-              <p class="mb-4">Asi mismo, nos comprometemos a estar siempre disponibles para apoyarlo en caso de presentarse un siniestro o reclamacion y asegurarnos asi de que usted reciba la mejor atencion y el pago mas justo.</p>
-              <div class="director-signature">
-                <div class="title">Ing. Rogelio Baidon Olvera</div>
-                <div class="subtitle">Director General</div>
-              </div>
-            </div>
+          <a class="btn btn-outline-primary btn-sm" href="https://maps.app.goo.gl/5AWZf6QMzi85Wz8Z8" target="_blank" rel="noopener">Abrir en Google Maps</a>
+        </div>
+        <div class="location-card">
+          <div class="ratio ratio-21x9 location-map">
+            <iframe src="https://www.google.com/maps?q=R.+Baidon+-+Sucursal+Hermosillo,+Av.+Santos+Degollado+3,+Local+C,+Col.+Constitucion,+Hermosillo,+Sonora+83150&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="location-info text-center">
+            <h5 class="fw-semibold mb-1">Av. Santos Degollado 3-Local C</h5>
+            <p class="text-muted mb-1">Col. Constitucion</p>
+            <p class="text-muted mb-1">Hermosillo, Sonora C.P. 83150</p>
+            <p class="mb-2">Tel. (622) 210 58 70</p>
+            <a class="link-primary fw-semibold" href="mailto:hermosillo@rbaidon.com.mx">hermosillo@rbaidon.com.mx</a>
           </div>
         </div>
       </div>
@@ -139,7 +134,7 @@
           <h6 class="footer-heading">Quienes Somos?</h6>
           <ul class="list-unstyled footer-links">
             <li><a href="quienes.php#nosotros">Sobre Nosotros</a></li>
-            <li><a href="quienes.php#equipo">Equipo</a></li>
+            <li><a href="quienes.php#equipo">Mensaje del Director</a></li>
             <li><a href="quienes.php#alianzas">Alianzas</a></li>
           </ul>
         </div>
