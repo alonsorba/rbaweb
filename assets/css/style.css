@@ -50,6 +50,53 @@ body {
     url('../img/EDIFICIO-RBA-DIA.png') center center / cover no-repeat;
   min-height: 80vh;
 }
+.hero-carousel .carousel-item {
+  position: relative;
+}
+.hero-carousel .carousel-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(11,48,95,0.35), rgba(0,0,0,0.45));
+}
+.hero-carousel img {
+  height: 70vh;
+  object-fit: cover;
+}
+.hero-carousel .carousel-caption {
+  bottom: 18%;
+  z-index: 2;
+  text-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+.hero-carousel .carousel-indicators [data-bs-target] {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.carousel.fallback-carousel {
+  position: relative;
+  overflow: hidden;
+}
+.carousel.fallback-carousel .carousel-inner {
+  position: relative;
+}
+.carousel.fallback-carousel .carousel-item {
+  display: block;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: scale(1.04);
+  transition: opacity 0.85s ease, transform 0.85s ease;
+}
+.carousel.fallback-carousel .carousel-item.active {
+  position: relative;
+  opacity: 1;
+  transform: scale(1);
+}
+@media (max-width: 768px) {
+  .hero-carousel img { height: 55vh; }
+  .hero-carousel .carousel-caption { bottom: 12%; }
+}
 .qs-hero {
   background:
     linear-gradient(120deg, rgba(11, 47, 95, 0.699), rgba(19, 92, 138, 0.644)),

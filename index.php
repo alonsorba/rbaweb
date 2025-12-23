@@ -38,9 +38,53 @@
         </div>
       </div>
     </nav>
-  </header>
+</header>
 
   <main>
+    <section class="hero-carousel">
+      <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Primera diapositiva"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Segunda diapositiva"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Tercera diapositiva"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/img/01.jpg" class="d-block w-100" alt="Asesores de seguros colaborando">
+            <div class="carousel-caption">
+              <div class="eyebrow text-white-80">Proteccion total</div>
+              <h2 class="fw-semibold mb-2">Soluciones integrales para tu empresa y familia.</h2>
+              <p class="mb-0 text-white-80">Gestionamos riesgos con asesoria experta y respuesta inmediata.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="assets/img/02.jpg" class="d-block w-100" alt="Asegurando acuerdos de negocio">
+            <div class="carousel-caption">
+              <div class="eyebrow text-white-80">Servicio boutique</div>
+              <h2 class="fw-semibold mb-2">Acompa¤amos cada decision de cobertura.</h2>
+              <p class="mb-0 text-white-80">Planes claros, sin letras peque¤as y listos para tus operaciones.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="assets/img/03.jpg" class="d-block w-100" alt="Familia protegida con seguro">
+            <div class="carousel-caption">
+              <div class="eyebrow text-white-80">Confianza que responde</div>
+              <h2 class="fw-semibold mb-2">Coberturas que se ajustan a tu estilo de vida.</h2>
+              <p class="mb-0 text-white-80">Red de atencion 24/7 y gestoria de siniestros sin fricciones.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </section>
+
     <section id="servicios" class="py-5">
       <div class="container">
         <div class="row align-items-center mb-4">
@@ -394,6 +438,6 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js?v=2"></script>
 </body>
 </html>
