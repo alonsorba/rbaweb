@@ -22,7 +22,7 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary" id="topNav">
       <div class="container-fluid">
         <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-primary" href="index.php">
-          <img src="assets/img/R BAIDON V3 RGB (WEB).png" class="brand-logo" alt="RBA Seguros &amp; Fianzas">
+          <img src="assets/img/R BAIDON V3 BLANCO.png" class="brand-logo" alt="RBA Seguros &amp; Fianzas">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
