@@ -1,3 +1,26 @@
+(() => {
+  const navEntry = performance.getEntriesByType('navigation')?.[0];
+  const navType = navEntry?.type || performance.navigation?.type;
+  const isReload = navType === 'reload' || navType === performance.navigation?.TYPE_RELOAD;
+
+  // Force the scroll to the header as soon as possible on reload.
+  if (isReload) {
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    const scrollToHeader = () => {
+      const header = document.querySelector('header');
+      if (header) {
+        window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+        header.scrollIntoView({ behavior: 'auto', block: 'start' });
+      }
+    };
+    // Run both after DOM is ready and after the browser paints, to beat native restoration.
+    document.addEventListener('DOMContentLoaded', scrollToHeader, { once: true });
+    window.addEventListener('pageshow', scrollToHeader, { once: true });
+  }
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
   const nav = document.getElementById('topNav');
   const shrinkOn = 20;
