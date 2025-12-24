@@ -35,6 +35,20 @@ body {
   width: auto;
   display: block;
 }
+.nav-access-btn {
+  background: var(--brand-700);
+  color: #fff;
+  border: 1px solid var(--brand-700);
+  border-radius: 12px;
+  padding: 0.55rem 1rem;
+  font-weight: 600;
+  box-shadow: 0 10px 24px rgba(11,48,95,0.16);
+}
+.nav-access-btn:hover {
+  color: #fff;
+  background: var(--brand-800);
+  border-color: var(--brand-800);
+}
 
 .btn-gradient {
   background: var(--brand-700);

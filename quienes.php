@@ -35,6 +35,9 @@
             <li class="nav-item"><a class="nav-link active" aria-current="page" href="quienes.php">Quienes somos</a></li>
             <li class="nav-item"><a class="nav-link" href="servicio-cliente.php">Servicio al cliente</a></li>
           </ul>
+          <div class="ms-lg-3 mt-3 mt-lg-0">
+            <a class="btn nav-access-btn w-100" href="https://neo.rbaidon.com/">Acceso a usuarios</a>
+          </div>
         </div>
       </div>
     </nav>
@@ -158,11 +161,6 @@
             <li><a href="aviso-privacidad.php">Aviso de Privacidad</a></li>
             <li><a href="ubicacion.php#cd-obregon">Ubicacion</a></li>
           </ul>
-        </div>
-        <div class="col-6 col-md-4 col-lg-2">
-          <h6 class="footer-heading">
-            <a class="footer-heading-link" href="#">Acceso a Clientes</a>
-          </h6>
         </div>
       </div>
       <div class="footer-bottom pt-4 mt-3 border-top">
