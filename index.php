@@ -386,7 +386,7 @@
 
   <footer class="footer-main">
     <div class="container py-5">
-      <div class="row g-4">
+      <div class="row g-4 align-items-start">
         <div class="col-6 col-md-4 col-lg-2">
           <h6 class="footer-heading">Nuestros Servicios</h6>
           <ul class="list-unstyled footer-links">

@@ -334,6 +334,20 @@ footer .brand-mark {
   width: auto;
   display: block;
 }
+.footer-access-btn {
+  background: var(--brand-700);
+  color: #fff;
+  border: 1px solid var(--brand-700);
+  border-radius: 12px;
+  padding: 0.55rem 1rem;
+  font-weight: 600;
+  box-shadow: 0 10px 24px rgba(11,48,95,0.16);
+}
+.footer-access-btn:hover {
+  color: #fff;
+  background: var(--brand-800);
+  border-color: var(--brand-800);
+}
 .footer-main .footer-bottom { color: var(--muted); }
 .privacy-card {
   max-width: 1000px;
