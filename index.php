@@ -64,8 +64,8 @@
             <img src="assets/img/02.jpg" class="d-block w-100" alt="Asegurando acuerdos de negocio">
             <div class="carousel-caption">
               <div class="eyebrow text-white-80">Servicio boutique</div>
-              <h2 class="fw-semibold mb-2">Acompa¤amos cada decision de cobertura.</h2>
-              <p class="mb-0 text-white-80">Planes claros, sin letras peque¤as y listos para tus operaciones.</p>
+              <h2 class="fw-semibold mb-2">Acompañamos cada decision de cobertura.</h2>
+              <p class="mb-0 text-white-80">Planes claros, sin letras pequeñas y listos para tus operaciones.</p>
             </div>
           </div>
           <div class="carousel-item">

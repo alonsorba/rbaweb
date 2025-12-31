@@ -1,4 +1,4 @@
-<?php
+﻿<?php
   $siteTitle = 'RBA Seguros y Fianzas';
   $phone = '+52 55 1234 5678';
   $email = 'contacto@rbaseguros.mx';
@@ -51,7 +51,7 @@
           <div class="col-lg-7">
             <div class="eyebrow text-white-80">Soluciones integrales</div>
             <h1 class="display-5 fw-semibold lh-tight mb-3">Coberturas hechas a medida para tu empresa y tu familia.</h1>
-            <p class="lead text-white-80 mb-4">Diseñamos el programa completo: diagnostico de riesgos, colocacion con las mejores aseguradoras y acompañamiento en siniestros sin importar la hora.</p>
+            <p class="lead text-white-80 mb-4">DiseÃ±amos el programa completo: diagnostico de riesgos, colocacion con las mejores aseguradoras y acompaÃ±amiento en siniestros sin importar la hora.</p>
             <div class="d-flex flex-wrap gap-3">
               <a class="btn btn-lg btn-light text-primary" href="index.php#contacto">Habla con un asesor</a>
               <a class="btn btn-lg btn-outline-light" href="tel:<?php echo $phone; ?>">Llamar ahora</a>
@@ -84,7 +84,7 @@
           <h2 class="fw-semibold">Proteccion a la medida en un solo portafolio.</h2>
           <p class="text-muted">Selecciona el frente que quieres fortalecer y te asignamos a un especialista.</p>
         </div>
-        <div class="row g-4">
+        <div class="row g-4 justify-content-center">
           <div class="col-md-6 col-lg-4 anchor-offset" id="autos">
             <div class="tile h-100">
               <div class="icon-circle"><i class="bi bi-car-front"></i></div>
@@ -116,7 +116,7 @@
           </div>
           <div class="col-md-6 col-lg-4 anchor-offset" id="vida">
             <div class="tile h-100">
-              <div class="icon-circle"><i class="bi bi-shield-heart"></i></div>
+              <div class="icon-circle"><i class="bi bi-heart"></i></div>
               <h5 class="fw-semibold">Vida</h5>
               <p class="text-muted">Proteccion financiera ante fallecimiento o invalidez con planes disenados para ahorro, educacion o retiro.</p>
               <ul class="list-unstyled feature-list d-grid gap-2 small text-muted mb-3">
@@ -215,7 +215,7 @@
       <div class="shape-blur"></div>
       <div class="container position-relative">
         <div class="eyebrow text-white-80">Listos para empezar</div>
-        <h2 class="fw-semibold">Cuéntanos que necesitas asegurar.</h2>
+        <h2 class="fw-semibold">Cuentanos que necesitas asegurar.</h2>
         <p class="lead text-white-80 mb-4">Un asesor te contactara el mismo dia para preparar la propuesta correcta.</p>
         <div class="d-flex flex-wrap gap-3 justify-content-center">
           <a class="btn btn-lg btn-light text-primary" href="index.php#contacto">Contactar ahora</a>
@@ -280,3 +280,5 @@
   <script src="assets/js/main.js?v=4"></script>
 </body>
 </html>
+
+

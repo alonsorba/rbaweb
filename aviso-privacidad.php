@@ -91,7 +91,7 @@
           </ul>
           <p><strong>Titular:</strong> Acepta o rechaza la transferencia.</p>
           <p>Le informamos que para las transferencias indicadas arriba requerimos de su consentimiento. Si usted no manifiesta su negativa para dichas transferencias, entenderemos que nos lo ha otorgado.</p>
-          <p>En caso de no autorizar que sus datos personales sean compartidos con los terceros es necesario que nos envie a <a href="mailto:dpaz@rbaidon.com.mx">dpar@rbaidon.com.mx</a> un correo con una copia de su IFE e indicando rechazar la transferencia de los datos.</p>
+          <p>En caso de no autorizar que sus datos personales sean compartidos con los terceros es necesario que nos envie a <a href="mailto:dpaz@rbaidon.com.mx">dpaz@rbaidon.com.mx</a> un correo con una copia de su IFE e indicando rechazar la transferencia de los datos.</p>
 
           <h5 class="fw-semibold">Derechos ARCO</h5>
           <ul class="privacy-list">
@@ -100,11 +100,11 @@
             <li><strong>Cancelacion:</strong> Que la eliminemos de nuestros registros o bases de datos cuando considere que la misma no esta siendo utilizada conforme a los principios, deberes y obligaciones previstas en la normativa.</li>
             <li><strong>Oposicion:</strong> Asi como oponerse al uso de sus datos personales para fines especificos.</li>
           </ul>
-          <p>En caso de cualquier duda o aclaracion que pudiera tener respecto al tratamiento de su informacion puede comunicarse al correo <a href="mailto:dpaz@rbaidon.com.mx">dpar@rbaidon.com.mx</a>.</p>
+          <p>En caso de cualquier duda o aclaracion que pudiera tener respecto al tratamiento de su informacion puede comunicarse al correo <a href="mailto:dpaz@rbaidon.com.mx">dpaz@rbaidon.com.mx</a>.</p>
 
           <h5 class="fw-semibold">Procedimiento para revocar su consentimiento al tratamiento de sus datos</h5>
           <p>Usted puede revocar el consentimiento que, en su caso, nos haya otorgado para el tratamiento de sus datos personales. Sin embargo, es importante tener en cuenta que NO en todos los casos podremos atender su solicitud o concluir el uso de forma inmediata, ya que es posible que, por alguna obligacion legal, requiramos seguir tratando sus datos personales. Asimismo, usted debera considerar que, para ciertos fines, la revocacion de su consentimiento implicara que no podamos seguir prestando el servicio que nos solicito o la conclusion de su relacion con nosotros.</p>
-          <p>Para hacer valida la revocacion del consentimiento, usted debera enviar un correo a <a href="mailto:dpaz@rbaidon.com.mx">dpar@rbaidon.com.mx</a> solicitando expresamente la revocacion de todos los datos personales.</p>
+          <p>Para hacer valida la revocacion del consentimiento, usted debera enviar un correo a <a href="mailto:dpaz@rbaidon.com.mx">dpaz@rbaidon.com.mx</a> solicitando expresamente la revocacion de todos los datos personales.</p>
 
           <h5 class="fw-semibold">Las opciones y medios para limitar el uso o divulgacion</h5>
           <p>de su informacion personal son:</p>
