@@ -53,7 +53,7 @@
             <p class="lead text-white-80 mb-4">Mesa de servicio que atiende reclamaciones, siniestros y solicitudes operativas sin perder de vista tus tiempos.</p>
             <div class="d-flex flex-wrap gap-3">
               <a class="btn btn-lg btn-light text-primary" href="#reclamaciones">Levantar solicitud</a>
-              <a class="btn btn-lg btn-outline-light" href="#contacto">Enviar mensaje</a>
+              <a class="btn btn-lg btn-outline-light" href="#reclamaciones">Enviar mensaje</a>
               <a class="btn btn-lg btn-outline-light" href="tel:<?php echo $phone; ?>"><i class="bi bi-telephone me-2"></i>Llamar ahora</a>
             </div>
             <div class="d-flex align-items-center gap-3 mt-4 text-white-80 small">
@@ -73,53 +73,9 @@
                 <li class="d-flex gap-2 align-items-start"><i class="bi bi-people"></i><span>Gestor asignado durante todo el caso.</span></li>
               </ul>
               <div class="d-flex gap-2">
-                <a class="btn btn-gradient flex-fill" href="#contacto">Enviar mensaje</a>
-                <a class="btn btn-outline-primary flex-fill" href="#faq">Ver preguntas</a>
+                <a class="btn btn-gradient flex-fill" href="#reclamaciones">Enviar mensaje</a>
+                <a class="btn btn-outline-primary flex-fill" href="#siniestros">Ver siniestros</a>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="acciones" class="py-5">
-      <div class="container">
-        <div class="text-center mb-4">
-          <div class="eyebrow text-primary">Elige que necesitas</div>
-          <h2 class="fw-semibold">Te guiamos paso a paso segun tu solicitud.</h2>
-          <p class="text-muted">Haz clic para ir directo a la seccion correcta.</p>
-        </div>
-        <div class="row g-4">
-          <div class="col-md-6 col-lg-3">
-            <div class="tile h-100">
-              <div class="icon-circle"><i class="bi bi-clipboard2-check"></i></div>
-              <h6 class="fw-semibold">Reclamaciones</h6>
-              <p class="text-muted small mb-3">Reporta cargos, deducibles u otras reclamaciones administrativas.</p>
-              <a class="link-primary fw-semibold small" href="#reclamaciones">Iniciar ahora</a>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="tile h-100">
-              <div class="icon-circle"><i class="bi bi-lightning-charge"></i></div>
-              <h6 class="fw-semibold">Siniestros</h6>
-              <p class="text-muted small mb-3">Activa tu poliza y recibe checklist para ajustadores.</p>
-              <a class="link-primary fw-semibold small" href="#siniestros">Reportar siniestro</a>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="tile h-100">
-              <div class="icon-circle"><i class="bi bi-file-earmark-text"></i></div>
-              <h6 class="fw-semibold">Constancias y certificados</h6>
-              <p class="text-muted small mb-3">Solicita COI, cartas de fianza o comprobantes de cobertura.</p>
-              <a class="link-primary fw-semibold small" href="#documentos">Solicitar documento</a>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="tile h-100">
-              <div class="icon-circle"><i class="bi bi-question-circle"></i></div>
-              <h6 class="fw-semibold">Preguntas frecuentes</h6>
-              <p class="text-muted small mb-3">Revisalo antes de levantar un folio o agenda una llamada.</p>
-              <a class="link-primary fw-semibold small" href="#faq">Ver respuestas</a>
             </div>
           </div>
         </div>
@@ -128,173 +84,241 @@
 
     <section id="reclamaciones" class="py-5 bg-soft">
       <div class="container">
-        <div class="row g-4 align-items-center">
-          <div class="col-lg-6">
-            <div class="eyebrow text-primary">Reclamaciones y aclaraciones</div>
-            <h3 class="fw-semibold mb-3">Dinos que paso y te asignamos un gestor en minutos.</h3>
-            <p class="text-muted mb-3">Ingresa la informacion clave y generamos un folio de seguimiento con tiempos comprometidos.</p>
-            <ul class="list-unstyled feature-list d-grid gap-2 small text-muted mb-4">
-              <li class="d-flex gap-2 align-items-start"><i class="bi bi-check-circle-fill"></i><span>Detalle del evento, fecha y numero de poliza.</span></li>
-              <li class="d-flex gap-2 align-items-start"><i class="bi bi-check-circle-fill"></i><span>Documentos de respaldo o tickets de cobro.</span></li>
-              <li class="d-flex gap-2 align-items-start"><i class="bi bi-check-circle-fill"></i><span>Prioridad y medio de contacto preferido.</span></li>
-            </ul>
-            <div class="d-flex gap-3 flex-wrap">
-              <a class="btn btn-gradient" href="#contacto">Enviar reclamacion</a>
-              <a class="btn btn-outline-primary" href="mailto:<?php echo $email; ?>">Compartir por correo</a>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="tile p-4 shadow-sm h-100">
-              <div class="d-flex align-items-center gap-3 mb-3">
-                <div class="icon-circle"><i class="bi bi-clipboard-check"></i></div>
-                <div>
-                  <h6 class="fw-semibold mb-0">Check list inmediato</h6>
-                  <small class="text-muted">Ten estos datos listos</small>
-                </div>
-              </div>
-              <div class="d-grid gap-3 small">
-                <div class="d-flex gap-2 align-items-start"><i class="bi bi-dot text-primary fs-3 lh-1"></i><span>Numero de poliza, aseguradora y vigencia.</span></div>
-                <div class="d-flex gap-2 align-items-start"><i class="bi bi-dot text-primary fs-3 lh-1"></i><span>Datos del asegurado o titular del contrato.</span></div>
-                <div class="d-flex gap-2 align-items-start"><i class="bi bi-dot text-primary fs-3 lh-1"></i><span>Fecha, hora, lugar y descripcion breve.</span></div>
-                <div class="d-flex gap-2 align-items-start"><i class="bi bi-dot text-primary fs-3 lh-1"></i><span>Evidencia (fotos, facturas, reportes medicos o policiales).</span></div>
-                <div class="d-flex gap-2 align-items-start"><i class="bi bi-dot text-primary fs-3 lh-1"></i><span>Contacto para notificaciones y autorizaciones.</span></div>
-              </div>
-            </div>
-          </div>
+        <div class="text-center mb-4">
+          <div class="eyebrow text-primary">Reclamaciones</div>
+          <h2 class="fw-semibold">Selecciona el tipo de reclamacion.</h2>
+          <p class="text-muted">Gestionamos vida y salud con seguimiento dedicado.</p>
         </div>
-      </div>
-    </section>
-
-    <section id="siniestros" class="py-5">
-      <div class="container">
-        <div class="row g-4 align-items-start">
-          <div class="col-lg-5">
-            <div class="eyebrow text-primary">Siniestros</div>
-            <h3 class="fw-semibold mb-3">Activamos ajustadores y entregables sin esperas.</h3>
-            <p class="text-muted mb-3">Nuestro equipo coordina con aseguradoras y ajustadores para asegurarte una ruta clara.</p>
-            <a class="btn btn-gradient" href="#contacto">Reportar siniestro</a>
-          </div>
-          <div class="col-lg-7">
-            <div class="row g-3">
-              <div class="col-sm-6">
-                <div class="tile h-100">
-                  <div class="icon-circle"><i class="bi bi-stopwatch"></i></div>
-                  <h6 class="fw-semibold mb-1">1. Confirmacion</h6>
-                  <p class="text-muted small mb-0">Generamos folio y te confirmamos ventana de respuesta.</p>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="tile h-100">
-                  <div class="icon-circle"><i class="bi bi-people"></i></div>
-                  <h6 class="fw-semibold mb-1">2. Asignacion</h6>
-                  <p class="text-muted small mb-0">Designamos gestor y ajustador segun la cobertura y ubicacion.</p>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="tile h-100">
-                  <div class="icon-circle"><i class="bi bi-clipboard-data"></i></div>
-                  <h6 class="fw-semibold mb-1">3. Documentacion</h6>
-                  <p class="text-muted small mb-0">Checklist de documentos y visitas en sitio cuando aplica.</p>
-                </div>
-              </div>
-              <div class="col-sm-6">
-                <div class="tile h-100">
-                  <div class="icon-circle"><i class="bi bi-flag"></i></div>
-                  <h6 class="fw-semibold mb-1">4. Cierre</h6>
-                  <p class="text-muted small mb-0">Seguimiento hasta el pago, constancias y conclusiones.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="documentos" class="py-5 bg-soft">
-      <div class="container">
-        <div class="row g-4 align-items-center">
-          <div class="col-lg-6">
-            <div class="eyebrow text-primary">Documentacion</div>
-            <h3 class="fw-semibold mb-3">Certificados, cartas y constancias sin friccion.</h3>
-            <p class="text-muted mb-3">Solicita comprobantes de cobertura, COI o cartas de fianza y te los enviamos listos para tus contrapartes.</p>
-            <div class="d-flex gap-3 flex-wrap">
-              <a class="btn btn-gradient" href="#contacto">Pedir documento</a>
-              <a class="btn btn-outline-primary" href="mailto:<?php echo $email; ?>">Enviar requisitos</a>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="tile p-4 shadow-sm h-100">
-              <h6 class="fw-semibold mb-3">Documentos mas solicitados</h6>
-              <div class="d-grid gap-2 small text-muted">
-                <div class="d-flex gap-2 align-items-start"><i class="bi bi-file-earmark-medical text-primary"></i><span>Certificados de seguro y cobertura activa.</span></div>
-                <div class="d-flex gap-2 align-items-start"><i class="bi bi-file-earmark-lock text-primary"></i><span>Cartas fianza y constancias para licitaciones.</span></div>
-                <div class="d-flex gap-2 align-items-start"><i class="bi bi-file-earmark-text text-primary"></i><span>Constancias de no siniestralidad.</span></div>
-                <div class="d-flex gap-2 align-items-start"><i class="bi bi-file-earmark-person text-primary"></i><span>Altas y bajas de asegurados.</span></div>
-              </div>
-              <hr>
-              <p class="small text-muted mb-0">Agrega fecha limite y formato requerido (PDF, Excel, editable) para agilizar la entrega.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="faq" class="py-5">
-      <div class="container">
         <div class="row g-4">
-          <div class="col-lg-5">
-            <div class="eyebrow text-primary">Preguntas frecuentes</div>
-            <h3 class="fw-semibold mb-3">Respuestas rapidas antes de levantar un folio.</h3>
-            <p class="text-muted mb-3">Si necesitas algo mas especifico, deja tu mensaje y te respondemos en minutos.</p>
-            <a class="btn btn-gradient" href="#contacto">Contactar ahora</a>
+          <div class="col-md-6">
+            <div class="tile h-100">
+              <div class="icon-circle"><i class="bi bi-heart-pulse"></i></div>
+              <h5 class="fw-semibold">Vida</h5>
+              <p class="text-muted">Formatos y requisitos para reclamaciones de vida.</p>
+              <div class="accordion small" id="vidaAccordion">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="vidaHeadingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#vidaCollapseOne" aria-expanded="true" aria-controls="vidaCollapseOne">
+                      Formatos basicos
+                    </button>
+                  </h2>
+                  <div id="vidaCollapseOne" class="accordion-collapse collapse show" aria-labelledby="vidaHeadingOne" data-bs-parent="#vidaAccordion">
+                    <div class="accordion-body text-muted">
+                      <ul class="list-unstyled mb-0">
+                        <li><a class="link-primary" href="https://firebasestorage.googleapis.com/v0/b/gnp-soycliente-pro.appspot.com/o/mis-tramites%2F-Kvj2XqfyvMiBcgjnLox%2FDeclaraci%C3%B3n%2Bde%2BFallecimiento%2B1%2Be%2Binstructivo%2Beditableok.pdf?alt=media&token=e4f15516-f355-4b6b-a488-d27307a3bb24">GNP - Formato de fallecimiento 1</a></li>
+                        <li><a class="link-primary" href="https://firebasestorage.googleapis.com/v0/b/gnp-soycliente-pro.appspot.com/o/mis-tramites%2F-Kvj2d5HJD8aCRqdg_PG%2FDeclaraci%C3%B3n%2Bde%2BFallecimiento%2B2%2Be%2BInstructivo%2Beditableok.pdf?alt=media&token=cde0f2de-b2e1-4789-91ba-c0981b195d29">GNP - Formato de fallecimiento 2</a></li>
+                        <li><a class="link-primary" href="https://firebasestorage.googleapis.com/v0/b/gnp-soycliente-pro.appspot.com/o/mis-tramites%2F-Kvj2zji0WPtyzHPCqPJ%2FFormato%2B%C3%9Anico%2Bde%2BIdentificaci%C3%B3n%2Bde%2BCliente_dic15ok.pdf?alt=media&token=28d215a4-cf80-4220-86dc-406fa35bd520">GNP - Identificacion al cliente</a></li>
+                        <li><a class="link-primary" href="https://firebasestorage.googleapis.com/v0/b/gnp-soycliente-pro.appspot.com/o/mis-tramites%2F-Kvj1mpYuzw2SCy-diLp%2FFormato%2B%C3%9Anico%2Bde%2BInformaci%C3%B3n%2BBancaria%2Bpara%2Bpago%2Bv%C3%ADa%2BTransferencia%2BElectr%C3%B3nica%2BMayo%2B3ok.pdf?alt=media&token=1e43d018-a1d0-4b89-9186-a975a662af8e">GNP - Informacion bancaria</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="vidaHeadingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#vidaCollapseTwo" aria-expanded="false" aria-controls="vidaCollapseTwo">
+                      Formatos por aseguradora
+                    </button>
+                  </h2>
+                  <div id="vidaCollapseTwo" class="accordion-collapse collapse" aria-labelledby="vidaHeadingTwo" data-bs-parent="#vidaAccordion">
+                    <div class="accordion-body text-muted">
+                      <ul class="list-unstyled mb-0">
+                        <li><a class="link-primary" href="https://www.gnp.com.mx/post-venta/contacto/masinfo/servicios-relacionados/formatos/formatos-masinfo#!/gnp/servicios-formatos">GNP</a></li>
+                        <li><a class="link-primary" href="https://axa.mx/documents/20247/361325/Formato-Reclamacion-de-siniestro-Persona-Fisica-30-ABRIL-2014-Vida.pdf">AXA</a></li>
+                        <li><a class="link-primary" href="https://www.mapfre.com.mx/seguros-mx/images/formato-reclamacion-siniestro-vida_tcm584-82285.pdf">MAPFRE</a></li>
+                        <li><a class="link-primary" href="http://www.segurosatlas.com.mx/Descargas.html">ATLAS - Descargas</a></li>
+                        <li><a class="link-primary" href="http://www.segurosatlas.com.mx/Documentos/VIDA_INDV/Formatos_y_Solicitudes/FORMULARIO%20MEDICO_%20FF-333.pdf">ATLAS - Formulario medico</a></li>
+                        <li><a class="link-primary" href="http://www.segurosatlas.com.mx/Documentos/VIDA_INDV/Formatos_y_Solicitudes/DECLARACION%20DE%20TESTIGOS%20FF-334.pdf">ATLAS - Declaracion de testigos</a></li>
+                        <li><a class="link-primary" href="http://www.segurosatlas.com.mx/Documentos/VIDA_INDV/Formatos_y_Solicitudes/SOLICITUD%20RECLAMACION%20DE%20BENEFICIARIOS%20FF-335.pdf">ATLAS - Solicitud de beneficiarios</a></li>
+                        <li><a class="link-primary" href="https://www.metlife.com.mx/soy-cliente/documentacion-y-solicitudes/">METLIFE</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="vidaHeadingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#vidaCollapseThree" aria-expanded="false" aria-controls="vidaCollapseThree">
+                      Documentos de identificacion
+                    </button>
+                  </h2>
+                  <div id="vidaCollapseThree" class="accordion-collapse collapse" aria-labelledby="vidaHeadingThree" data-bs-parent="#vidaAccordion">
+                    <div class="accordion-body text-muted">
+                      <p class="mb-1"><strong>Asegurado</strong></p>
+                      <ul class="list-unstyled mb-2">
+                        <li>Acta de defuncion (original)</li>
+                        <li>Acta de nacimiento (original)</li>
+                        <li>Certificado de defuncion (copia notariada MAPFRE)</li>
+                        <li>Copia de INE</li>
+                      </ul>
+                      <p class="mb-1"><strong>Beneficiario</strong></p>
+                      <ul class="list-unstyled mb-0">
+                        <li>Acta de nacimiento (original)</li>
+                        <li>Acta de matrimonio (original)</li>
+                        <li>Comprobante de domicilio</li>
+                        <li>Copia de INE</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="vidaHeadingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#vidaCollapseFour" aria-expanded="false" aria-controls="vidaCollapseFour">
+                      Casos especiales y certificado
+                    </button>
+                  </h2>
+                  <div id="vidaCollapseFour" class="accordion-collapse collapse" aria-labelledby="vidaHeadingFour" data-bs-parent="#vidaAccordion">
+                    <div class="accordion-body text-muted">
+                      <ul class="list-unstyled mb-2">
+                        <li>Vida grupo: recibos de nomina y alta/baja ante IMSS.</li>
+                        <li>Accidente con doble pago: expediente completo del ministerio publico.</li>
+                      </ul>
+                      <p class="mb-1"><strong>Certificado-consentimiento</strong></p>
+                      <ul class="list-unstyled mb-0">
+                        <li>Sin tachaduras y con letra de molde.</li>
+                        <li>Datos correctos de beneficiarios.</li>
+                        <li>Beneficiarios mayores de edad.</li>
+                        <li>Beneficiarios en linea directa (conyuge, padres, hijos).</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="vidaHeadingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#vidaCollapseFive" aria-expanded="false" aria-controls="vidaCollapseFive">
+                      Vida deudores
+                    </button>
+                  </h2>
+                  <div id="vidaCollapseFive" class="accordion-collapse collapse" aria-labelledby="vidaHeadingFive" data-bs-parent="#vidaAccordion">
+                    <div class="accordion-body text-muted">
+                      <p class="mb-1"><strong>Asegurado</strong></p>
+                      <ul class="list-unstyled mb-2">
+                        <li>Acta de nacimiento original.</li>
+                        <li>Acta de defuncion original.</li>
+                        <li>Copia de certificado de fallecimiento.</li>
+                        <li>Formato de fallecimiento.</li>
+                        <li>Ultima declaracion pagada.</li>
+                        <li>Contratos y avisos firmados.</li>
+                      </ul>
+                      <p class="mb-1"><strong>Beneficiario</strong></p>
+                      <ul class="list-unstyled mb-0">
+                        <li>Acta constitutiva de la empresa.</li>
+                        <li>Poder legal del representante.</li>
+                        <li>INE del representante legal.</li>
+                        <li>Estado de cuenta bancario (no mayor a 3 meses).</li>
+                        <li>Formato de informacion bancaria firmado.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="col-lg-7">
-            <div class="accordion" id="faqAccordion">
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="faq1">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1Body" aria-expanded="true" aria-controls="faq1Body">
-                    Como reporto un siniestro fuera de horario?
-                  </button>
-                </h2>
-                <div id="faq1Body" class="accordion-collapse collapse show" aria-labelledby="faq1" data-bs-parent="#faqAccordion">
-                  <div class="accordion-body text-muted small">
-                    Llamanos al <?php echo $phone; ?> y envia evidencia basica a <?php echo $email; ?>. Registramos el caso, activamos al ajustador y te confirmamos la ventana de atencion.
+          <div class="col-md-6">
+            <div class="tile h-100">
+              <div class="icon-circle"><i class="bi bi-clipboard2-heart"></i></div>
+              <h5 class="fw-semibold">Salud</h5>
+              <p class="text-muted">Accidentes personales, gastos medicos mayores y menores.</p>
+              <div class="accordion small" id="saludAccordion">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="saludHeadingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#saludCollapseOne" aria-expanded="true" aria-controls="saludCollapseOne">
+                      Medicos y hospitales en red
+                    </button>
+                  </h2>
+                  <div id="saludCollapseOne" class="accordion-collapse collapse show" aria-labelledby="saludHeadingOne" data-bs-parent="#saludAccordion">
+                    <div class="accordion-body text-muted">
+                      <ul class="list-unstyled mb-0">
+                        <li><a class="link-primary" href="hospitales-y-medicos-gnp-2018.pdf">Manual de usuario GNP</a></li>
+                        <li><a class="link-primary" href="https://www.gnp.com.mx/post-venta/contacto/masinfo/servicios-relacionados/directorios/medicos#!/gnp/directorios">Directorio GNP</a></li>
+                        <li><a class="link-primary" href="hospitales-y-medicos-seguros-atlas-2018.pdf">Manual de usuario ATLAS</a></li>
+                        <li><a class="link-primary" href="http://www.segurosatlas.com.mx/Descargas.html">ATLAS - Descargas</a></li>
+                        <li><a class="link-primary" href="https://axa.mx/web/servicios-axa/prestadores-de-servicios">AXA - Prestadores</a></li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="faq2">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2Body" aria-expanded="false" aria-controls="faq2Body">
-                    Que pasa despues de enviar una reclamacion?
-                  </button>
-                </h2>
-                <div id="faq2Body" class="accordion-collapse collapse" aria-labelledby="faq2" data-bs-parent="#faqAccordion">
-                  <div class="accordion-body text-muted small">
-                    Recibes tu folio y un gestor dedicado. Compartimos checklist, tiempos de cada fase y el canal directo para actualizaciones.
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="saludHeadingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#saludCollapseTwo" aria-expanded="false" aria-controls="saludCollapseTwo">
+                      Formatos de reclamacion
+                    </button>
+                  </h2>
+                  <div id="saludCollapseTwo" class="accordion-collapse collapse" aria-labelledby="saludHeadingTwo" data-bs-parent="#saludAccordion">
+                    <div class="accordion-body text-muted">
+                      <ul class="list-unstyled mb-0">
+                        <li><a class="link-primary" href="https://firebasestorage.googleapis.com/v0/b/gnp-soycliente-pro.appspot.com/o/mis-tramites%2F-Kvj1HY9Tb-FgZrgMIjO%2FInforme%2Bm%C3%A9dicoAviso%2Bde%2Baccidente%2By%2Bo%2BenfermedadGMMok.pdf?alt=media&token=a09a4186-7d62-4687-a217-cd8d20bc34e5">GNP - Informe medico y aviso</a></li>
+                        <li><a class="link-primary" href="https://firebasestorage.googleapis.com/v0/b/gnp-soycliente-pro.appspot.com/o/mis-tramites%2F-Kvj-qhnUFqDZVpKgiNz%2FReembolso%2Bde%2BAccidente%2By-o%2Benfermedad%2B%2B09%2B2017.pdf?alt=media&token=91f279ad-85bb-444e-8bfc-5e3f6b2581fa">GNP - Formato de reembolso</a></li>
+                        <li><a class="link-primary" href="https://firebasestorage.googleapis.com/v0/b/gnp-soycliente-pro.appspot.com/o/mis-tramites%2F-Kvj17kSB-WjaL9Qh7Bq%2FFormato%2B%C3%9Anico%2Bde%2BInformaci%C3%B3n%2BBancaria%2Bpara%2Bpago%2Bv%C3%ADa%2BTransferencia%2BElectr%C3%B3nica%2BMayo%2B3ok.pdf?alt=media&token=5d0591f0-1013-473b-b747-f0e767b1c120">GNP - Informacion bancaria</a></li>
+                        <li><a class="link-primary" href="http://www.segurosatlas.com.mx/Documentos/GASTOS_MEDICOS/Formatos_y_Solicitudes/INFORME%20MEDICO%20FF-284-PDF.pdf">ATLAS - Informe medico</a></li>
+                        <li><a class="link-primary" href="http://www.segurosatlas.com.mx/Documentos/GASTOS_MEDICOS/Formatos_y_Solicitudes/CARTA%20REMESA%20%20FF-023-PDF_.pdf">ATLAS - Carta remesa</a></li>
+                        <li><a class="link-primary" href="http://www.segurosatlas.com.mx/Documentos/GASTOS_MEDICOS/Formatos_y_Solicitudes/FORMATO%20DE%20AVISO%20DE%20ACCIDENTE%20O%20ENFERMEDAD%20FF-285-PDF.pdf">ATLAS - Aviso de accidente</a></li>
+                        <li><a class="link-primary" href="http://www.segurosatlas.com.mx/Documentos/ACCIDENTES/Formatos_y_Solicitudes/FORMATO%20UNICO%20DE%20TRASFERENCIA%20ELECTRONICA%20FF-349-%20PDF.pdf">ATLAS - Informacion bancaria</a></li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="faq3">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3Body" aria-expanded="false" aria-controls="faq3Body">
-                    En cuanto tiempo entregan certificados o cartas?
-                  </button>
-                </h2>
-                <div id="faq3Body" class="accordion-collapse collapse" aria-labelledby="faq3" data-bs-parent="#faqAccordion">
-                  <div class="accordion-body text-muted small">
-                    Para constancias estandar, el mismo dia; cartas fianza y COI dependen de las validaciones con aseguradoras, pero confirmamos fecha de entrega al recibir la solicitud.
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="saludHeadingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#saludCollapseThree" aria-expanded="false" aria-controls="saludCollapseThree">
+                      Que cubre la maternidad
+                    </button>
+                  </h2>
+                  <div id="saludCollapseThree" class="accordion-collapse collapse" aria-labelledby="saludHeadingThree" data-bs-parent="#saludAccordion">
+                    <div class="accordion-body text-muted">
+                      <ul class="list-unstyled mb-0">
+                        <li>Cubre el evento del parto (no prenatal ni postnatal).</li>
+                        <li>Incluye hospital, ginecologo, anestesiologo y ayudante.</li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="faq4">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4Body" aria-expanded="false" aria-controls="faq4Body">
-                    Puedo dar de alta o baja asegurados desde aqui?
-                  </button>
-                </h2>
-                <div id="faq4Body" class="accordion-collapse collapse" aria-labelledby="faq4" data-bs-parent="#faqAccordion">
-                  <div class="accordion-body text-muted small">
-                    Si, comparte el nombre, CURP y fecha de efecto. Confirmamos cambios y enviamos constancia actualizada en tu correo.
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="saludHeadingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#saludCollapseFour" aria-expanded="false" aria-controls="saludCollapseFour">
+                      Que hacer en caso de reclamacion
+                    </button>
+                  </h2>
+                  <div id="saludCollapseFour" class="accordion-collapse collapse" aria-labelledby="saludHeadingFour" data-bs-parent="#saludAccordion">
+                    <div class="accordion-body text-muted">
+                      <ul class="list-unstyled mb-0">
+                        <li><a class="link-primary" href="https://www.rbaidon.com.mx/img/38.jpg">Reembolso</a></li>
+                        <li><a class="link-primary" href="https://www.rbaidon.com.mx/img/39.jpg">Programacion de cirugia</a></li>
+                        <li><a class="link-primary" href="https://www.rbaidon.com.mx/img/40.jpg">Reporte hospitalario</a></li>
+                        <li><a class="link-primary" href="https://www.rbaidon.com.mx/img/41.jpg">Urgencia accidentes personales</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="saludHeadingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#saludCollapseFive" aria-expanded="false" aria-controls="saludCollapseFive">
+                      Sabias que...
+                    </button>
+                  </h2>
+                  <div id="saludCollapseFive" class="accordion-collapse collapse" aria-labelledby="saludHeadingFive" data-bs-parent="#saludAccordion">
+                    <div class="accordion-body text-muted">
+                      <ul class="list-unstyled mb-0">
+                        <li>Si el beneficiario no es linea directa, puede aplicar retencion ISR 20%.</li>
+                        <li>Si asignas 100% a un beneficiario, se recomienda un sustituto.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="saludHeadingSix">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#saludCollapseSix" aria-expanded="false" aria-controls="saludCollapseSix">
+                      Contacto R. Baidon
+                    </button>
+                  </h2>
+                  <div id="saludCollapseSix" class="accordion-collapse collapse" aria-labelledby="saludHeadingSix" data-bs-parent="#saludAccordion">
+                    <div class="accordion-body text-muted">
+                      <p class="mb-0">
+                        Lic. Patricia Hernandez Figueroa<br>
+                        Reclamaciones beneficios<br>
+                        Tel. (644) 410 86 00 Ext. 116<br>
+                        Cel. (644) 134 14 15<br>
+                        <a class="link-primary" href="mailto:reclamaciones@rbaidon.com.mx">reclamaciones@rbaidon.com.mx</a>
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -304,56 +328,362 @@
       </div>
     </section>
 
-    <section id="contacto" class="py-5 bg-soft">
+        <section id="siniestros" class="py-5">
       <div class="container">
+        <div class="text-center mb-4">
+          <div class="eyebrow text-primary">Siniestros</div>
+          <h2 class="fw-semibold">Guias por tipo de siniestro.</h2>
+          <p class="text-muted">Selecciona la categoria para ver pasos, requisitos y contactos.</p>
+        </div>
         <div class="row g-4">
-          <div class="col-lg-5">
-            <div class="eyebrow text-primary">Contactanos</div>
-            <h4 class="fw-semibold">Mesa de servicio lista para ayudarte.</h4>
-            <p class="text-muted mb-3">Cuentanos tu caso y te respondemos con un folio y gestor asignado.</p>
-            <div class="d-flex flex-column gap-3">
-              <div class="d-flex gap-3 align-items-center"><i class="bi bi-telephone-forward text-primary fs-4"></i><span><?php echo $phone; ?></span></div>
-              <div class="d-flex gap-3 align-items-center"><i class="bi bi-envelope-open text-primary fs-4"></i><span><?php echo $email; ?></span></div>
-              <div class="d-flex gap-3 align-items-center"><i class="bi bi-clock-history text-primary fs-4"></i><span>Atencion prioritaria en menos de 30 minutos</span></div>
+          <div class="col-md-6">
+            <div class="tile h-100">
+              <div class="icon-circle"><i class="bi bi-car-front"></i></div>
+              <h5 class="fw-semibold">Autos</h5>
+              <p class="text-muted">Guia rapida y contactos de apoyo.</p>
+              <div class="accordion small" id="autosAccordion">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="autosHeadingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#autosCollapseOne" aria-expanded="true" aria-controls="autosCollapseOne">
+                      Pasos inmediatos
+                    </button>
+                  </h2>
+                  <div id="autosCollapseOne" class="accordion-collapse collapse show" aria-labelledby="autosHeadingOne" data-bs-parent="#autosAccordion">
+                    <div class="accordion-body text-muted">
+                      <h6 class="fw-semibold">Colision, volcadura, inundaciones, rotura de cristales e incendio</h6>
+                      <ul class="list-unstyled mb-0">
+                        <li>- Mantenga la calma.</li>
+                        <li>- Si hay lesionados, solicite servicios de emergencia.</li>
+                        <li>- Si no obstruye la circulacion, permanezca en el lugar.</li>
+                        <li>- Reporte el accidente con su aseguradora.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="autosHeadingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#autosCollapseTwo" aria-expanded="false" aria-controls="autosCollapseTwo">
+                      Reporte a cabina y asistencia
+                    </button>
+                  </h2>
+                  <div id="autosCollapseTwo" class="accordion-collapse collapse" aria-labelledby="autosHeadingTwo" data-bs-parent="#autosAccordion">
+                    <div class="accordion-body text-muted">
+                      <p class="mb-1"><strong>Directorio de companias</strong></p>
+                      <ul class="list-unstyled mb-3">
+                        <li>Qualitas - 01 800 288 67 00</li>
+                        <li>CHUBB Seguros - 01 800 834 34 00</li>
+                        <li>GNP - 01 800 400 9000</li>
+                        <li>Seguros ATLAS - 01 800 849 39 17</li>
+                        <li>AXA Seguros - 01 800 900 12 92</li>
+                      </ul>
+                      <p class="mb-1"><strong>Necesitas para el reporte</strong></p>
+                      <ul class="list-unstyled mb-3">
+                        <li>- Numero de poliza e inciso.</li>
+                        <li>- Nombre del asegurado y del conductor.</li>
+                        <li>- Nombre de quien reporta y telefono de contacto.</li>
+                        <li>- Datos del vehiculo (marca, tipo, color, placas, serie).</li>
+                        <li>- Lugar del accidente y referencias.</li>
+                      </ul>
+                      <p class="mb-1"><strong>Recomendaciones</strong></p>
+                      <ul class="list-unstyled mb-3">
+                        <li>- No abandonar a las victimas salvo riesgo de vida.</li>
+                        <li>- No hacer acuerdos de pago.</li>
+                        <li>- No abandonar el vehiculo despues del accidente.</li>
+                      </ul>
+                      <p class="mb-1"><strong>Asistencia vial</strong></p>
+                      <ul class="list-unstyled mb-0">
+                        <li>- Identificar tipo de asistencia: grua, gasolina, paso de corriente.</li>
+                        <li>- Flotillas: 2 asistencias viales por vigencia anual.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="autosHeadingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#autosCollapseThree" aria-expanded="false" aria-controls="autosCollapseThree">
+                      Sabias que y robo
+                    </button>
+                  </h2>
+                  <div id="autosCollapseThree" class="accordion-collapse collapse" aria-labelledby="autosHeadingThree" data-bs-parent="#autosAccordion">
+                    <div class="accordion-body text-muted">
+                      <a class="link-primary fw-semibold d-inline-block mb-3" href="https://www.rbaidon.com.mx/guia-siniestros-autos.pdf">Guia que hacer en caso de siniestro</a>
+                      <p class="mb-1"><strong>Factura</strong></p>
+                      <p>Se requiere factura de origen (o titulo/pedimento) y endosos previos para indemnizacion.</p>
+                      <p class="mb-1"><strong>Reparacion</strong></p>
+                      <p>Tiempo promedio de 7 a 45 dias habiles.</p>
+                      <p class="mb-1"><strong>Auto sustituto</strong></p>
+                      <p>Cobertura adicional para renta en caso de perdida total o robo.</p>
+                      <p class="mb-1"><strong>Perdida total</strong></p>
+                      <p>Se considera cuando el dano excede 65% del valor, segun poliza.</p>
+                      <p class="mb-1"><strong>Atencion en agencia</strong></p>
+                      <p>Solo unidades con antiguedad maxima de 2 anos.</p>
+                      <h6 class="fw-semibold mt-3">Que hacer en caso de robo</h6>
+                      <p>Denuncia ante Ministerio Publico, llama a tu aseguradora y notifica a R. Baidon.</p>
+                      <p class="mb-1"><strong>De la factura</strong></p>
+                      <ul class="list-unstyled mb-3">
+                        <li>- Marca, tipo y modelo.</li>
+                        <li>- Numero de motor y serie.</li>
+                        <li>- Numero de registro federal (si aplica).</li>
+                        <li>- Placas y color.</li>
+                      </ul>
+                      <p class="mb-1"><strong>Informacion adicional</strong></p>
+                      <ul class="list-unstyled mb-0">
+                        <li>- Forma en que ocurrio el robo.</li>
+                        <li>- Documentacion y pertenencias en el vehiculo.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="autosHeadingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#autosCollapseFour" aria-expanded="false" aria-controls="autosCollapseFour">
+                      Contacto R. Baidon
+                    </button>
+                  </h2>
+                  <div id="autosCollapseFour" class="accordion-collapse collapse" aria-labelledby="autosHeadingFour" data-bs-parent="#autosAccordion">
+                    <div class="accordion-body text-muted">
+                      <p class="mb-0">
+                        Ing. Manuel Hernandez Dominguez<br>
+                        Siniestros autos<br>
+                        Tel. (644) 410 86 00 Ext. 143<br>
+                        Cel. (644) 222 29 88<br>
+                        <a class="link-primary" href="mailto:siniestrosautos@rbaidon.com.mx">siniestrosautos@rbaidon.com.mx</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col-lg-7">
-            <div class="tile p-4 shadow-sm">
-              <form method="post" action="procesar-contacto.php" class="row g-3">
-                <div class="col-md-6">
-                  <label class="form-label">Nombre</label>
-                  <input type="text" name="nombre" class="form-control" placeholder="Tu nombre" required>
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label">Correo</label>
-                  <input type="email" name="correo" class="form-control" placeholder="correo@ejemplo.com" required>
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label">Telefono</label>
-                  <input type="tel" name="telefono" class="form-control" placeholder="55 0000 0000" required>
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label">Tipo de solicitud</label>
-                  <select name="servicio" class="form-select">
-                    <option>Reclamacion</option>
-                    <option>Siniestro</option>
-                    <option>Documento o constancia</option>
-                    <option>Alta o baja de asegurado</option>
-                    <option>Otra</option>
-                  </select>
-                </div>
-                <div class="col-12">
-                  <label class="form-label">Mensaje</label>
-                  <textarea name="mensaje" rows="4" class="form-control" placeholder="Describe brevemente tu caso" required></textarea>
-                </div>
-                <div class="col-12 d-flex justify-content-between align-items-center">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="1" id="aviso" required>
-                    <label class="form-check-label" for="aviso">Acepto el <a class="link-primary" href="aviso-privacidad.php">Aviso de Privacidad</a></label>
+          <div class="col-md-6">
+            <div class="tile h-100">
+              <div class="icon-circle"><i class="bi bi-building"></i></div>
+              <h5 class="fw-semibold">Danos</h5>
+              <p class="text-muted">Pasos, directorio y proceso de ajuste.</p>
+              <div class="accordion small" id="danosAccordion">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="danosHeadingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#danosCollapseOne" aria-expanded="true" aria-controls="danosCollapseOne">
+                      Que hacer en caso de siniestro
+                    </button>
+                  </h2>
+                  <div id="danosCollapseOne" class="accordion-collapse collapse show" aria-labelledby="danosHeadingOne" data-bs-parent="#danosAccordion">
+                    <div class="accordion-body text-muted">
+                      <ul class="list-unstyled mb-3">
+                        <li>- Mantenga la calma.</li>
+                        <li>- Si hay lesionados, solicite servicios de emergencia.</li>
+                        <li>- Reporte a la aseguradora e informe a R. Baidon.</li>
+                        <li>- Tome fotografias del siniestro.</li>
+                        <li>- Espere al ajustador para iniciar el proceso.</li>
+                      </ul>
+                      <p class="mb-1"><strong>Casos especiales</strong></p>
+                      <ul class="list-unstyled mb-0">
+                        <li>- Incendio: llamar a bomberos.</li>
+                        <li>- Robo: interponer denuncia.</li>
+                        <li>- Transporte de carga: salvaguardar el producto.</li>
+                      </ul>
+                    </div>
                   </div>
-                  <button type="submit" class="btn btn-gradient">Enviar</button>
                 </div>
-              </form>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="danosHeadingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#danosCollapseTwo" aria-expanded="false" aria-controls="danosCollapseTwo">
+                      Reporte y directorio
+                    </button>
+                  </h2>
+                  <div id="danosCollapseTwo" class="accordion-collapse collapse" aria-labelledby="danosHeadingTwo" data-bs-parent="#danosAccordion">
+                    <div class="accordion-body text-muted">
+                      <p class="mb-1"><strong>Para reportar el siniestro</strong></p>
+                      <ul class="list-unstyled mb-3">
+                        <li>- Numero de poliza.</li>
+                        <li>- Fecha y hora del siniestro.</li>
+                        <li>- Domicilio de la ubicacion afectada o lugar del accidente.</li>
+                        <li>- Nombre y telefono de contacto.</li>
+                        <li>- Causa del siniestro.</li>
+                      </ul>
+                      <p class="mb-1"><strong>Directorio por companias</strong></p>
+                      <ul class="list-unstyled mb-0">
+                        <li>MAPFRE Mexico - 01 800 2021212</li>
+                        <li>GNP - 01 800 400 9000 (1,5)</li>
+                        <li>Chubb Seguros - 01 800 834 34 00</li>
+                        <li>Seguros ATLAS - 01 800 849 39 17</li>
+                        <li>AXA Seguros - 01 800 900 12 92</li>
+                        <li>AIG Mexico - (01) 55 5488-4700</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="danosHeadingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#danosCollapseThree" aria-expanded="false" aria-controls="danosCollapseThree">
+                      Puntos de interes y proceso de ajuste
+                    </button>
+                  </h2>
+                  <div id="danosCollapseThree" class="accordion-collapse collapse" aria-labelledby="danosHeadingThree" data-bs-parent="#danosAccordion">
+                    <div class="accordion-body text-muted">
+                      <p class="mb-1"><strong>Puntos de interes y ayuda</strong></p>
+                      <ul class="list-unstyled mb-3">
+                        <li>- Contar con factura para acreditar propiedad.</li>
+                        <li>- Reportar en las primeras 24 horas.</li>
+                        <li>- Avaluo del inmueble si aplica.</li>
+                        <li>- Planos con caracteristicas constructivas.</li>
+                        <li>- Relacion de activos en caso de danos a contenidos.</li>
+                        <li>- Fotografias en USB y respaldo contable.</li>
+                        <li>- Contar con inventarios.</li>
+                      </ul>
+                      <p class="mb-1"><strong>Proceso de ajuste</strong></p>
+                      <ul class="list-unstyled mb-0">
+                        <li>- Ajustador revisa documentos y envia informe.</li>
+                        <li>- Aseguradora autoriza convenio.</li>
+                        <li>- Ajustador envia convenio y finiquito para firma.</li>
+                        <li>- Se revisan diferencias y se aclaran.</li>
+                        <li>- Autorizacion final con aseguradora.</li>
+                        <li>- Firma de documentos y tramite de pago.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="danosHeadingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#danosCollapseFour" aria-expanded="false" aria-controls="danosCollapseFour">
+                      Contacto R. Baidon
+                    </button>
+                  </h2>
+                  <div id="danosCollapseFour" class="accordion-collapse collapse" aria-labelledby="danosHeadingFour" data-bs-parent="#danosAccordion">
+                    <div class="accordion-body text-muted">
+                      <p class="mb-0">
+                        Ma. De Jesus Ruesga Gonzalez<br>
+                        Siniestros danos<br>
+                        Tel. (644) 410 86 00 Ext. 121<br>
+                        Cel. (644) 196 09 06<br>
+                        <a class="link-primary" href="mailto:mariajesus@rbaidon.com.mx">mariajesus@rbaidon.com.mx</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="tile h-100">
+              <div class="icon-circle"><i class="bi bi-heart-pulse"></i></div>
+              <h5 class="fw-semibold">Vida</h5>
+              <p class="text-muted">Documentacion requerida para iniciar el proceso.</p>
+              <div class="accordion small" id="vidaSiniestrosAccordion">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="vidaSiniestrosHeadingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#vidaSiniestrosCollapseOne" aria-expanded="true" aria-controls="vidaSiniestrosCollapseOne">
+                      Documentos comunes
+                    </button>
+                  </h2>
+                  <div id="vidaSiniestrosCollapseOne" class="accordion-collapse collapse show" aria-labelledby="vidaSiniestrosHeadingOne" data-bs-parent="#vidaSiniestrosAccordion">
+                    <div class="accordion-body text-muted">
+                      <p>Cuando ocurre un siniestro en vida, el beneficiario debe contactar a nuestros asesores para integrar la documentacion requerida por la aseguradora.</p>
+                      <ul class="list-unstyled mb-0">
+                        <li>- Formato de reclamacion (proporcionado por R. Baidon).</li>
+                        <li>- Consentimiento o designacion de beneficiarios.</li>
+                        <li>- Ultimo recibo de prima pagada.</li>
+                        <li>- Acta o certificado de defuncion.</li>
+                        <li>- Acta de nacimiento, pasaporte o carta de naturalizacion.</li>
+                        <li>- En muerte no natural: copia de averiguacion previa.</li>
+                      </ul>
+                      <p class="mt-3 mb-0">Mantenos informados de cualquier retraso para brindarte apoyo.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="tile h-100">
+              <div class="icon-circle"><i class="bi bi-hospital"></i></div>
+              <h5 class="fw-semibold">Salud</h5>
+              <p class="text-muted">Urgencias, cirugia y reembolsos.</p>
+              <div class="accordion small" id="saludSiniestrosAccordion">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="saludSiniestrosHeadingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#saludSiniestrosCollapseOne" aria-expanded="true" aria-controls="saludSiniestrosCollapseOne">
+                      Reporte hospitalario o urgencia medica
+                    </button>
+                  </h2>
+                  <div id="saludSiniestrosCollapseOne" class="accordion-collapse collapse show" aria-labelledby="saludSiniestrosHeadingOne" data-bs-parent="#saludSiniestrosAccordion">
+                    <div class="accordion-body text-muted">
+                      <ul class="list-unstyled mb-0">
+                        <li>- Acude al hospital e identificate como asegurado.</li>
+                        <li>- Si hay convenio, el hospital tramita la reclamacion.</li>
+                        <li>- Sin convenio, opera por reembolso.</li>
+                        <li>- Reporta a R. Baidon para apoyo.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="saludSiniestrosHeadingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#saludSiniestrosCollapseTwo" aria-expanded="false" aria-controls="saludSiniestrosCollapseTwo">
+                      Programacion de cirugia
+                    </button>
+                  </h2>
+                  <div id="saludSiniestrosCollapseTwo" class="accordion-collapse collapse" aria-labelledby="saludSiniestrosHeadingTwo" data-bs-parent="#saludSiniestrosAccordion">
+                    <div class="accordion-body text-muted">
+                      <ul class="list-unstyled mb-0">
+                        <li>- Solicita informe medico y envialo a R. Baidon.</li>
+                        <li>- Confirma recepcion con tu asesor.</li>
+                        <li>- Solicita autorizacion con 10 dias de anticipacion.</li>
+                        <li>- R. Baidon gestiona la autorizacion con la aseguradora.</li>
+                        <li>- Se da seguimiento hasta la fecha de cirugia.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="saludSiniestrosHeadingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#saludSiniestrosCollapseThree" aria-expanded="false" aria-controls="saludSiniestrosCollapseThree">
+                      Reembolso
+                    </button>
+                  </h2>
+                  <div id="saludSiniestrosCollapseThree" class="accordion-collapse collapse" aria-labelledby="saludSiniestrosHeadingThree" data-bs-parent="#saludSiniestrosAccordion">
+                    <div class="accordion-body text-muted">
+                      <ul class="list-unstyled mb-0">
+                        <li>- Presenta facturas para tramitar reembolso.</li>
+                        <li>- Facturas a nombre del asegurado (o titular si es menor).</li>
+                        <li>- Para estudios: orden medica, resultados y factura.</li>
+                        <li>- Se da seguimiento hasta entrega del cheque.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 offset-md-3">
+            <div class="tile h-100">
+              <div class="icon-circle"><i class="bi bi-flower3"></i></div>
+              <h5 class="fw-semibold">Agricola</h5>
+              <p class="text-muted">Datos para reporte y seguimiento.</p>
+              <div class="accordion small" id="agricolaAccordion">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="agricolaHeadingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#agricolaCollapseOne" aria-expanded="true" aria-controls="agricolaCollapseOne">
+                      Datos necesarios
+                    </button>
+                  </h2>
+                  <div id="agricolaCollapseOne" class="accordion-collapse collapse show" aria-labelledby="agricolaHeadingOne" data-bs-parent="#agricolaAccordion">
+                    <div class="accordion-body text-muted">
+                      <p>Reporte el siniestro a la compania de seguros. El ajustador informara los pasos a seguir.</p>
+                      <ul class="list-unstyled mb-3">
+                        <li>- Nombre del contratante o asegurado.</li>
+                        <li>- Numero de poliza.</li>
+                        <li>- Ubicacion del predio danado.</li>
+                        <li>- Nombre, direccion y telefono de contacto.</li>
+                        <li>- Fecha y hora del siniestro.</li>
+                        <li>- Causas del siniestro.</li>
+                        <li>- Bienes afectados.</li>
+                      </ul>
+                      <p class="mb-0">Informe a R. Baidon para apoyo en integracion y pago del siniestro.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -387,7 +717,6 @@
           <ul class="list-unstyled footer-links">
             <li><a href="#reclamaciones">Reclamaciones</a></li>
             <li><a href="#siniestros">Siniestros</a></li>
-            <li><a href="#faq">Preguntas Frecuentes</a></li>
           </ul>
         </div>
         <div class="col-6 col-md-4 col-lg-2">
@@ -416,3 +745,4 @@
   <script src="assets/js/main.js?v=4"></script>
 </body>
 </html>
+

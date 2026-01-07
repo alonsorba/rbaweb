@@ -1,4 +1,4 @@
-﻿<?php
+<?php
   $siteTitle = 'RBA Seguros y Fianzas';
   $phone = '+52 55 1234 5678';
   $email = 'contacto@rbaseguros.mx';
@@ -64,8 +64,8 @@
             <img src="assets/img/02.jpg" class="d-block w-100" alt="Asegurando acuerdos de negocio">
             <div class="carousel-caption">
               <div class="eyebrow text-white-80">Servicio boutique</div>
-              <h2 class="fw-semibold mb-2">Acompañamos cada decision de cobertura.</h2>
-              <p class="mb-0 text-white-80">Planes claros, sin letras pequeñas y listos para tus operaciones.</p>
+              <h2 class="fw-semibold mb-2">Acompa¤amos cada decision de cobertura.</h2>
+              <p class="mb-0 text-white-80">Planes claros, sin letras peque¤as y listos para tus operaciones.</p>
             </div>
           </div>
           <div class="carousel-item">
@@ -93,7 +93,7 @@
         <div class="row align-items-center mb-4">
           <div class="col-lg-8">
             <div class="eyebrow text-primary">Portafolio</div>
-            <h2 class="fw-semibold">Coberturas diseñadas para empresas y familias.</h2>
+            <h2 class="fw-semibold">Coberturas dise¤adas para empresas y familias.</h2>
             <p class="text-muted lead">Simplificamos la contratacion y administracion de seguros para que tu operacion siga sin fricciones.</p>
           </div>
           <div class="col-lg-4 text-lg-end">
@@ -127,7 +127,7 @@
                 <i class="bi bi-shield-fill-check"></i>
               </div>
               <h5 class="fw-semibold">Vida y Ahorro</h5>
-              <p class="text-muted">Soluciones de prevision, ahorro y retiro con acompañamiento humano y transparente.</p>
+              <p class="text-muted">Soluciones de prevision, ahorro y retiro con acompa¤amiento humano y transparente.</p>
               <a class="link-primary fw-semibold" href="#contacto">Conocer planes</a>
             </div>
           </div>
@@ -157,7 +157,7 @@
                 <i class="bi bi-lightning-charge"></i>
               </div>
               <h5 class="fw-semibold">Respuesta a Siniestros</h5>
-              <p class="text-muted">Acompañamiento inmediato, coordinacion con ajustadores y gestion hasta el pago.</p>
+              <p class="text-muted">Acompa¤amiento inmediato, coordinacion con ajustadores y gestion hasta el pago.</p>
               <a class="link-primary fw-semibold" href="#contacto">Reportar ahora</a>
             </div>
           </div>
@@ -232,7 +232,7 @@
               <li class="d-flex gap-3 align-items-start">
                 <div class="check-circle"><i class="bi bi-check-lg"></i></div>
                 <div>
-                  <h6 class="mb-1 fw-semibold">Diseño y tecnologia</h6>
+                  <h6 class="mb-1 fw-semibold">Dise¤o y tecnologia</h6>
                   <p class="mb-0 text-muted">Paneles, recordatorios y reportes listos para integrarse a tu ERP o CRM.</p>
                 </div>
               </li>
@@ -247,7 +247,7 @@
                 <div class="check-circle"><i class="bi bi-check-lg"></i></div>
                 <div>
                   <h6 class="mb-1 fw-semibold">Respuestas claras</h6>
-                  <p class="mb-0 text-muted">Sin letras pequeñas: indicadores de riesgo y cobertura en dashboards simples.</p>
+                  <p class="mb-0 text-muted">Sin letras peque¤as: indicadores de riesgo y cobertura en dashboards simples.</p>
                 </div>
               </li>
             </ul>

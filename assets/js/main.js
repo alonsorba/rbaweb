@@ -83,4 +83,27 @@ document.addEventListener('DOMContentLoaded', () => {
       setInterval(next, 5000);
     }
   }
+
+  if (!window.bootstrap || !bootstrap.Collapse) {
+    document.querySelectorAll('[data-bs-toggle="collapse"]').forEach(button => {
+      button.addEventListener('click', () => {
+        const targetSelector = button.getAttribute('data-bs-target');
+        if (!targetSelector) return;
+        const target = document.querySelector(targetSelector);
+        if (!target) return;
+        const parentSelector = target.getAttribute('data-bs-parent');
+        if (parentSelector) {
+          const parent = document.querySelector(parentSelector);
+          parent?.querySelectorAll('.collapse.show').forEach(item => {
+            if (item !== target) {
+              item.classList.remove('show');
+            }
+          });
+        }
+        const willOpen = !target.classList.contains('show');
+        target.classList.toggle('show');
+        button.setAttribute('aria-expanded', String(willOpen));
+      });
+    });
+  }
 });
