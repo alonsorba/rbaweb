@@ -83,7 +83,22 @@ document.addEventListener('DOMContentLoaded', () => {
       setInterval(next, 5000);
     }
   }
-
+  const heroSwiperEl = document.querySelector('.hero-swiper');
+  if (heroSwiperEl && window.Swiper) {
+    new Swiper(heroSwiperEl, {
+      loop: true,
+      speed: 800,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+      },
+      grabCursor: true,
+      pagination: {
+        el: '.hero-swiper .swiper-pagination',
+        clickable: true
+      },
+});
+  }
   if (!window.bootstrap || !bootstrap.Collapse) {
     document.querySelectorAll('[data-bs-toggle="collapse"]').forEach(button => {
       button.addEventListener('click', () => {
@@ -107,3 +122,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+
+

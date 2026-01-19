@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   --brand-900: #0b305f;
   --brand-800: #0e3b70;
   --brand-700: #135c8a;
@@ -129,10 +129,10 @@ header.shadow-sm { background: transparent; }
     url('../img/EDIFICIO-RBA-DIA.png') center center / cover no-repeat;
   min-height: 80vh;
 }
-.hero-carousel .carousel-item {
+.hero-carousel .swiper-slide {
   position: relative;
 }
-.hero-carousel .carousel-item::after {
+.hero-carousel .swiper-slide::after {
   content: '';
   position: absolute;
   inset: 0;
@@ -142,16 +142,23 @@ header.shadow-sm { background: transparent; }
   height: 70vh;
   object-fit: cover;
 }
+.hero-carousel .swiper {
+  height: 70vh;
+}
 .hero-carousel .carousel-caption {
   bottom: 18%;
   z-index: 2;
   text-shadow: 0 6px 18px rgba(0,0,0,0.35);
   display: none;
 }
-.hero-carousel .carousel-indicators [data-bs-target] {
+.hero-carousel .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  border-radius: 50%;
+  background: rgba(255,255,255,0.65);
+  opacity: 1;
+}
+.hero-carousel .swiper-pagination-bullet-active {
+  background: #fff;
 }
 .carousel.fallback-carousel {
   position: relative;
@@ -175,6 +182,7 @@ header.shadow-sm { background: transparent; }
 }
 @media (max-width: 768px) {
   .hero-carousel img { height: 55vh; }
+  .hero-carousel .swiper { height: 55vh; }
   .hero-carousel .carousel-caption { bottom: 12%; }
 }
 .qs-hero {
@@ -517,14 +525,17 @@ footer .brand-mark {
   font-size: 0.95rem;
 }
 @media (max-width: 768px) {
-  .director-heading {
-    font-size: 1.6rem;
-    gap: 0.9rem;
-  }
+  .hero-carousel img { height: 55vh; }
+  .hero-carousel .swiper { height: 55vh; }
+  .hero-carousel .carousel-caption { bottom: 12%; }
+}
+
   .director-heading::after {
     display: none;
   }
 }
+
+
 
 
 
