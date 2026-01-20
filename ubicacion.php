@@ -1,4 +1,4 @@
-<?php
+﻿<?php
   $siteTitle = 'RBA Seguros y Fianzas';
   $phone = '+52 55 1234 5678';
   $email = 'contacto@rbaseguros.mx';
@@ -9,7 +9,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><?php echo $siteTitle; ?> | Ubicacion</title>
+  <title><?php echo $siteTitle; ?> | Ubicación</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -32,7 +32,7 @@
           <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
             <li class="nav-item"><a class="nav-link" href="index.php">Inicio</a></li>
             <li class="nav-item"><a class="nav-link" href="servicios.php">Nuestros servicios</a></li>
-            <li class="nav-item"><a class="nav-link" href="quienes.php">Quienes somos</a></li>
+            <li class="nav-item"><a class="nav-link" href="quienes.php">Quiénes somos</a></li>
             <li class="nav-item"><a class="nav-link" href="servicio-cliente.php">Servicio al cliente</a></li>
           </ul>
           <div class="ms-lg-3 mt-3 mt-lg-0">
@@ -48,9 +48,9 @@
       <div class="container">
         <div class="row align-items-center g-4">
           <div class="col-lg-7">
-            <div class="eyebrow text-white-80">Ubicacion</div>
+            <div class="eyebrow text-white-80">Ubicación</div>
             <h1 class="display-5 fw-semibold lh-tight mb-3">Estamos cerca de ti con oficinas en Sonora.</h1>
-            <p class="lead text-white-80 mb-4">Cd. Obregon es nuestra oficina matriz y Hermosillo extiende nuestra atencion en el estado.</p>
+            <p class="lead text-white-80 mb-4">Cd. Obregón es nuestra oficina matriz y Hermosillo extiende nuestra Atención en el estado.</p>
             <div class="d-flex flex-wrap gap-3">
               <a class="btn btn-lg btn-light text-primary" href="#cd-obregon">Ver oficina matriz</a>
               <a class="btn btn-lg btn-outline-light" href="#hermosillo">Ver oficina Hermosillo</a>
@@ -58,12 +58,12 @@
           </div>
           <div class="col-lg-5">
             <div class="tile shadow-lg">
-              <p class="text-primary fw-semibold mb-1">Contactanos directo</p>
-              <h5 class="fw-semibold">Telefonos y correos</h5>
+              <p class="text-primary fw-semibold mb-1">Contáctanos directo</p>
+              <h5 class="fw-semibold">teléfonos y correos</h5>
               <ul class="list-unstyled feature-list d-grid gap-2 small text-muted mb-0">
-                <li class="d-flex gap-2 align-items-start"><i class="bi bi-geo-alt-fill"></i><span>Cd. Obregon (oficina matriz): <a href="tel:+526444108600" class="link-primary fw-semibold">(644) 410 8600</a> · <a href="mailto:obregon@rbaidon.com.mx" class="link-primary fw-semibold">obregon@rbaidon.com.mx</a></span></li>
-                <li class="d-flex gap-2 align-items-start"><i class="bi bi-geo-alt-fill"></i><span>Hermosillo: <a href="tel:+526222105870" class="link-primary fw-semibold">(622) 210 58 70</a> · <a href="mailto:hermosillo@rbaidon.com.mx" class="link-primary fw-semibold">hermosillo@rbaidon.com.mx</a></span></li>
-                <li class="d-flex gap-2 align-items-start"><i class="bi bi-clock-history"></i><span>Atencion personalizada y seguimiento en sitio cuando lo necesites.</span></li>
+                <li class="d-flex gap-2 align-items-start"><i class="bi bi-geo-alt-fill"></i><span>Cd. Obregón (oficina matriz): <a href="tel:+526444108600" class="link-primary fw-semibold">(644) 410 8600</a>  |  <a href="mailto:obregon@rbaidon.com.mx" class="link-primary fw-semibold">obregon@rbaidon.com.mx</a></span></li>
+                <li class="d-flex gap-2 align-items-start"><i class="bi bi-geo-alt-fill"></i><span>Hermosillo: <a href="tel:+526222105870" class="link-primary fw-semibold">(622) 210 58 70</a>  |  <a href="mailto:hermosillo@rbaidon.com.mx" class="link-primary fw-semibold">hermosillo@rbaidon.com.mx</a></span></li>
+                <li class="d-flex gap-2 align-items-start"><i class="bi bi-clock-history"></i><span>Atención personalizada y seguimiento en sitio cuando lo necesites.</span></li>
               </ul>
             </div>
           </div>
@@ -76,8 +76,8 @@
         <div class="location-header d-flex flex-wrap justify-content-between align-items-center gap-3 mb-3">
           <div>
             <div class="location-pill">Oficina matriz</div>
-            <h2 class="fw-semibold mb-1">Cd. Obregon</h2>
-            <p class="text-muted mb-0">Nuestra sede principal y punto de atencion central para clientes.</p>
+            <h2 class="fw-semibold mb-1">Cd. Obregón</h2>
+            <p class="text-muted mb-0">Nuestra sede principal y punto de Atención central para clientes.</p>
           </div>
           <a class="btn btn-outline-primary btn-sm" href="https://maps.app.goo.gl/vNUhqXXGTEnwPeto8" target="_blank" rel="noopener">Abrir en Google Maps</a>
         </div>
@@ -87,7 +87,7 @@
           </div>
           <div class="location-info text-center">
             <h5 class="fw-semibold mb-1">Morelos No. 522 Ote. Col. Zona Norte</h5>
-            <p class="text-muted mb-1">Cd. Obregon, Sonora C.P. 85010</p>
+            <p class="text-muted mb-1">Cd. Obregón, Sonora C.P. 85010</p>
             <p class="mb-2">Tel. (644) 410 8600</p>
             <a class="link-primary fw-semibold" href="mailto:obregon@rbaidon.com.mx">obregon@rbaidon.com.mx</a>
           </div>
@@ -135,7 +135,7 @@
           </ul>
         </div>
         <div class="col-6 col-md-4 col-lg-2">
-          <h6 class="footer-heading">Quienes Somos?</h6>
+          <h6 class="footer-heading">¿Quiénes somos?</h6>
           <ul class="list-unstyled footer-links">
             <li><a href="quienes.php#nosotros">Sobre Nosotros</a></li>
             <li><a href="quienes.php#equipo">Mensaje del Director</a></li>
@@ -155,7 +155,7 @@
           <ul class="list-unstyled footer-links">
             <li><a href="index.php#contacto">Formulario de Contacto</a></li>
             <li><a href="aviso-privacidad.php">Aviso de Privacidad</a></li>
-            <li><a href="ubicacion.php#cd-obregon">Ubicacion</a></li>
+            <li><a href="ubicacion.php#cd-obregon">Ubicación</a></li>
           </ul>
         </div>
       </div>
@@ -177,3 +177,7 @@
   <script src="assets/js/main.js?v=4"></script>
 </body>
 </html>
+
+
+
+

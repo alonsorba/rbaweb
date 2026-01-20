@@ -1,8 +1,8 @@
-<?php
+﻿<?php
   $siteTitle = 'RBA Seguros y Fianzas';
   $phone = '+52 55 1234 5678';
   $email = 'contacto@rbaseguros.mx';
-  $ctaMessage = 'Acompanamiento cercano';
+  $ctaMessage = 'Acompañamiento cercano';
   $year = date('Y');
 ?>
 <!DOCTYPE html>
@@ -10,7 +10,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><?php echo $siteTitle; ?> | Quienes somos</title>
+  <title><?php echo $siteTitle; ?> | Quiénes somos</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -33,7 +33,7 @@
           <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
             <li class="nav-item"><a class="nav-link" href="index.php">Inicio</a></li>
             <li class="nav-item"><a class="nav-link" href="servicios.php">Nuestros servicios</a></li>
-            <li class="nav-item"><a class="nav-link active" aria-current="page" href="quienes.php">Quienes somos</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="quienes.php">Quiénes somos</a></li>
             <li class="nav-item"><a class="nav-link" href="servicio-cliente.php">Servicio al cliente</a></li>
           </ul>
           <div class="ms-lg-3 mt-3 mt-lg-0">
@@ -49,33 +49,33 @@
       <div class="container py-4">
         <div class="row align-items-end">
           <div class="col-lg-7">
-            <div class="eyebrow text-white-80">Quienes Somos</div>
+            <div class="eyebrow text-white-80">Quiénes somos</div>
             <h1 class="display-5 fw-semibold lh-tight text-white mb-3">Comprometidos con su tranquilidad.</h1>
-            <p class="lead text-white-80 mb-4">Protegemos a nuestros clientes con alternativas de prevision y proteccion justas, acompanandolos en cada tramite y siniestro.</p>
+            <p class="lead text-white-80 mb-4">Protegemos a nuestros clientes con alternativas de previsión y protección justas, acompanandolos en cada tramite y siniestro.</p>
             <div class="d-flex flex-wrap gap-3 text-white-80 small">
               <div class="pill-highlight d-flex align-items-center gap-2"><i class="bi bi-shield-check"></i><span>Pago justo y servicio cercano</span></div>
               <div class="pill-highlight d-flex align-items-center gap-2"><i class="bi bi-people"></i><span>Equipo humano profesional</span></div>
-              <div class="pill-highlight d-flex align-items-center gap-2"><i class="bi bi-lightning-charge"></i><span>Respuesta rapida y clara</span></div>
+              <div class="pill-highlight d-flex align-items-center gap-2"><i class="bi bi-lightning-charge"></i><span>Respuesta rápida y clara</span></div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="py-5 mission-vision">
+    <section class="py-5 mission-Visión">
       <div class="container">
         <div class="row g-5 align-items-start">
           <div class="col-lg-6">
             <div class="section-title-line">
-              <h3 class="fw-semibold">Nuestra Mision</h3>
+              <h3 class="fw-semibold">Nuestra Misión</h3>
             </div>
-            <p class="text-muted mb-0">Proporcionar a nuestros clientes las mejores alternativas de prevision y proteccion, asi como el pago mas justo en el caso de presentarse una eventualidad, tratando siempre de satisfacer al maximo sus necesidades de costo, coberturas, condiciones y servicios competitivos, desarrollando productos y servicios de calidad con un equipo humano profesional, capaz e innovador que garantice la permanencia y crecimiento de nuestros clientes, colaboradores, accionistas y de nuestro pais.</p>
+            <p class="text-muted mb-0">Proporcionar a nuestros clientes las mejores alternativas de previsión y protección, así como el pago más justo en el caso de presentarse una eventualidad, tratando siempre de satisfacer al máximo sus necesidades de costo, coberturas, condiciones y servicios competitivos, desarrollando productos y servicios de calidad con un equipo humano profesional, capaz e innovador que garantice la permanencia y crecimiento de nuestros clientes, colaboradores, accionistas y de nuestro país.</p>
           </div>
           <div class="col-lg-6">
             <div class="section-title-line">
-              <h3 class="fw-semibold">Nuestra Vision</h3>
+              <h3 class="fw-semibold">Nuestra Visión</h3>
             </div>
-            <p class="text-muted mb-0">Lograr el liderazgo en la region noroeste del pais, con calidad de servicio global, contando con un equipo humano profesional, capaz e innovador y con infraestructura y tecnologia de alto nivel.</p>
+            <p class="text-muted mb-0">Lograr el liderazgo en la región noroeste del país, con calidad de servicio global, contando con un equipo humano profesional, capaz e innovador y con infraestructura y tecnología de alto nivel.</p>
           </div>
         </div>
       </div>
@@ -95,7 +95,7 @@
               <li>Liderazgo</li>
               <li>Efectividad</li>
               <li>Honestidad</li>
-              <li>Innovacion</li>
+              <li>Innovación</li>
               <li>Mejora Continua</li>
             </ul>
           </div>
@@ -111,10 +111,10 @@
           </div>
           <div class="col-lg-8">
             <div class="glass-card director-card p-4 p-lg-5 text-white">
-              <p class="mb-3">En R. Baidon estamos "Comprometidos con su Tranquilidad", nuestro compromiso es satisfacer al maximo las necesidades de proteccion de Usted, su familia y su negocio.</p>
+              <p class="mb-3">En R. Baidon estamos "Comprometidos con su Tranquilidad", nuestro compromiso es satisfacer al máximo las necesidades de protección de usted, su familia y su negocio.</p>
               <p class="mb-3">Nos interesa mucho establecer una relacion de largo plazo con Usted, una relacion basada en cuidar siempre sus intereses aun por encima de los nuestros.</p>
-              <p class="mb-3">Ademas, nos comprometemos a seguir buscando nuevas y mejores formas de resolver sus necesidades de proteccion y ofrecerle un excelente servicio en la contratacion de su seguro.</p>
-              <p class="mb-4">Asi mismo, nos comprometemos a estar siempre disponibles para apoyarlo en caso de presentarse un siniestro o reclamacion y asegurarnos asi de que usted reciba la mejor atencion y el pago mas justo.</p>
+              <p class="mb-3">Además, nos comprometemos a seguir buscando nuevas y mejores formas de resolver sus necesidades de protección y ofrecerle un excelente servicio en la contratación de su seguro.</p>
+              <p class="mb-4">Asimismo, nos comprometemos a estar siempre disponibles para apoyarlo en caso de presentarse un siniestro o reclamación y asegurarnos así de que usted reciba la mejor atención y el pago más justo.</p>
               <div class="director-signature">
                 <div class="title">Ing. Rogelio Baidon Olvera</div>
                 <div class="subtitle">Director General</div>
@@ -140,7 +140,7 @@
           </ul>
         </div>
         <div class="col-6 col-md-4 col-lg-2">
-          <h6 class="footer-heading">Quienes Somos?</h6>
+          <h6 class="footer-heading">¿Quiénes somos?</h6>
           <ul class="list-unstyled footer-links">
             <li><a href="quienes.php#nosotros">Sobre Nosotros</a></li>
             <li><a href="quienes.php#equipo">Equipo</a></li>
@@ -160,7 +160,7 @@
           <ul class="list-unstyled footer-links">
             <li><a href="index.php#contacto">Formulario de Contacto</a></li>
             <li><a href="aviso-privacidad.php">Aviso de Privacidad</a></li>
-            <li><a href="ubicacion.php#cd-obregon">Ubicacion</a></li>
+            <li><a href="ubicacion.php#cd-obregon">Ubicación</a></li>
           </ul>
         </div>
       </div>
@@ -182,3 +182,8 @@
   <script src="assets/js/main.js?v=4"></script>
 </body>
 </html>
+
+
+
+
+
