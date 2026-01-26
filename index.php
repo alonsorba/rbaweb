@@ -52,7 +52,7 @@
             <img src="assets/img/01.jpg" class="d-block w-100" alt="Asesores de seguros colaborando">
             <div class="carousel-caption">
               <div class="eyebrow text-white-80">Protección total</div>
-              <h2 class="fw-semibold mb-2">Soluciones integrales para tu empresa y familia.</h2>
+              <h2 class="fw-semibold mb-2">Soluciones integrales para tu empresa y familia</h2>
               <p class="mb-0 text-white-80">Gestionamos riesgos con Asesoría experta y respuesta inmediata.</p>
             </div>
           </div>
