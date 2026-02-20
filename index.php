@@ -1,4 +1,4 @@
-﻿<?php
+<?php
   $siteTitle = 'RBA Seguros y Fianzas';
   $phone = '+52 55 1234 5678';
   $email = 'contacto@rbaseguros.mx';
@@ -16,15 +16,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="assets/css/style.css?v=3">
 </head>
-<body>
-  <header class="shadow-sm sticky-top bg-white">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" id="topNav">
+<body class="home-index">
+  <header class="shadow-sm sticky-top">
+    <nav class="navbar navbar-expand-lg" id="topNav">
       <div class="container-fluid">
         <a class="navbar-brand d-flex align-items-center gap-2 fw-bold text-primary" href="index.php">
-          <img src="assets/img/R BAIDON V3 RGB (WEB).png" class="brand-logo" alt="RBA Seguros &amp; Fianzas">
+          <img src="assets/img/R BAIDON V3 BLANCO.png" class="brand-logo" alt="RBA Seguros &amp; Fianzas">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -46,35 +45,9 @@
 
   <main>
         <section class="hero-carousel">
-      <div class="swiper hero-swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="assets/img/01.jpg" class="d-block w-100" alt="Asesores de seguros colaborando">
-            <div class="carousel-caption">
-              <div class="eyebrow text-white-80">Protección total</div>
-              <h2 class="fw-semibold mb-2">Soluciones integrales para tu empresa y familia</h2>
-              <p class="mb-0 text-white-80">Gestionamos riesgos con Asesoría experta y respuesta inmediata.</p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <img src="assets/img/02.jpg" class="d-block w-100" alt="Asegurando acuerdos de negocio">
-            <div class="carousel-caption">
-              <div class="eyebrow text-white-80">Servicio boutique</div>
-              <h2 class="fw-semibold mb-2">Acompañamos cada decisión de cobertura.</h2>
-              <p class="mb-0 text-white-80">Planes claros, sin letras pequeñas y listos para tus operaciones.</p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <img src="assets/img/03.jpg" class="d-block w-100" alt="Familia protegida con seguro">
-            <div class="carousel-caption">
-              <div class="eyebrow text-white-80">Confianza que responde</div>
-              <h2 class="fw-semibold mb-2">Coberturas que se ajustan a tu estilo de vida.</h2>
-              <p class="mb-0 text-white-80">Red de Atención 24/7 y Gestoría de siniestros sin fricciones.</p>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-pagination"></div>
-      </div>
+      <video class="hero-video d-block w-100" autoplay muted loop playsinline preload="metadata" aria-label="Video principal de edificio corporativo">
+        <source src="assets/img/edificio.mp4" type="video/mp4">
+      </video>
     </section>
 
     <section id="servicios" class="py-5">
@@ -83,7 +56,7 @@
           <div class="col-lg-8">
             <div class="eyebrow text-primary">Portafolio</div>
             <h2 class="fw-semibold">Coberturas diseñadas para empresas y familias.</h2>
-            <p class="text-muted lead">Simplificamos la Contratación y Administración de seguros para que tu Operación siga sin fricciones.</p>
+            <p class="text-muted lead">Simplificamos la contratación y administración de seguros para que tu operación siga sin fricciones.</p>
           </div>
           <div class="col-lg-4 text-lg-end">
             <a class="btn btn-outline-primary btn-lg" href="#contacto">Agenda una llamada</a>
@@ -136,7 +109,7 @@
                 <i class="bi bi-cash-coin"></i>
               </div>
               <h5 class="fw-semibold">Fianzas</h5>
-              <p class="text-muted">Cumplimiento, fidelidad y licitaciones con respaldo de afianzadoras Líderes.</p>
+              <p class="text-muted">Cumplimiento, fidelidad y licitaciones con respaldo de afianzadoras líderes.</p>
               <a class="link-primary fw-semibold" href="#contacto">Subir requisitos</a>
             </div>
           </div>
@@ -216,7 +189,7 @@
         <div class="row g-5 align-items-center">
           <div class="col-lg-6">
             <div class="eyebrow text-primary">Por qué elegirnos</div>
-            <h2 class="fw-semibold mb-4">Un trato humano con Estándares de servicio de marcas de lujo.</h2>
+            <h2 class="fw-semibold mb-4">Un trato humano con estándares de servicio de marcas de lujo.</h2>
             <ul class="list-unstyled d-grid gap-3">
               <li class="d-flex gap-3 align-items-start">
                 <div class="check-circle"><i class="bi bi-check-lg"></i></div>
@@ -229,7 +202,7 @@
                 <div class="check-circle"><i class="bi bi-check-lg"></i></div>
                 <div>
                   <h6 class="mb-1 fw-semibold">Equipo especialista</h6>
-                  <p class="mb-0 text-muted">Suscripción, siniestros y Afinación de Pólizas con consultores senior.</p>
+                  <p class="mb-0 text-muted">Suscripción, siniestros y afinación de pólizas con consultores senior.</p>
                 </div>
               </li>
               <li class="d-flex gap-3 align-items-start">
@@ -247,7 +220,7 @@
           </div>
           <div class="col-lg-6">
             <div class="ratio ratio-16x9 rounded-4 overflow-hidden shadow-lg">
-              <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80" class="w-100 h-100 object-fit-cover" alt="Equipo de seguros">
+              <img src="assets/img/02.jpg" class="w-100 h-100 object-fit-cover" alt="Equipo de seguros">
             </div>
           </div>
         </div>
@@ -283,7 +256,7 @@
                   <small class="text-muted">Emprendedor</small>
                 </div>
               </div>
-              <p class="mb-0 text-muted">"Me explicaron cada opcion de vida y ahorro con claridad. Se siente un servicio boutique."</p>
+              <p class="mb-0 text-muted">"Me explicaron cada opción de vida y ahorro con claridad. Se siente un servicio boutique."</p>
             </div>
           </div>
           <div class="col-md-4">
@@ -295,7 +268,7 @@
                   <small class="text-muted">Operaciones</small>
                 </div>
               </div>
-              <p class="mb-0 text-muted">"Reporte un siniestro nocturno y respondieron en minutos. Todo quedo resuelto Rápido."</p>
+              <p class="mb-0 text-muted">"Reporté un siniestro nocturno y respondieron en minutos. Todo quedó resuelto rápido."</p>
             </div>
           </div>
         </div>
@@ -306,8 +279,8 @@
       <div class="shape-blur"></div>
       <div class="container position-relative">
         <div class="eyebrow text-white-80">Listos cuando nos necesites</div>
-        <h2 class="fw-semibold">Hablemos de tu Próximo proyecto o Póliza.</h2>
-        <p class="lead text-white-80 mb-4">Deja que nuestro equipo prepare una propuesta que proteja tu Operación y tu gente.</p>
+        <h2 class="fw-semibold">Hablemos de tu próximo proyecto o póliza.</h2>
+        <p class="lead text-white-80 mb-4">Deja que nuestro equipo prepare una propuesta que proteja tu operación y tu gente.</p>
         <div class="d-flex flex-wrap gap-3 justify-content-center">
           <a class="btn btn-lg btn-light text-primary" href="tel:<?php echo $phone; ?>">Llámanos</a>
           <a class="btn btn-lg btn-outline-light" href="mailto:<?php echo $email; ?>">Escríbenos</a>
@@ -325,7 +298,7 @@
             <div class="d-flex flex-column gap-3">
               <div class="d-flex gap-3 align-items-center"><i class="bi bi-telephone-forward text-primary fs-4"></i><span><?php echo $phone; ?></span></div>
               <div class="d-flex gap-3 align-items-center"><i class="bi bi-envelope-open text-primary fs-4"></i><span><?php echo $email; ?></span></div>
-              <div class="d-flex gap-3 align-items-center"><i class="bi bi-geo-alt text-primary fs-4"></i><span>CDMX y Atención nacional</span></div>
+              <div class="d-flex gap-3 align-items-center"><i class="bi bi-geo-alt text-primary fs-4"></i><span>CDMX y atención nacional</span></div>
             </div>
           </div>
           <div class="col-lg-6">
@@ -344,7 +317,7 @@
                   <input type="tel" name="Teléfono" class="form-control" placeholder="55 0000 0000" required>
                 </div>
                 <div class="col-12">
-                  <label class="form-label">Servicio de Interés</label>
+                  <label class="form-label">Servicio de interés</label>
                   <select name="servicio" class="form-select">
                     <option>Seguros Empresariales</option>
                     <option>Gastos Médicos</option>
@@ -356,7 +329,7 @@
                 </div>
                 <div class="col-12">
                   <label class="form-label">Mensaje</label>
-                  <textarea name="mensaje" rows="4" class="form-control" placeholder="Cuéntanos que necesitas" required></textarea>
+                  <textarea name="mensaje" rows="4" class="form-control" placeholder="Cuéntanos qué necesitas" required></textarea>
                 </div>
                 <div class="col-12 d-flex justify-content-between align-items-center">
                   <div class="form-check">
@@ -425,7 +398,6 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/js/main.js?v=4"></script>
 </body>
 </html>
@@ -433,5 +405,8 @@
 
 
 
+
+
+ 
 
 
