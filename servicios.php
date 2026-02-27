@@ -21,6 +21,7 @@
 </head>
 
 <body>
+  <!-- Header global con navegacion principal -->
   <header class="shadow-sm sticky-top bg-white">
     <nav class="navbar navbar-expand-lg bg-body-tertiary" id="topNav">
       <div class="container-fluid">
@@ -46,6 +47,7 @@
   </header>
 
   <main>
+    <!-- Hero de servicios: propuesta de valor y CTA principal -->
     <section class="page-hero py-5">
       <div class="container">
         <div class="row align-items-center g-4">
@@ -78,6 +80,7 @@
       </div>
     </section>
 
+    <!-- Catalogo de servicios en cards con anclas por ramo -->
     <section id="portafolio" class="py-5">
       <div class="container">
         <div class="text-center mb-4">
@@ -167,6 +170,7 @@
       </div>
     </section>
 
+    <!-- Bloque de metodologia operativa (paso a paso) -->
     <section id="proceso" class="py-5 bg-soft">
       <div class="container">
         <div class="row g-4 align-items-center">
@@ -212,6 +216,7 @@
       </div>
     </section>
 
+    <!-- Cierre comercial con llamado a contacto -->
     <section id="cta" class="py-5 text-center text-white position-relative overflow-hidden">
       <div class="shape-blur"></div>
       <div class="container position-relative">
@@ -226,6 +231,7 @@
     </section>
   </main>
 
+  <!-- Footer institucional compartido -->
   <footer class="footer-main">
     <div class="container py-5">
       <div class="row g-4 align-items-start">

@@ -1,5 +1,7 @@
 :root {
+  /* Altura base para compensar el header sticky en secciones ancladas. */
   --header-height: 94px;
+  /* Paleta institucional del proyecto. */
   --brand-900: #0b305f;
   --brand-800: #0e3b70;
   --brand-700: #135c8a;
@@ -20,7 +22,10 @@
   --bs-link-visited-color-rgb: 19,92,138;
 }
 
-/* Ajustes de color institucional para primarios y enlaces */
+/* =========================
+   Tema base Bootstrap/RBA
+   ========================= */
+/* Boton primario Bootstrap adaptado a color institucional. */
 .btn-primary {
   --bs-btn-bg: var(--brand-700);
   --bs-btn-border-color: var(--brand-700);
@@ -32,6 +37,7 @@
   --bs-btn-disabled-border-color: var(--brand-700);
 }
 .btn-outline-primary {
+  /* Variante outline con hover/active de marca. */
   --bs-btn-color: var(--brand-700);
   --bs-btn-border-color: var(--brand-700);
   --bs-btn-hover-color: #fff;
@@ -43,6 +49,7 @@
   --bs-btn-disabled-border-color: var(--brand-700);
 }
 a, .link-primary {
+  /* Color base de enlaces globales. */
   color: var(--brand-700);
 }
 a:hover, .link-primary:hover {
@@ -69,6 +76,10 @@ body {
 .navbar { padding-top: 0.65rem; padding-bottom: 0.65rem; }
 .navbar-brand { padding-top: 0; padding-bottom: 0; }
 .navbar-nav .nav-link { padding-top: 0.75rem; padding-bottom: 0.75rem; }
+/* =========================
+   Header / Navegacion
+   ========================= */
+/* Contenedor principal del navbar en vistas internas. */
 #topNav {
   min-height: 78px;
   background: #fff;
@@ -80,6 +91,7 @@ header.shadow-sm {
   background: #fff;
 }
 #topNav .nav-link {
+  /* Link de navegacion (estado base). */
   color: var(--brand-700);
   font-weight: 600;
   background: transparent;
@@ -92,6 +104,7 @@ header.shadow-sm {
 }
 #topNav .nav-link:hover,
 #topNav .nav-link:focus {
+  /* Estado hover/focus del menu. */
   color: var(--brand-800);
   background: transparent;
   border-color: transparent;
@@ -103,10 +116,11 @@ header.shadow-sm {
   border-color: rgba(19,92,138,0.35);
 }
 #topNav .navbar-toggler-icon {
+  /* Icono hamburguesa en SVG inline para mantener color corporativo. */
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(19,92,138,0.95)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-/* Navbar transparente solo en index */
+/* Home: navbar transparente sobre el hero/video. */
 body.home-index #topNav {
   background: transparent;
   color: #fff;
@@ -139,15 +153,18 @@ body.home-index #topNav .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.95)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 header.sticky-top {
+  /* Transicion del header al hacer scroll (opacity + translateY). */
   transition: opacity 0.24s ease, transform 0.24s ease;
   will-change: opacity, transform;
 }
 .brand-logo {
+  /* Tamaño del logo principal del header. */
   height: 72px;
   width: auto;
   display: block;
 }
 .nav-access-btn {
+  /* CTA de acceso a usuarios en navbar. */
   background: var(--brand-700);
   color: #fff;
   border: 1px solid var(--brand-700);
@@ -163,6 +180,7 @@ header.sticky-top {
 }
 
 .btn-gradient {
+  /* Boton destacado para CTAs principales. */
   background: var(--brand-700);
   color: #fff;
   border: none;
@@ -171,12 +189,14 @@ header.sticky-top {
 .btn-gradient:hover { color: #fff; opacity: 0.92; }
 
 #hero {
+  /* Hero con imagen de respaldo para bloques destacados. */
   background:
     linear-gradient(120deg, rgba(11,48,95,0.5), rgba(19,92,138,0.5)),
     url('../img/EDIFICIO-RBA-DIA.png') center center / cover no-repeat;
   min-height: 100svh;
 }
 .hero-carousel {
+  /* Contenedor del video principal de home. */
   position: relative;
   overflow: hidden;
   min-height: 100svh;
@@ -190,6 +210,7 @@ body.home-index .hero-carousel {
   position: sticky;
 }
 .hero-carousel::after {
+  /* Overlay oscuro dinamico para mejorar contraste del texto. */
   content: '';
   position: absolute;
   inset: 0;
@@ -198,6 +219,7 @@ body.home-index .hero-carousel {
   pointer-events: none;
 }
 .hero-carousel .hero-video {
+  /* Video con efecto suave en scroll controlado via CSS variable. */
   position: relative;
   z-index: 1;
   height: 100svh;
@@ -207,12 +229,112 @@ body.home-index .hero-carousel {
   opacity: calc(1 - (var(--video-scroll-progress) * 0.2));
   transition: transform 0.24s ease-out, filter 0.24s ease-out, opacity 0.24s ease-out;
 }
+/* Leyenda institucional sobre el video de portada. */
+.hero-video-legend {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 3;
+  width: min(90vw, 860px);
+  text-align: center;
+  color: #fff;
+  padding: 0;
+  opacity: calc(1 - (var(--video-scroll-progress) * 1.15));
+  transform: translate(-50%, calc(-50% - (var(--video-scroll-progress) * 28px)));
+  transition: opacity 0.22s ease-out, transform 0.22s ease-out;
+}
+.hero-video-legend__title {
+  margin: 0 0 0.55rem;
+  font-weight: 700;
+  font-size: clamp(1.95rem, 3.4vw, 3.35rem);
+  line-height: 1.24;
+  letter-spacing: 0.035em;
+  text-wrap: balance;
+  text-shadow: 0 8px 22px rgba(8, 28, 52, 0.6);
+  opacity: 0;
+  transform: translateY(14px);
+  animation: legendTextIn 0.82s cubic-bezier(0.22, 1, 0.36, 1) forwards 0.18s;
+}
+.hero-video-legend__subtitle {
+  margin: 0;
+  font-weight: 500;
+  font-size: clamp(1.08rem, 1.55vw, 1.58rem);
+  line-height: 1.72;
+  letter-spacing: 0.02em;
+  color: rgba(255,255,255,0.93);
+  text-shadow: 0 8px 22px rgba(8, 28, 52, 0.55);
+  opacity: 0;
+  transform: translateY(14px);
+  animation: legendTextIn 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards 0.34s;
+}
+@keyframes legendTextIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+    filter: blur(3px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+/* Indicador de scroll sobre el video de portada (solo home). */
+.hero-scroll-hint {
+  position: absolute;
+  left: 50%;
+  bottom: clamp(1.1rem, 3.2vw, 2.2rem);
+  transform: translateX(-50%);
+  z-index: 4;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.55rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.45);
+  background: linear-gradient(135deg, rgba(11,48,95,0.88), rgba(19,92,138,0.9));
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 10px 26px rgba(11,48,95,0.35);
+  animation: hintPulse 1.9s ease-in-out infinite;
+}
+.hero-scroll-hint:hover,
+.hero-scroll-hint:focus {
+  color: #fff;
+  border-color: rgba(255,255,255,0.65);
+}
+.hero-scroll-hint__text {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.hero-scroll-hint__icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.16);
+  font-size: 0.9rem;
+  animation: hintBounce 1.3s ease-in-out infinite;
+}
+@keyframes hintPulse {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-3px); }
+}
+@keyframes hintBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(2px); }
+}
 body.home-index main > section:not(.hero-carousel) {
   position: relative;
   z-index: 3;
   background: #fff;
 }
 .carousel.fallback-carousel {
+  /* Carrusel manual cuando Bootstrap Carousel no esta disponible. */
   position: relative;
   overflow: hidden;
 }
@@ -237,8 +359,20 @@ body.home-index main > section:not(.hero-carousel) {
   body.home-index .hero-carousel {
     position: relative;
   }
+  .hero-video-legend {
+    width: min(92vw, 640px);
+    top: 48%;
+  }
+  .hero-scroll-hint {
+    gap: 0.45rem;
+    padding: 0.5rem 0.75rem;
+  }
+  .hero-scroll-hint__text {
+    font-size: 0.72rem;
+  }
 }
 .qs-hero {
+  /* Hero de la vista "Quienes somos". */
   background:
     linear-gradient(120deg, rgba(11, 47, 95, 0.699), rgba(19, 92, 138, 0.644)),
     url('../img/01.jpg') center center / cover no-repeat;
@@ -251,6 +385,7 @@ body.home-index main > section:not(.hero-carousel) {
   padding: 0.35rem 0.75rem;
 }
 .page-hero {
+  /* Hero reutilizable para paginas internas. */
     background:
       linear-gradient(130deg, rgba(11,48,95,0.88), rgba(27,132,198,0.78)),
       url('../img/EDIFICIO-RBA-DIA.png') center center / cover no-repeat;
@@ -264,6 +399,7 @@ body.home-index main > section:not(.hero-carousel) {
 .anchor-offset { scroll-margin-top: 90px; }
 .feature-list li i { color: var(--brand-700); }
 #hero .shape-blur, #cta .shape-blur {
+  /* Capa decorativa para profundidad visual en heroes oscuros. */
   position: absolute;
   inset: 0;
   background: transparent;
@@ -276,6 +412,7 @@ body.home-index main > section:not(.hero-carousel) {
 .text-white-60 { color: rgba(255,255,255,0.6); }
 
 .eyebrow {
+  /* Sobre-titulo corto para jerarquia de secciones. */
   text-transform: uppercase;
   letter-spacing: 0.06em;
   font-size: 0.85rem;
@@ -283,6 +420,7 @@ body.home-index main > section:not(.hero-carousel) {
 }
 
 .glass-card {
+  /* Card premium para formularios y bloques de alto foco. */
   background: #fff;
   border: 1px solid #e6edf5;
   border-radius: 20px;
@@ -301,16 +439,19 @@ body.home-index main > section:not(.hero-carousel) {
 }
 
 .form-control, .form-select {
+  /* Inputs globales del sitio. */
   border-radius: 14px;
   border: 1px solid #dde4ee;
   padding: 0.9rem 1rem;
 }
 .form-control:focus, .form-select:focus {
+  /* Estado focus accesible y alineado a la marca. */
   border-color: var(--brand-500);
   box-shadow: 0 0 0 0.2rem rgba(27,132,198,0.15);
 }
 
 .tile {
+  /* Card base reutilizable para contenido modular. */
   background: #fff;
   border-radius: 18px;
   padding: 1.5rem;
@@ -318,11 +459,12 @@ body.home-index main > section:not(.hero-carousel) {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .tile:hover {
+  /* Microinteraccion: eleva la card al hover. */
   transform: translateY(-6px);
   box-shadow: 0 18px 38px rgba(12,46,84,0.14);
 }
 
-/* Scroll reveal */
+/* Reveal on scroll para cards e imagenes en main. */
 main .reveal-on-scroll {
   opacity: 0;
   transform: translate3d(0, 24px, 0);
@@ -344,9 +486,15 @@ main .reveal-on-scroll.is-visible {
     transform: none;
     transition: none;
   }
+  .hero-scroll-hint,
+  .hero-scroll-hint__icon,
+  .hero-video-legend {
+    animation: none;
+  }
 }
 
 .icon-circle {
+  /* Icono circular para destacar servicios/beneficios. */
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -362,6 +510,7 @@ main .reveal-on-scroll.is-visible {
 .bg-soft { background: #f3f7fb; }
 
 .check-circle {
+  /* Check circular para listas de valor. */
   width: 38px;
   height: 38px;
   border-radius: 50%;
@@ -373,6 +522,7 @@ main .reveal-on-scroll.is-visible {
 }
 
 .stat-card {
+  /* Tarjeta flotante de indicador (si existe en una vista). */
   position: absolute;
   right: 10%;
   bottom: -10%;
@@ -416,6 +566,7 @@ main .reveal-on-scroll.is-visible {
 #cta { background: var(--brand-700); }
 
 .avatar {
+  /* Avatar de iniciales para testimonios. */
   width: 42px;
   height: 42px;
   border-radius: 12px;
@@ -440,6 +591,7 @@ footer .brand-mark {
 }
 
 .footer-main {
+  /* Contenedor principal del pie de pagina. */
   background: #f1f4f8;
   color: var(--text-dark);
   border-top: 1px solid #e6edf5;
@@ -463,11 +615,13 @@ footer .brand-mark {
 }
 .footer-links a:hover { color: var(--brand-700); }
 .footer-logo {
+  /* Logo del footer. */
   height: 87px;
   width: auto;
   display: block;
 }
 .footer-access-btn {
+  /* Boton de acceso en el pie, espejo del header. */
   background: var(--brand-700);
   color: #fff;
   border: 1px solid var(--brand-700);
@@ -483,6 +637,7 @@ footer .brand-mark {
 }
 .footer-main .footer-bottom { color: var(--muted); }
 .privacy-card {
+  /* Contenedor legible para texto largo legal. */
   max-width: 1000px;
   margin: 0 auto;
   line-height: 1.7;
@@ -494,6 +649,7 @@ footer .brand-mark {
 .privacy-list li strong { color: var(--brand-800); }
 
 .location-card {
+  /* Card de sucursal (mapa + datos). */
   background: #fff;
   border: 1px solid #e6edf5;
   border-radius: 18px;
@@ -501,6 +657,7 @@ footer .brand-mark {
   box-shadow: 0 16px 36px rgba(12,46,84,0.12);
 }
 .location-map iframe {
+  /* Iframe responsive del mapa embebido. */
   width: 100%;
   height: 100%;
   border: 0;
@@ -530,6 +687,7 @@ footer .brand-mark {
 }
 
 .mission-vision .section-title-line {
+  /* Subrayado institucional para titulos de mision/vision. */
   border-bottom: 2px solid var(--brand-700);
   display: inline-block;
   padding-bottom: 0.35rem;
@@ -538,6 +696,7 @@ footer .brand-mark {
 }
 
 .values-banner {
+  /* Banner de valores con fondo degradado y luces radiales. */
   background:
     radial-gradient(140% 90% at 20% 20%, rgba(255,255,255,0.08), transparent),
     radial-gradient(140% 90% at 80% 80%, rgba(255,255,255,0.06), transparent),
@@ -565,17 +724,20 @@ footer .brand-mark {
 }
 
 .director-banner {
+  /* Fondo del bloque de mensaje directivo. */
   background:
     linear-gradient(120deg, rgba(11,48,95,0.5), rgba(19,92,138,0.5)),
     url('../img/EDIFICIO-RBA-DIA.png') center center / cover no-repeat;
   background-blend-mode: normal;
 }
 .director-card {
+  /* Card semitransparente del contenido directivo. */
   background: rgba(255, 255, 255, 0.719);
   border: 1px solid rgba(255, 255, 255, 0.158);
   border-radius: 18px;
 }
 .director-heading {
+  /* Encabezado principal del bloque del director. */
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 0.04em;

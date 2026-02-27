@@ -1,13 +1,15 @@
 (() => {
+  // Detecta si la navegacion actual fue una recarga completa de pagina.
   const navEntry = performance.getEntriesByType('navigation')?.[0];
   const navType = navEntry?.type || performance.navigation?.type;
   const isReload = navType === 'reload' || navType === performance.navigation?.TYPE_RELOAD;
 
-  // Force the scroll to the header as soon as possible on reload.
+  // En recarga, evita restauracion de scroll del navegador y sube al header.
   if (isReload) {
     if ('scrollRestoration' in history) {
       history.scrollRestoration = 'manual';
     }
+    // Punto unico para forzar scroll al top sin animacion.
     const scrollToHeader = () => {
       const header = document.querySelector('header');
       if (header) {
@@ -15,13 +17,14 @@
         header.scrollIntoView({ behavior: 'auto', block: 'start' });
       }
     };
-    // Run both after DOM is ready and after the browser paints, to beat native restoration.
+    // Se ejecuta en ambos eventos para ganarle al restore nativo del browser.
     document.addEventListener('DOMContentLoaded', scrollToHeader, { once: true });
     window.addEventListener('pageshow', scrollToHeader, { once: true });
   }
 })();
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Referencias globales de UI (navbar/header/hero).
   const nav = document.getElementById('topNav');
   const header = document.querySelector('header.sticky-top');
   const heroCarousel = document.querySelector('body.home-index .hero-carousel');
@@ -29,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const fadeOutOn = 260;
   let ticking = false;
 
+  // Actualiza la variable CSS que controla zoom/tono/opacidad del video hero.
   const updateHeroScrollEffect = () => {
     if (!heroCarousel) return;
     const viewportHeight = window.innerHeight || 1;
@@ -37,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     heroCarousel.style.setProperty('--video-scroll-progress', progress.toFixed(3));
   };
 
+  // Throttle por frame para que el scroll sea fluido y sin trabajo duplicado.
   const requestScrollFrame = () => {
     if (ticking) return;
     ticking = true;
@@ -46,6 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
+  // Comportamiento de header al desplazarse y sincronizacion de efectos del hero.
   const onScroll = () => {
     if (window.scrollY > shrinkOn) {
       nav.classList.add('shadow-sm');
@@ -65,6 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('resize', requestScrollFrame);
   onScroll();
 
+  // Smooth scroll para anclas internas del menu.
   document.querySelectorAll('a.nav-link[href^="#"]').forEach(link => {
     link.addEventListener('click', e => {
       const target = document.querySelector(link.getAttribute('href'));
@@ -78,6 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const statCard = document.getElementById('statCard');
   const statToggle = document.querySelector('#statCard .stat-toggle');
   if (statCard && statToggle) {
+    // Colapsa/expande la tarjeta estadistica cuando existe en la vista.
     statToggle.addEventListener('click', () => {
       statCard.classList.toggle('collapsed');
     });
@@ -85,11 +93,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const heroCarouselEl = document.getElementById('heroCarousel');
   if (heroCarouselEl) {
+    // Camino principal: inicializa carrusel con Bootstrap cuando esta disponible.
     if (window.bootstrap && bootstrap.Carousel) {
       new bootstrap.Carousel(heroCarouselEl, { interval: 5000, ride: 'carousel', pause: false });
     } else {
+      // Camino fallback: carrusel manual si Bootstrap JS no cargó.
       heroCarouselEl.classList.add('fallback-carousel');
-      // Fallback simple slider if Bootstrap JS no carga
       const items = Array.from(heroCarouselEl.querySelectorAll('.carousel-item'));
       const indicators = Array.from(heroCarouselEl.querySelectorAll('[data-bs-slide-to]'));
       let current = 0;
@@ -114,6 +123,8 @@ document.addEventListener('DOMContentLoaded', () => {
       setInterval(next, 5000);
     }
   }
+
+  // Fallback de acordeon/collapse cuando no existe bootstrap.Collapse.
   if (!window.bootstrap || !bootstrap.Collapse) {
     document.querySelectorAll('[data-bs-toggle="collapse"]').forEach(button => {
       button.addEventListener('click', () => {
@@ -137,16 +148,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Reveal on scroll para cards e imagenes principales del contenido.
   if ('IntersectionObserver' in window) {
     const revealTargets = Array.from(document.querySelectorAll(
       'main .tile, main .glass-card, main .location-card, main .privacy-card, main .ratio, main img'
     )).filter(el => !el.classList.contains('brand-logo') && !el.classList.contains('footer-logo'));
 
     revealTargets.forEach((el, idx) => {
+      // Clase base de animacion + delay escalonado para entrada visual limpia.
       el.classList.add('reveal-on-scroll');
       el.style.setProperty('--reveal-delay', `${(idx % 4) * 55}ms`);
     });
 
+    // Alterna visibilidad al entrar/salir del viewport (subiendo y bajando).
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {

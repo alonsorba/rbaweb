@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="assets/css/style.css?v=3">
 </head>
 <body>
+  <!-- Header global con navegacion principal -->
   <header class="shadow-sm sticky-top bg-white">
     <nav class="navbar navbar-expand-lg bg-body-tertiary" id="topNav">
       <div class="container-fluid">
@@ -44,6 +45,7 @@
   </header>
 
   <main>
+    <!-- Hero legal con accesos rapidos -->
     <section class="page-hero py-5">
       <div class="container">
         <div class="row align-items-center g-4">
@@ -60,6 +62,7 @@
       </div>
     </section>
 
+    <!-- Contenido completo del aviso de privacidad -->
     <section id="aviso" class="py-5">
       <div class="container">
         <div class="tile p-4 shadow-sm privacy-card">
@@ -121,6 +124,7 @@
     </section>
   </main>
 
+  <!-- Footer institucional compartido -->
   <footer class="footer-main">
     <div class="container py-5">
       <div class="row g-4 align-items-start">

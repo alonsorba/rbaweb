@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="assets/css/style.css?v=3">
 </head>
 <body>
+  <!-- Header global con navegacion principal -->
   <header class="shadow-sm sticky-top bg-white">
     <nav class="navbar navbar-expand-lg bg-body-tertiary" id="topNav">
       <div class="container-fluid">
@@ -45,6 +46,7 @@
   </header>
 
   <main>
+    <!-- Hero de soporte: canales directos y CTA a reclamaciones/siniestros -->
     <section id="soporte" class="page-hero py-5">
       <div class="container">
         <div class="row align-items-center g-4">
@@ -83,6 +85,7 @@
       </div>
     </section>
 
+    <!-- Bloque de reclamaciones por ramo -->
     <section id="reclamaciones" class="py-5 bg-soft">
       <div class="container">
         <div class="text-center mb-4">
@@ -91,6 +94,7 @@
           <p class="text-muted">Gestionamos vida y salud con seguimiento dedicado.</p>
         </div>
         <div class="row g-4">
+          <!-- Reclamaciones Vida -->
           <div class="col-md-6">
             <div class="tile h-100">
               <div class="icon-circle"><i class="bi bi-heart-pulse"></i></div>
@@ -213,6 +217,7 @@
               </div>
             </div>
           </div>
+          <!-- Reclamaciones Salud -->
           <div class="col-md-6">
             <div class="tile h-100">
               <div class="icon-circle"><i class="bi bi-clipboard2-heart"></i></div>
@@ -329,6 +334,7 @@
       </div>
     </section>
 
+    <!-- Bloque de siniestros por categoria -->
         <section id="siniestros" class="py-5">
       <div class="container">
         <div class="text-center mb-4">
@@ -337,6 +343,7 @@
           <p class="text-muted">Selecciona la categoria para ver pasos, requisitos y contactos.</p>
         </div>
         <div class="row g-4">
+          <!-- Siniestros Autos -->
           <div class="col-md-6">
             <div class="tile h-100">
               <div class="icon-circle"><i class="bi bi-car-front"></i></div>
@@ -456,6 +463,7 @@
               </div>
             </div>
           </div>
+          <!-- Siniestros Daños -->
           <div class="col-md-6">
             <div class="tile h-100">
               <div class="icon-circle"><i class="bi bi-building"></i></div>
@@ -565,6 +573,7 @@
               </div>
             </div>
           </div>
+          <!-- Siniestros Vida -->
           <div class="col-md-6">
             <div class="tile h-100">
               <div class="icon-circle"><i class="bi bi-heart-pulse"></i></div>
@@ -595,6 +604,7 @@
               </div>
             </div>
           </div>
+          <!-- Siniestros Salud -->
           <div class="col-md-6">
             <div class="tile h-100">
               <div class="icon-circle"><i class="bi bi-hospital"></i></div>
@@ -656,6 +666,7 @@
               </div>
             </div>
           </div>
+          <!-- Siniestros Agricola -->
           <div class="col-md-6 offset-md-3">
             <div class="tile h-100">
               <div class="icon-circle"><i class="bi bi-flower3"></i></div>

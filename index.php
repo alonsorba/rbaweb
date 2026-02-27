@@ -1,4 +1,4 @@
-<?php
+﻿<?php
   $siteTitle = 'RBA Seguros y Fianzas';
   $phone = '+52 55 1234 5678';
   $email = 'contacto@rbaseguros.mx';
@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="assets/css/style.css?v=3">
 </head>
 <body class="home-index">
+  <!-- Header global: logo, navegacion y acceso a usuarios -->
   <header class="shadow-sm sticky-top">
     <nav class="navbar navbar-expand-lg" id="topNav">
       <div class="container-fluid">
@@ -44,12 +45,22 @@
 </header>
 
   <main>
+    <!-- Hero de video en portada -->
         <section class="hero-carousel">
       <video class="hero-video d-block w-100" autoplay muted loop playsinline preload="metadata" aria-label="Video principal de edificio corporativo">
-        <source src="assets/img/edificio.mp4" type="video/mp4">
+        <source src="assets/img/edificio1.mp4" type="video/mp4">
       </video>
+      <div class="hero-video-legend" aria-label="Mensaje institucional destacado">
+        <p class="hero-video-legend__title">Aseguramos<br>tu tranquilidad.</p>
+        <p class="hero-video-legend__subtitle">Asesórate con nosotros<br>sobre las mejores alternativas de<br>previsión y protección</p>
+      </div>
+      <a class="hero-scroll-hint" href="#servicios" aria-label="Desplazarse hacia la sección de servicios">
+        <span class="hero-scroll-hint__text">Desliza</span>
+        <span class="hero-scroll-hint__icon" aria-hidden="true"><i class="bi bi-chevron-double-down"></i></span>
+      </a>
     </section>
 
+    <!-- Portafolio de servicios en formato card -->
     <section id="servicios" class="py-5">
       <div class="container">
         <div class="row align-items-center mb-4">
@@ -127,6 +138,7 @@
       </div>
     </section>
 
+    <!-- Bloque comercial principal con formulario rapido -->
     <section id="hero" class="position-relative overflow-hidden text-white">
       <div class="shape-blur"></div>
       <div class="container py-5">
@@ -184,6 +196,7 @@
       </div>
     </section>
 
+    <!-- Propuesta de valor + imagen destacada -->
     <section id="ventajas" class="py-5 bg-soft">
       <div class="container">
         <div class="row g-5 align-items-center">
@@ -227,6 +240,7 @@
       </div>
     </section>
 
+    <!-- Testimonios de clientes -->
     <section id="testimonios" class="py-5">
       <div class="container">
         <div class="text-center mb-4">
@@ -275,6 +289,7 @@
       </div>
     </section>
 
+    <!-- Llamado a la accion principal -->
     <section id="cta" class="py-5 text-center text-white position-relative overflow-hidden">
       <div class="shape-blur"></div>
       <div class="container position-relative">
@@ -288,6 +303,7 @@
       </div>
     </section>
 
+    <!-- Formulario de contacto operativo -->
     <section id="contacto" class="py-5 bg-soft">
       <div class="container">
         <div class="row g-4">
@@ -346,6 +362,7 @@
     </section>
   </main>
 
+  <!-- Footer global con enlaces utiles -->
   <footer class="footer-main">
     <div class="container py-5">
       <div class="row g-4 align-items-start">

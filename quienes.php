@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="assets/css/style.css?v=3">
 </head>
 <body>
+  <!-- Header global con navegacion principal -->
   <header class="shadow-sm sticky-top bg-white">
     <nav class="navbar navbar-expand-lg bg-body-tertiary" id="topNav">
       <div class="container-fluid">
@@ -45,6 +46,7 @@
   </header>
 
   <main>
+    <!-- Hero institucional de la pagina -->
     <section class="qs-hero py-5 position-relative overflow-hidden">
       <div class="container py-4">
         <div class="row align-items-end">
@@ -62,6 +64,7 @@
       </div>
     </section>
 
+    <!-- Bloque de mision y vision corporativa -->
     <section class="py-5 mission-Visión">
       <div class="container">
         <div class="row g-5 align-items-start">
@@ -81,6 +84,7 @@
       </div>
     </section>
 
+    <!-- Valores de la empresa en formato destacado -->
     <section class="values-banner position-relative py-5 overflow-hidden text-white">
       <div class="container position-relative">
         <div class="row g-4 align-items-center">
@@ -103,6 +107,7 @@
       </div>
     </section>
 
+    <!-- Mensaje del director con card de contenido -->
     <section class="director-banner position-relative py-5 text-white overflow-hidden">
       <div class="container position-relative">
         <div class="row g-4 align-items-center">
@@ -126,6 +131,7 @@
     </section>
   </main>
 
+  <!-- Footer institucional compartido -->
   <footer class="footer-main">
     <div class="container py-5">
       <div class="row g-4 align-items-start">

@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="assets/css/style.css?v=3">
 </head>
 <body>
+  <!-- Header global con navegacion principal -->
   <header class="shadow-sm sticky-top bg-white">
     <nav class="navbar navbar-expand-lg bg-body-tertiary" id="topNav">
       <div class="container-fluid">
@@ -44,6 +45,7 @@
   </header>
 
   <main>
+    <!-- Hero de ubicacion con accesos rapidos por ciudad -->
     <section class="page-hero py-5">
       <div class="container">
         <div class="row align-items-center g-4">
@@ -71,6 +73,7 @@
       </div>
     </section>
 
+    <!-- Sucursal matriz: mapa, direccion y contacto -->
     <section class="py-5" id="cd-obregon">
       <div class="container">
         <div class="location-header d-flex flex-wrap justify-content-between align-items-center gap-3 mb-3">
@@ -95,6 +98,7 @@
       </div>
     </section>
 
+    <!-- Sucursal Hermosillo: mapa, direccion y contacto -->
     <section class="py-5 bg-soft" id="hermosillo">
       <div class="container">
         <div class="location-header d-flex flex-wrap justify-content-between align-items-center gap-3 mb-3">
@@ -121,6 +125,7 @@
     </section>
   </main>
 
+  <!-- Footer institucional compartido -->
   <footer class="footer-main">
     <div class="container py-5">
       <div class="row g-4 align-items-start">
