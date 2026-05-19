@@ -17,7 +17,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
   <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
-  <link rel="stylesheet" href="assets/css/style.css?v=3">
+  <link rel="stylesheet" href="assets/css/style.css?v=4">
 </head>
 
 <body>
@@ -56,7 +56,7 @@
             <h1 class="display-5 fw-semibold lh-tight mb-3">Coberturas hechas a medida para tu empresa y tu familia.</h1>
             <p class="lead text-white-80 mb-4">Diseñamos el programa completo: diagnóstico de riesgos, colocación con las mejores aseguradoras y acompañamiento en siniestros sin importar la hora.</p>
             <div class="d-flex flex-wrap gap-3">
-              <a class="btn btn-lg btn-light text-primary" href="index.php#contacto">Habla con un asesor</a>
+              <a class="btn btn-lg btn-light text-primary" href="index.php#contacto">Hablar con un asesor</a>
               <a class="btn btn-lg btn-outline-light" href="tel:<?php echo $phone; ?>">Llamar ahora</a>
             </div>
             <div class="d-flex align-items-center gap-3 mt-4 text-white-80 small">
@@ -64,7 +64,7 @@
               <div class="d-flex align-items-center gap-2"><i class="bi bi-clock-history"></i><span>Atención 24/7</span></div>
             </div>
           </div>
-          <div class="col-lg-5">
+          <div class="col-lg-4">
             <div class="tile shadow-lg">
               <p class="text-primary fw-semibold mb-1"><?php echo $ctaMessage; ?></p>
               <h5 class="fw-semibold">Qué puedes esperar de nuestro equipo</h5>
@@ -258,7 +258,7 @@
           <ul class="list-unstyled footer-links">
             <li><a href="servicio-cliente.php#reclamaciones">Reclamaciones</a></li>
             <li><a href="servicio-cliente.php#siniestros">Siniestros</a></li>
-            <li><a href="servicio-cliente.php#faq">Preguntas Frecuentes</a></li>
+            <li><a href="servicio-cliente.php#soporte">Preguntas Frecuentes</a></li>
           </ul>
         </div>
         <div class="col-6 col-md-4 col-lg-2">
@@ -285,7 +285,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/js/main.js?v=4"></script>
+  <script src="assets/js/main.js?v=5"></script>
 </body>
 </html>
 

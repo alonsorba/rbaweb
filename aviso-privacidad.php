@@ -16,7 +16,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
   <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
-  <link rel="stylesheet" href="assets/css/style.css?v=3">
+  <link rel="stylesheet" href="assets/css/style.css?v=4">
 </head>
 <body>
   <!-- Header global con navegacion principal -->
@@ -131,11 +131,11 @@
         <div class="col-6 col-md-4 col-lg-2">
           <h6 class="footer-heading">Nuestros Servicios</h6>
           <ul class="list-unstyled footer-links">
-            <li><a href="servicios.php#personales">Seguros Personales</a></li>
-            <li><a href="servicios.php#empresariales">Seguros Empresariales</a></li>
-            <li><a href="servicios.php#gobierno">Seguros de Gobierno</a></li>
-            <li><a href="servicios.php#fianzas">Fianzas</a></li>
-            <li><a href="servicios.php#rcusa">Seguro RC USA</a></li>
+            <li><a href="servicios.php#portafolio">Seguros Personales</a></li>
+            <li><a href="servicios.php#portafolio">Seguros Empresariales</a></li>
+            <li><a href="servicios.php#portafolio">Seguros de Gobierno</a></li>
+            <li><a href="servicios.php#portafolio">Fianzas</a></li>
+            <li><a href="servicios.php#portafolio">Seguro RC USA</a></li>
           </ul>
         </div>
         <div class="col-6 col-md-4 col-lg-2">
@@ -151,7 +151,7 @@
           <ul class="list-unstyled footer-links">
             <li><a href="servicio-cliente.php#reclamaciones">Reclamaciones</a></li>
             <li><a href="servicio-cliente.php#siniestros">Siniestros</a></li>
-            <li><a href="servicio-cliente.php#faq">Preguntas Frecuentes</a></li>
+            <li><a href="servicio-cliente.php#soporte">Preguntas Frecuentes</a></li>
           </ul>
         </div>
         <div class="col-6 col-md-4 col-lg-2">
@@ -178,7 +178,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/js/main.js?v=4"></script>
+  <script src="assets/js/main.js?v=5"></script>
 </body>
 </html>
 

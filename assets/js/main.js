@@ -9,119 +9,126 @@
     if ('scrollRestoration' in history) {
       history.scrollRestoration = 'manual';
     }
-    // Punto unico para forzar scroll al top sin animacion.
+
     const scrollToHeader = () => {
       const header = document.querySelector('header');
-      if (header) {
-        window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
-        header.scrollIntoView({ behavior: 'auto', block: 'start' });
-      }
+      if (!header) return;
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+      header.scrollIntoView({ behavior: 'auto', block: 'start' });
     };
-    // Se ejecuta en ambos eventos para ganarle al restore nativo del browser.
+
     document.addEventListener('DOMContentLoaded', scrollToHeader, { once: true });
     window.addEventListener('pageshow', scrollToHeader, { once: true });
   }
 })();
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Referencias globales de UI (navbar/header/hero).
   const nav = document.getElementById('topNav');
   const header = document.querySelector('header.sticky-top');
   const heroCarousel = document.querySelector('body.home-index .hero-carousel');
+  const heroContent = document.querySelector('body.home-index .hero-v2-content');
+  const heroHint = document.querySelector('body.home-index .hero-scroll-hint');
+  const pageHero = document.querySelector('body:not(.home-index) .page-hero, body:not(.home-index) .qs-hero');
+  const statCard = document.getElementById('statCard');
+  const statToggle = document.querySelector('#statCard .stat-toggle');
   const shrinkOn = 20;
   const fadeOutOn = 260;
-  let ticking = false;
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let animationFrame = null;
+  let currentScrollY = window.scrollY;
+  let targetScrollY = window.scrollY;
+  let revealObserver;
 
-  // Actualiza la variable CSS que controla zoom/tono/opacidad del video hero.
-  const updateHeroScrollEffect = () => {
+  const lerp = (start, end, factor) => start + (end - start) * factor;
+
+  const updateHeroScrollEffect = scrollY => {
     if (!heroCarousel) return;
+
     const viewportHeight = window.innerHeight || 1;
-    const maxScroll = Math.max(viewportHeight * 0.85, 1);
-    const progress = Math.min(window.scrollY / maxScroll, 1);
+    const maxScroll = Math.max(viewportHeight * 1.05, 1);
+    const progress = Math.min(scrollY / maxScroll, 1);
+    const easedProgress = 1 - Math.pow(1 - progress, 1.8);
+
     heroCarousel.style.setProperty('--video-scroll-progress', progress.toFixed(3));
+    heroCarousel.style.setProperty('--video-scroll-progress-eased', easedProgress.toFixed(3));
+
+    if (heroContent) {
+      heroContent.style.setProperty('--hero-content-shift', `${easedProgress * -42}px`);
+      heroContent.style.setProperty('--hero-content-opacity', String(1 - (easedProgress * 0.34)));
+    }
+
+    if (heroHint) {
+      heroHint.style.setProperty('--hero-hint-opacity', String(1 - (easedProgress * 0.7)));
+      heroHint.style.setProperty('--hero-hint-shift', `${easedProgress * 18}px`);
+    }
   };
 
-  // Throttle por frame para que el scroll sea fluido y sin trabajo duplicado.
-  const requestScrollFrame = () => {
-    if (ticking) return;
-    ticking = true;
-    window.requestAnimationFrame(() => {
-      onScroll();
-      ticking = false;
-    });
+  const updatePageHeroEffect = scrollY => {
+    if (!pageHero) return;
+
+    const maxScroll = Math.max((window.innerHeight || 1) * 0.75, 1);
+    const progress = Math.min(scrollY / maxScroll, 1);
+    const easedProgress = 1 - Math.pow(1 - progress, 1.6);
+    pageHero.style.setProperty('--page-hero-progress', easedProgress.toFixed(3));
   };
 
-  // Comportamiento de header al desplazarse y sincronizacion de efectos del hero.
-  const onScroll = () => {
-    if (window.scrollY > shrinkOn) {
-      nav.classList.add('shadow-sm');
-    } else {
-      nav.classList.remove('shadow-sm');
+  const onScroll = scrollY => {
+    if (nav) {
+      nav.classList.toggle('shadow-sm', scrollY > shrinkOn);
     }
 
     if (header) {
-      const progress = Math.min(window.scrollY / fadeOutOn, 1);
+      const progress = Math.min(scrollY / fadeOutOn, 1);
       header.style.opacity = String(1 - progress);
-      header.style.transform = `translateY(${progress * -14}px)`;
+      header.style.transform = `translateY(${progress * -18}px) scale(${1 - (progress * 0.02)})`;
       header.style.pointerEvents = progress > 0.98 ? 'none' : 'auto';
     }
-    updateHeroScrollEffect();
+
+    updateHeroScrollEffect(scrollY);
+    updatePageHeroEffect(scrollY);
   };
+
+  const renderScrollFrame = () => {
+    const factor = prefersReducedMotion ? 1 : 0.12;
+    currentScrollY = lerp(currentScrollY, targetScrollY, factor);
+
+    if (Math.abs(targetScrollY - currentScrollY) < 0.1) {
+      currentScrollY = targetScrollY;
+    }
+
+    onScroll(currentScrollY);
+
+    if (Math.abs(targetScrollY - currentScrollY) >= 0.1) {
+      animationFrame = window.requestAnimationFrame(renderScrollFrame);
+      return;
+    }
+
+    animationFrame = null;
+  };
+
+  const requestScrollFrame = () => {
+    targetScrollY = window.scrollY;
+    if (animationFrame !== null) return;
+    animationFrame = window.requestAnimationFrame(renderScrollFrame);
+  };
+
   window.addEventListener('scroll', requestScrollFrame, { passive: true });
   window.addEventListener('resize', requestScrollFrame);
-  onScroll();
+  requestScrollFrame();
 
-  // Smooth scroll para anclas internas del menu.
-  document.querySelectorAll('a.nav-link[href^="#"]').forEach(link => {
-    link.addEventListener('click', e => {
+  document.querySelectorAll('a.nav-link[href^="#"], a.hero-scroll-hint[href^="#"]').forEach(link => {
+    link.addEventListener('click', event => {
       const target = document.querySelector(link.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+      if (!target) return;
+      event.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
 
-  const statCard = document.getElementById('statCard');
-  const statToggle = document.querySelector('#statCard .stat-toggle');
   if (statCard && statToggle) {
-    // Colapsa/expande la tarjeta estadistica cuando existe en la vista.
     statToggle.addEventListener('click', () => {
       statCard.classList.toggle('collapsed');
     });
-  }
-
-  const heroCarouselEl = document.getElementById('heroCarousel');
-  if (heroCarouselEl) {
-    // Camino principal: inicializa carrusel con Bootstrap cuando esta disponible.
-    if (window.bootstrap && bootstrap.Carousel) {
-      new bootstrap.Carousel(heroCarouselEl, { interval: 5000, ride: 'carousel', pause: false });
-    } else {
-      // Camino fallback: carrusel manual si Bootstrap JS no cargó.
-      heroCarouselEl.classList.add('fallback-carousel');
-      const items = Array.from(heroCarouselEl.querySelectorAll('.carousel-item'));
-      const indicators = Array.from(heroCarouselEl.querySelectorAll('[data-bs-slide-to]'));
-      let current = 0;
-      const activate = idx => {
-        items.forEach((item, i) => item.classList.toggle('active', i === idx));
-        indicators.forEach((btn, i) => {
-          btn.classList.toggle('active', i === idx);
-          btn.setAttribute('aria-current', i === idx ? 'true' : 'false');
-        });
-        current = idx;
-      };
-      const next = () => activate((current + 1) % items.length);
-      const prev = () => activate((current - 1 + items.length) % items.length);
-      heroCarouselEl.querySelector('.carousel-control-next')?.addEventListener('click', e => { e.preventDefault(); next(); });
-      heroCarouselEl.querySelector('.carousel-control-prev')?.addEventListener('click', e => { e.preventDefault(); prev(); });
-      indicators.forEach(btn => btn.addEventListener('click', e => {
-        e.preventDefault();
-        const idx = Number(btn.getAttribute('data-bs-slide-to'));
-        if (!Number.isNaN(idx)) activate(idx);
-      }));
-      activate(0);
-      setInterval(next, 5000);
-    }
   }
 
   // Fallback de acordeon/collapse cuando no existe bootstrap.Collapse.
@@ -130,8 +137,10 @@ document.addEventListener('DOMContentLoaded', () => {
       button.addEventListener('click', () => {
         const targetSelector = button.getAttribute('data-bs-target');
         if (!targetSelector) return;
+
         const target = document.querySelector(targetSelector);
         if (!target) return;
+
         const parentSelector = target.getAttribute('data-bs-parent');
         if (parentSelector) {
           const parent = document.querySelector(parentSelector);
@@ -141,6 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
           });
         }
+
         const willOpen = !target.classList.contains('show');
         target.classList.toggle('show');
         button.setAttribute('aria-expanded', String(willOpen));
@@ -148,36 +158,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Reveal on scroll para cards e imagenes principales del contenido.
   if ('IntersectionObserver' in window) {
     const revealTargets = Array.from(document.querySelectorAll(
-      'main .tile, main .glass-card, main .location-card, main .privacy-card, main .ratio, main img'
-    )).filter(el => !el.classList.contains('brand-logo') && !el.classList.contains('footer-logo'));
+      'main .tile, main .glass-card, main .location-card, main .privacy-card, main .ratio, main img, main .trust-pill, main .timeline-v2-step, main .accordion-item, main .pill-highlight, main .values-list li, main .section-title-line'
+    )).filter(el => !el.classList.contains('brand-logo') && !el.classList.contains('footer-logo') && !el.classList.contains('home-landing-hero__image'));
 
     revealTargets.forEach((el, idx) => {
-      // Clase base de animacion + delay escalonado para entrada visual limpia.
       el.classList.add('reveal-on-scroll');
-      el.style.setProperty('--reveal-delay', `${(idx % 4) * 55}ms`);
+      el.style.setProperty('--reveal-delay', `${(idx % 4) * 80}ms`);
     });
 
-    // Alterna visibilidad al entrar/salir del viewport (subiendo y bajando).
-    const revealObserver = new IntersectionObserver((entries) => {
+    revealObserver = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          return;
-        }
-        entry.target.classList.remove('is-visible');
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
       });
     }, {
-      threshold: 0.12,
-      rootMargin: '0px 0px -10% 0px'
+      threshold: 0.16,
+      rootMargin: '0px 0px -12% 0px'
     });
 
     revealTargets.forEach(el => revealObserver.observe(el));
   }
-
 });
-
-
-
