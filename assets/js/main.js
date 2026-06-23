@@ -27,10 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('header.sticky-top');
   const heroCarousel = document.querySelector('body.home-index .hero-carousel');
   const heroContent = document.querySelector('body.home-index .hero-v2-content');
-  const heroHint = document.querySelector('body.home-index .hero-scroll-hint');
   const pageHero = document.querySelector('body:not(.home-index) .page-hero, body:not(.home-index) .qs-hero');
-  const statCard = document.getElementById('statCard');
-  const statToggle = document.querySelector('#statCard .stat-toggle');
   const shrinkOn = 20;
   const fadeOutOn = 260;
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -38,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentScrollY = window.scrollY;
   let targetScrollY = window.scrollY;
   let revealObserver;
+  let countObserver;
 
   const lerp = (start, end, factor) => start + (end - start) * factor;
 
@@ -55,11 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (heroContent) {
       heroContent.style.setProperty('--hero-content-shift', `${easedProgress * -42}px`);
       heroContent.style.setProperty('--hero-content-opacity', String(1 - (easedProgress * 0.34)));
-    }
-
-    if (heroHint) {
-      heroHint.style.setProperty('--hero-hint-opacity', String(1 - (easedProgress * 0.7)));
-      heroHint.style.setProperty('--hero-hint-shift', `${easedProgress * 18}px`);
     }
   };
 
@@ -116,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('resize', requestScrollFrame);
   requestScrollFrame();
 
-  document.querySelectorAll('a.nav-link[href^="#"], a.hero-scroll-hint[href^="#"]').forEach(link => {
+  document.querySelectorAll('a.nav-link[href^="#"]').forEach(link => {
     link.addEventListener('click', event => {
       const target = document.querySelector(link.getAttribute('href'));
       if (!target) return;
@@ -125,42 +118,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  if (statCard && statToggle) {
-    statToggle.addEventListener('click', () => {
-      statCard.classList.toggle('collapsed');
-    });
-  }
-
-  // Fallback de acordeon/collapse cuando no existe bootstrap.Collapse.
-  if (!window.bootstrap || !bootstrap.Collapse) {
-    document.querySelectorAll('[data-bs-toggle="collapse"]').forEach(button => {
-      button.addEventListener('click', () => {
-        const targetSelector = button.getAttribute('data-bs-target');
-        if (!targetSelector) return;
-
-        const target = document.querySelector(targetSelector);
-        if (!target) return;
-
-        const parentSelector = target.getAttribute('data-bs-parent');
-        if (parentSelector) {
-          const parent = document.querySelector(parentSelector);
-          parent?.querySelectorAll('.collapse.show').forEach(item => {
-            if (item !== target) {
-              item.classList.remove('show');
-            }
-          });
-        }
-
-        const willOpen = !target.classList.contains('show');
-        target.classList.toggle('show');
-        button.setAttribute('aria-expanded', String(willOpen));
-      });
-    });
-  }
-
   if ('IntersectionObserver' in window) {
     const revealTargets = Array.from(document.querySelectorAll(
-      'main .tile, main .glass-card, main .location-card, main .privacy-card, main .ratio, main img, main .trust-pill, main .timeline-v2-step, main .accordion-item, main .pill-highlight, main .values-list li, main .section-title-line'
+      'main .tile, main .glass-card, main .location-card, main .privacy-card, main .ratio, main img, main .trust-pill, main .timeline-v2-step, main .accordion-item, main .pill-highlight, main .values-list li, main .section-title-line, main .reveal-on-scroll'
     )).filter(el => !el.classList.contains('brand-logo') && !el.classList.contains('footer-logo') && !el.classList.contains('home-landing-hero__image'));
 
     revealTargets.forEach((el, idx) => {
@@ -180,5 +140,66 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     revealTargets.forEach(el => revealObserver.observe(el));
+
+    const countTargets = Array.from(document.querySelectorAll(
+      '.infographic-stats__number[data-count-target], .infographic-presence__number[data-count-target]'
+    ));
+
+    const animateCount = (element, targetValue, prefix = '') => {
+      const durationMs = 1500;
+      const startTime = performance.now();
+      const startValue = 0;
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (prefersReduced) {
+        element.textContent = `${prefix}${targetValue}`;
+        return;
+      }
+
+      const tick = now => {
+        const elapsed = Math.min((now - startTime) / durationMs, 1);
+        const eased = 1 - Math.pow(1 - elapsed, 3);
+        const currentValue = Math.round(startValue + ((targetValue - startValue) * eased));
+        element.textContent = `${prefix}${currentValue}`;
+
+        if (elapsed < 1) {
+          window.requestAnimationFrame(tick);
+          return;
+        }
+
+        element.textContent = `${prefix}${targetValue}`;
+      };
+
+      window.requestAnimationFrame(tick);
+    };
+
+    if (countTargets.length) {
+      countObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+
+          const element = entry.target;
+          const targetValue = Number.parseInt(element.dataset.countTarget, 10);
+          const prefix = element.dataset.countPrefix || '';
+
+          if (Number.isNaN(targetValue)) {
+            countObserver.unobserve(element);
+            return;
+          }
+
+          if (!element.dataset.countAnimated) {
+            element.dataset.countAnimated = 'true';
+            animateCount(element, targetValue, prefix);
+          }
+
+          countObserver.unobserve(element);
+        });
+      }, {
+        threshold: 0.35,
+        rootMargin: '0px 0px -10% 0px'
+      });
+
+      countTargets.forEach(el => countObserver.observe(el));
+    }
   }
 });

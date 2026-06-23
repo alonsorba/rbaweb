@@ -3,6 +3,12 @@
   $phone = '+52 55 1234 5678';
   $email = 'contacto@rbaseguros.mx';
   $year = date('Y');
+  $mapImagePath = 'assets/img/mapaa.png';
+  $mapImageExists = file_exists(__DIR__ . '/assets/img/mapaa.png');
+  $esrImagePath = 'assets/img/esr con sombre.png';
+  $esrImageExists = file_exists(__DIR__ . '/assets/img/esr con sombre.png');
+  $commitmentImagePath = 'assets/img/compromiso.png';
+  $commitmentImageExists = file_exists(__DIR__ . '/assets/img/compromiso.png');
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -15,7 +21,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="assets/css/style.css?v=5">
+  <link rel="stylesheet" href="assets/css/style.css?v=12">
 </head>
 <body class="home-index">
   <!-- Header global: logo, navegacion y acceso a usuarios -->
@@ -68,13 +74,115 @@
       </div>
     </section>
 
-    <section id="trust-bar" class="trust-bar py-3">
+    <section id="trust-bar" class="infographic-section">
       <div class="container">
-        <div class="row g-3">
-          <div class="col-6 col-lg-3"><div class="trust-pill"><i class="bi bi-headset"></i><span>Atención 24/7</span></div></div>
-          <div class="col-6 col-lg-3"><div class="trust-pill"><i class="bi bi-diagram-3"></i><span>Multiaseguradora</span></div></div>
-          <div class="col-6 col-lg-3"><div class="trust-pill"><i class="bi bi-person-badge"></i><span>Gestor dedicado</span></div></div>
-          <div class="col-6 col-lg-3"><div class="trust-pill"><i class="bi bi-lightning-charge"></i><span>Respuesta en minutos</span></div></div>
+        <div class="infographic-shell">
+          <div class="infographic-stats reveal-on-scroll">
+            <div class="infographic-stats__item">
+              <div class="infographic-stats__number" data-count-target="150" data-count-prefix="+">+150</div>
+              <div class="infographic-stats__label">empresas aseguradas</div>
+            </div>
+            <div class="infographic-stats__item">
+              <div class="infographic-stats__number" data-count-target="35" data-count-prefix="+">+35</div>
+              <div class="infographic-stats__label">años de experiencia</div>
+            </div>
+            <div class="infographic-stats__item">
+              <div class="infographic-stats__number" data-count-target="80" data-count-prefix="+">+80</div>
+              <div class="infographic-stats__label">colaboradores</div>
+            </div>
+          </div>
+
+          <div class="infographic-layout">
+            <div class="infographic-copy">
+              <div class="infographic-label reveal-on-scroll">
+                <span class="infographic-label__icon"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i></span>
+                <span class="infographic-label__text">Matriz en Ciudad<br>Obregón, Sonora</span>
+              </div>
+
+              <span class="infographic-connector-line" aria-hidden="true"></span>
+
+              <div class="infographic-presence reveal-on-scroll">
+              <div class="infographic-presence__number" data-count-target="25" data-count-prefix="+">+25</div>
+                <div class="infographic-presence__text">estados con presencia</div>
+              </div>
+            </div>
+
+            <div class="infographic-map reveal-on-scroll">
+              <div class="infographic-map__stage">
+                <span class="infographic-map__dot" aria-hidden="true"></span>
+                <?php if ($mapImageExists): ?>
+                  <img src="<?php echo $mapImagePath; ?>" alt="Mapa de México con presencia nacional de RBA" class="infographic-map__image" loading="lazy">
+                <?php else: ?>
+                  <div class="infographic-map__placeholder">
+                    <!-- Reemplazar este bloque por la imagen del mapa cuando esté disponible en assets/img/mapaa.png -->
+                    <p>Mapa de México</p>
+                  </div>
+                <?php endif; ?>
+
+                <div class="infographic-map__hover">
+                  <div class="infographic-map__hover-card">
+                    <strong>Presencia nacional</strong>
+                    <p>Matriz en Ciudad Obregón, Sonora. Cobertura activa en 25 estados.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="infographic-esr reveal-on-scroll">
+            <div class="infographic-esr__content">
+              <div class="infographic-esr__eyebrow">XV años</div>
+              <h2 class="infographic-esr__title">
+                <span>de ser</span>
+                <span>Empresa Socialmente</span>
+                <span>Responsable</span>
+              </h2>
+              <p class="infographic-esr__copy">Seguimos construyendo un futuro más responsable todos los días.</p>
+
+              <div class="infographic-esr__bar">
+                <span>Ética Empresarial</span>
+                <span>Cuidado del Medio Ambiente</span>
+                <span>Bienestar Social</span>
+              </div>
+            </div>
+
+            <div class="infographic-esr__media">
+              <?php if ($esrImageExists): ?>
+                <img src="<?php echo $esrImagePath; ?>" alt="Reconocimiento ESR de RBA Seguros y Fianzas" class="infographic-esr__image" loading="lazy">
+              <?php else: ?>
+                <div class="infographic-esr__placeholder">
+                  <!-- Reemplazar este bloque por la imagen del reconocimiento ESR cuando esté disponible en assets/img/esr con sombre.png -->
+                  <div class="infographic-esr__placeholder-eyebrow">Reconocimiento ESR</div>
+                  <p>Colocar aquí el trofeo ESR.</p>
+                </div>
+              <?php endif; ?>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="compromiso" class="commitment-section">
+      <div class="commitment-container">
+        <div class="commitment-copy reveal-on-scroll" style="max-width: 760px; padding-right: clamp(2rem, 4vw, 4rem);">
+          <h2 class="commitment-title" style="margin: 0; color: #565656; font-size: clamp(1.8rem, 2.25vw, 3.1rem); line-height: 1.18; font-weight: 400; letter-spacing: -0.035em;">
+            <span><strong>Nuestro compromiso</strong> es brindarte</span>
+            <span>un <strong>servicio en excelencia</strong> para</span>
+            <span>lograr al máximo <strong>tus necesidades</strong></span>
+            <span><strong>de protección.</strong></span>
+          </h2>
+        </div>
+
+        <div class="commitment-media reveal-on-scroll" style="width: clamp(540px, 42vw, 760px); max-width: 100%; justify-self: end; transform: translateY(-24px);">
+          <div class="commitment-image-card" style="width: 100%; aspect-ratio: 1.85 / 1; border-radius: clamp(24px, 2vw, 38px); overflow: hidden; background: transparent; box-shadow: none;">
+            <?php if ($commitmentImageExists): ?>
+              <img src="<?php echo $commitmentImagePath; ?>" alt="Asesoría profesional RBA" class="commitment-image" loading="lazy" style="display: block; width: 100%; height: 100%; object-fit: contain; object-position: center bottom;">
+            <?php else: ?>
+              <div class="commitment-image commitment-image--placeholder">
+                <span>RBA</span>
+              </div>
+            <?php endif; ?>
+          </div>
         </div>
       </div>
     </section>
@@ -274,7 +382,7 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-  <script src="assets/js/main.js?v=5"></script>
+  <script src="assets/js/main.js?v=7"></script>
 </body>
 </html>
 
