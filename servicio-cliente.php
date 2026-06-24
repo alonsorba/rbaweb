@@ -546,7 +546,7 @@
                         <li>- Ajustador envia convenio y finiquito para firma.</li>
                         <li>- Se revisan diferencias y se aclaran.</li>
                         <li>- Autorización final con aseguradora.</li>
-                        <li>- Firma de documentos y tramite de pago.</li>
+                        <li>- Firma de documentos y trámite de pago.</li>
                       </ul>
                     </div>
                   </div>

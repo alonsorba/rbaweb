@@ -106,8 +106,8 @@
           <p>En caso de cualquier duda o aclaración que pudiera tener respecto al tratamiento de su información puede comunicarse al correo <a href="mailto:dpaz@rbaidon.com.mx">dpaz@rbaidon.com.mx</a>.</p>
 
           <h5 class="fw-semibold">Procedimiento para revocar su consentimiento al tratamiento de sus datos</h5>
-          <p>Usted puede revocar el consentimiento que, en su caso, nos haya otorgado para el tratamiento de sus datos personales. Sin embargo, es importante tener en cuenta que NO en todos los casos podremos atender su solicitud o concluir el uso de forma inmediata, ya que es posible que, por alguna Obligación legal, requiramos seguir tratando sus datos personales. Asimismo, usted debera considerar que, para ciertos fines, la Revocación de su consentimiento implicara que no podamos seguir prestando el servicio que nos solicito o la conclusion de su relacion con nosotros.</p>
-          <p>Para hacer valida la Revocación del consentimiento, usted debera enviar un correo a <a href="mailto:dpaz@rbaidon.com.mx">dpaz@rbaidon.com.mx</a> solicitando expresamente la Revocación de todos los datos personales.</p>
+          <p>Usted puede revocar el consentimiento que, en su caso, nos haya otorgado para el tratamiento de sus datos personales. Sin embargo, es importante tener en cuenta que NO en todos los casos podremos atender su solicitud o concluir el uso de forma inmediata, ya que es posible que, por alguna obligación legal, requiramos seguir tratando sus datos personales. Asimismo, usted deberá considerar que, para ciertos fines, la revocación de su consentimiento implicará que no podamos seguir prestando el servicio que nos solicitó o la conclusión de su relación con nosotros.</p>
+          <p>Para hacer válida la revocación del consentimiento, usted deberá enviar un correo a <a href="mailto:dpaz@rbaidon.com.mx">dpaz@rbaidon.com.mx</a> solicitando expresamente la revocación de todos los datos personales.</p>
 
           <h5 class="fw-semibold">Las opciones y medios para limitar el uso o divulgación</h5>
           <p>de su información personal son:</p>

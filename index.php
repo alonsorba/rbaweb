@@ -1,4 +1,4 @@
-﻿<?php
+<?php
   $siteTitle = 'RBA Seguros y Fianzas';
   $phone = '+52 55 1234 5678';
   $email = 'contacto@rbaseguros.mx';
@@ -21,7 +21,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="assets/css/style.css?v=12">
+  <link rel="stylesheet" href="assets/css/style.css?v=16">
 </head>
 <body class="home-index">
   <!-- Header global: logo, navegacion y acceso a usuarios -->
@@ -164,8 +164,8 @@
 
     <section id="compromiso" class="commitment-section">
       <div class="commitment-container">
-        <div class="commitment-copy reveal-on-scroll" style="max-width: 760px; padding-right: clamp(2rem, 4vw, 4rem);">
-          <h2 class="commitment-title" style="margin: 0; color: #565656; font-size: clamp(1.8rem, 2.25vw, 3.1rem); line-height: 1.18; font-weight: 400; letter-spacing: -0.035em;">
+        <div class="commitment-copy reveal-on-scroll">
+          <h2 class="commitment-title">
             <span><strong>Nuestro compromiso</strong> es brindarte</span>
             <span>un <strong>servicio en excelencia</strong> para</span>
             <span>lograr al máximo <strong>tus necesidades</strong></span>
@@ -173,10 +173,10 @@
           </h2>
         </div>
 
-        <div class="commitment-media reveal-on-scroll" style="width: clamp(540px, 42vw, 760px); max-width: 100%; justify-self: end; transform: translateY(-24px);">
-          <div class="commitment-image-card" style="width: 100%; aspect-ratio: 1.85 / 1; border-radius: clamp(24px, 2vw, 38px); overflow: hidden; background: transparent; box-shadow: none;">
+        <div class="commitment-media reveal-on-scroll">
+          <div class="commitment-image-card">
             <?php if ($commitmentImageExists): ?>
-              <img src="<?php echo $commitmentImagePath; ?>" alt="Asesoría profesional RBA" class="commitment-image" loading="lazy" style="display: block; width: 100%; height: 100%; object-fit: contain; object-position: center bottom;">
+              <img src="<?php echo $commitmentImagePath; ?>" alt="Asesoría profesional RBA" class="commitment-image" loading="lazy">
             <?php else: ?>
               <div class="commitment-image commitment-image--placeholder">
                 <span>RBA</span>

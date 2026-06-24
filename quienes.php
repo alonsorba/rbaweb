@@ -1,4 +1,4 @@
-﻿<?php
+<?php
   $siteTitle = 'RBA Seguros y Fianzas';
   $phone = '+52 55 1234 5678';
   $email = 'contacto@rbaseguros.mx';
@@ -51,7 +51,7 @@
           <div class="col-lg-7">
             <div class="eyebrow text-white-80">Quiénes somos</div>
             <h1 class="display-5 fw-semibold lh-tight text-white mb-3">Comprometidos con su tranquilidad.</h1>
-            <p class="lead text-white-80 mb-4">Protegemos a nuestros clientes con alternativas de previsión y protección justas, acompanandolos en cada tramite y siniestro.</p>
+            <p class="lead text-white-80 mb-4">Protegemos a nuestros clientes con alternativas de previsión y protección justas, acompañándolos en cada trámite y siniestro.</p>
             <div class="d-flex flex-wrap gap-3 text-white-80 small">
               <div class="pill-highlight d-flex align-items-center gap-2"><i class="bi bi-shield-check"></i><span>Pago justo y servicio cercano</span></div>
               <div class="pill-highlight d-flex align-items-center gap-2"><i class="bi bi-people"></i><span>Equipo humano profesional</span></div>
@@ -88,7 +88,7 @@
         <div class="row g-4 align-items-center">
           <div class="col-lg-6">
             <h3 class="fw-semibold mb-3">Nuestros Valores</h3>
-            <p class="text-white-80 mb-4">Cuidamos la relacion de largo plazo con cada cliente, colocando sus intereses por encima de los nuestros.</p>
+            <p class="text-white-80 mb-4">Cuidamos la relación de largo plazo con cada cliente, colocando sus intereses por encima de los nuestros.</p>
           </div>
           <div class="col-lg-6">
             <ul class="values-list list-unstyled mb-0">
@@ -115,7 +115,7 @@
           <div class="col-lg-8">
             <div class="glass-card director-card p-4 p-lg-5 text-white">
               <p class="mb-3">En R. Baidon estamos "Comprometidos con su Tranquilidad", nuestro compromiso es satisfacer al máximo las necesidades de protección de usted, su familia y su negocio.</p>
-              <p class="mb-3">Nos interesa mucho establecer una relacion de largo plazo con Usted, una relacion basada en cuidar siempre sus intereses aun por encima de los nuestros.</p>
+              <p class="mb-3">Nos interesa mucho establecer una relación de largo plazo con Usted, una relación basada en cuidar siempre sus intereses aun por encima de los nuestros.</p>
               <p class="mb-3">Además, nos comprometemos a seguir buscando nuevas y mejores formas de resolver sus necesidades de protección y ofrecerle un excelente servicio en la contratación de su seguro.</p>
               <p class="mb-4">Asimismo, nos comprometemos a estar siempre disponibles para apoyarlo en caso de presentarse un siniestro o reclamación y asegurarnos así de que usted reciba la mejor atención y el pago más justo.</p>
               <div class="director-signature">
