@@ -202,4 +202,172 @@ document.addEventListener('DOMContentLoaded', () => {
       countTargets.forEach(el => countObserver.observe(el));
     }
   }
+
+  const solutionSection = document.querySelector('.services-solutions');
+  if (!solutionSection) return;
+
+  const solutionTrack = solutionSection.querySelector('#solutionsTrack') || solutionSection.querySelector('[data-solution-track]');
+  const solutionCarousel = solutionSection.querySelector('#solutionsCarousel') || solutionSection.querySelector('[data-solution-carousel]');
+  const solutionButtons = Array.from(solutionSection.querySelectorAll('[data-solution-key]'));
+
+  const solutionData = {
+    empresas: [
+      {
+        title: 'Daños',
+        description: 'Protección para patrimonio, incendio, fenómenos naturales y pérdidas materiales.',
+        image: 'assets/img/escudo.png',
+        alt: 'Protección de daños'
+      },
+      {
+        title: 'Autos',
+        description: 'Coberturas para unidades particulares o flotillas con asistencia y respaldo vial.',
+        image: 'assets/img/carro.png',
+        alt: 'Cobertura de autos'
+      },
+      {
+        title: 'Gastos Médicos',
+        description: 'Atención médica privada con protección amplia, respaldo hospitalario y emergencias.',
+        image: 'assets/img/corazon.png',
+        alt: 'Cobertura de gastos médicos'
+      },
+      {
+        title: 'Vida',
+        description: 'Protección financiera para tu familia y planeación de largo plazo.',
+        image: 'assets/img/asesoria.png',
+        alt: 'Cobertura de vida'
+      }
+    ],
+    personas: [
+      {
+        title: 'Hogar',
+        description: 'Cobertura para tu casa y contenidos con protección práctica y fácil de entender.',
+        image: 'assets/img/persona.png',
+        alt: 'Cobertura de hogar'
+      },
+      {
+        title: 'Auto Personal',
+        description: 'Protección para tu vehículo con asistencia, daños materiales y responsabilidad civil.',
+        image: 'assets/img/carro.png',
+        alt: 'Cobertura de auto personal'
+      },
+      {
+        title: 'Salud',
+        description: 'Soluciones de salud y bienestar con respaldo para atención médica oportuna.',
+        image: 'assets/img/corazon.png',
+        alt: 'Cobertura de salud'
+      },
+      {
+        title: 'Vida Familiar',
+        description: 'Planeación y respaldo económico para el futuro de quienes dependen de ti.',
+        image: 'assets/img/asesoria.png',
+        alt: 'Cobertura de vida familiar'
+      }
+    ],
+    gestion: [
+      {
+        title: 'Administración de Riesgos',
+        description: 'Acompañamiento para identificar, medir y priorizar riesgos de manera integral.',
+        image: 'assets/img/cuadro escudo.png',
+        alt: 'Administración de riesgos'
+      },
+      {
+        title: 'Gestión de Siniestros',
+        description: 'Seguimiento ordenado de incidencias para acelerar respuesta y resolución.',
+        image: 'assets/img/cuadro gastos.png',
+        alt: 'Gestión de siniestros'
+      },
+      {
+        title: 'Fianzas',
+        description: 'Esquemas de cumplimiento y respaldo para contratos, licitaciones y obligaciones.',
+        image: 'assets/img/cuadro carro.png',
+        alt: 'Fianzas'
+      },
+      {
+        title: 'Programas Corporativos',
+        description: 'Diseño y administración de programas hechos a la medida de tu operación.',
+        image: 'assets/img/persona.png',
+        alt: 'Programas corporativos'
+      }
+    ]
+  };
+
+  solutionData.fianzas = solutionData.gestion;
+
+  const renderSolutions = key => {
+    if (!solutionTrack) return;
+    const items = solutionData[key] || solutionData.empresas;
+
+    solutionTrack.innerHTML = items.map(item => `
+      <article class="solution-card">
+        <img src="${item.image}" alt="${item.alt}" class="solution-card__image" loading="lazy">
+        <div class="solution-card__content">
+          <h3>${item.title}</h3>
+          <p>${item.description}</p>
+          <a href="#contacto" class="solution-card__btn">VER COBERTURA</a>
+        </div>
+      </article>
+    `).join('');
+
+    if (solutionCarousel) {
+      solutionCarousel.scrollTo({ left: 0, behavior: 'auto' });
+    }
+  };
+
+  const setActiveSolution = key => {
+    solutionButtons.forEach(button => {
+      const isActive = button.dataset.solutionKey === key;
+      button.classList.toggle('active', isActive);
+      button.setAttribute('aria-pressed', String(isActive));
+    });
+
+    renderSolutions(key);
+  };
+
+  solutionButtons.forEach(button => {
+    button.addEventListener('click', () => setActiveSolution(button.dataset.solutionKey));
+  });
+
+  if (solutionCarousel) {
+    let isDown = false;
+    let startX = 0;
+    let scrollLeft = 0;
+    let moved = false;
+
+    solutionCarousel.addEventListener('mousedown', function (event) {
+      isDown = true;
+      moved = false;
+      solutionCarousel.classList.add('is-dragging');
+      startX = event.pageX - solutionCarousel.offsetLeft;
+      scrollLeft = solutionCarousel.scrollLeft;
+    });
+
+    solutionCarousel.addEventListener('mouseleave', function () {
+      isDown = false;
+      solutionCarousel.classList.remove('is-dragging');
+    });
+
+    solutionCarousel.addEventListener('mouseup', function () {
+      isDown = false;
+      solutionCarousel.classList.remove('is-dragging');
+    });
+
+    solutionCarousel.addEventListener('mousemove', function (event) {
+      if (!isDown) return;
+      event.preventDefault();
+      const x = event.pageX - solutionCarousel.offsetLeft;
+      const walk = (x - startX) * 1.4;
+      if (Math.abs(walk) > 5) moved = true;
+      solutionCarousel.scrollLeft = scrollLeft - walk;
+    });
+
+    solutionCarousel.addEventListener('click', function (event) {
+      if (!moved) return;
+      const link = event.target.closest('a');
+      if (link) event.preventDefault();
+    }, true);
+  }
+
+  renderSolutions('empresas');
+  setActiveSolution('empresas');
 });
+

@@ -21,7 +21,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="assets/css/style.css?v=16">
+  <link rel="stylesheet" href="assets/css/style.css?v=17">
 </head>
 <body class="home-index">
   <!-- Header global: logo, navegacion y acceso a usuarios -->
@@ -187,51 +187,56 @@
       </div>
     </section>
 
-    <section id="servicios" class="py-5 services-v2">
+    <section id="servicios" class="services-solutions py-5" aria-labelledby="solutionsTitle">
       <div class="container">
-        <div class="row align-items-end mb-4">
-          <div class="col-lg-8">
-            <div class="eyebrow text-primary">Portafolio</div>
-            <h2 class="fw-semibold mb-2">Coberturas diseñadas para cada etapa.</h2>
-            <p class="text-muted mb-0">Selecciona tu frente de interés y conoce las opciones recomendadas por nuestros especialistas.</p>
-          </div>
-          <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
-            <a class="btn btn-outline-primary btn-lg" href="#contacto">Agenda una llamada</a>
+        <div class="services-solutions__header text-center">
+          <h2 class="services-solutions__title" id="solutionsTitle">Soluciones</h2>
+          <div class="services-solutions__pills" role="tablist" aria-label="Tipos de solución">
+            <button type="button" class="services-solutions__pill active" data-solution-key="empresas" aria-pressed="true">Empresas</button>
+            <button type="button" class="services-solutions__pill" data-solution-key="personas" aria-pressed="false">Personas</button>
+            <button type="button" class="services-solutions__pill" data-solution-key="fianzas" aria-pressed="false">Fianzas</button>
+            <button type="button" class="services-solutions__pill" data-solution-key="gestion" aria-pressed="false">Gestión Integral</button>
           </div>
         </div>
 
-        <ul class="nav nav-pills services-tabs mb-4" id="servicesTab" role="tablist">
-          <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="empresarial-tab" data-bs-toggle="pill" data-bs-target="#empresarial-pane" type="button" role="tab" aria-controls="empresarial-pane" aria-selected="true">Empresarial</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link" id="personales-tab" data-bs-toggle="pill" data-bs-target="#personales-pane" type="button" role="tab" aria-controls="personales-pane" aria-selected="false">Personales</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link" id="fianzas-tab" data-bs-toggle="pill" data-bs-target="#fianzas-pane" type="button" role="tab" aria-controls="fianzas-pane" aria-selected="false">Fianzas y siniestros</button>
-          </li>
-        </ul>
+        <div class="services-solutions__carousel-shell">
+          <div class="services-solutions__carousel solutions-carousel" id="solutionsCarousel" data-solution-carousel aria-label="Carrusel de soluciones">
+            <div class="services-solutions__track solutions-track" id="solutionsTrack" data-solution-track>
+              <article class="solution-card">
+                <img src="assets/img/escudo.png" alt="Daños" class="solution-card__image">
+                <div class="solution-card__content">
+                  <h3>Daños</h3>
+                  <p>Protección para los activos de tu empresa y su responsabilidad civil ante siniestros.</p>
+                  <a href="#contacto" class="solution-card__btn">VER COBERTURA</a>
+                </div>
+              </article>
 
-        <div class="tab-content" id="servicesTabContent">
-          <div class="tab-pane fade show active" id="empresarial-pane" role="tabpanel" aria-labelledby="empresarial-tab" tabindex="0">
-            <div class="row g-4">
-              <div class="col-md-6 col-lg-4"><div class="tile h-100"><div class="icon-circle"><i class="bi bi-building-check"></i></div><h5 class="fw-semibold">Seguros Empresariales</h5><p class="text-muted">Protección patrimonial, responsabilidad civil, transporte y riesgos especiales con planes a medida.</p></div></div>
-              <div class="col-md-6 col-lg-4"><div class="tile h-100"><div class="icon-circle"><i class="bi bi-car-front"></i></div><h5 class="fw-semibold">Autos Ejecutivos</h5><p class="text-muted">Coberturas flexibles, autos de reemplazo y asistencia en carretera para operación continua.</p></div></div>
-              <div class="col-md-6 col-lg-4"><div class="tile h-100"><div class="icon-circle"><i class="bi bi-shield-check"></i></div><h5 class="fw-semibold">Responsabilidad Civil</h5><p class="text-muted">Blindaje legal y financiero para operaciones, proveedores y relaciones comerciales.</p></div></div>
-            </div>
-          </div>
-          <div class="tab-pane fade" id="personales-pane" role="tabpanel" aria-labelledby="personales-tab" tabindex="0">
-            <div class="row g-4">
-              <div class="col-md-6 col-lg-4"><div class="tile h-100"><div class="icon-circle"><i class="bi bi-heart-pulse"></i></div><h5 class="fw-semibold">Gastos Médicos</h5><p class="text-muted">Cobertura nacional e internacional con red hospitalaria premium y concierge de salud.</p></div></div>
-              <div class="col-md-6 col-lg-4"><div class="tile h-100"><div class="icon-circle"><i class="bi bi-shield-fill-check"></i></div><h5 class="fw-semibold">Vida y Ahorro</h5><p class="text-muted">Soluciones de previsión, ahorro y retiro con acompañamiento transparente.</p></div></div>
-              <div class="col-md-6 col-lg-4"><div class="tile h-100"><div class="icon-circle"><i class="bi bi-house-check"></i></div><h5 class="fw-semibold">Patrimonio Familiar</h5><p class="text-muted">Protección de hogar y activos clave con esquemas personalizables.</p></div></div>
-            </div>
-          </div>
-          <div class="tab-pane fade" id="fianzas-pane" role="tabpanel" aria-labelledby="fianzas-tab" tabindex="0">
-            <div class="row g-4">
-              <div class="col-md-6 col-lg-4"><div class="tile h-100"><div class="icon-circle"><i class="bi bi-cash-coin"></i></div><h5 class="fw-semibold">Fianzas</h5><p class="text-muted">Cumplimiento, fidelidad y licitaciones con respaldo de afianzadoras líderes.</p></div></div>
-              <div class="col-md-6 col-lg-4"><div class="tile h-100"><div class="icon-circle"><i class="bi bi-lightning-charge"></i></div><h5 class="fw-semibold">Respuesta a Siniestros</h5><p class="text-muted">Coordinación inmediata con ajustadores y seguimiento hasta resolución.</p></div></div>
-              <div class="col-md-6 col-lg-4"><div class="tile h-100"><div class="icon-circle"><i class="bi bi-file-earmark-text"></i></div><h5 class="fw-semibold">Gestión de Trámites</h5><p class="text-muted">Control documental y renovación sin fricción para tu equipo.</p></div></div>
+              <article class="solution-card">
+                <img src="assets/img/carro.png" alt="Autos" class="solution-card__image">
+                <div class="solution-card__content">
+                  <h3>Autos</h3>
+                  <p>Protección para vehículos empresariales y de colaboradores.</p>
+                  <a href="#contacto" class="solution-card__btn">VER COBERTURA</a>
+                </div>
+              </article>
+
+              <article class="solution-card">
+                <img src="assets/img/corazon.png" alt="Gastos Médicos" class="solution-card__image">
+                <div class="solution-card__content">
+                  <h3>Gastos Médicos</h3>
+                  <p>Cobertura de salud para colaboradores con planes diseñados para tu empresa.</p>
+                  <a href="#contacto" class="solution-card__btn">VER COBERTURA</a>
+                </div>
+              </article>
+
+              <article class="solution-card">
+                <img src="assets/img/asesoria.png" alt="Vida" class="solution-card__image">
+                <div class="solution-card__content">
+                  <h3>Vida</h3>
+                  <p>Protección económica para colaboradores y sus familias.</p>
+                  <a href="#contacto" class="solution-card__btn">VER COBERTURA</a>
+                </div>
+              </article>
             </div>
           </div>
         </div>
@@ -392,5 +397,6 @@
 
 
  
+
 
 
