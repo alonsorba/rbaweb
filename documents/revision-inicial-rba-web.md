@@ -207,3 +207,10 @@ Los PSD pesados no estaban presentes en el arbol actual, pero si formaban parte 
 
 ### Estado final del push
 - Exitoso. La rama `main` ya fue subida con `--force-with-lease` despues de limpiar el historial.
+
+## 16. Bloque de normalizacion base
+Estado: iniciado.
+- Se creo la rama `feature/normalizacion-base`.
+- Se revisaron los archivos principales con lectura UTF-8.
+- Se corrigieron textos visibles y de documentacion donde habia acentos faltantes o redaccion dañada.
+- No se realizaron cambios visuales, estructurales ni funcionales.

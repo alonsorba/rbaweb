@@ -68,7 +68,7 @@
               <p class="text-primary fw-semibold mb-1"><?php echo $ctaMessage; ?></p>
               <h5 class="fw-semibold">Qué puedes esperar de nuestro equipo</h5>
               <ul class="list-unstyled feature-list d-grid gap-2 small text-muted mb-0">
-                <li class="d-flex gap-2 align-items-start"><i class="bi bi-check-circle-fill"></i><span>Auditoria de Pólizas actuales y deteccion de brechas.</span></li>
+                <li class="d-flex gap-2 align-items-start"><i class="bi bi-check-circle-fill"></i><span>Auditoría de Pólizas actuales y detección de brechas.</span></li>
                 <li class="d-flex gap-2 align-items-start"><i class="bi bi-check-circle-fill"></i><span>Plan de Protección por unidades de negocio, patrimonio y personas clave.</span></li>
                 <li class="d-flex gap-2 align-items-start"><i class="bi bi-check-circle-fill"></i><span>Reporte ejecutivo con indicadores y recordatorios de Renovación.</span></li>
                 <li class="d-flex gap-2 align-items-start"><i class="bi bi-check-circle-fill"></i><span>Gestor dedicado para siniestros y Trámites.</span></li>
@@ -135,11 +135,11 @@
           <div class="col-md-6 col-lg-4 anchor-offset" id="casa">
             <div class="tile h-100">
               <div class="icon-circle"><i class="bi bi-house-check"></i></div>
-              <h5 class="fw-semibold">Casa Habitacion</h5>
+              <h5 class="fw-semibold">Casa Habitación</h5>
               <p class="text-muted">Protección para tu hogar, bienes y responsabilidad a terceros con planes hechos a la medida.</p>
               <ul class="list-unstyled feature-list d-grid gap-2 small text-muted mb-3">
                 <li class="d-flex gap-2 align-items-start"><i class="bi bi-check-circle-fill"></i><span>Incendio, rayo y/o explosion.</span></li>
-                <li class="d-flex gap-2 align-items-start"><i class="bi bi-check-circle-fill"></i><span>Fenómenos hidrometeorologicos.</span></li>
+                <li class="d-flex gap-2 align-items-start"><i class="bi bi-check-circle-fill"></i><span>Fenómenos hidrometeorológicos.</span></li>
                 <li class="d-flex gap-2 align-items-start"><i class="bi bi-check-circle-fill"></i><span>Terremoto y/o Erupción Volcánica.</span></li>
                 <li class="d-flex gap-2 align-items-start"><i class="bi bi-check-circle-fill"></i><span>Robo y rotura de cristales.</span></li>
                 <li class="d-flex gap-2 align-items-start"><i class="bi bi-check-circle-fill"></i><span>Responsabilidad civil familiar, patronal o arrendatario.</span></li>
@@ -184,7 +184,7 @@
               <div class="col-sm-6">
                 <div class="tile h-100">
                   <div class="icon-circle"><i class="bi bi-clipboard-check"></i></div>
-                  <h6 class="fw-semibold mb-1">1. Diagnostico</h6>
+                  <h6 class="fw-semibold mb-1">1. Diagnóstico</h6>
                   <p class="text-muted small mb-0">Revisamos Pólizas actuales, contratos y riesgos operativos.</p>
                 </div>
               </div>
@@ -220,8 +220,8 @@
       <div class="shape-blur"></div>
       <div class="container position-relative">
         <div class="eyebrow text-white-80">Listos para empezar</div>
-        <h2 class="fw-semibold">Cuéntanos que necesitas asegurar.</h2>
-        <p class="lead text-white-80 mb-4">Un asesor te contactara el mismo día para preparar la propuesta correcta.</p>
+        <h2 class="fw-semibold">Cuéntanos qué necesitas asegurar.</h2>
+        <p class="lead text-white-80 mb-4">Un asesor te contactará el mismo día para preparar la propuesta correcta.</p>
         <div class="d-flex flex-wrap gap-3 justify-content-center">
           <a class="btn btn-lg btn-light text-primary" href="index.php#contacto">Contactar ahora</a>
           <a class="btn btn-lg btn-outline-light" href="mailto:<?php echo $email; ?>">Enviar correo</a>
@@ -240,7 +240,7 @@
             <li><a href="servicios.php#autos">Autos</a></li>
             <li><a href="servicios.php#gastos-medicos">Gastos Médicos</a></li>
             <li><a href="servicios.php#vida">Vida</a></li>
-            <li><a href="servicios.php#casa">Casa Habitacion</a></li>
+            <li><a href="servicios.php#casa">Casa Habitación</a></li>
             <li><a href="servicios.php#viajero">Viajero</a></li>
           </ul>
         </div>

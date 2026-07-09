@@ -51,7 +51,7 @@
           <div class="col-lg-7">
             <div class="eyebrow text-white-80">Ubicación</div>
             <h1 class="display-5 fw-semibold lh-tight mb-3">Estamos cerca de ti con oficinas en Sonora.</h1>
-            <p class="lead text-white-80 mb-4">Cd. Obregón es nuestra oficina matriz y Hermosillo extiende nuestra Atención en el estado.</p>
+            <p class="lead text-white-80 mb-4">Cd. Obregón es nuestra oficina matriz y Hermosillo extiende nuestra atención en el estado.</p>
             <div class="d-flex flex-wrap gap-3">
               <a class="btn btn-lg btn-light text-primary" href="#cd-obregon">Ver oficina matriz</a>
               <a class="btn btn-lg btn-outline-light" href="#hermosillo">Ver oficina Hermosillo</a>
@@ -60,7 +60,7 @@
           <div class="col-lg-5">
             <div class="tile shadow-lg">
               <p class="text-primary fw-semibold mb-1">Contáctanos directo</p>
-              <h5 class="fw-semibold">teléfonos y correos</h5>
+              <h5 class="fw-semibold">Teléfonos y correos</h5>
               <ul class="list-unstyled feature-list d-grid gap-2 small text-muted mb-0">
                 <li class="d-flex gap-2 align-items-start"><i class="bi bi-geo-alt-fill"></i><span>Cd. Obregón (oficina matriz): <a href="tel:+526444108600" class="link-primary fw-semibold">(644) 410 8600</a>  |  <a href="mailto:obregon@rbaidon.com.mx" class="link-primary fw-semibold">obregon@rbaidon.com.mx</a></span></li>
                 <li class="d-flex gap-2 align-items-start"><i class="bi bi-geo-alt-fill"></i><span>Hermosillo: <a href="tel:+526222105870" class="link-primary fw-semibold">(622) 210 58 70</a>  |  <a href="mailto:hermosillo@rbaidon.com.mx" class="link-primary fw-semibold">hermosillo@rbaidon.com.mx</a></span></li>
@@ -79,7 +79,7 @@
           <div>
             <div class="location-pill">Oficina matriz</div>
             <h2 class="fw-semibold mb-1">Cd. Obregón</h2>
-            <p class="text-muted mb-0">Nuestra sede principal y punto de Atención central para clientes.</p>
+            <p class="text-muted mb-0">Nuestra sede principal y punto de atención central para clientes.</p>
           </div>
           <a class="btn btn-outline-primary btn-sm" href="https://maps.app.goo.gl/vNUhqXXGTEnwPeto8" target="_blank" rel="noopener">Abrir en Google Maps</a>
         </div>
@@ -114,7 +114,7 @@
           </div>
           <div class="location-info text-center">
             <h5 class="fw-semibold mb-1">Av. Santos Degollado 3-Local C</h5>
-            <p class="text-muted mb-1">Col. Constitucion</p>
+            <p class="text-muted mb-1">Col. Constitución</p>
             <p class="text-muted mb-1">Hermosillo, Sonora C.P. 83150</p>
             <p class="mb-2">Tel. (622) 210 58 70</p>
             <a class="link-primary fw-semibold" href="mailto:hermosillo@rbaidon.com.mx">hermosillo@rbaidon.com.mx</a>

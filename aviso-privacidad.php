@@ -66,7 +66,7 @@
       <div class="container">
         <div class="tile p-4 shadow-sm privacy-card">
           <h5 class="fw-semibold">Responsable del tratamiento</h5>
-          <p>R. Baidon Agente de Seguros y de Fianzas S.A. de C.V. con domicilio en calle Jose Maria Yanez #522 Oriente, col. zona norte 1, C.P. 85010, Ciudad Obregón, Sonora, México, es responsable del uso y Protección de sus datos personales y al respecto se le informa lo siguiente:</p>
+          <p>R. Baidon Agente de Seguros y de Fianzas S.A. de C.V. con domicilio en calle José María Yáñez #522 Oriente, col. zona norte 1, C.P. 85010, Ciudad Obregón, Sonora, México, es responsable del uso y protección de sus datos personales y al respecto se le informa lo siguiente:</p>
 
           <h5 class="fw-semibold">Finalidades del tratamiento</h5>
           <p>Los datos personales que recabemos de usted son necesarios para el servicio que solicita y los utilizaremos para las siguientes finalidades:</p>
@@ -75,12 +75,12 @@
             <li><strong>Contratos de fianzas:</strong> La administración de fianzas en la integración de expedientes de solvencia, solicitudes de fianzas, pago de fianzas, renovaciones, reclamos y siniestros, prórrogas y reclamaciones de fianzas.</li>
           </ul>
           <p>De manera adicional, utilizaremos su información personal para las siguientes finalidades que no son necesarias para el servicio solicitado, pero que nos permiten brindar un mejor servicio y comunicación con usted: Seguros (reclamación de seguros y aclaración de pago de seguros y fianzas).</p>
-          <p>En caso de que <strong>NO</strong> desee que sus datos personales se utilicen para estos fines, por favor mandenos un correo Electrónico a <a href="mailto:dpaz@rbaidon.com.mx">dpar@rbaidon.com.mx</a> en la que exprese su deseo, sus datos personales y el motivo. La negativa para el uso y transferencia de sus datos personales no sera un motivo para negarle los servicios y productos que solicita con nosotros.</p>
+          <p>En caso de que <strong>NO</strong> desee que sus datos personales se utilicen para estos fines, por favor mándenos un correo electrónico a <a href="mailto:dpaz@rbaidon.com.mx">dpar@rbaidon.com.mx</a> en el que exprese su deseo, sus datos personales y el motivo. La negativa para el uso y transferencia de sus datos personales no será un motivo para negarle los servicios y productos que solicita con nosotros.</p>
 
           <h5 class="fw-semibold">Datos personales</h5>
           <p>Para llevar a cabo las finalidades descritas en el presente aviso de privacidad, utilizaremos los siguientes datos:</p>
           <ul class="privacy-list">
-            <li><strong>Datos personales de Identificación, contacto, laborales, medio de pago y patrimoniales.</strong></li>
+            <li><strong>Datos personales de identificación, contacto, laborales, medio de pago y patrimoniales.</strong></li>
             <li><strong>Datos personales sensibles:</strong> Para las finalidades informadas en el presente, utilizaremos los siguientes datos personales sensibles.</li>
             <li><strong>Datos de salud:</strong> información concerniente a una persona física relacionada con la valoración, prevención, cuidado, mejoramiento y recuperación de su estado de salud físico o mental, presente, pasado o futuro, así como la información genética.</li>
           </ul>
@@ -98,10 +98,10 @@
 
           <h5 class="fw-semibold">Derechos ARCO</h5>
           <ul class="privacy-list">
-            <li><strong>Acceso:</strong> Usted tiene derecho a conocer que datos personales tenemos de usted, para que los utilizamos y las condiciones del uso que les damos.</li>
+            <li><strong>Acceso:</strong> Usted tiene derecho a conocer qué datos personales tenemos de usted, para qué los utilizamos y las condiciones del uso que les damos.</li>
             <li><strong>Rectificación:</strong> Asimismo, es su derecho solicitar la corrección de su información personal en el caso de que esté desactualizada, sea inexacta o incompleta.</li>
-            <li><strong>Cancelación:</strong> Que la eliminemos de nuestros registros o bases de datos cuando considere que la misma no esta siendo utilizada conforme a los principios, deberes y obligaciones previstas en la normativa.</li>
-            <li><strong>Oposición:</strong> así como oponerse al uso de sus datos personales para fines especificos.</li>
+            <li><strong>Cancelación:</strong> Que la eliminemos de nuestros registros o bases de datos cuando considere que la misma no está siendo utilizada conforme a los principios, deberes y obligaciones previstas en la normativa.</li>
+            <li><strong>Oposición:</strong> así como oponerse al uso de sus datos personales para fines específicos.</li>
           </ul>
           <p>En caso de cualquier duda o aclaración que pudiera tener respecto al tratamiento de su información puede comunicarse al correo <a href="mailto:dpaz@rbaidon.com.mx">dpaz@rbaidon.com.mx</a>.</p>
 
@@ -111,10 +111,10 @@
 
           <h5 class="fw-semibold">Las opciones y medios para limitar el uso o divulgación</h5>
           <p>de su información personal son:</p>
-          <p>Si la respuesta resulta insatisfactoria, usted podrá ejercer su derecho y su divulgación de la información personal, le sugerimos el siguiente procedimiento:</p>
+          <p>Si la respuesta resulta insatisfactoria, usted podrá ejercer su derecho a la divulgación de la información personal; le sugerimos el siguiente procedimiento:</p>
           <p>Su inscripción en el Registro Público para Evitar Publicidad, que está a cargo de la Procuraduría Federal del Consumidor. Con la finalidad de que sus datos personales no sean utilizados para recibir publicidad o promociones de empresas de bienes o servicios de aquí en adelante, usted podrá inscribirse en dicho registro vía internet en la página <a href="http://www.profeco.gob.mx" target="_blank" rel="noopener">www.profeco.gob.mx</a> o bien consultar más información con esta.</p>
           <p>Le informamos que en nuestra página de Internet podemos utilizar web beacons y otras tecnologías a través de las cuales es posible monitorear su comportamiento como usuario de Internet, así como ofrecerle un mejor servicio y experiencia de usuario al navegar en nuestra página. Usamos estas tecnologías para obtener información como horario de navegación, tiempo de navegación en nuestra página de Internet, secciones consultadas y páginas de Internet que accedió previo a la nuestra.</p>
-          <p>El presente aviso de privacidad puede sufrir modificaciones, cambios o actualizaciones derivadas de nuevos requerimientos legales, de nuestras propias necesidades por los productos o servicios que ofrecemos, de nuestras practicas de privacidad, de cambios en nuestro modelo de negocio o por otras causas.</p>
+          <p>El presente aviso de privacidad puede sufrir modificaciones, cambios o actualizaciones derivadas de nuevos requerimientos legales, de nuestras propias necesidades por los productos o servicios que ofrecemos, de nuestras prácticas de privacidad, de cambios en nuestro modelo de negocio o por otras causas.</p>
 
           <p class="fw-semibold mb-0">Atentamente</p>
           <p class="mb-0">R. Baidon Agente de Seguros y de Fianzas SA de CV</p>

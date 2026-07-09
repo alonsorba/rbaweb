@@ -423,7 +423,7 @@
                       <p class="mb-1"><strong>Perdida total</strong></p>
                       <p>Se considera cuando el dano excede 65% del valor, segun Póliza.</p>
                       <p class="mb-1"><strong>Atención en agencia</strong></p>
-                      <p>Solo unidades con antiguedad maxima de 2 anos.</p>
+                      <p>Solo unidades con antigüedad máxima de 2 años.</p>
                       <h6 class="fw-semibold mt-3">Qué hacer en caso de robo</h6>
                       <p>Denuncia ante Ministerio Público, llama a tu aseguradora y notifica a R. Baidon.</p>
                       <p class="mb-1"><strong>De la factura</strong></p>
@@ -436,7 +436,7 @@
                       <p class="mb-1"><strong>Información adicional</strong></p>
                       <ul class="list-unstyled mb-0">
                         <li>- Forma en que ocurrio el robo.</li>
-                        <li>- Documentacion y pertenencias en el vehiculo.</li>
+                        <li>- Documentación y pertenencias en el vehículo.</li>
                       </ul>
                     </div>
                   </div>
@@ -534,7 +534,7 @@
                         <li>- Contar con factura para acreditar propiedad.</li>
                         <li>- Reportar en las primeras 24 horas.</li>
                         <li>- Avaluo del inmueble si aplica.</li>
-                        <li>- Planos con caracteristicas constructivas.</li>
+                        <li>- Planos con características constructivas.</li>
                         <li>- Relacion de activos en caso de Daños a contenidos.</li>
                         <li>- Fotografias en USB y respaldo contable.</li>
                         <li>- Contar con inventarios.</li>
@@ -577,7 +577,7 @@
             <div class="tile h-100">
               <div class="icon-circle"><i class="bi bi-heart-pulse"></i></div>
               <h5 class="fw-semibold">Vida</h5>
-              <p class="text-muted">Documentacion requerida para iniciar el proceso.</p>
+              <p class="text-muted">Documentación requerida para iniciar el proceso.</p>
               <div class="accordion small" id="vidaSiniestrosAccordion">
                 <div class="accordion-item">
                   <h2 class="accordion-header" id="vidaSiniestrosHeadingOne">
@@ -596,7 +596,7 @@
                         <li>- Acta de nacimiento, pasaporte o carta de naturalizacion.</li>
                         <li>- En muerte no natural: copia de averiguacion previa.</li>
                       </ul>
-                      <p class="mt-3 mb-0">Mantenos informados de cualquier retraso para brindarte apoyo.</p>
+                      <p class="mt-3 mb-0">Manténnos informados de cualquier retraso para brindarte apoyo.</p>
                     </div>
                   </div>
                 </div>
