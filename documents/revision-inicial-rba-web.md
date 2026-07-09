@@ -214,3 +214,9 @@ Estado: iniciado.
 - Se revisaron los archivos principales con lectura UTF-8.
 - Se corrigieron textos visibles y de documentacion donde habia acentos faltantes o redaccion dañada.
 - No se realizaron cambios visuales, estructurales ni funcionales.
+
+## 17. Auditoria del home
+Estado: iniciada.
+- Se revisaron `index.php`, `assets/css/style.css` y `assets/js/main.js`.
+- Se documento la estructura actual del home, sus clases principales y las funciones JS relacionadas.
+- Se identificaron diferencias tecnicas y riesgos previos a cualquier rediseño visual.
