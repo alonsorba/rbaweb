@@ -186,3 +186,24 @@ Al intentar hacer `git push`, GitHub rechazo la subida por archivos pesados en l
 Esto significa que la subida no se puede completar hasta:
 - eliminar esos archivos del historial o moverlos a Git LFS;
 - volver a preparar la rama para un push limpio.
+
+## 15. Limpieza aplicada
+### Problema detectado
+Los PSD pesados no estaban presentes en el arbol actual, pero si formaban parte del historial y bloqueaban la subida a GitHub.
+
+### Solucion aplicada
+- Se reescribio la historia de `main` para eliminar:
+  - `assets/img/oficina intro.psd`
+  - `assets/img/werg.psd`
+- Se borro el ref de respaldo creado por `filter-branch`.
+- Se ejecuto `git gc --prune=now` para compactar la limpieza local.
+
+### Archivos ignorados
+- `*.psd`
+- `*.ai`
+- `*.xd`
+- `*.fig`
+- `*.sketch`
+
+### Estado final del push
+- Pendiente de validacion despues del commit final de limpieza.
