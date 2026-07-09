@@ -206,4 +206,4 @@ Los PSD pesados no estaban presentes en el arbol actual, pero si formaban parte 
 - `*.sketch`
 
 ### Estado final del push
-- Pendiente de validacion despues del commit final de limpieza.
+- Exitoso. La rama `main` ya fue subida con `--force-with-lease` despues de limpiar el historial.
