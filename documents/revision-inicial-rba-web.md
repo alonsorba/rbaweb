@@ -178,3 +178,11 @@ El primer bloque de trabajo recomendado es:
 - La prioridad real ahora es controlar codificacion, rama de trabajo y consistencia base.
 - La segunda prioridad es cerrar la diferencia entre el estado actual y el boceto final de Comunicacion.
 
+## 14. Bloqueo detectado al intentar subir a GitHub
+Al intentar hacer `git push`, GitHub rechazo la subida por archivos pesados en la historia de la rama:
+- `assets/img/oficina intro.psd` supera el tamano recomendado;
+- `assets/img/werg.psd` excede el limite de 100 MB.
+
+Esto significa que la subida no se puede completar hasta:
+- eliminar esos archivos del historial o moverlos a Git LFS;
+- volver a preparar la rama para un push limpio.
