@@ -220,3 +220,9 @@ Estado: iniciada.
 - Se revisaron `index.php`, `assets/css/style.css` y `assets/js/main.js`.
 - Se documento la estructura actual del home, sus clases principales y las funciones JS relacionadas.
 - Se identificaron diferencias tecnicas y riesgos previos a cualquier rediseño visual.
+
+## 18. Bloque visual inicial
+Estado: en progreso.
+- Se ajusto el header del home para pasar de transparente a solido cuando hay scroll.
+- Se refino el hero principal y el bloque de estadisticas/presencia nacional sin tocar secciones posteriores.
+- Se actualizo la auditoria del home con los archivos intervenidos y las validaciones responsive preliminares.

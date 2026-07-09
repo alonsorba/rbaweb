@@ -165,3 +165,31 @@ Motivo:
 - No esta en una fase de arranque, sino de consolidacion previa al rediseno.
 - La principal limitacion tecnica no es funcional, sino de mantenimiento y consistencia entre secciones.
 
+## 11. Bloque inicial ajustado
+Estado: en progreso.
+- Se ajusto el comportamiento del header del home para que pase de transparente sobre el hero a un estado solido al hacer scroll.
+- Se preparo el cambio de logo del header entre version blanca y version RGB para evitar baja legibilidad sobre fondo claro.
+- Se refino el hero principal con mayor presencia visual, mejor overlay y una card de contenido ligeramente mas equilibrada.
+- Se dieron ajustes de proporcion al bloque de estadisticas/presencia nacional para sostener mejor la lectura en desktop.
+
+## 12. Archivos modificados en este bloque
+- `index.php`
+- `assets/css/style.css`
+- `assets/js/main.js`
+- `documents/revision-inicial-rba-web.md`
+
+## 13. Validaciones responsive
+- Desktop: header mas legible al hacer scroll, hero con card mas estable y stats con mejor balance visual.
+- Tablet: el bloque se mantiene dentro del flujo esperado sin modificar secciones posteriores.
+- Movil: el header conserva contraste con el cambio de logo y el bloque inicial sigue apilado por las reglas existentes.
+- Sintaxis PHP: validada con `C:\xampp\php\php.exe -l` en todas las paginas tocadas de PHP.
+- Captura visual automatizada: pendiente de validacion porque `127.0.0.1:8082` devolvio `ERR_CONNECTION_REFUSED` al intentar tomar la screenshot.
+
+## 14. Riesgos pendientes
+- El estado visual completo depende de pruebas en navegador con el servidor local levantado.
+- El cambio de logo depende de que los assets blanco y RGB permanezcan disponibles con los mismos nombres.
+- El bloque de estadisticas sigue siendo el tramo mas sensible del home para ajustes posteriores.
+
+## 15. Siguiente bloque recomendado
+- Revisar y pulir la seccion de presencia nacional/mapa si la comunicacion visual pide una jerarquia mas marcada.
+- Si no hay cambios adicionales de diseño, el siguiente bloque logico es avanzar al resto del home sin tocar el header ya estabilizado.

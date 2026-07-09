@@ -29,7 +29,7 @@
     <nav class="navbar navbar-expand-lg home-nav" id="topNav">
       <div class="container-fluid home-nav-shell">
         <a class="navbar-brand home-mobile-brand" href="index.php" aria-label="Inicio RBA Seguros y Fianzas">
-          <img src="assets/img/R BAIDON V3 BLANCO.png" class="brand-logo" alt="RBA Seguros &amp; Fianzas">
+          <img src="assets/img/R BAIDON V3 BLANCO.png" class="brand-logo" alt="RBA Seguros &amp; Fianzas" data-home-logo-light="assets/img/R BAIDON V3 BLANCO.png" data-home-logo-dark="assets/img/R BAIDON V3 RGB (WEB).png">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -43,7 +43,7 @@
               <li class="nav-item"><a class="nav-link" href="quienes.php">Nosotros</a></li>
             </ul>
             <a class="navbar-brand home-center-brand" href="index.php" aria-label="Inicio RBA Seguros y Fianzas">
-              <img src="assets/img/R BAIDON V3 BLANCO.png" class="brand-logo" alt="RBA Seguros &amp; Fianzas">
+              <img src="assets/img/R BAIDON V3 BLANCO.png" class="brand-logo" alt="RBA Seguros &amp; Fianzas" data-home-logo-light="assets/img/R BAIDON V3 BLANCO.png" data-home-logo-dark="assets/img/R BAIDON V3 RGB (WEB).png">
             </a>
             <div class="home-nav-actions">
               <a class="nav-link home-contact-link" href="#contacto">Contacto</a>

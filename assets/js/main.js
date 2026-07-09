@@ -28,14 +28,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const heroCarousel = document.querySelector('body.home-index .hero-carousel');
   const heroContent = document.querySelector('body.home-index .hero-v2-content');
   const pageHero = document.querySelector('body:not(.home-index) .page-hero, body:not(.home-index) .qs-hero');
+  const homeBrandLogos = Array.from(document.querySelectorAll('body.home-index .brand-logo[data-home-logo-light][data-home-logo-dark]'));
   const shrinkOn = 20;
-  const fadeOutOn = 260;
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   let animationFrame = null;
   let currentScrollY = window.scrollY;
   let targetScrollY = window.scrollY;
   let revealObserver;
   let countObserver;
+
+  const updateHomeBrandLogos = isScrolled => {
+    homeBrandLogos.forEach(logo => {
+      const nextSrc = isScrolled ? logo.dataset.homeLogoDark : logo.dataset.homeLogoLight;
+      if (!nextSrc || logo.getAttribute('src') === nextSrc) return;
+      logo.setAttribute('src', nextSrc);
+    });
+  };
 
   const lerp = (start, end, factor) => start + (end - start) * factor;
 
@@ -66,17 +74,18 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const onScroll = scrollY => {
+    const isScrolled = scrollY > shrinkOn;
+
     if (nav) {
-      nav.classList.toggle('shadow-sm', scrollY > shrinkOn);
+      nav.classList.toggle('shadow-sm', isScrolled);
+      nav.classList.toggle('is-scrolled', isScrolled);
     }
 
     if (header) {
-      const progress = Math.min(scrollY / fadeOutOn, 1);
-      header.style.opacity = String(1 - progress);
-      header.style.transform = `translateY(${progress * -18}px) scale(${1 - (progress * 0.02)})`;
-      header.style.pointerEvents = progress > 0.98 ? 'none' : 'auto';
+      header.classList.toggle('is-scrolled', isScrolled);
     }
 
+    updateHomeBrandLogos(isScrolled);
     updateHeroScrollEffect(scrollY);
     updatePageHeroEffect(scrollY);
   };

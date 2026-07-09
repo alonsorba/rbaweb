@@ -136,10 +136,12 @@ header.shadow-sm {
 
 /* Home: navbar transparente sobre el hero/video. */
 body.home-index #topNav {
-  background: transparent;
+  background: linear-gradient(180deg, rgba(5,12,23,0.54), rgba(5,12,23,0));
   color: #fff;
   box-shadow: none;
-  border: none;
+  border: 1px solid transparent;
+  border-radius: 0 0 24px 24px;
+  margin: 0 auto;
 }
 body.home-index header.shadow-sm {
   background: transparent;
@@ -166,10 +168,45 @@ body.home-index #topNav .navbar-toggler {
 body.home-index #topNav .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.95)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
+body.home-index #topNav.is-scrolled {
+  background: rgba(255,255,255,0.96);
+  color: var(--brand-700);
+  border-color: rgba(19,92,138,0.12);
+  box-shadow: 0 18px 42px rgba(12,46,84,0.15);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+body.home-index #topNav.is-scrolled .nav-link,
+body.home-index #topNav.is-scrolled .home-contact-link {
+  color: var(--brand-700);
+  text-shadow: none;
+}
+body.home-index #topNav.is-scrolled .nav-link:hover,
+body.home-index #topNav.is-scrolled .nav-link:focus,
+body.home-index #topNav.is-scrolled .home-contact-link:hover,
+body.home-index #topNav.is-scrolled .home-contact-link:focus {
+  color: var(--brand-800);
+}
+body.home-index #topNav.is-scrolled .navbar-toggler {
+  border-color: rgba(19,92,138,0.22);
+}
+body.home-index #topNav.is-scrolled .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(19,92,138,0.95)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+body.home-index #topNav.is-scrolled .home-nav-collapse {
+  background: rgba(255,255,255,0.96);
+  border: 1px solid rgba(19,92,138,0.14);
+  box-shadow: 0 18px 42px rgba(12,46,84,0.12);
+}
+body.home-index #topNav.is-scrolled .nav-access-btn {
+  background: var(--brand-700);
+  color: #fff;
+  border-color: var(--brand-700);
+}
 header.sticky-top {
-  /* Transicion del header al hacer scroll (opacity + translateY). */
-  transition: opacity var(--dur-base) var(--ease-smooth), transform var(--dur-base) var(--ease-smooth);
-  will-change: opacity, transform;
+  /* Transicion del header al hacer scroll (fondo + sombra). */
+  transition: background-color var(--dur-base) var(--ease-smooth), box-shadow var(--dur-base) var(--ease-smooth), border-color var(--dur-base) var(--ease-smooth), opacity var(--dur-base) var(--ease-smooth);
+  will-change: opacity, transform, background-color, box-shadow, border-color;
   transform-origin: top center;
 }
 .brand-logo {
@@ -487,7 +524,7 @@ body.home-index #topNav .home-nav-actions .nav-access-btn:hover {
 }
 
 .home-landing-hero {
-  min-height: 648px;
+  min-height: 680px;
   background: #0b305f;
 }
 body.home-index .home-landing-hero {
@@ -495,8 +532,9 @@ body.home-index .home-landing-hero {
 }
 .home-landing-hero::after {
   background:
-    linear-gradient(90deg, rgba(0,0,0,0.22), rgba(0,0,0,0.1) 45%, rgba(0,0,0,0.18)),
-    rgba(0,0,0,0.08);
+    linear-gradient(180deg, rgba(3,10,20,0.16) 0%, rgba(3,10,20,0.08) 34%, rgba(3,10,20,0.22) 100%),
+    linear-gradient(90deg, rgba(0,0,0,0.25), rgba(0,0,0,0.08) 45%, rgba(0,0,0,0.18)),
+    rgba(0,0,0,0.06);
 }
 .home-landing-hero__image {
   position: absolute;
@@ -508,15 +546,15 @@ body.home-index .home-landing-hero {
   object-position: center center;
 }
 .home-hero-card.hero-v2-content {
-  inset: auto auto clamp(2rem, 5.35vh, 2.35rem) clamp(1.65rem, 4.15vw, 3.1rem);
-  width: min(474px, calc(100% - 3.3rem));
-  min-height: 313px;
-  padding: clamp(2rem, 5.7vh, 2.35rem) clamp(0.55rem, 1vw, 0.8rem) 2.35rem clamp(2rem, 3.95vw, 2.95rem);
-  border: 2px solid rgba(37, 122, 181, 0.68);
-  border-radius: 29px;
+  inset: auto auto clamp(1.85rem, 4.8vh, 2.4rem) clamp(1.4rem, 3.5vw, 2.55rem);
+  width: min(500px, calc(100% - 2.8rem));
+  min-height: 318px;
+  padding: clamp(2.05rem, 5.6vh, 2.5rem) clamp(0.85rem, 1.4vw, 1.05rem) 2.35rem clamp(2rem, 4vw, 3rem);
+  border: 2px solid rgba(42, 158, 227, 0.62);
+  border-radius: 30px;
   background:
     linear-gradient(100deg, rgba(8, 43, 79, 0.98) 0%, rgba(10, 48, 87, 0.98) 47%, rgba(36, 73, 104, 0.96) 100%);
-  box-shadow: 0 16px 32px rgba(7, 27, 52, 0.34), inset 0 1px 0 rgba(255,255,255,0.09);
+  box-shadow: 0 20px 42px rgba(7, 27, 52, 0.34), inset 0 1px 0 rgba(255,255,255,0.09);
   color: #fff;
   overflow: hidden;
 }
@@ -538,7 +576,7 @@ body.home-index .home-landing-hero {
   max-width: 14em;
   margin: 0 0 0.9rem;
   color: #fff;
-  font-size: clamp(1.82rem, 2.48vw, 1.92rem);
+  font-size: clamp(1.9rem, 2.55vw, 2.15rem);
   font-weight: 700;
   line-height: 1.27;
   letter-spacing: 0;
@@ -547,7 +585,7 @@ body.home-index .home-landing-hero {
   max-width: none;
   margin: 0;
   color: #fff;
-  font-size: clamp(0.96rem, 1.35vw, 1.02rem);
+  font-size: clamp(0.98rem, 1.38vw, 1.04rem);
   font-weight: 400;
   line-height: 1.45;
   letter-spacing: 0;
@@ -571,8 +609,8 @@ body.home-index .home-landing-hero {
   align-items: center;
   justify-content: center;
   gap: 0.45rem;
-  min-width: 157px;
-  min-height: 36px;
+  min-width: 164px;
+  min-height: 38px;
   border-radius: 999px;
   font-size: 0.62rem;
   font-weight: 700;
@@ -1178,8 +1216,8 @@ footer .brand-mark {
    ========================= */
 .infographic-section {
   background: #fff;
-  padding-top: clamp(1rem, 1.8vw, 1.6rem);
-  padding-bottom: clamp(1.2rem, 2vw, 2rem);
+  padding-top: clamp(0.85rem, 1.5vw, 1.3rem);
+  padding-bottom: clamp(1.2rem, 2vw, 1.9rem);
   overflow-x: clip;
 }
 .infographic-shell {
@@ -1187,13 +1225,13 @@ footer .brand-mark {
   max-width: 1000px;
   margin: 0 auto;
   display: grid;
-  gap: clamp(0.1rem, 0.35vw, 0.35rem);
+  gap: clamp(0.2rem, 0.45vw, 0.45rem);
 }
 .infographic-stats {
-  width: min(100%, 720px);
+  width: min(100%, 760px);
   margin: 0 auto;
-  min-height: 120px;
-  padding: 0.85rem 1.2rem;
+  min-height: 124px;
+  padding: 0.95rem 1.25rem;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: center;
@@ -1221,14 +1259,14 @@ footer .brand-mark {
 }
 .infographic-layout {
   display: grid;
-  grid-template-columns: minmax(260px, 1fr) minmax(560px, 1.35fr);
-  gap: clamp(0.15rem, 0.4vw, 0.45rem);
+  grid-template-columns: minmax(280px, 0.95fr) minmax(540px, 1.35fr);
+  gap: clamp(0.25rem, 0.5vw, 0.65rem);
   align-items: start;
 }
 .infographic-copy {
   display: grid;
   justify-items: start;
-  gap: clamp(0.35rem, 0.7vw, 0.6rem);
+  gap: clamp(0.4rem, 0.8vw, 0.7rem);
   padding-top: 0;
 }
 .infographic-label {
@@ -1280,7 +1318,7 @@ footer .brand-mark {
 .infographic-map {
   position: relative;
   justify-self: end;
-  width: clamp(720px, 62vw, 1050px);
+  width: clamp(700px, 60vw, 1000px);
   margin-right: 0;
 }
 .infographic-map__stage {
@@ -1543,33 +1581,33 @@ footer .brand-mark {
 }
   .infographic-stats {
     position: absolute;
-    top: clamp(0.8rem, 1.4vw, 1.4rem);
+    top: clamp(0.7rem, 1.3vw, 1.15rem);
     left: 50%;
     transform: translateX(-50%);
-    width: clamp(520px, 48vw, 760px);
+    width: clamp(540px, 49vw, 780px);
     margin: 0;
     z-index: 4;
   }
   .infographic-layout {
     position: relative;
     width: 100%;
-    min-height: clamp(640px, 58vw, 860px);
+    min-height: clamp(640px, 56vw, 840px);
     display: block;
     gap: 0;
   }
   .infographic-copy {
     position: absolute;
-    left: clamp(4rem, 15vw, 15rem);
-    top: clamp(128px, 12.5vw, 186px);
-    width: clamp(250px, 24vw, 340px);
-    gap: clamp(0.3rem, 0.6vw, 0.5rem);
+    left: clamp(3.5rem, 13.5vw, 13.5rem);
+    top: clamp(124px, 11.8vw, 180px);
+    width: clamp(250px, 23vw, 330px);
+    gap: clamp(0.35rem, 0.7vw, 0.55rem);
     z-index: 3;
   }
   .infographic-map {
     position: absolute;
-    top: clamp(86px, 7vw, 128px);
-    right: clamp(-220px, -10vw, -90px);
-    width: clamp(720px, 62vw, 1050px);
+    top: clamp(84px, 6.8vw, 122px);
+    right: clamp(-200px, -9vw, -84px);
+    width: clamp(700px, 60vw, 1000px);
     margin-right: 0;
     z-index: 2;
   }
