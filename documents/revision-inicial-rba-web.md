@@ -238,3 +238,10 @@ Estado: ajustado.
 - El mapa quedo mas centrado y con menor peso visual para mantener la jerarquia del home.
 - El indicador de matriz y el contador `+25 estados con presencia` quedaron como anclas visuales del bloque.
 - La validacion responsive quedo documentada y pendiente de un repaso manual en navegador normal por la limitacion de las capturas headless.
+
+## 21. Seccion ESR
+Estado: ajustado.
+- Se reajusto la composicion del bloque ESR para equilibrar el texto, los pilares y el reconocimiento institucional.
+- El trofeo ESR quedo contenido en una escala mas estable dentro del layout.
+- Se mantuvo la continuidad visual con la presencia nacional anterior y con el bloque de compromiso que sigue despues.
+- La validacion automatizada quedo limitada por la misma restriccion del render headless, asi que el repaso final debe confirmarse manualmente.

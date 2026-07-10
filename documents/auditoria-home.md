@@ -214,3 +214,17 @@ Estado: ajustado.
 - Movil: el mapa se conserva dentro del flujo vertical sin invadir secciones posteriores.
 - Sintaxis PHP: `php -l index.php` paso sin errores.
 - Captura automatizada: el navegador headless no guardo archivo de captura para este bloque, asi que la revision visual queda documentada como validacion pendiente en navegador normal.
+
+## 19. Bloque ESR
+Estado: ajustado.
+- Se reequilibro la relacion entre el texto ESR y la imagen del reconocimiento para que el trofeo no domine la composicion.
+- Se reforzo la jerarquia del titulo y se ajustaron los pilares ESR para que se lean como una banda de soporte y no como contenido secundario disperso.
+- Se redujo el ancho efectivo del trofeo y se mejoro su alineacion dentro del bloque.
+- Se mantuvo la continuidad visual con la seccion de presencia nacional sin alterar compromiso ni el resto del home.
+
+## 20. Validacion del bloque ESR
+- Desktop: el texto y la imagen mantienen una composicion mas equilibrada y menos cargada.
+- Tablet: el bloque conserva lectura clara en una columna sin invadir el siguiente contenido.
+- Movil: la imagen del trofeo sigue el flujo vertical y no rompe el orden de secciones.
+- Sintaxis PHP: `php -l index.php` paso sin errores.
+- Captura automatizada: el navegador headless no dejo una captura utilizable, asi que la validacion visual final queda pendiente de comprobacion manual en navegador normal.
