@@ -1786,23 +1786,23 @@ footer .brand-mark {
 .commitment-container {
   width: min(100%, 1500px);
   margin: 0 auto;
-  padding: clamp(3rem, 6vh, 5rem) clamp(1.5rem, 6vw, 5.5rem);
+  padding: clamp(2.75rem, 5.5vh, 4.5rem) clamp(1.25rem, 5vw, 5rem);
   display: grid;
-  grid-template-columns: minmax(0, 0.68fr) minmax(560px, 1fr);
+  grid-template-columns: minmax(0, 0.62fr) minmax(520px, 1fr);
   align-items: center;
-  gap: clamp(4.5rem, 7vw, 7rem);
+  gap: clamp(3rem, 5.5vw, 5rem);
   justify-content: space-between;
 }
 .commitment-copy {
-  max-width: 560px;
+  max-width: 620px;
   padding-right: 0;
   justify-self: start;
 }
 .commitment-title {
   margin: 0;
   color: #565656;
-  font-size: clamp(1.8rem, 2.25vw, 3.1rem);
-  line-height: 1.18;
+  font-size: clamp(1.75rem, 2.15vw, 2.9rem);
+  line-height: 1.12;
   font-weight: 400;
   letter-spacing: -0.035em;
   text-wrap: balance;
@@ -1810,31 +1810,32 @@ footer .brand-mark {
 .commitment-title span {
   display: block;
   white-space: nowrap;
+  margin-bottom: 0.1em;
 }
 .commitment-title strong {
   color: var(--brand-900);
   font-weight: 700;
 }
 .commitment-media {
-  width: min(100%, 650px);
+  width: min(100%, 720px);
   max-width: 100%;
   justify-self: end;
   transform: none;
 }
 .commitment-image-card {
   width: 100%;
-  aspect-ratio: 1.72 / 1;
-  border-radius: clamp(24px, 2vw, 38px);
+  aspect-ratio: 1.38 / 1;
+  border-radius: clamp(26px, 2.1vw, 40px);
   overflow: hidden;
   background: transparent;
-  box-shadow: none;
+  box-shadow: 0 24px 52px rgba(12,46,84,0.12);
 }
 .commitment-image {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: center bottom;
+  object-fit: cover;
+  object-position: center center;
 }
 .commitment-image--placeholder {
   display: grid;
@@ -1851,29 +1852,29 @@ footer .brand-mark {
   }
   .commitment-container {
     grid-template-columns: 1fr;
-    padding-block: clamp(3rem, 10vw, 5rem);
-    gap: 2.5rem;
+    padding-block: clamp(2.75rem, 9vw, 4.5rem);
+    gap: 2rem;
   }
   .commitment-copy {
-    max-width: 760px;
+    max-width: 740px;
     margin: 0 auto;
     text-align: center;
     padding-right: 0;
   }
   .commitment-title {
-    font-size: clamp(1.75rem, 8vw, 2.6rem);
+    font-size: clamp(1.7rem, 7.5vw, 2.45rem);
     text-align: center;
   }
   .commitment-title span {
     white-space: normal;
   }
   .commitment-media {
-    width: min(100%, 640px);
+    width: min(100%, 680px);
     justify-self: center;
     transform: none;
   }
   .commitment-image-card {
-    aspect-ratio: 1.45 / 1;
+    aspect-ratio: 1.18 / 1;
   }
 }
 

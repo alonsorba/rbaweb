@@ -245,3 +245,10 @@ Estado: ajustado.
 - El trofeo ESR quedo contenido en una escala mas estable dentro del layout.
 - Se mantuvo la continuidad visual con la presencia nacional anterior y con el bloque de compromiso que sigue despues.
 - La validacion automatizada quedo limitada por la misma restriccion del render headless, asi que el repaso final debe confirmarse manualmente.
+
+## 22. Seccion de compromiso
+Estado: ajustado.
+- Se trabajo la seccion de compromiso corporativo con enfoque en equilibrio entre texto e imagen.
+- Se redujo el espacio vacio y se afino el recorte de la imagen del equipo.
+- Se mantuvo la continuidad visual con la seccion ESR y el paso hacia soluciones.
+- La validacion responsive quedo documentada y pendiente de una revision manual en navegador normal.

@@ -228,3 +228,17 @@ Estado: ajustado.
 - Movil: la imagen del trofeo sigue el flujo vertical y no rompe el orden de secciones.
 - Sintaxis PHP: `php -l index.php` paso sin errores.
 - Captura automatizada: el navegador headless no dejo una captura utilizable, asi que la validacion visual final queda pendiente de comprobacion manual en navegador normal.
+
+## 21. Bloque de compromiso
+Estado: ajustado.
+- Se mejoro el equilibrio entre el texto del compromiso y la imagen del equipo.
+- Se redujeron espacios vacios con una distribucion mas compacta y estable.
+- Se ajusto el recorte de la imagen para que el equipo se vea como una composicion completa y no como una pieza flotante.
+- Se reforzo la jerarquia del mensaje principal para que la lectura inicial sea mas limpia.
+
+## 22. Validacion responsive del bloque de compromiso
+- Desktop: el texto y la imagen quedan mejor balanceados y con menos aire inutil.
+- Tablet: la seccion sigue apilando correctamente sin romper el flujo hacia soluciones.
+- Movil: el bloque conserva lectura clara y la imagen mantiene su recorte.
+- Sintaxis PHP: `php -l index.php` paso sin errores.
+- Captura automatizada: no se obtuvo una captura utilizable, asi que la validacion visual final sigue pendiente de revisar en navegador normal.
