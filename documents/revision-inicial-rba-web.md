@@ -328,3 +328,51 @@ Elementos pendientes:
 - contacto y footer quedan para el siguiente bloque de trabajo;
 - siguen existiendo cambios ajenos en el worktree que no pertenecen a esta integracion;
 - conviene validar una vez mas en navegador normal antes de tocar el cierre comercial.
+
+## 28. Seccion de contacto
+Estado: ajustado.
+- Se mejoro la continuidad visual del cierre del home con una card de apoyo y un formulario mas contenido.
+- Se reforzaron labels, placeholders, focus y jerarquia tipografica para que el formulario se lea con mas claridad.
+- Se mantuvo la funcionalidad actual del formulario sin agregar backend ni nuevas dependencias.
+- Se preservaron los campos, validaciones y enlaces existentes.
+
+## 29. Footer
+Estado: ajustado.
+- Se refino la separacion entre columnas y la jerarquia de enlaces para un cierre visual mas limpio.
+- Se suavizo el fondo y se mejoro la lectura de enlaces y el bloque inferior de copyright.
+- Se mantuvo el componente compartido para el resto del sitio sin tocar paginas internas.
+
+## 30. Preparación para CMS
+Campos editables sugeridos para Contacto:
+- titulo;
+- subtitulo;
+- correo;
+- telefono;
+- direccion;
+- horario;
+- textos auxiliares;
+- destinatario futuro del formulario;
+- mensaje de confirmacion.
+
+Campos editables sugeridos para Footer:
+- logotipo;
+- descripcion;
+- columnas de enlaces;
+- datos de contacto;
+- redes sociales;
+- aviso legal;
+- copyright;
+- orden y visibilidad de enlaces.
+
+## 31. Validación responsive del cierre
+- Desktop: contacto y footer conservan jerarquia y ancho maximo razonable.
+- Laptop: el formulario mantiene una lectura estable junto a la tarjeta informativa.
+- Tablet: el bloque se apila sin romper el flujo ni generar desbordes.
+- Movil: los campos se apilan y el footer conserva su lectura por columnas.
+- Sintaxis PHP: `php -l index.php` paso sin errores.
+- JavaScript: `node --check assets/js/main.js` paso sin errores.
+
+## 32. Riesgos y deuda técnica
+- El worktree sigue teniendo cambios ajenos en `.php-preview-router.php` y `assets/img/` que no forman parte de este cierre.
+- `index.php` conserva una correccion ortografica previa separada de este bloque.
+- El footer es compartido, asi que cualquier ajuste posterior debe revisarse tambien en paginas internas.
