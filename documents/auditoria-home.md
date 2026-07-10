@@ -165,20 +165,59 @@ Motivo:
 - No esta en una fase de arranque, sino de consolidacion previa al rediseno.
 - La principal limitacion tecnica no es funcional, sino de mantenimiento y consistencia entre secciones.
 
-## 11. Bloque inicial ajustado
+## 11. Seccion de testimonios
+Estado: revisado y ajustado.
+- La seccion actual es estatica y se compone de un encabezado, un CTA y tres cards en una grilla Bootstrap.
+- Cada card contiene avatar de iniciales, nombre, cargo, texto del testimonio, calificacion visual y una referencia de empresa.
+- No existe carrusel, autoplay, indicadores ni logica de navegacion en JavaScript para este bloque.
+- La estructura se puede convertir facilmente en una coleccion de testimonios si el futuro CMS expone campos por registro.
+
+## 12. Preparacion para CMS
+Campos editables sugeridos:
+- nombre del cliente;
+- cargo o rol;
+- empresa;
+- fotografia o avatar;
+- texto del testimonio;
+- orden de aparicion;
+- estado activo o visible;
+- calificacion opcional.
+
+Estructura sugerida:
+- un registro por testimonio;
+- una card reutilizable por elemento;
+- un encabezado editable solo desde configuracion general de la seccion;
+- un orden controlado por campo numerico.
+
+Dependencias:
+- contenido visible en `index.php`;
+- estilos locales en `assets/css/style.css`;
+- posible render dinamico futuro desde PHP o CMS.
+
+Riesgos:
+- exceso de texto puede desbalancear la altura de las cards;
+- fotografias de distintos formatos pueden romper la alineacion;
+- si el CMS no controla el orden, la lectura narrativa puede perder coherencia.
+
+Oportunidades de reutilizacion:
+- mismo componente para home, pagina de casos o landing de conversion;
+- misma tarjeta base con diferentes niveles de densidad;
+- posible integracion con testimonios destacados o rotacion manual.
+
+## 13. Bloque inicial ajustado
 Estado: en progreso.
 - Se ajusto el comportamiento del header del home para que pase de transparente sobre el hero a un estado solido al hacer scroll.
 - Se preparo el cambio de logo del header entre version blanca y version RGB para evitar baja legibilidad sobre fondo claro.
 - Se refino el hero principal con mayor presencia visual, mejor overlay y una card de contenido ligeramente mas equilibrada.
 - Se dieron ajustes de proporcion al bloque de estadisticas/presencia nacional para sostener mejor la lectura en desktop.
 
-## 12. Archivos modificados en este bloque
+## 14. Archivos modificados en este bloque
 - `index.php`
 - `assets/css/style.css`
 - `assets/js/main.js`
 - `documents/revision-inicial-rba-web.md`
 
-## 13. Validaciones responsive
+## 15. Validaciones responsive
 - Desktop: header mas legible al hacer scroll, hero con card mas estable y stats con mejor balance visual.
 - Tablet: el bloque se mantiene dentro del flujo esperado sin modificar secciones posteriores.
 - Movil: el header conserva contraste con el cambio de logo y el bloque inicial sigue apilado por las reglas existentes.
@@ -187,35 +226,35 @@ Estado: en progreso.
 - Verificacion de assets: la ruta del logo en `assets/img/R BAIDON V3 BLANCO.png` responde `200 image/png` desde el router local.
 - Captura visual automatizada: en navegador headless el logo siguio apareciendo como fallback en algunas capturas, asi que queda una verificacion manual pendiente para confirmar si es un efecto del entorno de preview o del navegador de pruebas.
 
-## 14. Riesgos pendientes
+## 16. Riesgos pendientes
 - El estado visual completo depende de pruebas en navegador con el servidor local levantado.
 - El cambio de logo depende de que los assets blanco y RGB permanezcan disponibles con los mismos nombres y de que el preview local siga resolviendo rutas con espacios.
 - El bloque de estadisticas sigue siendo el tramo mas sensible del home para ajustes posteriores.
 
-## 15. Siguiente bloque recomendado
+## 17. Siguiente bloque recomendado
 - Revisar y pulir la seccion de presencia nacional/mapa si la comunicacion visual pide una jerarquia mas marcada.
 - Si no hay cambios adicionales de diseño, el siguiente bloque logico es avanzar al resto del home sin tocar el header ya estabilizado.
 
-## 16. Validacion local adicional
+## 18. Validacion local adicional
 - El router local de preview permanece como parte del proyecto y se usa para servir PHP y assets estaticos durante la verificacion.
 - La ruta del logo responde `200 image/png` en `127.0.0.1:8082`, por lo que la incidencia restante queda asociada a la pintura headless del navegador y no a la disponibilidad del asset.
 - Antes de avanzar al siguiente bloque visual, conviene confirmar manualmente el logo del header en un navegador normal conectado al servidor local.
 
-## 17. Bloque de presencia nacional
+## 19. Bloque de presencia nacional
 Estado: ajustado.
 - Se redujo la presencia visual del mapa para que el bloque respire mejor y no compita con el bloque ESR.
 - Se refino la posicion del punto de ubicacion para acercarlo a Sonora dentro de la composicion.
 - Se reforzo el hover del mapa con una capa mas limpia y una tarjeta de presencia nacional mas legible.
 - Se mantuvo el numero `+25` y la etiqueta de matriz como referencia principal del bloque.
 
-## 18. Validacion responsive del bloque
+## 20. Validacion responsive del bloque
 - Desktop: el mapa queda mas contenido y la composicion general del bloque mantiene jerarquia antes del ESR.
 - Tablet: la estructura sigue apilando correctamente el contenido cuando el layout pasa a una sola columna.
 - Movil: el mapa se conserva dentro del flujo vertical sin invadir secciones posteriores.
 - Sintaxis PHP: `php -l index.php` paso sin errores.
 - Captura automatizada: el navegador headless no guardo archivo de captura para este bloque, asi que la revision visual queda documentada como validacion pendiente en navegador normal.
 
-## 19. Bloque ESR
+## 21. Bloque ESR
 Estado: ajustado.
 - Se reequilibro la relacion entre el texto ESR y la imagen del reconocimiento para que el trofeo no domine la composicion.
 - Se reforzo la jerarquia del titulo y se ajustaron los pilares ESR para que se lean como una banda de soporte y no como contenido secundario disperso.

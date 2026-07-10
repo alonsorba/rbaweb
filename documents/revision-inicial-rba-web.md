@@ -266,3 +266,42 @@ Estado: ajustado.
 - Se agregaron iconos, numeros y conectores visuales para reforzar la secuencia.
 - Se mantuvo la lectura secuencial de las cuatro etapas sin tocar testimonios ni contacto.
 - La validacion responsive quedo documentada y pendiente de una revision manual en navegador normal por la limitacion de la captura headless.
+
+## 25. Seccion de testimonios
+Estado: ajustado.
+- Se reorganizo el encabezado para darle mas jerarquia al mensaje y al CTA.
+- Se incorporaron estrellas visuales, empresa y mejor balance entre avatar, nombre y texto.
+- Se mantuvo la estructura en tres cards estaticas sin agregar carrusel ni dependencias nuevas.
+- La seccion queda preparada para convertir sus datos en contenido dinamico mas adelante.
+
+## 26. Preparación para CMS
+Campos editables sugeridos:
+- nombre del cliente;
+- cargo o rol;
+- empresa;
+- fotografia o avatar;
+- texto del testimonio;
+- orden de aparicion;
+- estado activo o visible;
+- calificacion opcional.
+
+Estructura sugerida:
+- un registro por testimonio;
+- una card reutilizable por elemento;
+- un encabezado editable solo desde configuracion general de la seccion;
+- orden controlado por un campo numerico.
+
+Dependencias:
+- contenido visible en `index.php`;
+- estilos locales en `assets/css/style.css`;
+- posible render dinamico futuro desde PHP o CMS.
+
+Riesgos:
+- textos muy largos pueden cambiar la altura de las cards;
+- imagenes con distintos encuadres pueden romper la alineacion;
+- sin control de orden, se puede perder la narrativa comercial del bloque.
+
+Oportunidades de reutilizacion:
+- componente apto para home, pagina de casos o landing comercial;
+- misma base visual con distintos niveles de densidad de contenido;
+- posible uso como bloque de testimonios destacados o rotacion manual.

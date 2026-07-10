@@ -292,19 +292,89 @@
       </div>
     </section>
 
-    <section id="testimonios" class="py-5">
+    <section id="testimonios" class="py-5 testimonials-section">
       <div class="container">
-        <div class="d-flex justify-content-between align-items-end flex-wrap gap-3 mb-4">
-          <div>
+        <div class="testimonials-section__header d-flex justify-content-between align-items-end flex-wrap gap-3 mb-4">
+          <div class="testimonials-section__intro">
             <div class="eyebrow text-primary">Clientes</div>
-            <h2 class="fw-semibold mb-0">Confianza respaldada por resultados.</h2>
+            <h2 class="fw-semibold mb-2">Confianza respaldada por resultados.</h2>
+            <p class="text-muted mb-0">Testimonios seleccionados de clientes que valoran la claridad, el seguimiento y la respuesta oportuna.</p>
           </div>
-          <a class="btn btn-outline-primary" href="#contacto">Quiero asesorÃ­a</a>
+          <a class="btn btn-outline-primary" href="#contacto">Quiero asesoría</a>
         </div>
-        <div class="row g-4">
-          <div class="col-lg-4"><div class="tile h-100"><div class="d-flex align-items-center gap-3 mb-3"><div class="avatar">JG</div><div><h6 class="mb-0 fw-semibold">Jessica G.</h6><small class="text-muted">Directora de Finanzas</small></div></div><p class="mb-0 text-muted">"Migramos toda la PÃ³liza corporativa sin interrupciones. El seguimiento a siniestros es impecable."</p></div></div>
-          <div class="col-lg-4"><div class="tile h-100"><div class="d-flex align-items-center gap-3 mb-3"><div class="avatar">MR</div><div><h6 class="mb-0 fw-semibold">Marco R.</h6><small class="text-muted">Emprendedor</small></div></div><p class="mb-0 text-muted">"Me explicaron cada opciÃ³n de vida y ahorro con claridad. Se siente un servicio boutique."</p></div></div>
-          <div class="col-lg-4"><div class="tile h-100"><div class="d-flex align-items-center gap-3 mb-3"><div class="avatar">AL</div><div><h6 class="mb-0 fw-semibold">Ana L.</h6><small class="text-muted">Operaciones</small></div></div><p class="mb-0 text-muted">"ReportÃ© un siniestro nocturno y respondieron en minutos. Todo quedÃ³ resuelto rÃ¡pido."</p></div></div>
+        <div class="row g-4 align-items-stretch">
+          <div class="col-lg-4 d-flex">
+            <article class="tile testimonials-card h-100 w-100">
+              <div class="d-flex align-items-center gap-3">
+                <div class="avatar">JG</div>
+                <div>
+                  <h6 class="mb-0 fw-semibold">Jessica G.</h6>
+                  <small class="text-muted">Directora de Finanzas</small>
+                </div>
+              </div>
+              <div class="testimonials-card__stars d-flex align-items-center gap-1" aria-label="Calificación de 5 de 5 estrellas">
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                <span class="visually-hidden">5 de 5 estrellas</span>
+              </div>
+              <p class="testimonials-card__quote mb-0">"Migramos toda la póliza corporativa sin interrupciones. El seguimiento a siniestros es impecable."</p>
+              <div class="testimonials-card__footer pt-3 mt-auto border-top">
+                <small class="text-uppercase text-muted d-block">Empresa</small>
+                <div class="fw-semibold">Grupo Delta</div>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4 d-flex">
+            <article class="tile testimonials-card h-100 w-100">
+              <div class="d-flex align-items-center gap-3">
+                <div class="avatar">MR</div>
+                <div>
+                  <h6 class="mb-0 fw-semibold">Marco R.</h6>
+                  <small class="text-muted">Emprendedor</small>
+                </div>
+              </div>
+              <div class="testimonials-card__stars d-flex align-items-center gap-1" aria-label="Calificación de 5 de 5 estrellas">
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                <span class="visually-hidden">5 de 5 estrellas</span>
+              </div>
+              <p class="testimonials-card__quote mb-0">"Me explicaron cada opción de vida y ahorro con claridad. Se siente un servicio boutique."</p>
+              <div class="testimonials-card__footer pt-3 mt-auto border-top">
+                <small class="text-uppercase text-muted d-block">Empresa</small>
+                <div class="fw-semibold">Consultoría Independiente</div>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4 d-flex">
+            <article class="tile testimonials-card h-100 w-100">
+              <div class="d-flex align-items-center gap-3">
+                <div class="avatar">AL</div>
+                <div>
+                  <h6 class="mb-0 fw-semibold">Ana L.</h6>
+                  <small class="text-muted">Operaciones</small>
+                </div>
+              </div>
+              <div class="testimonials-card__stars d-flex align-items-center gap-1" aria-label="Calificación de 5 de 5 estrellas">
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                <span class="visually-hidden">5 de 5 estrellas</span>
+              </div>
+              <p class="testimonials-card__quote mb-0">"Reporté un siniestro nocturno y respondieron en minutos. Todo quedó resuelto rápido."</p>
+              <div class="testimonials-card__footer pt-3 mt-auto border-top">
+                <small class="text-uppercase text-muted d-block">Empresa</small>
+                <div class="fw-semibold">Operadora del Norte</div>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
     </section>
