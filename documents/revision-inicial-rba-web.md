@@ -231,3 +231,10 @@ Estado: en progreso.
 - Se levanto el preview local con `php -S 127.0.0.1:8082 .php-preview-router.php`.
 - El router local quedo como parte del flujo de validacion porque resuelve assets PHP y estaticos durante la revision.
 - La ruta del logo blanco responde `200 image/png`; la verificacion pendiente es solo de pintura en captura headless, no de disponibilidad del asset.
+
+## 20. Presencia nacional
+Estado: ajustado.
+- Se trabajo el bloque de presencia nacional y mapa sin tocar el ESR ni las secciones siguientes.
+- El mapa quedo mas centrado y con menor peso visual para mantener la jerarquia del home.
+- El indicador de matriz y el contador `+25 estados con presencia` quedaron como anclas visuales del bloque.
+- La validacion responsive quedo documentada y pendiente de un repaso manual en navegador normal por la limitacion de las capturas headless.

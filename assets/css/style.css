@@ -1259,7 +1259,7 @@ footer .brand-mark {
 }
 .infographic-layout {
   display: grid;
-  grid-template-columns: minmax(280px, 0.95fr) minmax(540px, 1.35fr);
+  grid-template-columns: minmax(280px, 0.92fr) minmax(0, 1.38fr);
   gap: clamp(0.25rem, 0.5vw, 0.65rem);
   align-items: start;
 }
@@ -1318,7 +1318,7 @@ footer .brand-mark {
 .infographic-map {
   position: relative;
   justify-self: end;
-  width: clamp(700px, 60vw, 1000px);
+  width: clamp(640px, 56vw, 960px);
   margin-right: 0;
 }
 .infographic-map__stage {
@@ -1332,6 +1332,7 @@ footer .brand-mark {
   width: 100%;
   height: auto;
   object-fit: contain;
+  object-position: center center;
   transform: none;
   filter: drop-shadow(0 18px 22px rgba(7,23,42,0.22));
 }
@@ -1344,14 +1345,15 @@ footer .brand-mark {
 }
 .infographic-map__dot {
   position: absolute;
-  left: 31%;
-  top: 29%;
+  left: 29.5%;
+  top: 30.5%;
+  transform: translate(-50%, -50%);
   width: 14px;
   height: 14px;
   border-radius: 50%;
   background: #fff;
   border: 3px solid var(--brand-700);
-  box-shadow: 0 0 0 10px rgba(19,92,138,0.12);
+  box-shadow: 0 0 0 10px rgba(19,92,138,0.12), 0 0 0 20px rgba(19,92,138,0.04);
   z-index: 3;
 }
 .infographic-map__hover {
@@ -1363,8 +1365,9 @@ footer .brand-mark {
   opacity: 0;
   visibility: hidden;
   transition: opacity var(--dur-base) var(--ease-apple), visibility var(--dur-base) var(--ease-apple);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
+  background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.28));
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 .infographic-map:hover .infographic-map__hover,
 .infographic-map:focus-within .infographic-map__hover {
@@ -1374,8 +1377,8 @@ footer .brand-mark {
 .infographic-map__hover-card {
   padding: 1rem 1.15rem;
   border-radius: 18px;
-  background: rgba(255,255,255,0.96);
-  box-shadow: 0 18px 36px rgba(12,46,84,0.18);
+  background: rgba(255,255,255,0.97);
+  box-shadow: 0 18px 36px rgba(12,46,84,0.18), inset 0 1px 0 rgba(255,255,255,0.84);
   color: var(--text-dark);
   text-align: center;
   max-width: 320px;
@@ -1606,8 +1609,8 @@ footer .brand-mark {
   .infographic-map {
     position: absolute;
     top: clamp(84px, 6.8vw, 122px);
-    right: clamp(-200px, -9vw, -84px);
-    width: clamp(700px, 60vw, 1000px);
+    right: clamp(-170px, -7vw, -72px);
+    width: clamp(640px, 56vw, 920px);
     margin-right: 0;
     z-index: 2;
   }
@@ -1624,8 +1627,8 @@ footer .brand-mark {
     transform: translateY(-50%) rotate(8deg);
   }
   .infographic-map__dot {
-    left: 31%;
-    top: 24%;
+    left: 28.5%;
+    top: 27%;
   }
   .infographic-connector-line {
     display: block;
@@ -1675,15 +1678,15 @@ footer .brand-mark {
   }
   .infographic-map {
     top: clamp(84px, 6.5vw, 126px);
-    right: clamp(-220px, -10vw, -90px);
-    width: clamp(720px, 62vw, 1050px);
+    right: clamp(-180px, -8.5vw, -80px);
+    width: clamp(640px, 58vw, 960px);
   }
   .infographic-map__image {
     transform: none;
   }
   .infographic-map__dot {
-    left: 31%;
-    top: 29%;
+    left: 28.8%;
+    top: 27.5%;
   }
   .infographic-label::after {
     content: none;

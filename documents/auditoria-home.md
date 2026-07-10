@@ -200,3 +200,17 @@ Estado: en progreso.
 - El router local de preview permanece como parte del proyecto y se usa para servir PHP y assets estaticos durante la verificacion.
 - La ruta del logo responde `200 image/png` en `127.0.0.1:8082`, por lo que la incidencia restante queda asociada a la pintura headless del navegador y no a la disponibilidad del asset.
 - Antes de avanzar al siguiente bloque visual, conviene confirmar manualmente el logo del header en un navegador normal conectado al servidor local.
+
+## 17. Bloque de presencia nacional
+Estado: ajustado.
+- Se redujo la presencia visual del mapa para que el bloque respire mejor y no compita con el bloque ESR.
+- Se refino la posicion del punto de ubicacion para acercarlo a Sonora dentro de la composicion.
+- Se reforzo el hover del mapa con una capa mas limpia y una tarjeta de presencia nacional mas legible.
+- Se mantuvo el numero `+25` y la etiqueta de matriz como referencia principal del bloque.
+
+## 18. Validacion responsive del bloque
+- Desktop: el mapa queda mas contenido y la composicion general del bloque mantiene jerarquia antes del ESR.
+- Tablet: la estructura sigue apilando correctamente el contenido cuando el layout pasa a una sola columna.
+- Movil: el mapa se conserva dentro del flujo vertical sin invadir secciones posteriores.
+- Sintaxis PHP: `php -l index.php` paso sin errores.
+- Captura automatizada: el navegador headless no guardo archivo de captura para este bloque, asi que la revision visual queda documentada como validacion pendiente en navegador normal.
