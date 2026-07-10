@@ -259,3 +259,10 @@ Estado: ajustado.
 - Se mantuvo el render dinamico por categorias y el desplazamiento horizontal con drag y touch.
 - Se mejoro la accesibilidad basica de las categorias y de los controles anterior/siguiente.
 - La validacion automatizada no genero captura utilizable, asi que la revision visual final debe confirmarse manualmente en navegador normal.
+
+## 24. Seccion de proceso
+Estado: ajustado.
+- Se trabajo la seccion de proceso con un subtitulo de contexto y tarjetas mas claras.
+- Se agregaron iconos, numeros y conectores visuales para reforzar la secuencia.
+- Se mantuvo la lectura secuencial de las cuatro etapas sin tocar testimonios ni contacto.
+- La validacion responsive quedo documentada y pendiente de una revision manual en navegador normal por la limitacion de la captura headless.

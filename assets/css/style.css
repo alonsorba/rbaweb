@@ -375,43 +375,96 @@ body.home-index .hero-carousel {
 }
 
 /* Timeline horizontal del proceso comercial. */
+.process-section {
+  overflow: hidden;
+}
+.process-header {
+  max-width: 780px;
+  margin-inline: auto;
+}
+.process-title {
+  margin-bottom: 0.65rem;
+}
+.process-subtitle {
+  margin: 0 auto;
+  max-width: 48rem;
+  color: var(--muted);
+  font-size: clamp(0.98rem, 1.2vw, 1.08rem);
+  line-height: 1.55;
+}
 .timeline-v2 {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.9rem;
+  gap: 1rem;
+  align-items: stretch;
 }
 .timeline-v2-step {
-  background: #fff;
-  border: 1px solid #ddebf5;
-  border-radius: 16px;
-  padding: 1rem;
+  position: relative;
+  display: grid;
+  gap: 0.65rem;
+  justify-items: start;
+  background: linear-gradient(180deg, #fff, #fbfdff);
+  border: 1px solid #d8e7f3;
+  border-radius: 22px;
+  padding: 1.3rem 1.2rem 1.15rem;
+  min-height: 214px;
+  box-shadow: 0 14px 30px rgba(12,46,84,0.06);
   transition: transform var(--dur-base) var(--ease-apple), box-shadow var(--dur-base) var(--ease-apple), border-color var(--dur-fast) ease;
 }
 .timeline-v2-step:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 18px 34px rgba(12,46,84,0.1);
-  border-color: #c8dff0;
+  transform: translateY(-5px);
+  box-shadow: 0 20px 36px rgba(12,46,84,0.1);
+  border-color: #c3dcef;
 }
-.timeline-v2-step span {
+.timeline-v2-step::after {
+  content: '';
+  position: absolute;
+  top: 2.1rem;
+  right: -0.65rem;
+  width: 1.1rem;
+  height: 2px;
+  background: linear-gradient(90deg, #4aa3dc, rgba(74,163,220,0));
+  pointer-events: none;
+}
+.timeline-v2-step:last-child::after {
+  display: none;
+}
+.timeline-v2-step__badge {
   display: inline-flex;
-  width: 28px;
-  height: 28px;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
   background: var(--brand-700);
   color: #fff;
   font-weight: 700;
-  margin-bottom: 0.65rem;
+  font-size: 0.92rem;
+  box-shadow: 0 10px 18px rgba(11,48,95,0.16);
+}
+.timeline-v2-step__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  background: rgba(19,92,138,0.1);
+  color: var(--brand-700);
+  font-size: 1.25rem;
 }
 .timeline-v2-step h6 {
-  margin: 0 0 0.35rem;
+  margin: 0;
+  color: var(--text-dark);
   font-weight: 700;
+  font-size: 1.02rem;
+  line-height: 1.2;
 }
 .timeline-v2-step p {
   margin: 0;
   color: var(--muted);
-  font-size: 0.94rem;
+  font-size: 0.95rem;
+  line-height: 1.45;
 }
 
 /* Cierre comercial con bloque de contacto dividido. */
@@ -446,6 +499,12 @@ body.home-index main > section:nth-of-type(even) {
   }
   .timeline-v2 {
     grid-template-columns: 1fr;
+  }
+  .timeline-v2-step {
+    min-height: 0;
+  }
+  .timeline-v2-step::after {
+    display: none;
   }
 }
 
@@ -1085,6 +1144,9 @@ footer .brand-mark {
 .stat-card { position: relative; right: 0; bottom: 0; margin-top: 1rem; display: flex; }
   .timeline-v2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .timeline-v2-step::after {
+    display: none;
   }
 }
 

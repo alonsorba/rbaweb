@@ -256,3 +256,18 @@ Estado: ajustado.
 - Movil: el bloque mantiene lectura clara, las categorias se apilan mejor y las cards conservan una anchura util.
 - JavaScript: `node --check assets/js/main.js` paso sin errores.
 - Captura automatizada: no se obtuvo una captura utilizable del bloque, por lo que la revision visual final sigue pendiente de navegador normal.
+
+## 25. Bloque de proceso
+Estado: ajustado.
+- Se reforzo la jerarquia del encabezado con un subtitulo de contexto.
+- Se reorganizaron los pasos en tarjetas semanticas con numero, icono y descripcion separada.
+- Se agregaron conectores visuales discretos en desktop para sostener la lectura secuencial.
+- Se mantuvo el orden Diagnostico > Diseno > Implementacion > Acompanamiento sin tocar el resto del home.
+
+## 26. Validacion del bloque de proceso
+- Desktop: las cuatro etapas quedan alineadas con una secuencia clara y conectores discretos.
+- Tablet: la grilla pasa a dos columnas sin cruzar textos ni iconos.
+- Movil: los pasos se apilan en una sola columna y los conectores se retiran para evitar desbordes.
+- Sintaxis PHP: `php -l index.php` paso sin errores.
+- JavaScript: `node --check assets/js/main.js` paso sin errores.
+- Captura automatizada: no se obtuvo una captura utilizable, asi que la revision visual final sigue pendiente de navegador normal.
