@@ -242,3 +242,17 @@ Estado: ajustado.
 - Movil: el bloque conserva lectura clara y la imagen mantiene su recorte.
 - Sintaxis PHP: `php -l index.php` paso sin errores.
 - Captura automatizada: no se obtuvo una captura utilizable, asi que la validacion visual final sigue pendiente de revisar en navegador normal.
+
+## 23. Bloque de soluciones
+Estado: ajustado.
+- Se reforzo la jerarquia del titulo con un subtitulo explicito para indicar que el contenido puede desplazarse horizontalmente.
+- Se mejoro la visibilidad de las categorias activas y se agregaron controles anterior/siguiente como apoyo al carrusel.
+- Se estandarizo la proporcion de las cards para que todas compartan un peso visual mas consistente.
+- Se mantuvo el render dinamico por categoria y el desplazamiento horizontal con drag y touch.
+
+## 24. Validacion del bloque de soluciones
+- Desktop: las cards aprovechan mejor el ancho disponible y el carrusel conserva su desplazamiento horizontal.
+- Tablet: las cards siguen visibles sin colapsar la jerarquia del bloque.
+- Movil: el bloque mantiene lectura clara, las categorias se apilan mejor y las cards conservan una anchura util.
+- JavaScript: `node --check assets/js/main.js` paso sin errores.
+- Captura automatizada: no se obtuvo una captura utilizable del bloque, por lo que la revision visual final sigue pendiente de navegador normal.

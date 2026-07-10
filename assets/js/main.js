@@ -218,6 +218,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const solutionTrack = solutionSection.querySelector('#solutionsTrack') || solutionSection.querySelector('[data-solution-track]');
   const solutionCarousel = solutionSection.querySelector('#solutionsCarousel') || solutionSection.querySelector('[data-solution-carousel]');
   const solutionButtons = Array.from(solutionSection.querySelectorAll('[data-solution-key]'));
+  const solutionPrevButton = solutionSection.querySelector('[data-solution-prev]');
+  const solutionNextButton = solutionSection.querySelector('[data-solution-next]');
 
   const solutionData = {
     empresas: [
@@ -320,6 +322,29 @@ document.addEventListener('DOMContentLoaded', () => {
     if (solutionCarousel) {
       solutionCarousel.scrollTo({ left: 0, behavior: 'auto' });
     }
+
+    window.requestAnimationFrame(updateSolutionCarouselState);
+  };
+
+  const updateSolutionCarouselState = () => {
+    if (!solutionCarousel || !solutionTrack) return;
+
+    const overflowWidth = solutionTrack.scrollWidth - solutionCarousel.clientWidth;
+    const isScrollable = overflowWidth > 8;
+    const isCentered = !isScrollable;
+
+    solutionTrack.classList.toggle('is-centered', isCentered);
+    solutionCarousel.classList.toggle('is-scrollable', isScrollable);
+
+    if (solutionPrevButton) {
+      solutionPrevButton.disabled = !isScrollable;
+      solutionPrevButton.setAttribute('aria-disabled', String(!isScrollable));
+    }
+
+    if (solutionNextButton) {
+      solutionNextButton.disabled = !isScrollable;
+      solutionNextButton.setAttribute('aria-disabled', String(!isScrollable));
+    }
   };
 
   const setActiveSolution = key => {
@@ -335,6 +360,20 @@ document.addEventListener('DOMContentLoaded', () => {
   solutionButtons.forEach(button => {
     button.addEventListener('click', () => setActiveSolution(button.dataset.solutionKey));
   });
+
+  if (solutionPrevButton && solutionCarousel) {
+    solutionPrevButton.addEventListener('click', () => {
+      const amount = Math.max(solutionCarousel.clientWidth * 0.78, 280);
+      solutionCarousel.scrollBy({ left: -amount, behavior: 'smooth' });
+    });
+  }
+
+  if (solutionNextButton && solutionCarousel) {
+    solutionNextButton.addEventListener('click', () => {
+      const amount = Math.max(solutionCarousel.clientWidth * 0.78, 280);
+      solutionCarousel.scrollBy({ left: amount, behavior: 'smooth' });
+    });
+  }
 
   if (solutionCarousel) {
     let isDown = false;
@@ -376,7 +415,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }, true);
   }
 
-  renderSolutions('empresas');
   setActiveSolution('empresas');
+  updateSolutionCarouselState();
+  window.addEventListener('resize', updateSolutionCarouselState, { passive: true });
 });
 

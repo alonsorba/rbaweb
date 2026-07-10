@@ -193,11 +193,22 @@
       <div class="container">
         <div class="services-solutions__header text-center">
           <h2 class="services-solutions__title" id="solutionsTitle">Soluciones</h2>
+          <p class="services-solutions__subtitle">Explora por categoría y desliza horizontalmente para ver más coberturas.</p>
           <div class="services-solutions__pills" role="tablist" aria-label="Tipos de solución">
             <button type="button" class="services-solutions__pill active" data-solution-key="empresas" aria-pressed="true">Empresas</button>
             <button type="button" class="services-solutions__pill" data-solution-key="personas" aria-pressed="false">Personas</button>
             <button type="button" class="services-solutions__pill" data-solution-key="fianzas" aria-pressed="false">Fianzas</button>
             <button type="button" class="services-solutions__pill" data-solution-key="gestion" aria-pressed="false">Gestión Integral</button>
+          </div>
+          <div class="services-solutions__controls" aria-label="Navegación del carrusel de soluciones">
+            <button type="button" class="services-solutions__control" data-solution-prev aria-label="Ver soluciones anteriores">
+              <i class="bi bi-arrow-left" aria-hidden="true"></i>
+              <span>Anterior</span>
+            </button>
+            <button type="button" class="services-solutions__control" data-solution-next aria-label="Ver más soluciones">
+              <span>Siguiente</span>
+              <i class="bi bi-arrow-right" aria-hidden="true"></i>
+            </button>
           </div>
         </div>
 

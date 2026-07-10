@@ -252,3 +252,10 @@ Estado: ajustado.
 - Se redujo el espacio vacio y se afino el recorte de la imagen del equipo.
 - Se mantuvo la continuidad visual con la seccion ESR y el paso hacia soluciones.
 - La validacion responsive quedo documentada y pendiente de una revision manual en navegador normal.
+
+## 23. Seccion de soluciones
+Estado: ajustado.
+- Se actualizo la seccion de soluciones con subtitulo, controles de navegacion y cards de mayor presencia visual.
+- Se mantuvo el render dinamico por categorias y el desplazamiento horizontal con drag y touch.
+- Se mejoro la accesibilidad basica de las categorias y de los controles anterior/siguiente.
+- La validacion automatizada no genero captura utilizable, asi que la revision visual final debe confirmarse manualmente en navegador normal.

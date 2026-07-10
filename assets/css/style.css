@@ -1904,20 +1904,29 @@ footer .brand-mark {
   letter-spacing: -0.05em;
 }
 
+.services-solutions__subtitle {
+  max-width: 48rem;
+  margin: -0.35rem auto 1.35rem;
+  color: var(--muted);
+  font-size: clamp(0.96rem, 1.2vw, 1.08rem);
+  line-height: 1.55;
+}
+
 .services-solutions__pills {
   display: inline-flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.85rem;
   flex-wrap: wrap;
+  margin: 0 auto 1rem;
 }
 
 .services-solutions__pill {
-  min-width: 145px;
+  min-width: 138px;
   border: 1.5px solid var(--brand-900);
   background: #fff;
   color: #555;
   border-radius: 999px;
-  padding: 0.78rem 1.5rem;
+  padding: 0.82rem 1.35rem;
   font-size: 0.95rem;
   font-weight: 400;
   line-height: 1;
@@ -1926,7 +1935,16 @@ footer .brand-mark {
 .services-solutions__pill.active {
   background: var(--brand-900);
   color: #fff;
-  box-shadow: none;
+  box-shadow: 0 14px 28px rgba(11,48,95,0.18);
+  transform: translateY(-1px);
+}
+
+.services-solutions__pill:focus-visible,
+.services-solutions__control:focus-visible,
+.solution-card__btn:focus-visible {
+  outline: 2px solid rgba(32, 151, 220, 0.72);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 4px rgba(32, 151, 220, 0.14);
 }
 
 .services-solutions__carousel-shell {
@@ -1949,6 +1967,9 @@ footer .brand-mark {
   -ms-overflow-style: none;
   user-select: none;
   touch-action: pan-y;
+  scroll-behavior: smooth;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
   padding: 0.5rem 0 1rem;
 }
 
@@ -1978,62 +1999,58 @@ footer .brand-mark {
   margin-left: calc(50% - 50vw);
   overflow: hidden;
   padding-left: clamp(2rem, 7vw, 7rem);
+  padding-right: clamp(1rem, 2vw, 2rem);
 }
 
 .services-solutions__track {
   display: flex;
   justify-content: flex-start;
-  gap: clamp(1.5rem, 3vw, 3.2rem);
+  gap: clamp(1.25rem, 2.5vw, 2.25rem);
   width: max-content;
-  padding: 0.5rem clamp(2rem, 7vw, 7rem) 1rem 0.25rem;
+  padding: 0.35rem clamp(1rem, 2vw, 2rem) 1rem 0.25rem;
+}
+
+.services-solutions__track.is-centered {
+  justify-content: center;
+  width: 100%;
 }
 
 .solution-card {
   position: relative;
-  flex: 0 0 clamp(230px, 18vw, 285px);
-  width: clamp(230px, 18vw, 285px);
-  min-height: 355px;
-  border-radius: 28px;
-  background: #e8e8e8;
-  padding: 1.75rem 1.35rem 1.45rem;
+  flex: 0 0 clamp(255px, 20vw, 320px);
+  width: clamp(255px, 20vw, 320px);
+  min-height: 385px;
+  border-radius: 30px;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.65), rgba(255,255,255,0.35)),
+    #e9edf2;
+  padding: 1.85rem 1.55rem 1.5rem;
   overflow: hidden;
   border: 0;
-  box-shadow: none;
+  box-shadow: 0 18px 34px rgba(12,46,84,0.09);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  scroll-snap-align: start;
+  transition: transform var(--dur-base) var(--ease-apple), box-shadow var(--dur-base) var(--ease-apple);
+}
+
+.solution-card:hover,
+.solution-card:focus-within {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 44px rgba(12,46,84,0.15);
 }
 
 .solution-card__image {
   position: static;
   display: block;
-  width: 118px;
-  height: 112px;
+  width: 130px;
+  height: 124px;
   object-fit: contain;
-  margin: 0 auto 1.15rem;
+  margin: 0 auto 1rem;
   pointer-events: none;
   user-select: none;
-}
-
-.solution-card:nth-child(2) .solution-card__image {
-  width: 172px;
-  height: 122px;
-}
-
-.solution-card:nth-child(3) .solution-card__image {
-  width: 125px;
-  height: 112px;
-}
-
-.solution-card:nth-child(4) .solution-card__image {
-  width: 125px;
-  height: 112px;
-}
-
-.solution-card:nth-child(2) .solution-card__content p {
-  max-width: 220px;
-  font-size: 0.78rem;
 }
 
 .solution-card__content {
@@ -2047,20 +2064,20 @@ footer .brand-mark {
 }
 
 .solution-card__content h3 {
-  margin: 0 0 0.55rem;
+  margin: 0 0 0.65rem;
   color: #5a5a5a;
-  font-size: 1.45rem;
-  line-height: 1.1;
+  font-size: 1.55rem;
+  line-height: 1.05;
   font-weight: 700;
   letter-spacing: -0.04em;
 }
 
 .solution-card__content p {
-  max-width: 205px;
-  margin: 0 auto 1rem;
+  max-width: 215px;
+  margin: 0 auto 1.1rem;
   color: #5f5f5f;
-  font-size: 0.74rem;
-  line-height: 1.25;
+  font-size: 0.82rem;
+  line-height: 1.35;
   font-weight: 400;
 }
 
@@ -2069,9 +2086,9 @@ footer .brand-mark {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 150px;
-  min-height: 43px;
-  border-radius: 8px;
+  min-width: 162px;
+  min-height: 44px;
+  border-radius: 999px;
   background: #2097dc;
   color: #fff;
   text-decoration: none;
@@ -2086,6 +2103,45 @@ footer .brand-mark {
 .solution-card__btn:focus {
   background: #1688cf;
   color: #fff;
+  transform: translateY(-1px);
+}
+
+.services-solutions__controls {
+  display: flex;
+  justify-content: center;
+  gap: 0.7rem;
+  margin: 1rem auto 0;
+  flex-wrap: wrap;
+}
+
+.services-solutions__control {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  min-width: 132px;
+  min-height: 42px;
+  padding: 0.65rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(19,92,138,0.18);
+  background: rgba(255,255,255,0.94);
+  color: var(--brand-700);
+  font-size: 0.84rem;
+  font-weight: 600;
+  box-shadow: 0 10px 20px rgba(12,46,84,0.08);
+}
+
+.services-solutions__control:hover,
+.services-solutions__control:focus {
+  background: #fff;
+  color: var(--brand-800);
+  box-shadow: 0 16px 26px rgba(12,46,84,0.12);
+}
+
+.services-solutions__control:disabled {
+  opacity: 0.48;
+  cursor: not-allowed;
+  box-shadow: none;
 }
 
 @media (max-width: 767.98px) {
@@ -2096,19 +2152,40 @@ footer .brand-mark {
   }
 
   .services-solutions__pills {
-    gap: 0.65rem;
+    gap: 0.55rem;
   }
 
   .services-solutions__pill {
     min-width: 0;
-    padding: 0.72rem 1rem;
-    font-size: 0.86rem;
+    padding: 0.7rem 0.95rem;
+    font-size: 0.84rem;
+  }
+
+  .services-solutions__subtitle {
+    margin-bottom: 1rem;
+    font-size: 0.94rem;
+  }
+
+  .services-solutions__controls {
+    margin-top: 0.85rem;
+  }
+
+  .services-solutions__control {
+    min-width: 126px;
+    min-height: 40px;
+    font-size: 0.8rem;
   }
 
   .solution-card {
-    flex-basis: 235px;
-    width: 235px;
-    height: 335px;
+    flex-basis: min(82vw, 300px);
+    width: min(82vw, 300px);
+    min-height: 360px;
+    padding: 1.6rem 1.2rem 1.35rem;
+  }
+
+  .solution-card__image {
+    width: 120px;
+    height: 112px;
   }
 }
 
