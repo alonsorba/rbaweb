@@ -3,6 +3,8 @@
   $phone = '+52 55 1234 5678';
   $email = 'contacto@rbaseguros.mx';
   $year = date('Y');
+  $homeLogoWhite = 'assets/img/R BAIDON V3 BLANCO.png';
+  $homeLogoRgb = 'assets/img/R BAIDON V3 RGB (WEB).png';
   $mapImagePath = 'assets/img/mapaa.png';
   $mapImageExists = file_exists(__DIR__ . '/assets/img/mapaa.png');
   $esrImagePath = 'assets/img/esr con sombre.png';
@@ -29,7 +31,7 @@
     <nav class="navbar navbar-expand-lg home-nav" id="topNav">
       <div class="container-fluid home-nav-shell">
         <a class="navbar-brand home-mobile-brand" href="index.php" aria-label="Inicio RBA Seguros y Fianzas">
-          <img src="assets/img/R BAIDON V3 BLANCO.png" class="brand-logo" alt="RBA Seguros &amp; Fianzas" data-home-logo-light="assets/img/R BAIDON V3 BLANCO.png" data-home-logo-dark="assets/img/R BAIDON V3 RGB (WEB).png">
+          <img src="<?php echo $homeLogoWhite; ?>" class="brand-logo" alt="RBA Seguros &amp; Fianzas" fetchpriority="high" decoding="sync" data-home-logo-light="<?php echo $homeLogoWhite; ?>" data-home-logo-dark="<?php echo $homeLogoRgb; ?>">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -43,7 +45,7 @@
               <li class="nav-item"><a class="nav-link" href="quienes.php">Nosotros</a></li>
             </ul>
             <a class="navbar-brand home-center-brand" href="index.php" aria-label="Inicio RBA Seguros y Fianzas">
-              <img src="assets/img/R BAIDON V3 BLANCO.png" class="brand-logo" alt="RBA Seguros &amp; Fianzas" data-home-logo-light="assets/img/R BAIDON V3 BLANCO.png" data-home-logo-dark="assets/img/R BAIDON V3 RGB (WEB).png">
+              <img src="<?php echo $homeLogoWhite; ?>" class="brand-logo" alt="RBA Seguros &amp; Fianzas" fetchpriority="high" decoding="sync" data-home-logo-light="<?php echo $homeLogoWhite; ?>" data-home-logo-dark="<?php echo $homeLogoRgb; ?>">
             </a>
             <div class="home-nav-actions">
               <a class="nav-link home-contact-link" href="#contacto">Contacto</a>
@@ -376,7 +378,7 @@
       <div class="footer-bottom pt-4 mt-3 border-top">
         <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center gap-3">
           <div class="d-flex align-items-center gap-3">
-            <img src="assets/img/R BAIDON V3 RGB (WEB).png" class="footer-logo" alt="RBA Seguros &amp; Fianzas">
+            <img src="<?php echo $homeLogoRgb; ?>" class="footer-logo" alt="RBA Seguros &amp; Fianzas">
           </div>
           <div class="text-muted small text-center text-lg-end">
             &copy; <?php echo $year; ?> R. Baidon Agente de Seguros y de Fianzas.

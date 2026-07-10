@@ -226,3 +226,8 @@ Estado: en progreso.
 - Se ajusto el header del home para pasar de transparente a solido cuando hay scroll.
 - Se refino el hero principal y el bloque de estadisticas/presencia nacional sin tocar secciones posteriores.
 - Se actualizo la auditoria del home con los archivos intervenidos y las validaciones responsive preliminares.
+
+## 19. Validacion local del bloque
+- Se levanto el preview local con `php -S 127.0.0.1:8082 .php-preview-router.php`.
+- El router local quedo como parte del flujo de validacion porque resuelve assets PHP y estaticos durante la revision.
+- La ruta del logo blanco responde `200 image/png`; la verificacion pendiente es solo de pintura en captura headless, no de disponibilidad del asset.

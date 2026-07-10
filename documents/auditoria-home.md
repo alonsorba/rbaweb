@@ -183,13 +183,20 @@ Estado: en progreso.
 - Tablet: el bloque se mantiene dentro del flujo esperado sin modificar secciones posteriores.
 - Movil: el header conserva contraste con el cambio de logo y el bloque inicial sigue apilado por las reglas existentes.
 - Sintaxis PHP: validada con `C:\xampp\php\php.exe -l` en todas las paginas tocadas de PHP.
-- Captura visual automatizada: pendiente de validacion porque `127.0.0.1:8082` devolvio `ERR_CONNECTION_REFUSED` al intentar tomar la screenshot.
+- Vista previa local: levantada con `php -S 127.0.0.1:8082 .php-preview-router.php`.
+- Verificacion de assets: la ruta del logo en `assets/img/R BAIDON V3 BLANCO.png` responde `200 image/png` desde el router local.
+- Captura visual automatizada: en navegador headless el logo siguio apareciendo como fallback en algunas capturas, asi que queda una verificacion manual pendiente para confirmar si es un efecto del entorno de preview o del navegador de pruebas.
 
 ## 14. Riesgos pendientes
 - El estado visual completo depende de pruebas en navegador con el servidor local levantado.
-- El cambio de logo depende de que los assets blanco y RGB permanezcan disponibles con los mismos nombres.
+- El cambio de logo depende de que los assets blanco y RGB permanezcan disponibles con los mismos nombres y de que el preview local siga resolviendo rutas con espacios.
 - El bloque de estadisticas sigue siendo el tramo mas sensible del home para ajustes posteriores.
 
 ## 15. Siguiente bloque recomendado
 - Revisar y pulir la seccion de presencia nacional/mapa si la comunicacion visual pide una jerarquia mas marcada.
 - Si no hay cambios adicionales de diseño, el siguiente bloque logico es avanzar al resto del home sin tocar el header ya estabilizado.
+
+## 16. Validacion local adicional
+- El router local de preview permanece como parte del proyecto y se usa para servir PHP y assets estaticos durante la verificacion.
+- La ruta del logo responde `200 image/png` en `127.0.0.1:8082`, por lo que la incidencia restante queda asociada a la pintura headless del navegador y no a la disponibilidad del asset.
+- Antes de avanzar al siguiente bloque visual, conviene confirmar manualmente el logo del header en un navegador normal conectado al servidor local.

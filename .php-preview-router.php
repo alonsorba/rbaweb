@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 }
 
 // Security check: Prevent directory traversal
-$requestPath = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+$requestPath = urldecode(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
 $normalizedPath = str_replace('..', '', $requestPath);
 $filePath = __DIR__ . $normalizedPath;
 
