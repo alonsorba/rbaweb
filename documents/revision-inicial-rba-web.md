@@ -305,3 +305,26 @@ Oportunidades de reutilizacion:
 - componente apto para home, pagina de casos o landing comercial;
 - misma base visual con distintos niveles de densidad de contenido;
 - posible uso como bloque de testimonios destacados o rotacion manual.
+
+## 27. Integración visual del Home
+Estado: ajustado.
+- Se reviso el home como una sola experiencia visual, de header a testimonios.
+- Se elimino la alternancia global de fondos para evitar conflictos con los fondos propios de cada bloque.
+- Se reforzo la continuidad entre hero, trust bar, compromiso, soluciones, proceso y testimonios.
+- Se mantuvo sin cambios el contenido, la logica JS y las secciones de contacto y footer.
+
+Criterios utilizados:
+- continuidad de fondo por bloque;
+- coherencia en sombras, bordes y radios;
+- lectura fluida de arriba hacia abajo;
+- continuidad de la identidad grafica en el tramo central del home.
+
+Inconsistencias corregidas:
+- fondos alternados que competian con secciones ya definidas;
+- cambios bruscos entre bloques con fondos similares;
+- remates visuales menos consistentes al pasar de proceso a testimonios.
+
+Elementos pendientes:
+- contacto y footer quedan para el siguiente bloque de trabajo;
+- siguen existiendo cambios ajenos en el worktree que no pertenecen a esta integracion;
+- conviene validar una vez mas en navegador normal antes de tocar el cierre comercial.

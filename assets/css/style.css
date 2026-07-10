@@ -478,11 +478,8 @@ body.home-index main > section {
   position: relative;
   z-index: 3;
 }
-body.home-index main > section:nth-of-type(odd) {
-  background: #FFFFFF !important;
-}
-body.home-index main > section:nth-of-type(even) {
-  background: #FAFAFA !important;
+.testimonials-section {
+  background: #fff;
 }
 @media (max-width: 768px) {
   body.home-index .hero-carousel {
