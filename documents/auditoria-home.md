@@ -385,23 +385,31 @@ Estado: ajustado.
 ## 27. Navbar del Home
 Estado: corregido.
 - La causa del bug era una base de fondo azul heredada y un cambio por saltos entre estados discretos: el navbar alternaba clases y eso provocaba una franja oscura al inicio y un blanco mal sincronizado con el scroll.
-- El comportamiento nuevo se basa en un unico componente controlado por el progreso real del hero, con interpolacion continua de color, opacidad, sombra y visibilidad.
+- El comportamiento nuevo se basa en un unico flujo matematico: `navbarProgress`, que arranca en 0 sobre el hero y avanza hasta 1 al final del `#trust-bar`.
 - Los selectores principales son `#topNav`, `header.sticky-top`, `.brand-logo-stack`, `.home-nav-collapse`, `.home-nav-menu .nav-link` y `.home-contact-link`.
-- La logica JS calcula `heroProgress` para el fondo y el color, y usa `trustBarTop + trustBarHeight * 0.25` como inicio de ocultamiento y `trustBarTop + trustBarHeight * 0.65` como fin.
-- Las formulas clave quedaron separadas asi:
-  - `--home-nav-bg-alpha = smoothstep(heroProgress)` para interpolar de transparente a blanco.
-  - `textProgress = smoothstep(clamp01((heroProgress - 0.18) / 0.62))` para retrasar el paso de blanco a azul.
-  - `logoProgress = smoothstep(clamp01((heroProgress - 0.28) / 0.5))` para retrasar el logo RGB.
-  - `exitProgress = clamp01((scrollY - exitStart) / (exitEnd - exitStart))` para ocultar gradualmente despues del `#trust-bar`.
-- En desktop, tablet y movil el contraste ya no depende de estados duros, sino de valores intermedios que evolucionan durante el scroll.
+- La logica JS deriva todo desde `navbarProgress`:
+  - `backgroundProgress = smoothstep(clamp01(navbarProgress / 0.84))`
+  - `textProgress = smoothstep(clamp01((navbarProgress - 0.20) / 0.52))`
+  - `logoProgress = smoothstep(clamp01((navbarProgress - 0.30) / 0.42))`
+  - `buttonProgress = smoothstep(clamp01((navbarProgress - 0.18) / 0.56))`
+  - `hideProgress = smoothstep(clamp01((navbarProgress - 0.80) / 0.20))`
+- El ocultamiento sigue ocurriendo despues del hero y durante el `trust-bar`, con desaparicion suave al final de ese bloque.
+- En desktop, tablet y movil el contraste ya no depende de estados duros, sino de una progresion unica con desfases pequenos para texto, logos y boton.
 - Se mantiene `prefers-reduced-motion` con transiciones desactivadas, pero sin volver al esquema de clases antiguas.
 
 Progreso visual:
-- Al inicio del hero, el navbar conserva el look blanco sobre fondo transparente.
-- En el avance medio del hero, el color de texto y los controles pasan gradualmente al azul institucional.
-- Al salir del hero, la barra se atenua y se oculta de forma suave antes de desaparecer por completo.
+- 0%: fondo realmente transparente, texto blanco, logo blanco, sin sombra.
+- 10%: el fondo sigue casi transparente, el texto conserva contraste blanco y el logo RGB apenas empieza a asomar.
+- 25%: aparece el blanco con suavidad, pero el texto sigue mayormente blanco.
+- 50%: el fondo ya es claramente blanco y el texto inicia el paso a azul institucional.
+- 75%: el fondo es casi blanco, el logo RGB domina y la sombra empieza a notarse.
+- 100%: el navbar ya es blanco, con texto y controles en azul institucional y ocultamiento en curso al final del `trust-bar`.
+- Inicio del `trust-bar`: el navbar sigue visible y blanco.
+- Mitad del `trust-bar`: la opacidad ya empieza a caer de forma suave.
+- Desaparicion: la salida se completa al final del rango calculado del `trust-bar`.
+- Reaparicion al subir: la barra vuelve a materializarse con la misma curva y sin regresar al azul inicial.
 
 Riesgos pendientes:
-- El comportamiento depende de la altura real del hero, asi que un cambio fuerte en su composicion puede requerir retocar la curva de interpolacion.
-- En mobile, si el CTA o el icono cambian de peso visual, puede requerir ajustar el desfase entre `textProgress` y `logoProgress`.
-- Si se agregan nuevas reglas globales para el navbar, deben respetar las variables CSS del componente para no reintroducir el conflicto de color.
+- El comportamiento depende de la geometria real del hero y del `trust-bar`, asi que un cambio fuerte en su composicion puede requerir retocar la curva de interpolacion.
+- Si el logo o el CTA cambian de proporciones, puede requerir ajustar los desfases internos de texto y logo.
+- Si se agregan nuevas reglas globales para el navbar, deben respetar el progreso unico para no reintroducir saltos visuales.

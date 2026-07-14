@@ -386,8 +386,9 @@ Campos editables sugeridos para Footer:
 
 ## 34. Correccion del navbar del Home
 - Se corrigio el conflicto de colores del navbar al hacer scroll.
-- El home ahora usa un unico componente animado por progreso real del hero, sin depender de estados bruscos.
+- El home ahora usa una sola variable base, `navbarProgress`, sin depender de estados bruscos.
 - El fondo ahora arranca en transparente real y evoluciona hacia blanco, sin pasar por azul institucional.
 - El contraste se resuelve con interpolacion continua de fondo, texto, botones, sombra y logos.
 - El navbar permanece visible durante el hero y el inicio del `#trust-bar`; despues se oculta de forma suave usando la geometria real de ese bloque.
+- La curva se suaviza con `smoothstep()` para que el cambio se sienta mas organico y menos tecnico.
 - La validacion pendiente es solo visual en navegador, porque la sintaxis PHP y el JS quedaron contemplados en el bloque de trabajo.
