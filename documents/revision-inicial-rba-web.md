@@ -376,3 +376,10 @@ Campos editables sugeridos para Footer:
 - El worktree sigue teniendo cambios ajenos en `.php-preview-router.php` y `assets/img/` que no forman parte de este cierre.
 - `index.php` conserva una correccion ortografica previa separada de este bloque.
 - El footer es compartido, asi que cualquier ajuste posterior debe revisarse tambien en paginas internas.
+
+## 33. Inicio de fase de QA Global
+- El Home ya quedo como referencia funcional y visual para el resto del sitio.
+- Se identificaron componentes reutilizables para estandarizar el resto de las paginas.
+- Quedaron documentados el sistema de componentes y la deuda tecnica principal.
+- La siguiente fase debe centrarse en revisar y normalizar las paginas internas sin redisenar todo el sitio de nuevo.
+- El primer foco sugerido es la pagina de servicios, porque concentra estructura, cards y llamadas a la accion reutilizables.
