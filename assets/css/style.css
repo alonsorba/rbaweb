@@ -143,8 +143,8 @@ body.home-index #topNav.home-nav {
   --home-nav-link-shadow: 0 1px 12px rgba(0,0,0,0.22);
   --home-nav-toggler-border: transparent;
   --home-nav-toggler-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.95)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-  --home-nav-collapse-bg: rgba(7, 31, 58, 0.9);
-  --home-nav-collapse-border: rgba(255,255,255,0.18);
+  --home-nav-collapse-bg: transparent;
+  --home-nav-collapse-border: transparent;
   --home-nav-collapse-shadow: none;
   --home-nav-access-bg: #279be2;
   --home-nav-access-border: #279be2;
@@ -841,6 +841,11 @@ body.home-index .home-landing-hero {
     border-radius: 18px;
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
+  }
+  body.home-index #topNav .home-nav-collapse.show {
+    background: rgba(7, 31, 58, 0.9);
+    border-color: rgba(255,255,255,0.18);
+    box-shadow: none;
   }
   .home-nav-content {
     display: block;

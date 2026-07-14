@@ -387,5 +387,6 @@ Campos editables sugeridos para Footer:
 ## 34. Correccion del navbar del Home
 - Se restauro el navbar al estado estable de `11f92d0`.
 - Los refinamientos posteriores se descartaron porque provocaban un recuadro blanco sin textos visibles y una lectura incorrecta del logo.
+- La correccion actual elimina el fondo azul marino inicial de `.home-nav-collapse` sin alterar el estado final blanco ni el menu movil abierto.
 - La referencia de Vast queda limitada a los estados inicial y final, no a su estructura visual completa.
 - La validacion pendiente vuelve a ser solo visual en navegador, porque la sintaxis PHP y el JS quedaron contemplados en el bloque estable.

@@ -387,6 +387,7 @@ Estado: corregido.
 - El navbar se restauro al estado estable de `11f92d0`, que vuelve a usar estados discretos (`top`, `transition`, `solid`, `hidden`) y el intercambio de logos por `src`.
 - Los refinamientos posteriores se descartaron visualmente porque generaban un recuadro blanco sin branding correcto, perdida de contraste y una interpretacion demasiado libre de la referencia.
 - Los selectores principales vuelven a ser `#topNav`, `#topNav[data-nav-state]`, `.home-nav-collapse`, `.home-nav-menu .nav-link`, `.home-contact-link` y `header.sticky-top.is-nav-hidden`.
+- La correccion puntual actual deja `.home-nav-collapse` transparente en el estado inicial y conserva un fondo legible solo cuando el menu movil esta abierto.
 - La referencia de Vast queda limitada solo a dos estados conceptuales: inicial transparente con texto/logo blancos y final blanco con branding azul institucional.
 - El ocultamiento vuelve a depender de `getHomeNavState()` y de los umbrales ya validados en el bloque estable.
 - `prefers-reduced-motion` sigue activo con transiciones minimizadas.
