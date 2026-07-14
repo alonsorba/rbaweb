@@ -49,80 +49,49 @@ document.addEventListener('DOMContentLoaded', () => {
     const heroHeight = homeLandingHero?.offsetHeight || heroCarousel?.offsetHeight || window.innerHeight || 1;
     const heroTop = homeLandingHero?.offsetTop || heroCarousel?.offsetTop || 0;
     const heroBottom = heroTop + heroHeight;
+    const heroProgress = clamp01((scrollY - heroTop) / heroHeight);
+    const backgroundProgress = smoothstep(heroProgress);
+    const textProgress = smoothstep(clamp01((heroProgress - 0.18) / 0.62));
+    const logoProgress = smoothstep(clamp01((heroProgress - 0.28) / 0.5));
+    const accessProgress = smoothstep(clamp01((heroProgress - 0.16) / 0.68));
     const trustTop = trustBar?.offsetTop || heroBottom;
     const trustHeight = trustBar?.offsetHeight || heroHeight;
-    const navExitEnd = trustTop + (trustHeight * 0.65);
-    const navbarProgress = smoothstep(clamp01((scrollY - heroTop) / Math.max(navExitEnd - heroTop, 1)));
-    const backgroundProgress = smoothstep(clamp01(navbarProgress / 0.84));
-    const textProgress = smoothstep(clamp01((navbarProgress - 0.20) / 0.52));
-    const logoProgress = smoothstep(clamp01((navbarProgress - 0.30) / 0.42));
-    const buttonProgress = smoothstep(clamp01((navbarProgress - 0.18) / 0.56));
-    const shadowProgress = smoothstep(clamp01((navbarProgress - 0.42) / 0.30));
-    const hideProgress = smoothstep(clamp01((navbarProgress - 0.80) / 0.20));
-    const visible = 1 - hideProgress;
+    const exitStart = trustTop + (trustHeight * 0.25);
+    const exitEnd = trustTop + (trustHeight * 0.65);
+    const exitProgress = clamp01((scrollY - exitStart) / Math.max(exitEnd - exitStart, 1));
+    const exitEase = smoothstep(exitProgress);
+    const visible = 1 - exitEase;
 
     const textColor = mixColor([255, 255, 255], [19, 92, 138], textProgress);
-    const linkShadow = textProgress < 0.42 ? '0 1px 12px rgba(0,0,0,0.22)' : 'none';
-    const collapseBg = `rgba(255,255,255,${(0.94 + (0.02 * backgroundProgress)).toFixed(3)})`;
-    const collapseBorder = `rgba(19,92,138,${(0.10 + (0.06 * backgroundProgress)).toFixed(3)})`;
-    const collapseShadow = `0 18px 42px rgba(12,46,84,${(0.10 * backgroundProgress).toFixed(3)})`;
-    const accessBg = `rgba(19,92,138,${buttonProgress.toFixed(3)})`;
-    const accessBorder = `rgba(19,92,138,${buttonProgress.toFixed(3)})`;
-    const shadowAlpha = 0.18 * shadowProgress;
-    const borderAlpha = 0.10 + (0.08 * backgroundProgress);
+    const hoverColor = mixColor([255, 255, 255], [14, 59, 112], clamp01(textProgress + 0.12));
+    const accessBg = `rgba(19,92,138,${accessProgress.toFixed(3)})`;
+    const accessBorder = mixColor([255, 255, 255], [19, 92, 138], accessProgress, 0.75 + (accessProgress * 0.25));
+    const collapseBg = `rgba(255,255,255,${(0.96 - (0.04 * (1 - backgroundProgress))).toFixed(3)})`;
+    const collapseBorder = `rgba(19,92,138,${(0.10 + (0.08 * backgroundProgress)).toFixed(3)})`;
+    const shadowAlpha = 0.14 * backgroundProgress;
+    const borderAlpha = 0.12 * backgroundProgress;
+    const linkShadow = textProgress < 0.4 ? '0 1px 12px rgba(0,0,0,0.22)' : 'none';
 
-    header.style.setProperty('--home-nav-progress', navbarProgress.toFixed(3));
-    header.style.backgroundColor = `rgba(255,255,255,${backgroundProgress.toFixed(3)})`;
-    header.style.borderBottomColor = `rgba(19,92,138,${borderAlpha.toFixed(3)})`;
-    header.style.boxShadow = `0 18px 42px rgba(12,46,84,${shadowAlpha.toFixed(3)})`;
-    header.style.opacity = visible.toFixed(3);
-    header.style.transform = `translate3d(0, ${(-12 * hideProgress).toFixed(2)}px, 0)`;
-    header.style.visibility = visible > 0.02 ? 'visible' : 'hidden';
-    header.style.pointerEvents = visible > 0.02 ? 'auto' : 'none';
-
-    nav.style.color = textColor;
-    nav.style.backgroundColor = `rgba(255,255,255,${backgroundProgress.toFixed(3)})`;
-    nav.style.boxShadow = `0 18px 42px rgba(12,46,84,${shadowAlpha.toFixed(3)})`;
-    nav.style.borderBottomColor = `rgba(19,92,138,${borderAlpha.toFixed(3)})`;
-    nav.style.opacity = visible.toFixed(3);
-    nav.style.transform = `translate3d(0, ${(-12 * hideProgress).toFixed(2)}px, 0)`;
-    nav.style.visibility = visible > 0.02 ? 'visible' : 'hidden';
-    nav.style.pointerEvents = visible > 0.02 ? 'auto' : 'none';
-
-    const navLinks = nav.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
-      link.style.textShadow = linkShadow;
-    });
-
-    const contactLink = nav.querySelector('.home-contact-link');
-    if (contactLink) {
-      contactLink.style.textShadow = linkShadow;
-    }
-
-    const brandLogoWhite = nav.querySelector('.brand-logo--white');
-    const brandLogoColor = nav.querySelector('.brand-logo--color');
-    if (brandLogoWhite) brandLogoWhite.style.opacity = String(1 - logoProgress);
-    if (brandLogoColor) brandLogoColor.style.opacity = String(logoProgress);
-
-    const toggler = nav.querySelector('.navbar-toggler');
-    if (toggler) {
-      toggler.style.color = textColor;
-      toggler.style.borderColor = `rgba(255,255,255,${(1 - textProgress * 0.45).toFixed(3)})`;
-    }
-
-    const collapse = nav.querySelector('.home-nav-collapse');
-    if (collapse) {
-      collapse.style.backgroundColor = collapseBg;
-      collapse.style.borderColor = collapseBorder;
-      collapse.style.boxShadow = collapseShadow;
-    }
-
-    const accessBtn = nav.querySelector('.nav-access-btn');
-    if (accessBtn) {
-      accessBtn.style.backgroundColor = accessBg;
-      accessBtn.style.borderColor = accessBorder;
-      accessBtn.style.color = '#fff';
-    }
+    header.style.setProperty('--home-nav-bg-alpha', backgroundProgress.toFixed(3));
+    header.style.setProperty('--home-nav-border-alpha', borderAlpha.toFixed(3));
+    header.style.setProperty('--home-nav-link-color', textColor);
+    header.style.setProperty('--home-nav-link-hover', hoverColor);
+    header.style.setProperty('--home-nav-link-shadow', linkShadow);
+    header.style.setProperty('--home-nav-toggler-border', `rgba(255,255,255,${(1 - textProgress * 0.45).toFixed(3)})`);
+    header.style.setProperty('--home-nav-toggler-color', textColor);
+    header.style.setProperty('--home-nav-collapse-bg', collapseBg);
+    header.style.setProperty('--home-nav-collapse-border', collapseBorder);
+    header.style.setProperty('--home-nav-collapse-shadow', `0 18px 42px rgba(12,46,84,${(0.12 * backgroundProgress).toFixed(3)})`);
+    header.style.setProperty('--home-nav-access-bg', accessBg);
+    header.style.setProperty('--home-nav-access-border', accessBorder);
+    header.style.setProperty('--home-nav-access-color', '#fff');
+    header.style.setProperty('--home-nav-shadow', `0 18px 42px rgba(12,46,84,${shadowAlpha.toFixed(3)})`);
+    header.style.setProperty('--home-nav-opacity', visible.toFixed(3));
+    header.style.setProperty('--home-nav-translate', `${(-12 * exitEase).toFixed(2)}px`);
+    header.style.setProperty('--home-nav-visibility', visible > 0.02 ? 'visible' : 'hidden');
+    header.style.setProperty('--home-nav-pointer-events', visible > 0.02 ? 'auto' : 'none');
+    header.style.setProperty('--home-nav-logo-white-opacity', (1 - logoProgress) * visible);
+    header.style.setProperty('--home-nav-logo-color-opacity', logoProgress * visible);
   };
 
   const updateHeroScrollEffect = scrollY => {
