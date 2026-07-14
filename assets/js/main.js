@@ -26,23 +26,83 @@ document.addEventListener('DOMContentLoaded', () => {
   const nav = document.getElementById('topNav');
   const header = document.querySelector('header.sticky-top');
   const heroCarousel = document.querySelector('body.home-index .hero-carousel');
+  const homeLandingHero = document.querySelector('body.home-index .home-landing-hero');
+  const trustBar = document.querySelector('body.home-index #trust-bar');
   const heroContent = document.querySelector('body.home-index .hero-v2-content');
   const pageHero = document.querySelector('body:not(.home-index) .page-hero, body:not(.home-index) .qs-hero');
   const homeBrandLogos = Array.from(document.querySelectorAll('body.home-index .brand-logo[data-home-logo-light][data-home-logo-dark]'));
-  const shrinkOn = 20;
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   let animationFrame = null;
   let currentScrollY = window.scrollY;
   let targetScrollY = window.scrollY;
+  let currentHomeNavState = '';
   let revealObserver;
   let countObserver;
 
-  const updateHomeBrandLogos = isScrolled => {
+  const updateHomeBrandLogos = state => {
+    const shouldUseRgb = state === 'transition' || state === 'solid';
+
     homeBrandLogos.forEach(logo => {
-      const nextSrc = isScrolled ? logo.dataset.homeLogoDark : logo.dataset.homeLogoLight;
+      const nextSrc = shouldUseRgb ? logo.dataset.homeLogoDark : logo.dataset.homeLogoLight;
       if (!nextSrc || logo.getAttribute('src') === nextSrc) return;
       logo.setAttribute('src', nextSrc);
     });
+  };
+
+  const measureHomeNavStates = () => {
+    const heroHeight = homeLandingHero?.offsetHeight || heroCarousel?.offsetHeight || window.innerHeight || 1;
+    const heroTop = homeLandingHero?.offsetTop || heroCarousel?.offsetTop || 0;
+    const trustTop = trustBar?.offsetTop || (heroTop + heroHeight);
+    const navHeight = nav?.offsetHeight || header?.offsetHeight || 0;
+
+    const topEnd = heroTop + Math.max(24, heroHeight * 0.08);
+    const transitionEnd = heroTop + Math.max(heroHeight * 0.42, navHeight * 1.35, 180);
+    const hiddenStart = Math.max(
+      transitionEnd + Math.max(heroHeight * 0.12, 96),
+      trustTop - Math.max(navHeight * 0.5, 56)
+    );
+
+    return {
+      topEnd,
+      transitionEnd,
+      hiddenStart
+    };
+  };
+
+  const getHomeNavState = scrollY => {
+    if (!nav || (!homeLandingHero && !heroCarousel)) {
+      return scrollY > 24 ? 'solid' : 'top';
+    }
+
+    const { topEnd, transitionEnd, hiddenStart } = measureHomeNavStates();
+
+    if (scrollY >= hiddenStart) {
+      return 'hidden';
+    }
+
+    if (scrollY >= transitionEnd) {
+      return 'solid';
+    }
+
+    if (scrollY >= topEnd) {
+      return 'transition';
+    }
+
+    return 'top';
+  };
+
+  const applyHomeNavState = state => {
+    if (!nav || !header || currentHomeNavState === state) return;
+
+    currentHomeNavState = state;
+    nav.dataset.navState = state;
+    nav.classList.toggle('is-scrolled', state === 'transition' || state === 'solid');
+    nav.classList.toggle('is-nav-hidden', state === 'hidden');
+    header.classList.toggle('is-nav-hidden', state === 'hidden');
+    if (state === 'hidden' && nav.contains(document.activeElement)) {
+      document.activeElement.blur();
+    }
+    updateHomeBrandLogos(state);
   };
 
   const lerp = (start, end, factor) => start + (end - start) * factor;
@@ -74,18 +134,17 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const onScroll = scrollY => {
-    const isScrolled = scrollY > shrinkOn;
+    const homeNavState = getHomeNavState(scrollY);
 
     if (nav) {
-      nav.classList.toggle('shadow-sm', isScrolled);
-      nav.classList.toggle('is-scrolled', isScrolled);
+      nav.classList.toggle('shadow-sm', homeNavState === 'transition' || homeNavState === 'solid');
     }
 
     if (header) {
-      header.classList.toggle('is-scrolled', isScrolled);
+      header.classList.toggle('is-scrolled', homeNavState === 'transition' || homeNavState === 'solid');
     }
 
-    updateHomeBrandLogos(isScrolled);
+    applyHomeNavState(homeNavState);
     updateHeroScrollEffect(scrollY);
     updatePageHeroEffect(scrollY);
   };

@@ -381,3 +381,22 @@ Estado: ajustado.
 - Sintaxis PHP: `php -l index.php` paso sin errores.
 - JavaScript: `node --check assets/js/main.js` paso sin errores.
 - Captura automatizada: no se obtuvo una captura utilizable, asi que la revision visual final sigue pendiente de navegador normal.
+
+## 27. Navbar del Home
+Estado: corregido.
+- La causa del bug era un conflicto de especificidad: una regla general dejaba el texto blanco incluso cuando el fondo ya se habia vuelto blanco.
+- Se definieron estados claros para el navbar: `top`, `transition`, `solid` y `hidden`.
+- Los selectores principales son `#topNav`, `#topNav[data-nav-state]`, `.home-nav-collapse`, `.home-nav-menu .nav-link`, `.home-contact-link` y `header.sticky-top.is-nav-hidden`.
+- La logica JS ahora calcula el estado segun la altura real del hero y la posicion del `#trust-bar`.
+- En desktop, tablet y movil el contraste queda controlado por variables CSS, no por una sola clase global.
+- Se mantuvo `prefers-reduced-motion` con transiciones minimizadas.
+
+Umbrales usados:
+- `top`: tramo inicial del hero.
+- `transition`: avance medio dentro del hero.
+- `solid`: tramo final del hero.
+- `hidden`: al entrar al siguiente bloque visual.
+
+Riesgos pendientes:
+- El comportamiento depende de medidas reales del hero, asi que un cambio fuerte en altura puede requerir ajustar los umbrales.
+- Si se agregan nuevas reglas globales para el navbar, deben respetar las variables de estado para no reintroducir el conflicto de color.

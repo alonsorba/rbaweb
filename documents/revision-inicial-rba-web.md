@@ -383,3 +383,10 @@ Campos editables sugeridos para Footer:
 - Quedaron documentados el sistema de componentes y la deuda tecnica principal.
 - La siguiente fase debe centrarse en revisar y normalizar las paginas internas sin redisenar todo el sitio de nuevo.
 - El primer foco sugerido es la pagina de servicios, porque concentra estructura, cards y llamadas a la accion reutilizables.
+
+## 34. Correccion del navbar del Home
+- Se corrigio el conflicto de colores del navbar al hacer scroll.
+- El home ahora maneja estados `top`, `transition`, `solid` y `hidden` segun la posicion real del scroll.
+- Se mantuvo el contraste correcto en desktop y movil al separar colores por variables de estado.
+- El navbar desaparece gradualmente al entrar a la siguiente seccion y reaparece al regresar al hero.
+- La validacion pendiente es solo visual en navegador, porque la sintaxis PHP y el JS quedaron contemplados en el bloque de trabajo.
