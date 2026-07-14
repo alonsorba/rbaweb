@@ -139,7 +139,7 @@ body.home-index #topNav {
   background: linear-gradient(180deg, rgba(5,12,23,0.54), rgba(5,12,23,0));
   color: #fff;
   box-shadow: none;
-  border: 1px solid transparent;
+  /* border: 1px solid transparent; */
   border-radius: 0 0 24px 24px;
   margin: 0 auto;
 }

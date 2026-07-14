@@ -46,21 +46,27 @@
 - Prioridad: media.
 - Recomendacion: formalizar el entorno de preview o documentar claramente si es temporal.
 
+### 8. Arbol de assets mezclado con fuentes de diseno
+- Problema: `assets/img/` mezcla imagenes finales, variantes de prueba y PSDs muy pesados en el mismo arbol.
+- Impacto: se confunden los archivos listos para web con fuentes locales y aumenta el riesgo de versionar material incorrecto.
+- Prioridad: media.
+- Recomendacion: separar fuentes de diseno de assets publicables y definir una convencion de nombres antes de seguir incorporando imagenes.
+
 ## Baja
 
-### 8. Documentacion con historia larga de normalizacion
+### 9. Documentacion con historia larga de normalizacion
 - Problema: la documentacion arrastra muchas notas de fase y cambios acumulados.
 - Impacto: ruido, pero no bloquea el sitio.
 - Prioridad: baja.
 - Recomendacion: cuando el proyecto lo permita, compactar o archivar estados intermedios.
 
-### 9. Variaciones leves de espaciado entre secciones
+### 10. Variaciones leves de espaciado entre secciones
 - Problema: algunos bloques todavia dependen de ajustes finos de padding y margen.
 - Impacto: visual, no funcional.
 - Prioridad: baja.
 - Recomendacion: estandarizar un sistema de espaciados por tipo de bloque.
 
-### 10. Dependencia fuerte de Bootstrap en layout
+### 11. Dependencia fuerte de Bootstrap en layout
 - Problema: el layout depende bastante de utilidades Bootstrap junto con CSS personalizado.
 - Impacto: aceptable hoy, pero puede generar sobreposicion de reglas.
 - Prioridad: baja.
