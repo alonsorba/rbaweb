@@ -384,24 +384,21 @@ Estado: ajustado.
 
 ## 27. Navbar del Home
 Estado: corregido.
-- La causa del bug era una base de fondo azul heredada y un cambio por saltos entre estados discretos: el navbar alternaba clases y eso provocaba una franja oscura al inicio y un blanco mal sincronizado con el scroll.
-- El comportamiento nuevo se basa en un unico componente controlado por el progreso real del hero, con interpolacion continua de color, opacidad, sombra y visibilidad.
-- Los selectores principales son `#topNav`, `header.sticky-top`, `.brand-logo-stack`, `.home-nav-collapse`, `.home-nav-menu .nav-link` y `.home-contact-link`.
-- La logica JS calcula `heroProgress` para el fondo y el color, y usa `trustBarTop + trustBarHeight * 0.25` como inicio de ocultamiento y `trustBarTop + trustBarHeight * 0.65` como fin.
-- Las formulas clave quedaron separadas asi:
-  - `--home-nav-bg-alpha = smoothstep(heroProgress)` para interpolar de transparente a blanco.
-  - `textProgress = smoothstep(clamp01((heroProgress - 0.18) / 0.62))` para retrasar el paso de blanco a azul.
-  - `logoProgress = smoothstep(clamp01((heroProgress - 0.28) / 0.5))` para retrasar el logo RGB.
-  - `exitProgress = clamp01((scrollY - exitStart) / (exitEnd - exitStart))` para ocultar gradualmente despues del `#trust-bar`.
-- En desktop, tablet y movil el contraste ya no depende de estados duros, sino de valores intermedios que evolucionan durante el scroll.
-- Se mantiene `prefers-reduced-motion` con transiciones desactivadas, pero sin volver al esquema de clases antiguas.
+- El navbar se restauro al estado estable de `11f92d0`, que vuelve a usar estados discretos (`top`, `transition`, `solid`, `hidden`) y el intercambio de logos por `src`.
+- Los refinamientos posteriores se descartaron visualmente porque generaban un recuadro blanco sin branding correcto, perdida de contraste y una interpretacion demasiado libre de la referencia.
+- Los selectores principales vuelven a ser `#topNav`, `#topNav[data-nav-state]`, `.home-nav-collapse`, `.home-nav-menu .nav-link`, `.home-contact-link` y `header.sticky-top.is-nav-hidden`.
+- La referencia de Vast queda limitada solo a dos estados conceptuales: inicial transparente con texto/logo blancos y final blanco con branding azul institucional.
+- El ocultamiento vuelve a depender de `getHomeNavState()` y de los umbrales ya validados en el bloque estable.
+- `prefers-reduced-motion` sigue activo con transiciones minimizadas.
 
 Progreso visual:
-- Al inicio del hero, el navbar conserva el look blanco sobre fondo transparente.
-- En el avance medio del hero, el color de texto y los controles pasan gradualmente al azul institucional.
-- Al salir del hero, la barra se atenua y se oculta de forma suave antes de desaparecer por completo.
+- Inicio del hero: navbar transparente, texto blanco y logo blanco visibles.
+- Mitad del hero: el fondo entra en transición y el branding sigue legible.
+- Final del hero: fondo blanco, texto azul institucional y logo RGB.
+- Inicio del `trust-bar`: el navbar mantiene el comportamiento estable previo.
+- Subida hacia arriba: reaparece sin saltos ni recuadros vacios.
 
 Riesgos pendientes:
-- El comportamiento depende de la altura real del hero, asi que un cambio fuerte en su composicion puede requerir retocar la curva de interpolacion.
-- En mobile, si el CTA o el icono cambian de peso visual, puede requerir ajustar el desfase entre `textProgress` y `logoProgress`.
-- Si se agregan nuevas reglas globales para el navbar, deben respetar las variables CSS del componente para no reintroducir el conflicto de color.
+- El retorno al estado estable implica que cualquier nuevo refinamiento del navbar debe partir de una comparacion visual muy estricta para no repetir el error.
+- Si se vuelve a trabajar el navbar, conviene hacerlo sobre una copia validada por captura y no sobre la logica estable sin respaldo.
+- Cualquier nuevo override global en header/nav debe revisarse para no romper el estado recuperado.

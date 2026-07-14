@@ -128,47 +128,38 @@ header.shadow-sm {
 }
 #topNav .navbar-toggler {
   border-color: rgba(19,92,138,0.35);
-  color: var(--brand-700);
 }
 #topNav .navbar-toggler-icon {
   /* Icono hamburguesa en SVG inline para mantener color corporativo. */
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(19,92,138,0.95)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 /* Home: navbar transparente sobre el hero con estados de scroll. */
 body.home-index #topNav.home-nav {
-  --home-nav-bg-alpha: 0;
-  --home-nav-border-alpha: 0;
+  --home-nav-bg: linear-gradient(180deg, rgba(5,12,23,0.54), rgba(5,12,23,0));
+  --home-nav-surface: transparent;
   --home-nav-link-color: #fff;
   --home-nav-link-hover: #fff;
   --home-nav-link-shadow: 0 1px 12px rgba(0,0,0,0.22);
-  --home-nav-toggler-border: rgba(255,255,255,0.55);
-  --home-nav-collapse-bg: rgba(255,255,255,0.96);
-  --home-nav-collapse-border: rgba(19,92,138,0.14);
+  --home-nav-toggler-border: transparent;
+  --home-nav-toggler-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.95)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  --home-nav-collapse-bg: rgba(7, 31, 58, 0.9);
+  --home-nav-collapse-border: rgba(255,255,255,0.18);
   --home-nav-collapse-shadow: none;
-  --home-nav-access-bg: rgba(19,92,138,0);
-  --home-nav-access-border: rgba(255,255,255,0.7);
+  --home-nav-access-bg: #279be2;
+  --home-nav-access-border: #279be2;
   --home-nav-access-color: #fff;
   --home-nav-shadow: none;
   --home-nav-opacity: 1;
   --home-nav-translate: 0;
-  --home-nav-visibility: visible;
-  --home-nav-pointer-events: auto;
-  --home-nav-logo-white-opacity: 1;
-  --home-nav-logo-color-opacity: 0;
-  --home-nav-toggler-color: #fff;
-  background: transparent;
-  background-color: rgba(255,255,255,var(--home-nav-bg-alpha));
+  background: var(--home-nav-bg);
   color: var(--home-nav-link-color);
   border: none;
   border-radius: 0 0 24px 24px;
-  border-bottom: 1px solid rgba(19,92,138,var(--home-nav-border-alpha));
   box-shadow: var(--home-nav-shadow);
   margin: 0 auto;
   opacity: var(--home-nav-opacity);
   transform: translate3d(0, var(--home-nav-translate), 0);
-  visibility: var(--home-nav-visibility);
-  pointer-events: var(--home-nav-pointer-events);
   transform-origin: top center;
   transition:
     background-color var(--dur-base) var(--ease-smooth),
@@ -179,6 +170,41 @@ body.home-index #topNav.home-nav {
     transform var(--dur-base) var(--ease-smooth),
     backdrop-filter var(--dur-base) var(--ease-smooth);
   will-change: opacity, transform, background-color, box-shadow, border-color;
+}
+body.home-index header.shadow-sm {
+  background: transparent;
+  box-shadow: none !important;
+  border: none;
+  transition: opacity var(--dur-base) var(--ease-smooth), transform var(--dur-base) var(--ease-smooth);
+  will-change: opacity, transform;
+}
+body.home-index #topNav.home-nav[data-nav-state="transition"],
+body.home-index #topNav.home-nav[data-nav-state="solid"] {
+  --home-nav-bg: rgba(255,255,255,0.96);
+  --home-nav-link-color: var(--brand-700);
+  --home-nav-link-hover: var(--brand-800);
+  --home-nav-link-shadow: none;
+  --home-nav-toggler-border: rgba(19,92,138,0.22);
+  --home-nav-toggler-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(19,92,138,0.95)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  --home-nav-collapse-bg: rgba(255,255,255,0.96);
+  --home-nav-collapse-border: rgba(19,92,138,0.14);
+  --home-nav-collapse-shadow: 0 18px 42px rgba(12,46,84,0.12);
+  --home-nav-access-bg: var(--brand-700);
+  --home-nav-access-border: var(--brand-700);
+  --home-nav-access-color: #fff;
+  --home-nav-shadow: 0 18px 42px rgba(12,46,84,0.15);
+}
+body.home-index #topNav.home-nav[data-nav-state="transition"] {
+  --home-nav-bg: rgba(255,255,255,0.78);
+}
+body.home-index #topNav.home-nav[data-nav-state="hidden"] {
+  --home-nav-opacity: 0;
+  --home-nav-translate: -18px;
+  pointer-events: none;
+  visibility: hidden;
+}
+body.home-index #topNav.home-nav[data-nav-state="hidden"] .home-nav-collapse {
+  pointer-events: none;
 }
 body.home-index #topNav .nav-link {
   color: var(--home-nav-link-color);
@@ -196,10 +222,9 @@ body.home-index #topNav .navbar-brand {
 }
 body.home-index #topNav .navbar-toggler {
   border-color: var(--home-nav-toggler-border);
-  color: var(--home-nav-toggler-color);
 }
 body.home-index #topNav .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-image: var(--home-nav-toggler-icon);
 }
 body.home-index #topNav .home-nav-collapse {
   background: var(--home-nav-collapse-bg);
@@ -219,37 +244,21 @@ body.home-index #topNav .nav-access-btn:focus {
 }
 header.sticky-top {
   /* Transicion del header al hacer scroll (fondo + sombra). */
-  transition: background-color var(--dur-base) var(--ease-smooth), box-shadow var(--dur-base) var(--ease-smooth), border-color var(--dur-base) var(--ease-smooth), opacity var(--dur-base) var(--ease-smooth), transform var(--dur-base) var(--ease-smooth), visibility var(--dur-base) var(--ease-smooth);
-  opacity: var(--home-nav-opacity, 1);
-  transform: translate3d(0, var(--home-nav-translate, 0), 0);
-  visibility: var(--home-nav-visibility, visible);
-  pointer-events: var(--home-nav-pointer-events, auto);
+  transition: background-color var(--dur-base) var(--ease-smooth), box-shadow var(--dur-base) var(--ease-smooth), border-color var(--dur-base) var(--ease-smooth), opacity var(--dur-base) var(--ease-smooth);
   will-change: opacity, transform, background-color, box-shadow, border-color;
   transform-origin: top center;
 }
+body.home-index header.sticky-top.is-nav-hidden {
+  opacity: 0;
+  transform: translate3d(0, -18px, 0);
+  visibility: hidden;
+  pointer-events: none;
+}
 .brand-logo {
   /* Tamaño del logo principal del header. */
-  width: auto;
-  display: block;
-}
-.brand-logo-stack {
-  position: relative;
-  display: inline-block;
   height: 72px;
   width: auto;
-}
-.brand-logo-stack .brand-logo {
-  position: absolute;
-  inset: 0;
-  height: 100%;
-  opacity: 0;
-  transition: opacity var(--dur-base) var(--ease-smooth);
-}
-.brand-logo-stack .brand-logo--white {
-  opacity: var(--home-nav-logo-white-opacity, 1);
-}
-.brand-logo-stack .brand-logo--color {
-  opacity: var(--home-nav-logo-color-opacity, 0);
+  display: block;
 }
 .nav-access-btn {
   /* CTA de acceso a usuarios en navbar. */
@@ -648,8 +657,9 @@ body.home-index #topNav .home-nav-shell {
   margin: 0;
   padding: 0;
 }
-.home-center-brand .brand-logo-stack {
+.home-center-brand .brand-logo {
   height: clamp(58px, 5.65vw, 66px);
+  width: auto;
 }
 body.home-index #topNav .home-nav-menu .nav-link,
 body.home-index #topNav .home-contact-link {
@@ -820,14 +830,11 @@ body.home-index .home-landing-hero {
     margin: 0;
     padding: 0;
   }
-  .home-mobile-brand .brand-logo-stack {
+  .home-mobile-brand .brand-logo {
     height: 46px;
   }
   .home-center-brand {
     display: none;
-  }
-  .home-center-brand .brand-logo-stack {
-    height: 46px;
   }
   .home-nav-collapse {
     margin-top: 0.9rem;
@@ -1075,6 +1082,10 @@ main .reveal-on-scroll.is-visible {
   body.home-index #topNav.home-nav,
   body.home-index header.sticky-top {
     transition: none;
+  }
+  body.home-index #topNav.home-nav[data-nav-state="hidden"],
+  body.home-index header.sticky-top.is-nav-hidden {
+    transform: none;
   }
   .hero-v2-title,
   .hero-v2-copy,

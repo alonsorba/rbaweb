@@ -385,9 +385,7 @@ Campos editables sugeridos para Footer:
 - El primer foco sugerido es la pagina de servicios, porque concentra estructura, cards y llamadas a la accion reutilizables.
 
 ## 34. Correccion del navbar del Home
-- Se corrigio el conflicto de colores del navbar al hacer scroll.
-- El home ahora usa un unico componente animado por progreso real del hero, sin depender de estados bruscos.
-- El fondo ahora arranca en transparente real y evoluciona hacia blanco, sin pasar por azul institucional.
-- El contraste se resuelve con interpolacion continua de fondo, texto, botones, sombra y logos.
-- El navbar permanece visible durante el hero y el inicio del `#trust-bar`; despues se oculta de forma suave usando la geometria real de ese bloque.
-- La validacion pendiente es solo visual en navegador, porque la sintaxis PHP y el JS quedaron contemplados en el bloque de trabajo.
+- Se restauro el navbar al estado estable de `11f92d0`.
+- Los refinamientos posteriores se descartaron porque provocaban un recuadro blanco sin textos visibles y una lectura incorrecta del logo.
+- La referencia de Vast queda limitada a los estados inicial y final, no a su estructura visual completa.
+- La validacion pendiente vuelve a ser solo visual en navegador, porque la sintaxis PHP y el JS quedaron contemplados en el bloque estable.
