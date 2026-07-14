@@ -27,11 +27,14 @@
 </head>
 <body class="home-index">
   <!-- Header global: logo, navegacion y acceso a usuarios -->
-  <header class="shadow-sm sticky-top">
+  <header class="sticky-top">
     <nav class="navbar navbar-expand-lg home-nav" id="topNav">
       <div class="container-fluid home-nav-shell">
         <a class="navbar-brand home-mobile-brand" href="index.php" aria-label="Inicio RBA Seguros y Fianzas">
-          <img src="<?php echo $homeLogoWhite; ?>" class="brand-logo" alt="RBA Seguros &amp; Fianzas" fetchpriority="high" decoding="sync" data-home-logo-light="<?php echo $homeLogoWhite; ?>" data-home-logo-dark="<?php echo $homeLogoRgb; ?>">
+          <span class="brand-logo-stack" aria-hidden="true">
+            <img src="<?php echo $homeLogoWhite; ?>" class="brand-logo brand-logo--white" alt="" fetchpriority="high" decoding="sync">
+            <img src="<?php echo $homeLogoRgb; ?>" class="brand-logo brand-logo--color" alt="" fetchpriority="high" decoding="sync">
+          </span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -45,7 +48,10 @@
               <li class="nav-item"><a class="nav-link" href="quienes.php">Nosotros</a></li>
             </ul>
             <a class="navbar-brand home-center-brand" href="index.php" aria-label="Inicio RBA Seguros y Fianzas">
-              <img src="<?php echo $homeLogoWhite; ?>" class="brand-logo" alt="RBA Seguros &amp; Fianzas" fetchpriority="high" decoding="sync" data-home-logo-light="<?php echo $homeLogoWhite; ?>" data-home-logo-dark="<?php echo $homeLogoRgb; ?>">
+              <span class="brand-logo-stack" aria-hidden="true">
+                <img src="<?php echo $homeLogoWhite; ?>" class="brand-logo brand-logo--white" alt="" fetchpriority="high" decoding="sync">
+                <img src="<?php echo $homeLogoRgb; ?>" class="brand-logo brand-logo--color" alt="" fetchpriority="high" decoding="sync">
+              </span>
             </a>
             <div class="home-nav-actions">
               <a class="nav-link home-contact-link" href="#contacto">Contacto</a>

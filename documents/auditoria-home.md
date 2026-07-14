@@ -384,19 +384,18 @@ Estado: ajustado.
 
 ## 27. Navbar del Home
 Estado: corregido.
-- La causa del bug era un conflicto de especificidad: una regla general dejaba el texto blanco incluso cuando el fondo ya se habia vuelto blanco.
-- Se definieron estados claros para el navbar: `top`, `transition`, `solid` y `hidden`.
-- Los selectores principales son `#topNav`, `#topNav[data-nav-state]`, `.home-nav-collapse`, `.home-nav-menu .nav-link`, `.home-contact-link` y `header.sticky-top.is-nav-hidden`.
-- La logica JS ahora calcula el estado segun la altura real del hero y la posicion del `#trust-bar`.
-- En desktop, tablet y movil el contraste queda controlado por variables CSS, no por una sola clase global.
-- Se mantuvo `prefers-reduced-motion` con transiciones minimizadas.
+- La causa del bug era un cambio por saltos entre estados discretos: el navbar alternaba clases y eso provocaba un fondo azul o blanco mal sincronizado con el scroll.
+- El comportamiento nuevo se basa en un unico componente controlado por el progreso real del hero, con interpolacion continua de color, opacidad, sombra y visibilidad.
+- Los selectores principales son `#topNav`, `header.sticky-top`, `.brand-logo-stack`, `.home-nav-collapse`, `.home-nav-menu .nav-link` y `.home-contact-link`.
+- La logica JS calcula `heroProgress` y `exitProgress` segun la altura real del hero, luego escribe variables CSS para fondo, texto, botones, logo, sombra y ocultamiento gradual.
+- En desktop, tablet y movil el contraste ya no depende de estados duros, sino de valores intermedios que evolucionan durante el scroll.
+- Se mantiene `prefers-reduced-motion` con transiciones desactivadas, pero sin volver al esquema de clases antiguas.
 
-Umbrales usados:
-- `top`: tramo inicial del hero.
-- `transition`: avance medio dentro del hero.
-- `solid`: tramo final del hero.
-- `hidden`: al entrar al siguiente bloque visual.
+Progreso visual:
+- Al inicio del hero, el navbar conserva el look blanco sobre fondo transparente.
+- En el avance medio del hero, el color de texto y los controles pasan gradualmente al azul institucional.
+- Al salir del hero, la barra se atenua y se oculta de forma suave antes de desaparecer por completo.
 
 Riesgos pendientes:
-- El comportamiento depende de medidas reales del hero, asi que un cambio fuerte en altura puede requerir ajustar los umbrales.
-- Si se agregan nuevas reglas globales para el navbar, deben respetar las variables de estado para no reintroducir el conflicto de color.
+- El comportamiento depende de la altura real del hero, asi que un cambio fuerte en su composicion puede requerir retocar la curva de interpolacion.
+- Si se agregan nuevas reglas globales para el navbar, deben respetar las variables CSS del componente para no reintroducir el conflicto de color.

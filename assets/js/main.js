@@ -30,82 +30,62 @@ document.addEventListener('DOMContentLoaded', () => {
   const trustBar = document.querySelector('body.home-index #trust-bar');
   const heroContent = document.querySelector('body.home-index .hero-v2-content');
   const pageHero = document.querySelector('body:not(.home-index) .page-hero, body:not(.home-index) .qs-hero');
-  const homeBrandLogos = Array.from(document.querySelectorAll('body.home-index .brand-logo[data-home-logo-light][data-home-logo-dark]'));
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   let animationFrame = null;
   let currentScrollY = window.scrollY;
   let targetScrollY = window.scrollY;
-  let currentHomeNavState = '';
   let revealObserver;
   let countObserver;
 
-  const updateHomeBrandLogos = state => {
-    const shouldUseRgb = state === 'transition' || state === 'solid';
+  const clamp01 = value => Math.min(1, Math.max(0, value));
+  const lerp = (start, end, factor) => start + ((end - start) * factor);
+  const smoothstep = value => value * value * (3 - (2 * value));
+  const mixChannel = (start, end, factor) => Math.round(lerp(start, end, factor));
+  const mixColor = (from, to, factor, alpha = 1) => `rgba(${mixChannel(from[0], to[0], factor)}, ${mixChannel(from[1], to[1], factor)}, ${mixChannel(from[2], to[2], factor)}, ${alpha})`;
 
-    homeBrandLogos.forEach(logo => {
-      const nextSrc = shouldUseRgb ? logo.dataset.homeLogoDark : logo.dataset.homeLogoLight;
-      if (!nextSrc || logo.getAttribute('src') === nextSrc) return;
-      logo.setAttribute('src', nextSrc);
-    });
-  };
+  const updateNavbar = scrollY => {
+    if (!nav || !header) return;
 
-  const measureHomeNavStates = () => {
     const heroHeight = homeLandingHero?.offsetHeight || heroCarousel?.offsetHeight || window.innerHeight || 1;
     const heroTop = homeLandingHero?.offsetTop || heroCarousel?.offsetTop || 0;
-    const trustTop = trustBar?.offsetTop || (heroTop + heroHeight);
-    const navHeight = nav?.offsetHeight || header?.offsetHeight || 0;
+    const heroBottom = heroTop + heroHeight;
+    const heroProgress = clamp01((scrollY - heroTop) / heroHeight);
+    const heroEase = smoothstep(heroProgress);
+    const exitWindow = Math.max(heroHeight * 0.18, 160);
+    const exitProgress = clamp01((scrollY - heroBottom) / exitWindow);
+    const exitEase = smoothstep(exitProgress);
+    const visible = 1 - exitEase;
 
-    const topEnd = heroTop + Math.max(24, heroHeight * 0.08);
-    const transitionEnd = heroTop + Math.max(heroHeight * 0.42, navHeight * 1.35, 180);
-    const hiddenStart = Math.max(
-      transitionEnd + Math.max(heroHeight * 0.12, 96),
-      trustTop - Math.max(navHeight * 0.5, 56)
-    );
+    const textColor = mixColor([255, 255, 255], [19, 92, 138], heroEase);
+    const hoverColor = mixColor([255, 255, 255], [14, 59, 112], Math.min(1, heroEase + 0.12));
+    const accessBg = mixColor([39, 155, 226], [19, 92, 138], heroEase);
+    const accessBorder = mixColor([39, 155, 226], [19, 92, 138], heroEase);
+    const panelBg = mixColor([7, 31, 58], [255, 255, 255], heroEase, 0.9 + (heroEase * 0.06));
+    const collapseBorder = mixColor([255, 255, 255], [19, 92, 138], heroEase, 0.18 + (heroEase * 0.04));
+    const shadowAlpha = 0.16 * heroEase;
+    const borderAlpha = 0.14 * heroEase;
+    const linkShadow = heroEase < 0.2 ? '0 1px 12px rgba(0,0,0,0.22)' : 'none';
 
-    return {
-      topEnd,
-      transitionEnd,
-      hiddenStart
-    };
+    header.style.setProperty('--home-nav-bg', `rgba(255,255,255,${heroEase.toFixed(3)})`);
+    header.style.setProperty('--home-nav-link-color', textColor);
+    header.style.setProperty('--home-nav-link-hover', hoverColor);
+    header.style.setProperty('--home-nav-link-shadow', linkShadow);
+    header.style.setProperty('--home-nav-toggler-border', `rgba(19,92,138,${Math.max(borderAlpha, 0.01).toFixed(3)})`);
+    header.style.setProperty('--home-nav-toggler-color', textColor);
+    header.style.setProperty('--home-nav-collapse-bg', panelBg);
+    header.style.setProperty('--home-nav-collapse-border', collapseBorder);
+    header.style.setProperty('--home-nav-collapse-shadow', `0 18px 42px rgba(12,46,84,${(0.12 * heroEase).toFixed(3)})`);
+    header.style.setProperty('--home-nav-access-bg', accessBg);
+    header.style.setProperty('--home-nav-access-border', accessBorder);
+    header.style.setProperty('--home-nav-access-color', '#fff');
+    header.style.setProperty('--home-nav-shadow', `0 18px 42px rgba(12,46,84,${shadowAlpha.toFixed(3)})`);
+    header.style.setProperty('--home-nav-opacity', visible.toFixed(3));
+    header.style.setProperty('--home-nav-translate', `${(-18 * exitEase).toFixed(2)}px`);
+    header.style.setProperty('--home-nav-visibility', visible > 0.02 ? 'visible' : 'hidden');
+    header.style.setProperty('--home-nav-pointer-events', visible > 0.02 ? 'auto' : 'none');
+    header.style.setProperty('--home-nav-logo-white-opacity', (1 - heroEase) * visible);
+    header.style.setProperty('--home-nav-logo-color-opacity', heroEase * visible);
   };
-
-  const getHomeNavState = scrollY => {
-    if (!nav || (!homeLandingHero && !heroCarousel)) {
-      return scrollY > 24 ? 'solid' : 'top';
-    }
-
-    const { topEnd, transitionEnd, hiddenStart } = measureHomeNavStates();
-
-    if (scrollY >= hiddenStart) {
-      return 'hidden';
-    }
-
-    if (scrollY >= transitionEnd) {
-      return 'solid';
-    }
-
-    if (scrollY >= topEnd) {
-      return 'transition';
-    }
-
-    return 'top';
-  };
-
-  const applyHomeNavState = state => {
-    if (!nav || !header || currentHomeNavState === state) return;
-
-    currentHomeNavState = state;
-    nav.dataset.navState = state;
-    nav.classList.toggle('is-scrolled', state === 'transition' || state === 'solid');
-    nav.classList.toggle('is-nav-hidden', state === 'hidden');
-    header.classList.toggle('is-nav-hidden', state === 'hidden');
-    if (state === 'hidden' && nav.contains(document.activeElement)) {
-      document.activeElement.blur();
-    }
-    updateHomeBrandLogos(state);
-  };
-
-  const lerp = (start, end, factor) => start + (end - start) * factor;
 
   const updateHeroScrollEffect = scrollY => {
     if (!heroCarousel) return;
@@ -134,17 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const onScroll = scrollY => {
-    const homeNavState = getHomeNavState(scrollY);
-
-    if (nav) {
-      nav.classList.toggle('shadow-sm', homeNavState === 'transition' || homeNavState === 'solid');
-    }
-
-    if (header) {
-      header.classList.toggle('is-scrolled', homeNavState === 'transition' || homeNavState === 'solid');
-    }
-
-    applyHomeNavState(homeNavState);
+    updateNavbar(scrollY);
     updateHeroScrollEffect(scrollY);
     updatePageHeroEffect(scrollY);
   };

@@ -386,7 +386,7 @@ Campos editables sugeridos para Footer:
 
 ## 34. Correccion del navbar del Home
 - Se corrigio el conflicto de colores del navbar al hacer scroll.
-- El home ahora maneja estados `top`, `transition`, `solid` y `hidden` segun la posicion real del scroll.
-- Se mantuvo el contraste correcto en desktop y movil al separar colores por variables de estado.
-- El navbar desaparece gradualmente al entrar a la siguiente seccion y reaparece al regresar al hero.
+- El home ahora usa un unico componente animado por progreso real del hero, sin depender de estados bruscos.
+- El contraste se resuelve con interpolacion continua de fondo, texto, botones, sombra y logos.
+- El navbar se atenua al salir del hero y reaparece de forma suave al volver al inicio.
 - La validacion pendiente es solo visual en navegador, porque la sintaxis PHP y el JS quedaron contemplados en el bloque de trabajo.
