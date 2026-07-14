@@ -384,10 +384,15 @@ Estado: ajustado.
 
 ## 27. Navbar del Home
 Estado: corregido.
-- La causa del bug era un cambio por saltos entre estados discretos: el navbar alternaba clases y eso provocaba un fondo azul o blanco mal sincronizado con el scroll.
+- La causa del bug era una base de fondo azul heredada y un cambio por saltos entre estados discretos: el navbar alternaba clases y eso provocaba una franja oscura al inicio y un blanco mal sincronizado con el scroll.
 - El comportamiento nuevo se basa en un unico componente controlado por el progreso real del hero, con interpolacion continua de color, opacidad, sombra y visibilidad.
 - Los selectores principales son `#topNav`, `header.sticky-top`, `.brand-logo-stack`, `.home-nav-collapse`, `.home-nav-menu .nav-link` y `.home-contact-link`.
-- La logica JS calcula `heroProgress` y `exitProgress` segun la altura real del hero, luego escribe variables CSS para fondo, texto, botones, logo, sombra y ocultamiento gradual.
+- La logica JS calcula `heroProgress` para el fondo y el color, y usa `trustBarTop + trustBarHeight * 0.25` como inicio de ocultamiento y `trustBarTop + trustBarHeight * 0.65` como fin.
+- Las formulas clave quedaron separadas asi:
+  - `--home-nav-bg-alpha = smoothstep(heroProgress)` para interpolar de transparente a blanco.
+  - `textProgress = smoothstep(clamp01((heroProgress - 0.18) / 0.62))` para retrasar el paso de blanco a azul.
+  - `logoProgress = smoothstep(clamp01((heroProgress - 0.28) / 0.5))` para retrasar el logo RGB.
+  - `exitProgress = clamp01((scrollY - exitStart) / (exitEnd - exitStart))` para ocultar gradualmente despues del `#trust-bar`.
 - En desktop, tablet y movil el contraste ya no depende de estados duros, sino de valores intermedios que evolucionan durante el scroll.
 - Se mantiene `prefers-reduced-motion` con transiciones desactivadas, pero sin volver al esquema de clases antiguas.
 
@@ -398,4 +403,5 @@ Progreso visual:
 
 Riesgos pendientes:
 - El comportamiento depende de la altura real del hero, asi que un cambio fuerte en su composicion puede requerir retocar la curva de interpolacion.
+- En mobile, si el CTA o el icono cambian de peso visual, puede requerir ajustar el desfase entre `textProgress` y `logoProgress`.
 - Si se agregan nuevas reglas globales para el navbar, deben respetar las variables CSS del componente para no reintroducir el conflicto de color.

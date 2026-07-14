@@ -137,18 +137,17 @@ header.shadow-sm {
 
 /* Home: navbar transparente sobre el hero con estados de scroll. */
 body.home-index #topNav.home-nav {
-  --home-nav-bg: linear-gradient(180deg, rgba(5,12,23,0.54), rgba(5,12,23,0));
-  --home-nav-surface: transparent;
+  --home-nav-bg-alpha: 0;
+  --home-nav-border-alpha: 0;
   --home-nav-link-color: #fff;
   --home-nav-link-hover: #fff;
   --home-nav-link-shadow: 0 1px 12px rgba(0,0,0,0.22);
-  --home-nav-toggler-border: transparent;
-  --home-nav-toggler-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.95)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-  --home-nav-collapse-bg: rgba(7, 31, 58, 0.9);
-  --home-nav-collapse-border: rgba(255,255,255,0.18);
+  --home-nav-toggler-border: rgba(255,255,255,0.55);
+  --home-nav-collapse-bg: rgba(255,255,255,0.96);
+  --home-nav-collapse-border: rgba(19,92,138,0.14);
   --home-nav-collapse-shadow: none;
-  --home-nav-access-bg: #279be2;
-  --home-nav-access-border: #279be2;
+  --home-nav-access-bg: rgba(19,92,138,0);
+  --home-nav-access-border: rgba(255,255,255,0.7);
   --home-nav-access-color: #fff;
   --home-nav-shadow: none;
   --home-nav-opacity: 1;
@@ -158,10 +157,12 @@ body.home-index #topNav.home-nav {
   --home-nav-logo-white-opacity: 1;
   --home-nav-logo-color-opacity: 0;
   --home-nav-toggler-color: #fff;
-  background: var(--home-nav-bg);
+  background: transparent;
+  background-color: rgba(255,255,255,var(--home-nav-bg-alpha));
   color: var(--home-nav-link-color);
   border: none;
   border-radius: 0 0 24px 24px;
+  border-bottom: 1px solid rgba(19,92,138,var(--home-nav-border-alpha));
   box-shadow: var(--home-nav-shadow);
   margin: 0 auto;
   opacity: var(--home-nav-opacity);
