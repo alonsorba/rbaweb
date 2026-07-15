@@ -631,18 +631,29 @@ body.home-index #topNav .home-nav-shell {
   align-items: center;
   min-height: 118px;
   padding: 18px clamp(1.65rem, 2.35vw, 1.8rem) 0 clamp(1.45rem, 3.3vw, 2.45rem);
+  background: transparent;
+  background-color: transparent;
+  box-shadow: none;
 }
 .home-mobile-brand {
   display: none;
 }
 .home-nav-collapse {
   width: 100%;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
 }
 .home-nav-content {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   align-items: center;
   width: 100%;
+  border-radius: 28px;
+  background: var(--home-nav-collapse-bg);
+  border: 1px solid var(--home-nav-collapse-border);
+  box-shadow: var(--home-nav-collapse-shadow);
+  overflow: hidden;
 }
 .home-nav-menu {
   align-items: center;
@@ -841,8 +852,11 @@ body.home-index .home-landing-hero {
     border-radius: 18px;
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
+    background: transparent;
+    border: 0;
+    box-shadow: none;
   }
-  body.home-index #topNav .home-nav-collapse.show {
+  body.home-index #topNav .home-nav-collapse.show .home-nav-content {
     background: rgba(7, 31, 58, 0.9);
     border-color: rgba(255,255,255,0.18);
     box-shadow: none;
