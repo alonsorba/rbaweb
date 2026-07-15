@@ -197,6 +197,9 @@ body.home-index #topNav.home-nav[data-nav-state="solid"] {
 body.home-index #topNav.home-nav[data-nav-state="transition"] {
   --home-nav-bg: transparent;
 }
+body.home-index #topNav.home-nav[data-nav-state="solid"] {
+  --home-nav-bg: transparent;
+}
 body.home-index #topNav.home-nav[data-nav-state="hidden"] {
   --home-nav-opacity: 0;
   --home-nav-translate: -18px;
