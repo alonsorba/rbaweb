@@ -195,7 +195,7 @@ body.home-index #topNav.home-nav[data-nav-state="solid"] {
   --home-nav-shadow: 0 18px 42px rgba(12,46,84,0.15);
 }
 body.home-index #topNav.home-nav[data-nav-state="transition"] {
-  --home-nav-bg: rgba(255,255,255,0.78);
+  --home-nav-bg: transparent;
 }
 body.home-index #topNav.home-nav[data-nav-state="hidden"] {
   --home-nav-opacity: 0;
