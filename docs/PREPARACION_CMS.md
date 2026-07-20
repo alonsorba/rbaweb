@@ -14,7 +14,9 @@ Cada seccion futura debera documentar campos editables, limites, imagenes, orden
 
 - WEB-003 usa variables para logo, links, CTA, hero y metricas.
 - WEB-004 usa variables para titulo de seccion, recurso de mapa, etiqueta de ubicacion y contador.
+- WEB-005 usa variables para aniversario, lineas del titulo, descripcion por partes, pilares, distintivo secundario y trofeo principal.
 - La validacion de existencia del recurso permite reemplazar el mapa sin cambiar la estructura del componente.
+- La misma logica permite sustituir los recursos ESR sin modificar el marcado general.
 
 ## Regla de trabajo
 

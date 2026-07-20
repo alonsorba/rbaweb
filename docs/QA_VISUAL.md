@@ -24,6 +24,13 @@ Validacion inicial de la base del Design System.
 - Contador +25 alineado con la composicion general.
 - Conector punteado visible en desktop y oculto en mobile para mantener estabilidad.
 
+## WEB-005
+
+- Seccion ESR integrada despues de presencia nacional y antes del bloque de compromiso.
+- Composicion horizontal en desktop con tarjeta de pilares, distintivo secundario y trofeo a la derecha.
+- Apilado vertical en mobile con jerarquia conservada y sin overflow horizontal observado en la revision del CSS y el DOM.
+- Sintaxis PHP, JS y diff validadas correctamente.
+
 ## Criterios revisados
 
 - Sin desbordamiento horizontal en la base existente.
@@ -31,6 +38,8 @@ Validacion inicial de la base del Design System.
 - Clases reutilizables disponibles para posteriores secciones.
 - Preparado para contraste y navegacion por teclado en los controles principales.
 - Sin desbordamiento horizontal observado en la composicion de presencia.
+- Sin desbordamiento horizontal observado en la seccion ESR.
+- El sitio responde con HTTP 200 desde el servidor local.
 ## Pendiente
 
 - Comparacion visual de nuevas paginas o secciones cuando exista contenido real del Home o de paginas internas.

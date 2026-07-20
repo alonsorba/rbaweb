@@ -21,6 +21,14 @@
     .rb-presence__shell {
         grid-template-columns: minmax(16rem, 0.92fr) minmax(0, 1.08fr);
     }
+
+    .rb-esr__shell {
+        grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.9fr);
+    }
+
+    .rb-esr__visual {
+        min-height: clamp(22rem, 34vw, 34rem);
+    }
 }
 
 @media (max-width: 991.98px) {
@@ -172,6 +180,27 @@
     .rb-presence__stat {
         max-width: 100%;
     }
+
+    .rb-esr__shell {
+        grid-template-columns: 1fr;
+        gap: var(--rb-space-5);
+    }
+
+    .rb-esr__copy {
+        max-width: 100%;
+    }
+
+    .rb-esr__pillars {
+        grid-template-columns: 1fr;
+    }
+
+    .rb-esr__secondary-badge {
+        max-width: 8rem;
+    }
+
+    .rb-esr__visual {
+        min-height: clamp(22rem, 86vw, 31rem);
+    }
 }
 
 @media (max-width: 575.98px) {
@@ -217,5 +246,30 @@
 
     .rb-presence__location-line {
         font-size: var(--rb-font-size-md);
+    }
+
+    .rb-esr__shell {
+        padding: var(--rb-space-4);
+    }
+
+    .rb-esr__years {
+        font-size: clamp(1.85rem, 10vw, 2.5rem);
+    }
+
+    .rb-esr__suffix {
+        font-size: clamp(1rem, 5vw, 1.2rem);
+    }
+
+    .rb-esr__title {
+        font-size: clamp(1.8rem, 8vw, 2.4rem);
+    }
+
+    .rb-esr__description {
+        font-size: var(--rb-font-size-md);
+    }
+
+    .rb-esr__visual {
+        min-height: clamp(18rem, 78vw, 25rem);
+        padding: 0;
     }
 }

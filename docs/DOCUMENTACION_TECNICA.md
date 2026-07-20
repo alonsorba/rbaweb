@@ -30,6 +30,16 @@ WEB-004 agrega una seccion dedicada a cobertura nacional con el mapa local de Me
 - El mapa usa un archivo local PNG con transparencia y dimensiones grandes para evitar pixelado.
 - La composicion se resuelve con grid, variables CSS y un conector decorativo que se oculta en mobile si no aporta estabilidad visual.
 
+## Empresa Socialmente Responsable
+
+WEB-005 agrega la seccion ESR como bloque siguiente al mapa de presencia nacional.
+
+- `includes/components/esr.php` recibe todos los datos por estructura PHP y no contiene contenido principal hardcodeado.
+- El componente separa la linea de aniversario, el titulo de dos lineas, la descripcion, la tarjeta de pilares, el distintivo secundario y el trofeo principal.
+- La tarjeta de pilares usa grid de tres columnas en desktop y se repliega en mobile sin romper la jerarquia visual.
+- El trofeo principal se resolvio con un recurso local transparente y se renderiza con `object-fit: contain` para conservar pedestal y proporciones.
+- Los iconos de pilares usan archivos locales con transparencia y se cargan desde rutas preparadas para el futuro CMS.
+
 ## Arquitectura CSS
 
 `main.css` funciona como unico archivo de carga del sistema y ordena:
@@ -79,3 +89,4 @@ Se definieron variables para:
 - No se agrego contenido temporal ni lorem ipsum.
 - El Home inicial usa variables para el logo, enlaces, hero, CTA y metricas.
 - La presencia nacional usa variables para la seccion, el mapa, la etiqueta, el punto de ubicacion y el contador.
+- La seccion ESR usa variables para aniversario, espaciados, tarjeta de pilares, distintivo secundario y maxima altura del trofeo.

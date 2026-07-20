@@ -220,3 +220,62 @@
     line-height: var(--rb-line-height-base);
     color: var(--rb-color-text);
 }
+
+.rb-esr__pillars {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--rb-esr-pillars-gap);
+    margin: 0;
+    padding: var(--rb-esr-pillars-padding);
+    list-style: none;
+    border-radius: var(--rb-radius-xl);
+    background: var(--rb-color-primary-900);
+    box-shadow: var(--rb-shadow-soft);
+}
+
+.rb-esr__pillar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--rb-space-3);
+    min-height: 7rem;
+    padding: var(--rb-space-2);
+    text-align: center;
+}
+
+.rb-esr__pillar-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--rb-esr-pillars-icon-size);
+    height: var(--rb-esr-pillars-icon-size);
+    flex: 0 0 auto;
+}
+
+.rb-esr__pillar-icon img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.rb-esr__pillar-label {
+    font-size: clamp(0.85rem, 1vw, 0.98rem);
+    line-height: 1.35;
+    font-weight: var(--rb-font-weight-semibold);
+    color: var(--rb-white);
+}
+
+.rb-esr__secondary-badge {
+    width: fit-content;
+    max-width: var(--rb-esr-secondary-badge-max-width);
+    margin: 0;
+}
+
+.rb-esr__secondary-badge img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}

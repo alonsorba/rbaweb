@@ -190,3 +190,107 @@
     line-height: var(--rb-line-height-base);
     color: var(--rb-color-text);
 }
+
+.rb-esr {
+    background: linear-gradient(180deg, var(--rb-white) 0%, var(--rb-color-surface-alt) 100%);
+}
+
+.rb-esr__shell {
+    display: grid;
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+    gap: var(--rb-esr-gap);
+    align-items: center;
+    padding: var(--rb-esr-shell-padding);
+    overflow: hidden;
+    background: var(--rb-white);
+    border: 1px solid var(--rb-color-border);
+    box-shadow: var(--rb-shadow-card);
+}
+
+.rb-esr__copy {
+    display: flex;
+    flex-direction: column;
+    gap: var(--rb-space-4);
+    max-width: min(100%, 42rem);
+}
+
+.rb-esr__heading {
+    display: flex;
+    flex-direction: column;
+    gap: var(--rb-space-2);
+}
+
+.rb-esr__anniversary {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--rb-space-2);
+    margin: 0;
+    width: fit-content;
+}
+
+.rb-esr__years {
+    font-size: clamp(2rem, 3vw, 3.4rem);
+    line-height: 1;
+    font-weight: var(--rb-font-weight-extrabold);
+    color: var(--rb-color-primary-500);
+    letter-spacing: -0.03em;
+}
+
+.rb-esr__suffix {
+    font-size: clamp(1.15rem, 1.6vw, 1.9rem);
+    line-height: 1.1;
+    font-weight: var(--rb-font-weight-semibold);
+    color: var(--rb-color-text-muted);
+}
+
+.rb-esr__title {
+    margin: 0;
+    font-size: clamp(2.25rem, 3.5vw, 4rem);
+    line-height: 1.04;
+    font-weight: var(--rb-font-weight-extrabold);
+    color: var(--rb-color-text);
+    letter-spacing: -0.035em;
+}
+
+.rb-esr__title-line {
+    display: block;
+}
+
+.rb-esr__description {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    margin: 0;
+    max-width: var(--rb-esr-description-max-width);
+    font-size: clamp(1rem, 1.35vw, 1.15rem);
+    line-height: 1.55;
+    color: var(--rb-color-text-muted);
+}
+
+.rb-esr__description-line {
+    display: inline;
+}
+
+.rb-esr__highlight {
+    color: var(--rb-color-primary-500);
+    font-weight: var(--rb-font-weight-bold);
+}
+
+.rb-esr__visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: var(--rb-esr-visual-min-height);
+    margin: 0;
+    padding: var(--rb-space-2);
+}
+
+.rb-esr__trophy {
+    display: block;
+    width: min(100%, var(--rb-esr-visual-max-width));
+    max-height: 100%;
+    object-fit: contain;
+    object-position: center center;
+    margin-inline: auto;
+}

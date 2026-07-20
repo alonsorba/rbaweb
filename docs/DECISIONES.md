@@ -32,3 +32,10 @@
 - Se eligio el mapa local `assets/img/mapa al ras.png` por ser el candidato mas cercano al mockup y por contar con transparencia y definicion suficiente.
 - La linea punteada y el marcador se resolvieron con HTML y CSS para evitar dependencias extras y conservar estabilidad responsive.
 - En mobile se prioriza la legibilidad del mapa y se oculta el conector si compromete la composicion.
+
+## Empresa Socialmente Responsable
+
+- Se eligio `assets/img/esr con sombra.png` como trofeo principal por su vista frontal, pedestal completo, sombra natural y mejor correspondencia con el mockup.
+- `assets/img/esr.png` se reservo como distintivo secundario debajo de la tarjeta de pilares por su escala mas compacta.
+- Los iconos de pilares se mantuvieron como recursos locales transparentes, con texto visible asociado para conservar accesibilidad y legibilidad.
+- La tarjeta de pilares se implemento con fondo corporativo oscuro, sin bordes internos fuertes y sin sombras adicionales que compitan con el trofeo.

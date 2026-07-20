@@ -127,6 +127,15 @@
     --rb-presence-connector-width: 54%;
     --rb-presence-connector-height: 26%;
     --rb-presence-connector-angle: 14deg;
+    --rb-esr-shell-padding: clamp(1.5rem, 3vw, 2.75rem);
+    --rb-esr-gap: clamp(1.5rem, 3vw, 2.5rem);
+    --rb-esr-visual-min-height: clamp(24rem, 38vw, 41rem);
+    --rb-esr-visual-max-width: clamp(19rem, 31vw, 28rem);
+    --rb-esr-pillars-gap: 0.9rem;
+    --rb-esr-pillars-padding: 1rem;
+    --rb-esr-pillars-icon-size: 2.75rem;
+    --rb-esr-secondary-badge-max-width: 7.5rem;
+    --rb-esr-description-max-width: 34rem;
     --rb-textarea-min-height: 9rem;
     --rb-indicator-size: 0.75rem;
     --rb-icon-circle-size: 3rem;

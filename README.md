@@ -60,6 +60,8 @@ WEB-003 ya compone el arranque visible del Home con navbar, hero y metricas, usa
 
 WEB-004 agrega presencia nacional con mapa de Mexico, marcador de matriz en Sonora y contador de estados, manteniendo la misma base editable para CMS.
 
+WEB-005 agrega la seccion de Empresa Socialmente Responsable con aniversario, pilares, distintivo secundario y trofeo principal, sin avanzar al bloque de compromiso.
+
 ## Manuales y mockups
 
 - `docs/PLAN_TRABAJO.md`
