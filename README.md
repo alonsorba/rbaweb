@@ -66,6 +66,8 @@ WEB-006 agrega la seccion de Nuestro compromiso con texto segmentado e imagen lo
 
 WEB-007 agrega la seccion de Soluciones con tabs accesibles, carrusel horizontal y cards reutilizables, sin avanzar a otras secciones.
 
+WEB-008 agrega la seccion ¿Por qué nosotros? con grid de cuatro beneficios, retratos recortados y etiquetas inferiores, sin avanzar a aseguradoras.
+
 ## Manuales y mockups
 
 - `docs/PLAN_TRABAJO.md`

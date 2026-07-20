@@ -45,9 +45,34 @@
 | `assets/img/04.jpg` | 2000 x 516 | JPG | No | Horizontal | No | Media | Imagen de atencion en oficina; no coincide con la composicion solicitada | No | No seleccionado |
 | `assets/img/nose.png` | 3259 x 5616 | PNG | Si, con recorte | Vertical | No | Alta | No coincide con la escena de compromiso ni con el formato horizontal | No | No seleccionado |
 
+### Recursos para Soluciones
+
+| Recurso | Categoria | Uso | Dimensiones | Extension | Transparencia | Orientacion | Fondo incluido | Calidad | Coincidencia con el mockup | Versionado | Estado |
+|---|---|---|---:|---|---|---|---|---|---|---|---|
+| `assets/img/escudo.png` | Empresas | Daños | 4096 x 4096 | PNG | Si | Cuadrada | No | Alta para web | Buena para una tarjeta corporativa de protección | No | Provisional, seleccionado |
+| `assets/img/carro.png` | Empresas | Autos | 1536 x 1024 | PNG | Si | Horizontal | No | Alta para web | Buena para cobertura vehicular con iconografía clara | No | Provisional, seleccionado |
+| `assets/img/corazon.png` | Empresas | Gastos Médicos | 1536 x 1024 | PNG | Si | Horizontal | No | Alta para web | Buena para una cobertura de salud con símbolo reconocible | No | Provisional, seleccionado |
+| `assets/img/vida.png` | Empresas | Vida | 1536 x 1024 | PNG | Si | Horizontal | No | Alta para web | Buena para protección de personas clave | No | Provisional, seleccionado |
+| `assets/img/avion.png` | Empresas | Viaje | 818 x 526 | PNG | Si | Horizontal | No | Alta para web | Buena para asistencia de viaje por su lectura inmediata | No | Provisional, seleccionado |
+| `assets/img/fianzas.png` | Empresas | Fianzas | 1536 x 1024 | PNG | Si | Horizontal | No | Alta para web | Buena para garantías y obligaciones contractuales | No | Provisional, seleccionado |
+| `assets/img/servicios actuariales.png` | Empresas y Gestion Integral | Servicios Actuariales | 441 x 476 | PNG | Si | Vertical | No | Media-alta para web | Aceptable aunque más compacta que las demás | No | Provisional, seleccionado |
+| `assets/img/asesoria.png` | Personas y Gestion Integral | Asesoría Integral | 4096 x 4096 | PNG | Si | Cuadrada | No | Alta para web | Buena para acompañamiento y diagnóstico | No | Provisional, seleccionado |
+| `assets/img/reclamaciones.png` | Personas y Gestion Integral | Reclamaciones | 1536 x 1024 | PNG | Si | Horizontal | No | Alta para web | Buena para gestión y seguimiento de procesos | No | Provisional, seleccionado |
+| `assets/img/siniestro.png` | Personas y Gestion Integral | Siniestros | 1536 x 1024 | PNG | Si | Horizontal | No | Alta para web | Buena para respuesta ante eventos cubiertos | No | Provisional, seleccionado |
+| `assets/img/prevención de riesgos.png` | Gestion Integral | Prevención e Ingeniería de Riesgo | 723 x 613 | PNG | Si | Horizontal | No | Alta para web | Buena para prevención y control de exposición | No | Provisional, seleccionado |
+
 ### Aseguradoras y aliados
 
 - Logos en `assets/img/logos blanco/`.
+
+### Recursos para ¿Por qué nosotros?
+
+| Recurso | Beneficio asignado | Dimensiones | Extension | Transparencia | Orientacion | Fondo incluido | Calidad | Coincidencia con el mockup | Versionado | Estado | Escala CSS |
+|---|---|---:|---|---|---|---|---|---|---|---|---|
+| `assets/img/nose.png` | Asesoría personalizada | 3259 x 5616 | PNG | Si | Vertical | No | Alta | Buena por la escena de asesoría en oficina | No | Provisional, seleccionado | `1.03` |
+| `assets/img/misa.png` | Prevención de riesgos | 3259 x 5616 | PNG | Si | Vertical | No | Alta | Buena por el gesto de atención telefónica y respuesta | No | Provisional, seleccionado | `1.05` |
+| `assets/img/jenny.png` | Análisis inteligente | 3259 x 5616 | PNG | Si | Vertical | No | Alta | Buena por la presencia ejecutiva con carpeta y postura analítica | No | Provisional, seleccionado | `1.04` |
+| `assets/img/itzel.png` | Acompañamiento constante | 3259 x 5616 | PNG | Si | Vertical | No | Alta | Buena por el retrato profesional limpio y cercano | No | Provisional, seleccionado | `1.02` |
 
 ### Estado de disponibilidad
 
@@ -57,6 +82,9 @@
 - Para WEB-004 se selecciono `assets/img/mapa al ras.png` como recurso local mas cercano al mockup; la pieza queda documentada como provisional hasta validar una version oficial.
 - Para WEB-005 se selecciono `assets/img/esr con sombra.png` como trofeo principal y `assets/img/esr.png` como distintivo secundario por su balance entre presencia, sombra y escala.
 - Para WEB-006 se selecciono `assets/img/compromiso.png` como recurso principal porque ya incluye el fondo azul integrado y es el mejor candidato local para el bloque de compromiso.
+- Para WEB-007 se seleccionaron `assets/img/escudo.png`, `carro.png`, `corazon.png`, `vida.png`, `avion.png`, `fianzas.png`, `servicios actuariales.png`, `asesoria.png`, `reclamaciones.png`, `siniestro.png` y `prevención de riesgos.png` como base visual de Soluciones, todos como recursos provisionales.
+- Para WEB-008 se seleccionaron `assets/img/nose.png`, `misa.png`, `jenny.png` e `itzel.png` como base visual de ¿Por qué nosotros?, todos como recursos provisionales y con escala ajustada desde datos PHP.
+- Los hashes `a8ba017` y `8ce6203` corresponden a la base funcional y documental previa de Soluciones y quedan registrados como antecedente directo de WEB-008.
 
 ## Recomendacion para la siguiente fase
 

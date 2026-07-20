@@ -1,5 +1,40 @@
 # Bitacora de cambios
 
+# 2026-07-20 - WEB-008 - Implementacion de la seccion ¿Por qué nosotros?
+
+### Cambios
+- Se agrego la seccion ¿Por qué nosotros? despues de Soluciones, sin avanzar a aseguradoras, testimonios ni formulario.
+- Se definio un grid de cuatro beneficios con retratos recortados, fondo azul superior y etiqueta blanca inferior.
+- Se parametrizaron los titulos por linea, las imagenes, el texto alternativo y la escala individual de cada tarjeta desde PHP.
+- Se seleccionaron `nose.png`, `misa.png`, `jenny.png` e `itzel.png` como base visual provisional por su cercania al mockup y por su consistencia de recorte.
+- Se documento la correccion de inventario de `WEB-007` con los recursos realmente usados en Soluciones y los hashes `a8ba017` y `8ce6203`.
+
+### Archivos
+- `index.php`
+- `includes/components/why.php`
+- `assets/css/variables.css`
+- `assets/css/sections.css`
+- `assets/css/responsive.css`
+- `docs/PLAN_TRABAJO.md`
+- `docs/DOCUMENTACION_TECNICA.md`
+- `docs/DECISIONES.md`
+- `docs/QA_VISUAL.md`
+- `docs/INVENTARIO_CONTENIDO.md`
+- `docs/PREPARACION_CMS.md`
+- `README.md`
+
+### Pruebas
+- Sintaxis PHP validada en `index.php` e `includes/components/why.php`.
+- Revision de JS validada con `node --check`.
+- Carga local confirmada con respuesta HTTP 200 en `http://127.0.0.1:8080/rba_web/index.php`.
+- Revision de diff sin conflictos de formato con `git diff --check`.
+- Capturas headless generadas con Edge y revisadas en desktop y mobile.
+
+### Git
+- Rama: `feature/base-project`
+- Commit: `a15afc7`
+- Push: pendiente
+
 # 2026-07-20 - WEB-007 - Implementacion de la seccion Soluciones
 
 ### Cambios

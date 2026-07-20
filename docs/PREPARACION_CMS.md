@@ -16,9 +16,12 @@ Cada seccion futura debera documentar campos editables, limites, imagenes, orden
 - WEB-004 usa variables para titulo de seccion, recurso de mapa, etiqueta de ubicacion y contador.
 - WEB-005 usa variables para aniversario, lineas del titulo, descripcion por partes, pilares, distintivo secundario y trofeo principal.
 - WEB-006 usa variables para segmentos de texto, imagen principal y metadata visual del bloque de compromiso.
+- WEB-007 usa variables para titulo de seccion, categorias, tarjetas, imagenes, descripciones, CTA y escala visual de cada recurso.
+- WEB-008 usa variables para titulo, lineas de beneficio, imagenes, texto alternativo y escala individual por tarjeta.
 - La validacion de existencia del recurso permite reemplazar el mapa sin cambiar la estructura del componente.
 - La misma logica permite sustituir los recursos ESR sin modificar el marcado general.
 - La misma logica se reutiliza en compromiso para cambiar la imagen sin tocar el markup.
+- La misma logica se reutiliza en Soluciones y en ¿Por qué nosotros? para validar recursos antes de renderizar.
 
 ## Regla de trabajo
 

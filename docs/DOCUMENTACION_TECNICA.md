@@ -60,6 +60,16 @@ WEB-007 agrega la seccion de Soluciones despues de Nuestro compromiso.
 - Los recursos de cada tarjeta se resuelven desde archivos locales existentes y se preparan para edicion futura desde CMS.
 - La logica JavaScript sincroniza estado activo, scroll de la pista y habilitacion de controles sin depender de librerias extra.
 
+## ¿Por qué nosotros?
+
+WEB-008 agrega la seccion ¿Por qué nosotros? despues de Soluciones.
+
+- `includes/components/why.php` genera un grid semantico de cuatro beneficios con retrato, fondo azul y etiqueta inferior blanca.
+- El componente valida la existencia de cada recurso antes de renderizar y omite elementos incompletos para evitar imagenes rotas.
+- Las tarjetas reciben una escala individual controlada por datos PHP para compensar diferencias de recorte sin estilos dispersos.
+- La composicion se mantiene sin carrusel ni JavaScript adicional, con un grid que desciende a dos columnas y luego a una columna en mobile.
+- El bloque queda listo para CMS porque el texto, el orden y el recurso visual dependen de estructura de datos y no del marcado fijo.
+
 ## Arquitectura CSS
 
 `main.css` funciona como unico archivo de carga del sistema y ordena:
@@ -112,3 +122,4 @@ Se definieron variables para:
 - La seccion ESR usa variables para aniversario, espaciados, tarjeta de pilares, distintivo secundario y maxima altura del trofeo.
 - La seccion de compromiso usa variables para separacion, ancho maximo, altura minima del visual y escala maxima de la imagen.
 - La seccion de Soluciones usa variables para espaciado del shell, tabs, pista del carrusel, ancho de card, alto minimo, media y padding lateral.
+- La seccion ¿Por qué nosotros? usa variables para separacion del grid, altura minima de card, altura minima del visual, solape de la etiqueta y padding de imagen.

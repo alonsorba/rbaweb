@@ -54,3 +54,11 @@
 - El carrusel se resolvio con scroll horizontal nativo, scroll-snap y botones propios para mantener rendimiento y accesibilidad.
 - Se agrego soporte de drag con mouse y touch sobre la pista para mejorar la exploracion de tarjetas sin comprometer teclado.
 - Las imagenes se toman de archivos locales ya disponibles y se validan antes de renderizar para evitar enlaces rotos.
+
+## ¿Por qué nosotros?
+
+- Se implemento `includes/components/why.php` como bloque data-driven para permitir edicion por CMS sin duplicar markup.
+- Se eligieron `nose.png`, `misa.png`, `jenny.png` e `itzel.png` por ser los mejores candidatos locales para representar asesoria, prevencion, analisis y acompanamiento.
+- Se mantuvo un fondo azul independiente detras de cada recorte para aproximar el mockup sin convertir el bloque en una tarjeta completamente azul.
+- La etiqueta blanca inferior se superpone ligeramente al visual para replicar la jerarquia observada en la referencia.
+- Las diferencias de escala entre retratos se corrigieron con una variable CSS individual por item en lugar de valores fijos dispersos.

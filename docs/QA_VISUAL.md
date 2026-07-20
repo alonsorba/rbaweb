@@ -46,6 +46,23 @@ Validacion inicial de la base del Design System.
 - Verificacion tecnica correcta, sin overflow horizontal detectado en la revision del DOM y estilos.
 - Captura headless generada y revisada con viewport alto para confirmar el render de la seccion.
 
+## WEB-008
+
+- Seccion ¿Por qué nosotros? integrada despues de Soluciones con cuatro beneficios visuales y orden original conservado.
+- Grid de cuatro columnas en desktop, dos columnas en tablet y una columna en mobile sin scroll horizontal.
+- Fotografia recortada por tarjeta con fondo azul superior y etiqueta blanca inferior alineada.
+- Capturas revisadas:
+  - `1366x768` en Edge headless, resultado correcto en carga general.
+  - `1024x768` en Edge headless, resultado correcto en carga general.
+  - `430x900` en Edge headless, resultado correcto en carga general.
+  - `768x900` en Edge headless, resultado correcto en tablet.
+  - `390x900` en Edge headless, resultado correcto en mobile.
+  - `360x900` en Edge headless, resultado correcto en mobile compacto.
+  - `1440x7200` en Edge headless, resultado correcto para revisar la seccion completa.
+  - `430x7000` en Edge headless, resultado correcto para revisar la seccion completa en ancho mobile.
+- Warning no bloqueante de Edge visible en varias capturas: `Every renderer should have at least one task provided by a primary task provider`.
+- Los intentos de captura con ancla `#por-que-nosotros` produjeron imagen en blanco y se descartaron; la evidencia final se tomo sin ancla.
+
 ## Criterios revisados
 
 - Sin desbordamiento horizontal en la base existente.
@@ -56,6 +73,7 @@ Validacion inicial de la base del Design System.
 - Sin desbordamiento horizontal observado en la seccion ESR.
 - Sin desbordamiento horizontal observado en la seccion de compromiso.
 - Sin desbordamiento horizontal observado en la seccion de Soluciones.
+- Sin desbordamiento horizontal observado en la seccion ¿Por qué nosotros?.
 - El sitio responde con HTTP 200 desde el servidor local.
 ## Pendiente
 
