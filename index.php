@@ -1,6 +1,6 @@
 <?php
 $pageTitle = 'R. Baidón | Seguros empresariales y personales';
-$pageDescription = 'Base del Home preparada con navbar, hero y métricas reutilizables para el sitio institucional de R. Baidón.';
+$pageDescription = 'Base del Home preparada con navbar, hero, métricas y presencia nacional reutilizables para el sitio institucional de R. Baidón.';
 require __DIR__ . '/includes/head.php';
 
 $rbNavbarData = [
@@ -73,12 +73,31 @@ $rbStatsData = [
         ],
     ],
 ];
+
+$rbPresenceData = [
+    'section_id' => 'presencia',
+    'eyebrow' => 'Presencia nacional',
+    'title' => 'Cobertura estratégica en México',
+    'map_image' => SITE_BASE_URL . '/assets/img/' . rawurlencode('mapa al ras.png'),
+    'map_alt' => 'Mapa de México con presencia de R. Baidón',
+    'map_width' => 4114,
+    'map_height' => 2712,
+    'location_label' => [
+        'line_1' => 'Matriz en Ciudad',
+        'line_2' => 'Obregón, Sonora',
+    ],
+    'stat' => [
+        'value' => '+25',
+        'label' => 'estados con presencia',
+    ],
+];
 ?>
 <?php require __DIR__ . '/includes/header.php'; ?>
 
 <main id="main-content" class="rb-main rb-main--home">
     <?php require __DIR__ . '/includes/components/hero.php'; ?>
     <?php require __DIR__ . '/includes/components/stats.php'; ?>
+    <?php require __DIR__ . '/includes/components/presence.php'; ?>
 </main>
 
 <?php require __DIR__ . '/includes/footer.php'; ?>

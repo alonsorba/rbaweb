@@ -47,3 +47,146 @@
 .rb-stats {
     background: var(--rb-color-surface-alt);
 }
+
+.rb-presence {
+    background: linear-gradient(180deg, var(--rb-color-surface-alt) 0%, var(--rb-white) 100%);
+}
+
+.rb-presence__shell {
+    display: grid;
+    grid-template-columns: minmax(18rem, 0.9fr) minmax(0, 1.1fr);
+    grid-template-areas:
+        "copy visual"
+        "stat visual";
+    gap: var(--rb-presence-gap);
+    padding: var(--rb-presence-shell-padding);
+    overflow: hidden;
+    background: var(--rb-white);
+    border: 1px solid var(--rb-color-border);
+    box-shadow: var(--rb-shadow-card);
+}
+
+.rb-presence__copy {
+    grid-area: copy;
+    display: flex;
+    flex-direction: column;
+    gap: var(--rb-space-4);
+}
+
+.rb-presence__header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--rb-space-2);
+}
+
+.rb-presence__title {
+    margin: 0;
+    font-size: clamp(1.75rem, 2.8vw, 3rem);
+    line-height: 1.05;
+    font-weight: var(--rb-font-weight-bold);
+    color: var(--rb-color-primary-900);
+}
+
+.rb-presence__location {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    width: fit-content;
+    max-width: var(--rb-presence-location-max-width);
+    padding: 1rem 1.15rem;
+    border-radius: var(--rb-radius-lg);
+    background: var(--rb-color-primary-500);
+    box-shadow: var(--rb-shadow-soft);
+}
+
+.rb-presence__location-line {
+    display: block;
+    font-size: var(--rb-font-size-lg);
+    line-height: 1.3;
+    font-weight: var(--rb-font-weight-semibold);
+    color: var(--rb-white);
+}
+
+.rb-presence__visual {
+    grid-area: visual;
+    position: relative;
+    min-height: var(--rb-presence-map-min-height);
+    overflow: visible;
+    background-image: var(--rb-presence-map-bg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+.rb-presence__map {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center center;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.rb-presence__connector {
+    position: absolute;
+    left: var(--rb-presence-connector-left);
+    top: var(--rb-presence-connector-top);
+    width: var(--rb-presence-connector-width);
+    height: var(--rb-presence-connector-height);
+    pointer-events: none;
+}
+
+.rb-presence__connector svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.rb-presence__connector line {
+    stroke: rgba(34, 139, 209, 0.7);
+    stroke-width: 2;
+    stroke-dasharray: 4 6;
+    stroke-linecap: round;
+}
+
+.rb-presence__marker {
+    position: absolute;
+    left: var(--rb-presence-marker-x);
+    top: var(--rb-presence-marker-y);
+    width: var(--rb-presence-marker-size);
+    height: var(--rb-presence-marker-size);
+    border-radius: 50%;
+    background: var(--rb-color-primary-500);
+    box-shadow: 0 0 0 0.35rem rgba(34, 139, 209, 0.18), var(--rb-shadow-soft);
+}
+
+.rb-presence__marker::after {
+    content: "";
+    position: absolute;
+    inset: -0.35rem;
+    border-radius: inherit;
+    border: 1px solid rgba(34, 139, 209, 0.28);
+}
+
+.rb-presence__stat {
+    grid-area: stat;
+    align-self: end;
+    max-width: 18rem;
+}
+
+.rb-presence__value {
+    margin: 0;
+    font-size: clamp(2rem, 3vw, 3rem);
+    line-height: 1;
+    font-weight: var(--rb-font-weight-extrabold);
+    color: var(--rb-color-primary-500);
+}
+
+.rb-presence__label {
+    margin: 0;
+    font-size: var(--rb-font-size-md);
+    line-height: var(--rb-line-height-base);
+    color: var(--rb-color-text);
+}

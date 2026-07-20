@@ -9,6 +9,18 @@
     .rb-section-title {
         font-size: var(--rb-font-size-4xl);
     }
+
+    .rb-presence {
+        --rb-presence-connector-left: -28%;
+        --rb-presence-connector-top: 18%;
+        --rb-presence-connector-width: 50%;
+        --rb-presence-marker-x: 19%;
+        --rb-presence-marker-y: 29%;
+    }
+
+    .rb-presence__shell {
+        grid-template-columns: minmax(16rem, 0.92fr) minmax(0, 1.08fr);
+    }
 }
 
 @media (max-width: 991.98px) {
@@ -101,6 +113,10 @@
         grid-template-columns: 1fr;
         gap: var(--rb-space-4);
     }
+
+    .rb-presence__visual {
+        min-height: clamp(16rem, 32vw, 24rem);
+    }
 }
 
 @media (min-width: 992px) {
@@ -136,6 +152,26 @@
     .rb-hero__stage {
         min-height: auto;
     }
+
+    .rb-presence__shell {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "copy"
+            "visual"
+            "stat";
+    }
+
+    .rb-presence__visual {
+        min-height: clamp(17rem, 78vw, 24rem);
+    }
+
+    .rb-presence__connector {
+        display: none;
+    }
+
+    .rb-presence__stat {
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 575.98px) {
@@ -168,5 +204,18 @@
     .rb-hero__floating-card {
         padding: var(--rb-space-4);
         border-radius: var(--rb-radius-lg);
+    }
+
+    .rb-presence__shell {
+        padding: var(--rb-space-4);
+    }
+
+    .rb-presence__location {
+        width: 100%;
+        max-width: none;
+    }
+
+    .rb-presence__location-line {
+        font-size: var(--rb-font-size-md);
     }
 }

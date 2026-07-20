@@ -115,6 +115,18 @@
     --rb-hero-floating-max-width: 19rem;
     --rb-stats-panel-padding: clamp(1.25rem, 2.5vw, 2rem);
     --rb-stats-grid-gap: var(--rb-space-6);
+    --rb-presence-shell-padding: clamp(1.5rem, 3vw, 2.5rem);
+    --rb-presence-gap: clamp(1.5rem, 3vw, 2.5rem);
+    --rb-presence-map-min-height: clamp(20rem, 37vw, 34rem);
+    --rb-presence-location-max-width: 17rem;
+    --rb-presence-marker-size: 0.95rem;
+    --rb-presence-marker-x: 18%;
+    --rb-presence-marker-y: 31%;
+    --rb-presence-connector-left: -32%;
+    --rb-presence-connector-top: 16%;
+    --rb-presence-connector-width: 54%;
+    --rb-presence-connector-height: 26%;
+    --rb-presence-connector-angle: 14deg;
     --rb-textarea-min-height: 9rem;
     --rb-indicator-size: 0.75rem;
     --rb-icon-circle-size: 3rem;
