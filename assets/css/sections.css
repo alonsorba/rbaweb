@@ -494,3 +494,87 @@
     margin-top: auto;
     width: 100%;
 }
+
+.rb-why {
+    background: linear-gradient(180deg, rgba(244, 248, 251, 0.92) 0%, var(--rb-white) 100%);
+}
+
+.rb-why__header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--rb-space-6);
+}
+
+.rb-why__title {
+    text-align: center;
+}
+
+.rb-why__grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--rb-why-grid-gap);
+    align-items: stretch;
+}
+
+.rb-why__item {
+    min-width: 0;
+}
+
+.rb-why__figure {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: var(--rb-why-card-min-height);
+    margin: 0;
+}
+
+.rb-why__visual {
+    position: relative;
+    flex: 1 1 auto;
+    min-height: var(--rb-why-visual-min-height);
+    overflow: hidden;
+    border-radius: var(--rb-radius-xl) var(--rb-radius-xl) 0 0;
+}
+
+.rb-why__backdrop {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, #0b5e9b 0%, var(--rb-color-primary-900) 100%);
+}
+
+.rb-why__image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center bottom;
+    transform: scale(var(--rb-why-image-scale, 1));
+    transform-origin: center bottom;
+    padding: var(--rb-why-image-padding) var(--rb-space-3) 0;
+    z-index: 1;
+}
+
+.rb-why__caption {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.1rem;
+    min-height: var(--rb-why-caption-min-height);
+    margin-top: calc(var(--rb-why-caption-overlap) * -1);
+    padding: var(--rb-space-3) var(--rb-space-4) var(--rb-space-4);
+    border-radius: var(--rb-radius-xl);
+    background: var(--rb-white);
+    box-shadow: var(--rb-shadow-soft);
+    text-align: center;
+}
+
+.rb-why__caption-line {
+    display: block;
+    font-size: clamp(1rem, 1.25vw, 1.15rem);
+    line-height: 1.25;
+    font-weight: var(--rb-font-weight-bold);
+    color: var(--rb-color-text);
+}

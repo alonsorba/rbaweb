@@ -150,6 +150,12 @@
     --rb-solutions-card-min-height: 22rem;
     --rb-solutions-media-height: clamp(8.5rem, 12vw, 10.5rem);
     --rb-solutions-viewport-padding-end: clamp(1rem, 4vw, 3rem);
+    --rb-why-grid-gap: clamp(1rem, 2vw, 1.5rem);
+    --rb-why-card-min-height: 23rem;
+    --rb-why-visual-min-height: clamp(15rem, 24vw, 19rem);
+    --rb-why-caption-min-height: 5.25rem;
+    --rb-why-caption-overlap: 1.2rem;
+    --rb-why-image-padding: var(--rb-space-4);
     --rb-textarea-min-height: 9rem;
     --rb-indicator-size: 0.75rem;
     --rb-icon-circle-size: 3rem;

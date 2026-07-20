@@ -1,6 +1,6 @@
 <?php
 $pageTitle = 'R. Baidón | Seguros empresariales y personales';
-$pageDescription = 'Base del Home preparada con navbar, hero, métricas, presencia nacional, ESR, compromiso y soluciones reutilizables para el sitio institucional de R. Baidón.';
+$pageDescription = 'Base del Home preparada con navbar, hero, métricas, presencia nacional, ESR, compromiso, soluciones y la sección ¿Por qué nosotros? reutilizables para el sitio institucional de R. Baidón.';
 require __DIR__ . '/includes/head.php';
 
 $rbNavbarData = [
@@ -353,6 +353,49 @@ $rbSolutionsData = [
         ],
     ],
 ];
+
+$rbWhyData = [
+    'section_id' => 'por-que-nosotros',
+    'title' => '¿Por qué nosotros?',
+    'items' => [
+        [
+            'title_lines' => [
+                'Asesoría',
+                'personalizada',
+            ],
+            'image' => SITE_BASE_URL . '/assets/img/' . rawurlencode('nose.png'),
+            'image_alt' => 'Asesoría personalizada de R. Baidón',
+            'image_scale' => 1.03,
+        ],
+        [
+            'title_lines' => [
+                'Prevención',
+                'de riesgos',
+            ],
+            'image' => SITE_BASE_URL . '/assets/img/' . rawurlencode('misa.png'),
+            'image_alt' => 'Prevención de riesgos con acompañamiento de R. Baidón',
+            'image_scale' => 1.05,
+        ],
+        [
+            'title_lines' => [
+                'Análisis',
+                'inteligente',
+            ],
+            'image' => SITE_BASE_URL . '/assets/img/' . rawurlencode('jenny.png'),
+            'image_alt' => 'Análisis inteligente con una especialista de R. Baidón',
+            'image_scale' => 1.04,
+        ],
+        [
+            'title_lines' => [
+                'Acompañamiento',
+                'constante',
+            ],
+            'image' => SITE_BASE_URL . '/assets/img/' . rawurlencode('itzel.png'),
+            'image_alt' => 'Acompañamiento constante de R. Baidón',
+            'image_scale' => 1.02,
+        ],
+    ],
+];
 ?>
 <?php require __DIR__ . '/includes/header.php'; ?>
 
@@ -363,6 +406,7 @@ $rbSolutionsData = [
     <?php require __DIR__ . '/includes/components/esr.php'; ?>
     <?php require __DIR__ . '/includes/components/commitment.php'; ?>
     <?php require __DIR__ . '/includes/components/solutions.php'; ?>
+    <?php require __DIR__ . '/includes/components/why.php'; ?>
 </main>
 
 <?php require __DIR__ . '/includes/footer.php'; ?>

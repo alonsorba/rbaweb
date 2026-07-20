@@ -150,6 +150,15 @@
     .rb-presence__visual {
         min-height: clamp(16rem, 32vw, 24rem);
     }
+
+    .rb-why {
+        --rb-why-card-min-height: 21rem;
+        --rb-why-visual-min-height: clamp(14rem, 28vw, 18rem);
+    }
+
+    .rb-why__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 @media (min-width: 992px) {
@@ -284,6 +293,16 @@
     .rb-solutions__card {
         min-height: 20.5rem;
     }
+
+    .rb-why {
+        --rb-why-card-min-height: 20rem;
+        --rb-why-visual-min-height: clamp(13rem, 56vw, 16rem);
+        --rb-why-caption-min-height: 4.75rem;
+    }
+
+    .rb-why__grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 575.98px) {
@@ -388,5 +407,13 @@
 
     .rb-solutions__description {
         font-size: var(--rb-font-size-xs);
+    }
+
+    .rb-why__header {
+        margin-bottom: var(--rb-space-5);
+    }
+
+    .rb-why__caption {
+        padding-inline: var(--rb-space-3);
     }
 }
