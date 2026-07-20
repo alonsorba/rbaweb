@@ -131,6 +131,56 @@ $rbEsrData = [
         'alt' => 'Trofeo de Empresa Socialmente Responsable de R. Baidón',
     ],
 ];
+
+$rbCommitmentData = [
+    'section_id' => 'compromiso',
+    'text_lines' => [
+        [
+            [
+                'text' => 'Nuestro compromiso',
+                'highlight' => true,
+            ],
+            [
+                'text' => ' es brindarte',
+                'highlight' => false,
+            ],
+        ],
+        [
+            [
+                'text' => 'un ',
+                'highlight' => false,
+            ],
+            [
+                'text' => 'servicio en excelencia',
+                'highlight' => true,
+            ],
+            [
+                'text' => ' para',
+                'highlight' => false,
+            ],
+        ],
+        [
+            [
+                'text' => 'lograr al máximo ',
+                'highlight' => false,
+            ],
+            [
+                'text' => 'tus necesidades',
+                'highlight' => true,
+            ],
+        ],
+        [
+            [
+                'text' => 'de protección.',
+                'highlight' => true,
+            ],
+        ],
+    ],
+    'image' => [
+        'src' => SITE_BASE_URL . '/assets/img/' . rawurlencode('compromiso.png'),
+        'alt' => 'Equipo de R. Baidón brindando atención personalizada',
+    ],
+];
 ?>
 <?php require __DIR__ . '/includes/header.php'; ?>
 
@@ -139,6 +189,7 @@ $rbEsrData = [
     <?php require __DIR__ . '/includes/components/stats.php'; ?>
     <?php require __DIR__ . '/includes/components/presence.php'; ?>
     <?php require __DIR__ . '/includes/components/esr.php'; ?>
+    <?php require __DIR__ . '/includes/components/commitment.php'; ?>
 </main>
 
 <?php require __DIR__ . '/includes/footer.php'; ?>

@@ -40,6 +40,16 @@ WEB-005 agrega la seccion ESR como bloque siguiente al mapa de presencia naciona
 - El trofeo principal se resolvio con un recurso local transparente y se renderiza con `object-fit: contain` para conservar pedestal y proporciones.
 - Los iconos de pilares usan archivos locales con transparencia y se cargan desde rutas preparadas para el futuro CMS.
 
+## Nuestro compromiso
+
+WEB-006 agrega la seccion de compromiso inmediatamente despues de ESR.
+
+- `includes/components/commitment.php` recibe el texto por segmentos para sostener la jerarquia visual sin convertir el parrafo en una imagen.
+- La imagen principal usa `assets/img/compromiso.png`, un recurso local con escena profesional ya integrada y fondo azul incluido.
+- El componente valida el archivo, toma dimensiones reales cuando estan disponibles y usa `loading="lazy"` junto con `decoding="async"`.
+- La composicion se resuelve con grid de dos columnas en desktop y se apila en mobile sin generar overflow horizontal.
+- No se agrego un fondo azul adicional porque el recurso ya contiene la coloracion requerida por el mockup.
+
 ## Arquitectura CSS
 
 `main.css` funciona como unico archivo de carga del sistema y ordena:
@@ -90,3 +100,4 @@ Se definieron variables para:
 - El Home inicial usa variables para el logo, enlaces, hero, CTA y metricas.
 - La presencia nacional usa variables para la seccion, el mapa, la etiqueta, el punto de ubicacion y el contador.
 - La seccion ESR usa variables para aniversario, espaciados, tarjeta de pilares, distintivo secundario y maxima altura del trofeo.
+- La seccion de compromiso usa variables para separacion, ancho maximo, altura minima del visual y escala maxima de la imagen.

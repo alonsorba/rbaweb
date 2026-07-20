@@ -136,6 +136,11 @@
     --rb-esr-pillars-icon-size: 2.75rem;
     --rb-esr-secondary-badge-max-width: 7.5rem;
     --rb-esr-description-max-width: 34rem;
+    --rb-commitment-gap: clamp(1.5rem, 3vw, 3rem);
+    --rb-commitment-shell-padding: clamp(1.5rem, 3vw, 2.75rem);
+    --rb-commitment-copy-max-width: 38rem;
+    --rb-commitment-visual-min-height: clamp(20rem, 34vw, 32rem);
+    --rb-commitment-media-max-width: clamp(22rem, 36vw, 30rem);
     --rb-textarea-min-height: 9rem;
     --rb-indicator-size: 0.75rem;
     --rb-icon-circle-size: 3rem;

@@ -29,6 +29,18 @@
     .rb-esr__visual {
         min-height: clamp(22rem, 34vw, 34rem);
     }
+
+    .rb-commitment__inner {
+        grid-template-columns: minmax(0, 1fr) minmax(20rem, 0.95fr);
+    }
+
+    .rb-commitment__text {
+        font-size: clamp(1.9rem, 3vw, 3.1rem);
+    }
+
+    .rb-commitment__visual {
+        min-height: clamp(18rem, 30vw, 27rem);
+    }
 }
 
 @media (max-width: 991.98px) {
@@ -201,6 +213,27 @@
     .rb-esr__visual {
         min-height: clamp(22rem, 86vw, 31rem);
     }
+
+    .rb-commitment__inner {
+        grid-template-columns: 1fr;
+        gap: var(--rb-space-5);
+    }
+
+    .rb-commitment__copy {
+        max-width: 100%;
+    }
+
+    .rb-commitment__text {
+        font-size: clamp(1.8rem, 8vw, 2.5rem);
+    }
+
+    .rb-commitment__visual {
+        min-height: clamp(18rem, 82vw, 28rem);
+    }
+
+    .rb-commitment__media {
+        width: min(100%, 34rem);
+    }
 }
 
 @media (max-width: 575.98px) {
@@ -271,5 +304,17 @@
     .rb-esr__visual {
         min-height: clamp(18rem, 78vw, 25rem);
         padding: 0;
+    }
+
+    .rb-commitment__inner {
+        padding: var(--rb-space-4);
+    }
+
+    .rb-commitment__text {
+        font-size: clamp(1.55rem, 7.4vw, 2rem);
+    }
+
+    .rb-commitment__visual {
+        min-height: clamp(16rem, 72vw, 22rem);
     }
 }

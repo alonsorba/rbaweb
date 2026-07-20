@@ -1,5 +1,38 @@
 # Bitacora de cambios
 
+## 2026-07-20 - WEB-006 - Implementacion de la seccion Nuestro compromiso
+
+### Cambios
+- Se agrego la seccion de compromiso inmediatamente despues de ESR, sin avanzar a soluciones.
+- Se parametrizo el texto en segmentos para conservar la jerarquia visual del mockup y facilitar edicion futura.
+- Se selecciono `assets/img/compromiso.png` como recurso principal por su mejor coincidencia con la escena profesional solicitada.
+- Se valido que el fondo azul ya viene integrado en la imagen, por lo que no se agrego un segundo fondo CSS.
+
+### Archivos
+- `index.php`
+- `includes/components/commitment.php`
+- `assets/css/variables.css`
+- `assets/css/sections.css`
+- `assets/css/responsive.css`
+- `docs/PLAN_TRABAJO.md`
+- `docs/DOCUMENTACION_TECNICA.md`
+- `docs/DECISIONES.md`
+- `docs/QA_VISUAL.md`
+- `docs/INVENTARIO_CONTENIDO.md`
+- `docs/PREPARACION_CMS.md`
+- `README.md`
+
+### Pruebas
+- Sintaxis PHP validada en `index.php` e `includes/components/commitment.php`.
+- Revision de JS validada con `node --check`.
+- Carga local confirmada con respuesta HTTP 200 en `http://127.0.0.1:8080/rba_web/index.php`.
+- Revision de diff sin conflictos de formato con `git diff --check`.
+
+### Git
+- Rama: `feature/base-project`
+- Commit: `pendiente`
+- Push: pendiente
+
 ## 2026-07-20 - WEB-005 - Implementacion de la seccion Empresa Socialmente Responsable
 
 ### Cambios

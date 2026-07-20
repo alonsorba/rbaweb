@@ -8,7 +8,8 @@
 | WEB-002 | Base | Creacion del Design System Base | Bloqueado | Base PHP existente, Bootstrap 5.3.3 y recursos de marca | Sistema CSS modular, stubs PHP de componentes y validacion local de carga | `d53bbac` |
 | WEB-003 | Home | Encabezado hero y metricas del home | Completado | Design System base, imagenes locales y remoto configurado | Navbar transparente con estado al hacer scroll, hero principal y bloque de metricas reutilizable | `2bc44a9` |
 | WEB-004 | Home | Implementacion de presencia nacional y mapa de Mexico | Completado | Home base validado, mapa local disponible y seccion posterior aun no tocada | Seccion de presencia con mapa de Mexico, marcador de Sonora y contador +25 preparada para CMS | `fb1f511` |
-| WEB-005 | Home | Implementacion de la seccion Empresa Socialmente Responsable | Completado | Presencia nacional ya integrada y recursos ESR locales disponibles | Seccion ESR con titulo, descripcion parametrizada, pilares reutilizables, distintivo secundario y trofeo principal listos para CMS | `pendiente` |
+| WEB-005 | Home | Implementacion de la seccion Empresa Socialmente Responsable | Completado | Presencia nacional ya integrada y recursos ESR locales disponibles | Seccion ESR con titulo, descripcion parametrizada, pilares reutilizables, distintivo secundario y trofeo principal listos para CMS | `139defa` |
+| WEB-006 | Home | Implementacion de la seccion Nuestro compromiso | Completado | ESR ya integrada y recurso local de compromiso disponible | Seccion de compromiso con texto segmentado, imagen profesional y composicion responsive lista para CMS | `pendiente` |
 
 ## Fases generales
 
@@ -27,3 +28,4 @@
 - WEB-003 completo la composicion visual real del Home sin avanzar a las secciones posteriores.
 - WEB-004 completo la seccion de presencia nacional sin tocar ESR ni bloques posteriores.
 - WEB-005 completa la seccion de Empresa Socialmente Responsable y mantiene pendiente el bloque de compromiso.
+- WEB-006 completa la seccion de compromiso y deja pendiente el bloque de soluciones.

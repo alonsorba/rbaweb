@@ -62,6 +62,8 @@ WEB-004 agrega presencia nacional con mapa de Mexico, marcador de matriz en Sono
 
 WEB-005 agrega la seccion de Empresa Socialmente Responsable con aniversario, pilares, distintivo secundario y trofeo principal, sin avanzar al bloque de compromiso.
 
+WEB-006 agrega la seccion de Nuestro compromiso con texto segmentado e imagen local, sin avanzar a Soluciones.
+
 ## Manuales y mockups
 
 - `docs/PLAN_TRABAJO.md`

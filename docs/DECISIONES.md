@@ -39,3 +39,10 @@
 - `assets/img/esr.png` se reservo como distintivo secundario debajo de la tarjeta de pilares por su escala mas compacta.
 - Los iconos de pilares se mantuvieron como recursos locales transparentes, con texto visible asociado para conservar accesibilidad y legibilidad.
 - La tarjeta de pilares se implemento con fondo corporativo oscuro, sin bordes internos fuertes y sin sombras adicionales que compitan con el trofeo.
+
+## Nuestro compromiso
+
+- Se eligio `assets/img/compromiso.png` como recurso principal por ser el candidato visual mas cercano al mockup y por incluir la escena profesional completa.
+- No se agrego un fondo azul adicional porque el recurso ya trae la composicion cromatica integrada y duplicarla generaria ruido visual.
+- El texto se compuso con segmentos destacados para controlar jerarquia y saltos sin depender de un rasterizado o una imagen compuesta.
+- La imagen se mantuvo sin recortes agresivos ni filtros para no alterar manos, rostros ni tonos de piel.

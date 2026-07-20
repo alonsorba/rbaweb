@@ -31,6 +31,13 @@ Validacion inicial de la base del Design System.
 - Apilado vertical en mobile con jerarquia conservada y sin overflow horizontal observado en la revision del CSS y el DOM.
 - Sintaxis PHP, JS y diff validadas correctamente.
 
+## WEB-006
+
+- Seccion de compromiso integrada despues de ESR y antes de soluciones.
+- Texto segmentado con palabras destacadas en azul oscuro y composicion de dos columnas en desktop.
+- Imagen principal visible sin segundo fondo azul, usando el recurso local completo `compromiso.png`.
+- Validacion tecnica correcta, con HTTP 200 y sin errores de sintaxis detectados.
+
 ## Criterios revisados
 
 - Sin desbordamiento horizontal en la base existente.
@@ -39,6 +46,7 @@ Validacion inicial de la base del Design System.
 - Preparado para contraste y navegacion por teclado en los controles principales.
 - Sin desbordamiento horizontal observado en la composicion de presencia.
 - Sin desbordamiento horizontal observado en la seccion ESR.
+- Sin desbordamiento horizontal observado en la seccion de compromiso.
 - El sitio responde con HTTP 200 desde el servidor local.
 ## Pendiente
 
