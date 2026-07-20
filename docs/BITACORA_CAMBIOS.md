@@ -48,4 +48,5 @@
 
 ### Git
 - Rama: `feature/base-project`
-- Commit: pendiente
+- Commit: `d53bbac`
+- Push: bloqueado por falta de remoto configurado
