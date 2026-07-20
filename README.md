@@ -64,6 +64,8 @@ WEB-005 agrega la seccion de Empresa Socialmente Responsable con aniversario, pi
 
 WEB-006 agrega la seccion de Nuestro compromiso con texto segmentado e imagen local, sin avanzar a Soluciones.
 
+WEB-007 agrega la seccion de Soluciones con tabs accesibles, carrusel horizontal y cards reutilizables, sin avanzar a otras secciones.
+
 ## Manuales y mockups
 
 - `docs/PLAN_TRABAJO.md`

@@ -50,6 +50,16 @@ WEB-006 agrega la seccion de compromiso inmediatamente despues de ESR.
 - La composicion se resuelve con grid de dos columnas en desktop y se apila en mobile sin generar overflow horizontal.
 - No se agrego un fondo azul adicional porque el recurso ya contiene la coloracion requerida por el mockup.
 
+## Soluciones
+
+WEB-007 agrega la seccion de Soluciones despues de Nuestro compromiso.
+
+- `includes/components/solutions.php` construye la estructura con datos PHP para categorias, cards, imagenes y CTA.
+- El componente usa `role="tablist"`, `role="tab"` y `role="tabpanel"` para sostener navegacion accesible por teclado.
+- El carrusel horizontal se implementa con scroll-snap, botones previos/siguientes y soporte de arrastre con mouse o touch.
+- Los recursos de cada tarjeta se resuelven desde archivos locales existentes y se preparan para edicion futura desde CMS.
+- La logica JavaScript sincroniza estado activo, scroll de la pista y habilitacion de controles sin depender de librerias extra.
+
 ## Arquitectura CSS
 
 `main.css` funciona como unico archivo de carga del sistema y ordena:
@@ -101,3 +111,4 @@ Se definieron variables para:
 - La presencia nacional usa variables para la seccion, el mapa, la etiqueta, el punto de ubicacion y el contador.
 - La seccion ESR usa variables para aniversario, espaciados, tarjeta de pilares, distintivo secundario y maxima altura del trofeo.
 - La seccion de compromiso usa variables para separacion, ancho maximo, altura minima del visual y escala maxima de la imagen.
+- La seccion de Soluciones usa variables para espaciado del shell, tabs, pista del carrusel, ancho de card, alto minimo, media y padding lateral.

@@ -279,3 +279,11 @@
     height: auto;
     object-fit: contain;
 }
+
+.rb-solutions__card.rb-carousel-card {
+    overflow: hidden;
+}
+
+.rb-solutions__card .rb-solutions__cta {
+    align-self: stretch;
+}

@@ -41,6 +41,19 @@
     .rb-commitment__visual {
         min-height: clamp(18rem, 30vw, 27rem);
     }
+
+    .rb-solutions__title {
+        font-size: clamp(2rem, 3vw, 3rem);
+    }
+
+    .rb-solutions__tabs {
+        gap: var(--rb-space-2);
+    }
+
+    .rb-solutions__track {
+        grid-auto-columns: clamp(14.5rem, 17vw, 16.5rem);
+        padding-right: var(--rb-space-5);
+    }
 }
 
 @media (max-width: 991.98px) {
@@ -234,6 +247,43 @@
     .rb-commitment__media {
         width: min(100%, 34rem);
     }
+
+    .rb-solutions__header {
+        margin-bottom: var(--rb-space-5);
+    }
+
+    .rb-solutions__tabs {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: var(--rb-space-2);
+        scroll-snap-type: x proximity;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .rb-solutions__tabs::-webkit-scrollbar {
+        display: none;
+    }
+
+    .rb-solutions__tab {
+        flex: 0 0 auto;
+        white-space: nowrap;
+    }
+
+    .rb-solutions__controls {
+        justify-content: space-between;
+    }
+
+    .rb-solutions__track {
+        grid-auto-columns: minmax(16rem, 82vw);
+        padding-right: var(--rb-space-4);
+    }
+
+    .rb-solutions__card {
+        min-height: 20.5rem;
+    }
 }
 
 @media (max-width: 575.98px) {
@@ -316,5 +366,27 @@
 
     .rb-commitment__visual {
         min-height: clamp(16rem, 72vw, 22rem);
+    }
+
+    .rb-solutions {
+        padding: var(--rb-space-4);
+    }
+
+    .rb-solutions__title {
+        font-size: clamp(1.8rem, 8vw, 2.4rem);
+    }
+
+    .rb-solutions__track {
+        grid-auto-columns: minmax(15.5rem, 80vw);
+        gap: var(--rb-space-3);
+        padding-right: var(--rb-space-3);
+    }
+
+    .rb-solutions__card-title {
+        font-size: 1rem;
+    }
+
+    .rb-solutions__description {
+        font-size: var(--rb-font-size-xs);
     }
 }

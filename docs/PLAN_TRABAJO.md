@@ -10,6 +10,7 @@
 | WEB-004 | Home | Implementacion de presencia nacional y mapa de Mexico | Completado | Home base validado, mapa local disponible y seccion posterior aun no tocada | Seccion de presencia con mapa de Mexico, marcador de Sonora y contador +25 preparada para CMS | `fb1f511` |
 | WEB-005 | Home | Implementacion de la seccion Empresa Socialmente Responsable | Completado | Presencia nacional ya integrada y recursos ESR locales disponibles | Seccion ESR con titulo, descripcion parametrizada, pilares reutilizables, distintivo secundario y trofeo principal listos para CMS | `139defa` |
 | WEB-006 | Home | Implementacion de la seccion Nuestro compromiso | Completado | ESR ya integrada y recurso local de compromiso disponible | Seccion de compromiso con texto segmentado, imagen profesional y composicion responsive lista para CMS | `829932d` |
+| WEB-007 | Home | Implementacion de la seccion Soluciones | Completado | Compromiso ya integrado y recursos locales para tarjetas de soluciones disponibles | Seccion Soluciones con tabs accesibles, carrusel horizontal, drag y cards reutilizables lista para CMS | `pendiente` |
 
 ## Fases generales
 
@@ -29,3 +30,4 @@
 - WEB-004 completo la seccion de presencia nacional sin tocar ESR ni bloques posteriores.
 - WEB-005 completa la seccion de Empresa Socialmente Responsable y mantiene pendiente el bloque de compromiso.
 - WEB-006 completa la seccion de compromiso y deja pendiente el bloque de soluciones.
+- WEB-007 completa la seccion de Soluciones con navegacion por categorias y carrusel horizontal accesible.

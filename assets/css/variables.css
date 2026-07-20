@@ -141,6 +141,15 @@
     --rb-commitment-copy-max-width: 38rem;
     --rb-commitment-visual-min-height: clamp(20rem, 34vw, 32rem);
     --rb-commitment-media-max-width: clamp(22rem, 36vw, 30rem);
+    --rb-solutions-shell-padding: clamp(1.5rem, 3vw, 2.5rem);
+    --rb-solutions-gap: clamp(1rem, 2vw, 1.5rem);
+    --rb-solutions-tabs-gap: 0.75rem;
+    --rb-solutions-panel-gap: 1rem;
+    --rb-solutions-track-gap: 1rem;
+    --rb-solutions-card-width: clamp(15rem, 18vw, 18rem);
+    --rb-solutions-card-min-height: 22rem;
+    --rb-solutions-media-height: clamp(8.5rem, 12vw, 10.5rem);
+    --rb-solutions-viewport-padding-end: clamp(1rem, 4vw, 3rem);
     --rb-textarea-min-height: 9rem;
     --rb-indicator-size: 0.75rem;
     --rb-icon-circle-size: 3rem;

@@ -1,6 +1,6 @@
 <?php
 $pageTitle = 'R. Baidón | Seguros empresariales y personales';
-$pageDescription = 'Base del Home preparada con navbar, hero, métricas, presencia nacional y ESR reutilizables para el sitio institucional de R. Baidón.';
+$pageDescription = 'Base del Home preparada con navbar, hero, métricas, presencia nacional, ESR, compromiso y soluciones reutilizables para el sitio institucional de R. Baidón.';
 require __DIR__ . '/includes/head.php';
 
 $rbNavbarData = [
@@ -181,6 +181,178 @@ $rbCommitmentData = [
         'alt' => 'Equipo de R. Baidón brindando atención personalizada',
     ],
 ];
+
+$rbSolutionsData = [
+    'section_id' => 'soluciones',
+    'title' => 'Soluciones',
+    'categories' => [
+        [
+            'id' => 'empresas',
+            'label' => 'Empresas',
+            'active' => true,
+            'items' => [
+                [
+                    'title' => 'Daños',
+                    'description' => 'Protección para activos, instalaciones y continuidad operativa.',
+                    'image' => SITE_BASE_URL . '/assets/img/' . rawurlencode('escudo.png'),
+                    'image_alt' => 'Cobertura de daños con escudo de protección',
+                    'url' => '#contacto',
+                    'cta_label' => 'VER COBERTURA',
+                ],
+                [
+                    'title' => 'Autos',
+                    'description' => 'Cobertura para vehículos de trabajo y movilidad cotidiana.',
+                    'image' => SITE_BASE_URL . '/assets/img/' . rawurlencode('carro.png'),
+                    'image_alt' => 'Cobertura para autos',
+                    'url' => '#contacto',
+                    'cta_label' => 'VER COBERTURA',
+                ],
+                [
+                    'title' => 'Gastos Médicos',
+                    'description' => 'Respaldo para atención médica y bienestar del equipo.',
+                    'image' => SITE_BASE_URL . '/assets/img/' . rawurlencode('corazon.png'),
+                    'image_alt' => 'Cobertura de gastos médicos',
+                    'url' => '#contacto',
+                    'cta_label' => 'VER COBERTURA',
+                ],
+                [
+                    'title' => 'Vida',
+                    'description' => 'Protección financiera para personas clave y colaboradores.',
+                    'image' => SITE_BASE_URL . '/assets/img/' . rawurlencode('vida.png'),
+                    'image_alt' => 'Cobertura de vida',
+                    'url' => '#contacto',
+                    'cta_label' => 'VER COBERTURA',
+                ],
+                [
+                    'title' => 'Viaje',
+                    'description' => 'Asistencia para traslados nacionales e internacionales.',
+                    'image' => SITE_BASE_URL . '/assets/img/' . rawurlencode('avion.png'),
+                    'image_alt' => 'Cobertura de viaje',
+                    'url' => '#contacto',
+                    'cta_label' => 'VER COBERTURA',
+                ],
+                [
+                    'title' => 'Fianzas',
+                    'description' => 'Garantías para contratos, obligaciones y compromisos.',
+                    'image' => SITE_BASE_URL . '/assets/img/' . rawurlencode('fianzas.png'),
+                    'image_alt' => 'Cobertura de fianzas',
+                    'url' => '#contacto',
+                    'cta_label' => 'VER COBERTURA',
+                ],
+                [
+                    'title' => 'Servicios Actuariales',
+                    'description' => 'Análisis técnico para decisiones y estimación de riesgos.',
+                    'image' => SITE_BASE_URL . '/assets/img/' . rawurlencode('servicios actuariales.png'),
+                    'image_alt' => 'Servicios actuariales',
+                    'url' => '#contacto',
+                    'cta_label' => 'VER COBERTURA',
+                ],
+            ],
+        ],
+        [
+            'id' => 'personas',
+            'label' => 'Personas',
+            'active' => false,
+            'items' => [
+                [
+                    'title' => 'Gastos Médicos',
+                    'description' => 'Cobertura médica con enfoque en bienestar personal.',
+                    'image' => SITE_BASE_URL . '/assets/img/' . rawurlencode('corazon.png'),
+                    'image_alt' => 'Cobertura de gastos médicos para personas',
+                    'url' => '#contacto',
+                    'cta_label' => 'VER COBERTURA',
+                ],
+                [
+                    'title' => 'Vida',
+                    'description' => 'Respaldo para quienes dependen de ti.',
+                    'image' => SITE_BASE_URL . '/assets/img/' . rawurlencode('vida.png'),
+                    'image_alt' => 'Cobertura de vida para personas',
+                    'url' => '#contacto',
+                    'cta_label' => 'VER COBERTURA',
+                ],
+                [
+                    'title' => 'Viaje',
+                    'description' => 'Asistencia para salidas fuera de casa.',
+                    'image' => SITE_BASE_URL . '/assets/img/' . rawurlencode('avion.png'),
+                    'image_alt' => 'Cobertura de viaje para personas',
+                    'url' => '#contacto',
+                    'cta_label' => 'VER COBERTURA',
+                ],
+                [
+                    'title' => 'Asesoría Integral',
+                    'description' => 'Acompañamiento para definir la protección adecuada.',
+                    'image' => SITE_BASE_URL . '/assets/img/' . rawurlencode('asesoria.png'),
+                    'image_alt' => 'Asesoría integral para personas',
+                    'url' => '#contacto',
+                    'cta_label' => 'VER COBERTURA',
+                ],
+                [
+                    'title' => 'Reclamaciones',
+                    'description' => 'Gestión clara de procesos y seguimiento.',
+                    'image' => SITE_BASE_URL . '/assets/img/' . rawurlencode('reclamaciones.png'),
+                    'image_alt' => 'Gestión de reclamaciones',
+                    'url' => '#contacto',
+                    'cta_label' => 'VER COBERTURA',
+                ],
+                [
+                    'title' => 'Siniestros',
+                    'description' => 'Atención ordenada cuando ocurre un evento.',
+                    'image' => SITE_BASE_URL . '/assets/img/' . rawurlencode('siniestro.png'),
+                    'image_alt' => 'Gestión de siniestros',
+                    'url' => '#contacto',
+                    'cta_label' => 'VER COBERTURA',
+                ],
+            ],
+        ],
+        [
+            'id' => 'gestion-integral',
+            'label' => 'Gestión Integral',
+            'active' => false,
+            'items' => [
+                [
+                    'title' => 'Reclamaciones',
+                    'description' => 'Seguimiento y resolución en cada etapa.',
+                    'image' => SITE_BASE_URL . '/assets/img/' . rawurlencode('reclamaciones.png'),
+                    'image_alt' => 'Gestión de reclamaciones',
+                    'url' => '#contacto',
+                    'cta_label' => 'VER COBERTURA',
+                ],
+                [
+                    'title' => 'Siniestros',
+                    'description' => 'Soporte operativo ante eventos cubiertos.',
+                    'image' => SITE_BASE_URL . '/assets/img/' . rawurlencode('siniestro.png'),
+                    'image_alt' => 'Gestión de siniestros',
+                    'url' => '#contacto',
+                    'cta_label' => 'VER COBERTURA',
+                ],
+                [
+                    'title' => 'Prevención e Ingeniería de Riesgo',
+                    'description' => 'Identificación y reducción de exposiciones.',
+                    'image' => SITE_BASE_URL . '/assets/img/' . rawurlencode('prevención de riesgos.png'),
+                    'image_alt' => 'Prevención e ingeniería de riesgo',
+                    'url' => '#contacto',
+                    'cta_label' => 'VER COBERTURA',
+                ],
+                [
+                    'title' => 'Asesoría Integral',
+                    'description' => 'Diagnóstico y diseño de programa.',
+                    'image' => SITE_BASE_URL . '/assets/img/' . rawurlencode('asesoria.png'),
+                    'image_alt' => 'Asesoría integral',
+                    'url' => '#contacto',
+                    'cta_label' => 'VER COBERTURA',
+                ],
+                [
+                    'title' => 'Servicios Actuariales',
+                    'description' => 'Modelos y análisis para decisiones sostenibles.',
+                    'image' => SITE_BASE_URL . '/assets/img/' . rawurlencode('servicios actuariales.png'),
+                    'image_alt' => 'Servicios actuariales',
+                    'url' => '#contacto',
+                    'cta_label' => 'VER COBERTURA',
+                ],
+            ],
+        ],
+    ],
+];
 ?>
 <?php require __DIR__ . '/includes/header.php'; ?>
 
@@ -190,6 +362,7 @@ $rbCommitmentData = [
     <?php require __DIR__ . '/includes/components/presence.php'; ?>
     <?php require __DIR__ . '/includes/components/esr.php'; ?>
     <?php require __DIR__ . '/includes/components/commitment.php'; ?>
+    <?php require __DIR__ . '/includes/components/solutions.php'; ?>
 </main>
 
 <?php require __DIR__ . '/includes/footer.php'; ?>

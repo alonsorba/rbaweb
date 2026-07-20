@@ -1,5 +1,41 @@
 # Bitacora de cambios
 
+# 2026-07-20 - WEB-007 - Implementacion de la seccion Soluciones
+
+### Cambios
+- Se agrego la seccion de Soluciones despues de Nuestro compromiso, sin tocar el resto del Home.
+- Se construyo un sistema de tabs accesible para las categorias Empresas, Personas y Gestion Integral.
+- Se implemento un carrusel horizontal con controles previos/siguientes y soporte de arrastre con mouse o touch.
+- Se parametrizaron titulos, descripciones, CTA e imagenes por medio de variables PHP para facilitar CMS futuro.
+- Se reutilizaron recursos locales existentes para cada tarjeta sin introducir librerias nuevas.
+
+### Archivos
+- `index.php`
+- `includes/components/solutions.php`
+- `assets/css/variables.css`
+- `assets/css/sections.css`
+- `assets/css/cards.css`
+- `assets/css/carousel.css`
+- `assets/css/responsive.css`
+- `assets/js/main.js`
+- `docs/PLAN_TRABAJO.md`
+- `docs/DOCUMENTACION_TECNICA.md`
+- `docs/DECISIONES.md`
+- `docs/QA_VISUAL.md`
+- `README.md`
+
+### Pruebas
+- Sintaxis PHP validada en `index.php` e `includes/components/solutions.php`.
+- Revision de JS validada con `node --check`.
+- Carga local confirmada con respuesta HTTP 200 en `http://127.0.0.1:8080/rba_web/index.php`.
+- Revision de diff sin conflictos de formato con `git diff --check`.
+- Captura visual generada con Edge headless y revisada en pantalla para confirmar la seccion Soluciones.
+
+### Git
+- Rama: `feature/base-project`
+- Commit: `pendiente`
+- Push: pendiente
+
 ## 2026-07-20 - WEB-006 - Implementacion de la seccion Nuestro compromiso
 
 ### Cambios

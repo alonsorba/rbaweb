@@ -38,6 +38,14 @@ Validacion inicial de la base del Design System.
 - Imagen principal visible sin segundo fondo azul, usando el recurso local completo `compromiso.png`.
 - Validacion tecnica correcta, con HTTP 200 y sin errores de sintaxis detectados.
 
+## WEB-007
+
+- Seccion de Soluciones integrada despues de compromiso y antes del cierre de pagina.
+- Tabs accesibles para Empresas, Personas y Gestion Integral con estados `aria-selected` y paneles asociados.
+- Carrusel horizontal con cards reutilizables, CTA `VER COBERTURA`, botones previos/siguientes y soporte de arrastre.
+- Verificacion tecnica correcta, sin overflow horizontal detectado en la revision del DOM y estilos.
+- Captura headless generada y revisada con viewport alto para confirmar el render de la seccion.
+
 ## Criterios revisados
 
 - Sin desbordamiento horizontal en la base existente.
@@ -47,6 +55,7 @@ Validacion inicial de la base del Design System.
 - Sin desbordamiento horizontal observado en la composicion de presencia.
 - Sin desbordamiento horizontal observado en la seccion ESR.
 - Sin desbordamiento horizontal observado en la seccion de compromiso.
+- Sin desbordamiento horizontal observado en la seccion de Soluciones.
 - El sitio responde con HTTP 200 desde el servidor local.
 ## Pendiente
 

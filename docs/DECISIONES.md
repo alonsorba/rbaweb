@@ -46,3 +46,11 @@
 - No se agrego un fondo azul adicional porque el recurso ya trae la composicion cromatica integrada y duplicarla generaria ruido visual.
 - El texto se compuso con segmentos destacados para controlar jerarquia y saltos sin depender de un rasterizado o una imagen compuesta.
 - La imagen se mantuvo sin recortes agresivos ni filtros para no alterar manos, rostros ni tonos de piel.
+
+## Soluciones
+
+- Se implemento `includes/components/solutions.php` como componente data-driven para facilitar edicion futura desde CMS.
+- Se eligio una interaccion por tabs para las categorias porque resuelve mejor la navegacion semantica y evita depender de sliders de terceros.
+- El carrusel se resolvio con scroll horizontal nativo, scroll-snap y botones propios para mantener rendimiento y accesibilidad.
+- Se agrego soporte de drag con mouse y touch sobre la pista para mejorar la exploracion de tarjetas sin comprometer teclado.
+- Las imagenes se toman de archivos locales ya disponibles y se validan antes de renderizar para evitar enlaces rotos.
