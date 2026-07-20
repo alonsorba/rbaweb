@@ -1,0 +1,44 @@
+:root {
+    --rb-blue-900: #0c3259;
+    --rb-blue-500: #228bd1;
+    --rb-blue-100: #daf2ff;
+    --rb-neutral-050: #fafafa;
+    --rb-white: #ffffff;
+
+    --rb-font-family-sans: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    --rb-font-size-base: 1rem;
+    --rb-line-height-base: 1.6;
+
+    --rb-space-1: 0.25rem;
+    --rb-space-2: 0.5rem;
+    --rb-space-3: 0.75rem;
+    --rb-space-4: 1rem;
+    --rb-space-5: 1.5rem;
+    --rb-space-6: 2rem;
+    --rb-space-7: 3rem;
+    --rb-space-8: 4rem;
+    --rb-space-9: 5rem;
+
+    --rb-radius-sm: 0.75rem;
+    --rb-radius-md: 1rem;
+    --rb-radius-lg: 1.5rem;
+    --rb-radius-xl: 2rem;
+
+    --rb-shadow-soft: 0 16px 40px rgba(12, 50, 89, 0.08);
+    --rb-shadow-card: 0 10px 28px rgba(12, 50, 89, 0.12);
+    --rb-shadow-focus: 0 0 0 0.25rem rgba(34, 139, 209, 0.2);
+
+    --rb-container-max: 1320px;
+    --rb-container-lg: 1140px;
+    --rb-container-md: 960px;
+    --rb-container-sm: 720px;
+
+    --rb-breakpoint-sm: 576px;
+    --rb-breakpoint-md: 768px;
+    --rb-breakpoint-lg: 992px;
+    --rb-breakpoint-xl: 1200px;
+    --rb-breakpoint-xxl: 1400px;
+
+    --rb-gradient-brand: linear-gradient(135deg, var(--rb-blue-900) 0%, #154b82 45%, var(--rb-blue-500) 100%);
+}
+

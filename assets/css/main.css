@@ -1,0 +1,73 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--rb-font-family-sans);
+    font-size: var(--rb-font-size-base);
+    line-height: var(--rb-line-height-base);
+    background:
+        radial-gradient(circle at top left, rgba(34, 139, 209, 0.08), transparent 30%),
+        radial-gradient(circle at top right, rgba(12, 50, 89, 0.08), transparent 28%),
+        var(--rb-neutral-050);
+    color: #15324f;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration-thickness: 0.08em;
+    text-underline-offset: 0.18em;
+}
+
+main {
+    display: block;
+}
+
+.rb-main {
+    padding-bottom: var(--rb-space-8);
+}
+
+.rb-skip-link {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    z-index: 1080;
+    padding: 0.75rem 1rem;
+    border-radius: 999px;
+    background: var(--rb-blue-900);
+    color: var(--rb-white);
+}
+
+.rb-skip-link:focus {
+    box-shadow: var(--rb-shadow-focus);
+}
+
+.btn-rb-primary {
+    --bs-btn-bg: var(--rb-blue-900);
+    --bs-btn-border-color: var(--rb-blue-900);
+    --bs-btn-hover-bg: #0a2745;
+    --bs-btn-hover-border-color: #0a2745;
+    --bs-btn-color: var(--rb-white);
+    --bs-btn-border-radius: 999px;
+    --bs-btn-padding-x: 1.25rem;
+    --bs-btn-padding-y: 0.8rem;
+    --bs-btn-font-weight: 600;
+}
+
+.btn-rb-ghost {
+    --bs-btn-bg: transparent;
+    --bs-btn-border-color: rgba(12, 50, 89, 0.18);
+    --bs-btn-hover-bg: rgba(34, 139, 209, 0.08);
+    --bs-btn-hover-border-color: rgba(34, 139, 209, 0.35);
+    --bs-btn-color: var(--rb-blue-900);
+    --bs-btn-border-radius: 999px;
+    --bs-btn-padding-x: 1.25rem;
+    --bs-btn-padding-y: 0.8rem;
+    --bs-btn-font-weight: 600;
+}
+
