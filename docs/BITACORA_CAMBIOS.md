@@ -33,7 +33,7 @@
 
 ### Git
 - Rama: `feature/base-project`
-- Commit: `pendiente`
+- Commit: `a8ba017`
 - Push: pendiente
 
 ## 2026-07-20 - WEB-006 - Implementacion de la seccion Nuestro compromiso
