@@ -58,6 +58,8 @@ El sistema visual se construye con clases propias prefijadas `rb-` y con `main.c
 
 WEB-003 ya compone el arranque visible del Home con navbar, hero y metricas, usando solo recursos locales existentes y variables PHP preparadas para edicion posterior.
 
+WEB-004 agrega presencia nacional con mapa de Mexico, marcador de matriz en Sonora y contador de estados, manteniendo la misma base editable para CMS.
+
 ## Manuales y mockups
 
 - `docs/PLAN_TRABAJO.md`

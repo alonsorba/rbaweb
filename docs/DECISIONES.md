@@ -26,3 +26,9 @@
 - El logo de cabecera y la imagen principal del hero se toman de recursos locales ya disponibles para no introducir dependencias nuevas.
 - La navegacion superior inicia transparente sobre el hero y cambia al hacer scroll mediante una clase controlada por JavaScript.
 - El contenido visible del Home se alimenta desde variables PHP para facilitar el futuro CMS.
+
+## Presencia nacional
+
+- Se eligio el mapa local `assets/img/mapa al ras.png` por ser el candidato mas cercano al mockup y por contar con transparencia y definicion suficiente.
+- La linea punteada y el marcador se resolvieron con HTML y CSS para evitar dependencias extras y conservar estabilidad responsive.
+- En mobile se prioriza la legibilidad del mapa y se oculta el conector si compromete la composicion.

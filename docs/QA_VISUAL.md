@@ -17,12 +17,20 @@ Validacion inicial de la base del Design System.
 - Hero principal con imagen local, card oscura y CTA.
 - Bloque de metricas con tres columnas sin separadores.
 
+## WEB-004
+
+- Seccion de presencia nacional con mapa local de Mexico.
+- Etiqueta de ubicacion en azul corporativo con texto blanco.
+- Contador +25 alineado con la composicion general.
+- Conector punteado visible en desktop y oculto en mobile para mantener estabilidad.
+
 ## Criterios revisados
 
 - Sin desbordamiento horizontal en la base existente.
 - Estructura responsive preparada para desktop, laptop, tablet y mobile.
 - Clases reutilizables disponibles para posteriores secciones.
 - Preparado para contraste y navegacion por teclado en los controles principales.
+- Sin desbordamiento horizontal observado en la composicion de presencia.
 ## Pendiente
 
 - Comparacion visual de nuevas paginas o secciones cuando exista contenido real del Home o de paginas internas.

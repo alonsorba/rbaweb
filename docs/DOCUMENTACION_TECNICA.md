@@ -22,6 +22,14 @@ WEB-003 compone solamente el arranque visible del Home:
 - Bloque de metricas reutilizable con tres contadores.
 - Datos preparados en variables PHP para posterior edicion desde CMS.
 
+## Presencia nacional
+
+WEB-004 agrega una seccion dedicada a cobertura nacional con el mapa local de Mexico, una etiqueta de ubicacion, una conexion visual punteada y un contador de estados.
+
+- `includes/components/presence.php` valida la existencia del recurso antes de renderizarlo.
+- El mapa usa un archivo local PNG con transparencia y dimensiones grandes para evitar pixelado.
+- La composicion se resuelve con grid, variables CSS y un conector decorativo que se oculta en mobile si no aporta estabilidad visual.
+
 ## Arquitectura CSS
 
 `main.css` funciona como unico archivo de carga del sistema y ordena:
@@ -70,3 +78,4 @@ Se definieron variables para:
 - La separacion de tokens, utilidades y componentes facilita convertir el front en bloques administrables.
 - No se agrego contenido temporal ni lorem ipsum.
 - El Home inicial usa variables para el logo, enlaces, hero, CTA y metricas.
+- La presencia nacional usa variables para la seccion, el mapa, la etiqueta, el punto de ubicacion y el contador.

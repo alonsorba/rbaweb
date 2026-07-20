@@ -83,3 +83,30 @@
 - Rama: `feature/base-project`
 - Commit: `2bc44a9`
 - Push: pendiente
+
+## 2026-07-20 - WEB-004 - Presencia nacional y mapa de Mexico
+
+### Cambios
+- Se agrego la seccion de presencia nacional despues de las metricas.
+- Se implemento un mapa local de Mexico con transparencia como recurso principal.
+- Se preparo una etiqueta de ubicacion para la matriz en Ciudad Obregon, Sonora.
+- Se agrego un contador de estados y un conector punteado para la composicion visual.
+- Se documentaron los recursos de mapa analizados y la decision tecnica tomada.
+
+### Archivos
+- `index.php`
+- `includes/components/presence.php`
+- `assets/css/variables.css`
+- `assets/css/sections.css`
+- `assets/css/responsive.css`
+- `docs/INVENTARIO_CONTENIDO.md`
+- `docs/PREPARACION_CMS.md`
+
+### Pruebas
+- Sintaxis PHP pendiente de ejecucion final.
+- Verificacion responsive y visual pendiente de ejecucion final.
+
+### Git
+- Rama: `feature/base-project`
+- Commit: `fb1f511`
+- Push: pendiente
