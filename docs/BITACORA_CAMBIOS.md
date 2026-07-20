@@ -30,8 +30,8 @@
 
 ### Git
 - Rama: `feature/base-project`
-- Commit: `pendiente`
-- Push: pendiente
+- Commit: `829932d`
+- Push: completado
 
 ## 2026-07-20 - WEB-005 - Implementacion de la seccion Empresa Socialmente Responsable
 
