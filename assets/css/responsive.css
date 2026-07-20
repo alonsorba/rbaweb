@@ -1,38 +1,83 @@
+@media (max-width: 1399.98px) {
+    .rb-container {
+        --rb-container-padding-x: var(--rb-space-5);
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .rb-hero__title,
+    .rb-section-title {
+        font-size: var(--rb-font-size-4xl);
+    }
+}
+
 @media (max-width: 991.98px) {
-    .hero-shell {
-        padding-top: 3rem;
+    .rb-main {
+        padding-block: var(--rb-space-7);
     }
 
-    .rb-status-card,
-    .rb-mini-card {
-        border-radius: 1.25rem;
+    .rb-section {
+        padding-block: var(--rb-space-7);
+    }
+
+    .rb-grid--3,
+    .rb-grid--4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .rb-hero__container {
+        gap: var(--rb-space-5);
+    }
+
+    .rb-brand-logo {
+        max-width: 160px;
+        max-height: 56px;
     }
 }
 
 @media (max-width: 767.98px) {
-    .display-5 {
-        font-size: calc(1.15rem + 3vw);
+    .rb-container {
+        --rb-container-padding-x: var(--rb-space-4);
     }
 
-    .rb-status-list li {
-        align-items: baseline;
-        flex-direction: column;
-        gap: 0.25rem;
+    .rb-grid--2,
+    .rb-grid--3,
+    .rb-grid--4 {
+        grid-template-columns: 1fr;
+    }
+
+    .rb-hero {
+        padding-block: var(--rb-space-7);
+    }
+
+    .rb-hero__title,
+    .rb-section-title {
+        font-size: var(--rb-font-size-3xl);
+    }
+
+    .rb-navbar__inner {
+        gap: var(--rb-space-3);
     }
 }
 
 @media (max-width: 575.98px) {
-    .hero-shell {
-        padding-top: 2rem;
+    .rb-main {
+        padding-block: var(--rb-space-6);
+    }
+
+    .rb-section {
+        padding-block: var(--rb-space-6);
+    }
+
+    .rb-card__header,
+    .rb-card__body,
+    .rb-card__footer,
+    .rb-stat-card {
+        padding: var(--rb-space-4);
     }
 
     .rb-brand-logo {
         max-width: 148px;
         max-height: 52px;
-    }
-
-    .rb-status-card,
-    .rb-mini-card {
-        padding: 1.25rem;
     }
 }

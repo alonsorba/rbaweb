@@ -1,0 +1,84 @@
+.rb-button,
+.btn-rb-primary,
+.btn-rb-ghost {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--rb-space-2);
+    min-height: var(--rb-control-height-md);
+    padding: var(--rb-control-padding-y) var(--rb-control-padding-x);
+    border: 1px solid transparent;
+    border-radius: var(--rb-radius-pill);
+    font-weight: var(--rb-font-weight-semibold);
+    line-height: 1;
+    text-decoration: none;
+    transition:
+        transform var(--rb-duration-fast) var(--rb-easing-standard),
+        background-color var(--rb-duration-fast) var(--rb-easing-standard),
+        border-color var(--rb-duration-fast) var(--rb-easing-standard),
+        color var(--rb-duration-fast) var(--rb-easing-standard),
+        box-shadow var(--rb-duration-fast) var(--rb-easing-standard);
+    cursor: pointer;
+}
+
+.rb-button:focus-visible,
+.btn-rb-primary:focus-visible,
+.btn-rb-ghost:focus-visible {
+    box-shadow: var(--rb-shadow-focus);
+}
+
+.rb-button:hover,
+.btn-rb-primary:hover,
+.btn-rb-ghost:hover {
+    transform: translateY(-1px);
+}
+
+.rb-button--primary,
+.btn-rb-primary {
+    background: var(--rb-gradient-brand);
+    color: var(--rb-white);
+    box-shadow: var(--rb-shadow-soft);
+}
+
+.rb-button--primary:hover,
+.btn-rb-primary:hover {
+    color: var(--rb-white);
+    box-shadow: var(--rb-shadow-elevated);
+}
+
+.rb-button--secondary {
+    background: var(--rb-color-secondary-500);
+    color: var(--rb-white);
+}
+
+.rb-button--outline,
+.btn-rb-ghost {
+    background: transparent;
+    border-color: var(--rb-color-border-strong);
+    color: var(--rb-color-primary-900);
+}
+
+.rb-button--outline:hover,
+.btn-rb-ghost:hover {
+    background: rgba(34, 139, 209, 0.08);
+    border-color: rgba(34, 139, 209, 0.35);
+    color: var(--rb-color-primary-900);
+}
+
+.rb-button--icon {
+    width: var(--rb-control-height-md);
+    padding: 0;
+    border-radius: 50%;
+}
+
+.rb-button-group {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: var(--rb-space-3);
+}
+
+.rb-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--rb-space-3);
+}

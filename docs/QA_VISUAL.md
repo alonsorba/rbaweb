@@ -1,28 +1,21 @@
 # QA visual
 
-## Estado actual
+## Estado
 
-La validación visual de esta entrega se limita a la base técnica inicial. El objetivo de esta etapa no es reproducir todavía el home completo, sino confirmar que el esqueleto carga y es responsive sin desbordamientos evidentes.
+Validacion inicial de la base del Design System.
 
-## Referencia
+## Alcance verificado
 
-- Mockups aprobados: pendientes de incorporación en esta fase.
-- Manual de marca: referencia indicada por el proyecto.
-- Manual de identidad visual: referencia indicada por el proyecto.
+- El sitio sigue cargando desde PHP local.
+- La hoja principal importa el sistema CSS completo.
+- No se modifico `index.php`.
+- No se agregaron librerias nuevas.
 
-## Viewports previstos para revisión posterior
+## Criterios revisados
 
-- 375 x 812
-- 430 x 932
-- 768 x 1024
-- 1024 x 768
-- 1366 x 768
-- 1440 x 900
-- 1920 x 1080
+- Sin desbordamiento horizontal en la base existente.
+- Estructura responsive preparada para desktop, laptop, tablet y mobile.
+- Clases reutilizables disponibles para posteriores secciones.
+## Pendiente
 
-## Observaciones
-
-- La base usa contenedores fluidos y evita anchuras fijas que provoquen scroll horizontal.
-- Se validó una primera pasada con capturas en móvil y escritorio para comprobar que el layout inicial no rompe el viewport.
-- La cabecera usa una variante horizontal del logotipo para reducir la altura en móvil.
-- El próximo ciclo debe registrar capturas comparativas cuando existan mockups definitivos para el home.
+- Comparacion visual de nuevas paginas o secciones cuando exista contenido real del Home o de paginas internas.

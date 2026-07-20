@@ -1,0 +1,46 @@
+@keyframes rb-fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes rb-rise-up {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rb-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
+@keyframes rb-pulse-soft {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+}
+
+.rb-animate-fade-in {
+    animation: rb-fade-in var(--rb-duration-normal) var(--rb-easing-standard) both;
+}
+
+.rb-animate-rise {
+    animation: rb-rise-up var(--rb-duration-slow) var(--rb-easing-standard) both;
+}
+
+.rb-animate-float {
+    animation: rb-float 6s ease-in-out infinite;
+}
+
+.rb-animate-pulse {
+    animation: rb-pulse-soft 3s ease-in-out infinite;
+}
+
+.rb-animate-delay-1 { animation-delay: 0.12s; }
+.rb-animate-delay-2 { animation-delay: 0.24s; }
+.rb-animate-delay-3 { animation-delay: 0.36s; }

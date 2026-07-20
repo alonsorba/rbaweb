@@ -1,0 +1,45 @@
+.rb-section-header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--rb-space-2);
+    margin-bottom: var(--rb-space-6);
+}
+
+.rb-kicker,
+.rb-section-eyebrow,
+.rb-section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--rb-space-2);
+    width: fit-content;
+    font-size: var(--rb-font-size-sm);
+    font-weight: var(--rb-font-weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--rb-color-primary-500);
+}
+
+.rb-section-title {
+    margin: 0;
+    font-size: var(--rb-font-size-3xl);
+    line-height: var(--rb-line-height-tight);
+    font-weight: var(--rb-font-weight-bold);
+    color: var(--rb-color-primary-900);
+}
+
+.rb-section-subtitle {
+    margin: 0;
+    max-width: var(--rb-text-measure);
+    font-size: var(--rb-font-size-md);
+    color: var(--rb-color-text-muted);
+}
+
+.rb-section-divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(12, 50, 89, 0.2), rgba(12, 50, 89, 0));
+}
+
+.rb-section-divider--center {
+    margin-inline: auto;
+}

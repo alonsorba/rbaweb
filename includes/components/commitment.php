@@ -1,0 +1,2 @@
+<?php
+$rbCommitmentData = $rbCommitmentData ?? [];

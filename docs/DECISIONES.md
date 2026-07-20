@@ -1,27 +1,22 @@
-# Decisiones técnicas
+# Decisiones tecnicas
 
-## 2026-07-20 - Base del proyecto
+## Base inicial
 
-### 1. Rama de trabajo
+- Se conservo `index.php` sin cambios para no alterar el Home.
+- Se mantuvo Bootstrap 5.3.3 como dependencia ya aprobada.
+- Montserrat sigue cargando desde Google Fonts hasta contar con archivos licenciados locales.
 
-Se utilizó `feature/base-project` para respetar la convención solicitada y aislar la base del sitio.
+## Design System
 
-### 2. Bootstrap 5.3.3
+- Se dividio el sistema en archivos de responsabilidad unica para evitar una CSS monolitica.
+- `main.css` quedo como unico importador para simplificar el mantenimiento.
+- Las clases nuevas se prefijan con `rb-` para minimizar colisiones con Bootstrap y con codigo futuro.
 
-Se integró Bootstrap 5.3.3 por CDN temporal en esta fase inicial para poder validar rápidamente la base visual sin introducir más dependencias.
+## Componentes PHP
 
-### 3. Montserrat
+- Los stubs de `includes/components/` no imprimen contenido.
+- Cada archivo reserva una variable PHP para que el futuro CMS pueda inyectar datos sin reescribir la estructura.
 
-La tipografía Montserrat se carga desde un recurso externo temporal porque el repositorio todavía no contiene archivos oficiales licenciados.
+## Compatibilidad
 
-### 4. Logotipo
-
-Se conserva el archivo oficial ya presente en el repositorio y no se reconstruye con texto ni se altera su identidad.
-
-### 5. Carpeta de temporales
-
-Se creó `assets/img/temporary/` para separar recursos provisionales de los definitivos y facilitar limpieza posterior.
-
-### 6. Variante de logotipo para cabecera
-
-Se eligió `assets/img/R BAIDON V3 RGB (WEB).png` para la cabecera porque su proporción horizontal encaja mejor en el espacio disponible sin reconstruir ni alterar el archivo oficial.
+- Se conservan alias tecnicos necesarios para la base previa mientras el sistema evoluciona hacia los nuevos componentes.

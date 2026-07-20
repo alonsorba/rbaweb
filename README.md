@@ -1,13 +1,13 @@
-# R. Baidón - Sitio institucional
+# R. Baidon - Sitio institucional
 
 ## Objetivo
 
-Renovación completa del sitio institucional de R. Baidón con una base front-end modular en PHP, HTML5 semántico, Bootstrap 5.3.3, CSS3 y JavaScript vanilla.
+Renovacion completa del sitio institucional de R. Baidon con una base front-end modular en PHP, HTML5 semantico, Bootstrap 5.3.3, CSS3 y JavaScript vanilla.
 
-## Tecnologías
+## Tecnologias
 
 - PHP
-- HTML5 semántico
+- HTML5 semantico
 - Bootstrap 5.3.3
 - CSS3
 - JavaScript vanilla
@@ -15,18 +15,16 @@ Renovación completa del sitio institucional de R. Baidón con una base front-en
 ## Requisitos locales
 
 - PHP instalado localmente.
-- Servidor integrado de PHP o Apache/Nginx local.
+- Servidor integrado de PHP o servidor local equivalente.
 - Navegador moderno.
 
-## Cómo ejecutar el proyecto
-
-Con el servidor integrado de PHP:
+## Ejecucion local
 
 ```bash
 php -S localhost:8000 -t .
 ```
 
-Luego abrir:
+Abrir:
 
 ```text
 http://localhost:8000
@@ -34,30 +32,27 @@ http://localhost:8000
 
 ## Estructura de carpetas
 
-- `index.php`: punto de entrada del sitio.
-- `includes/`: parciales reutilizables del layout.
-- `includes/components/`: componentes PHP para secciones futuras.
-- `assets/css/`: variables, estilos base, componentes y responsive.
-- `assets/js/`: comportamiento JavaScript.
+- `index.php`: punto de entrada actual.
+- `includes/`: parciales del layout y stubs de componentes.
+- `assets/css/`: Design System base.
+- `assets/js/`: comportamiento vanilla.
 - `assets/img/brand/`: recursos de marca.
-- `assets/img/home/`: recursos para el home.
-- `assets/img/icons/`: iconografía del sitio.
+- `assets/img/home/`: recursos para el Home.
+- `assets/img/icons/`: iconos.
 - `assets/img/temporary/`: recursos provisionales.
-- `assets/fonts/`: tipografías locales con licencia.
-- `pages/`: páginas internas futuras.
-- `docs/`: documentación técnica y de seguimiento.
+- `assets/fonts/`: fuentes locales con licencia.
+- `pages/`: paginas internas futuras.
+- `docs/`: documentacion del proyecto.
 
-## Convención de ramas y commits
+## Convencion de ramas y commits
 
 - Rama base: `main`.
-- Rama de trabajo para esta base: `feature/base-project`.
-- Commits con formato Conventional Commits.
+- Rama de trabajo actual: `feature/base-project`.
+- Commits con Conventional Commits.
 
-Ejemplo:
+## Design System
 
-```text
-feat: crea estructura inicial del sitio web
-```
+El sistema visual se construye con clases propias prefijadas `rb-` y con `main.css` como importador central. La estructura ya esta preparada para reutilizar componentes y evolucionar hacia un CMS.
 
 ## Manuales y mockups
 
@@ -66,12 +61,6 @@ feat: crea estructura inicial del sitio web
 - `docs/BITACORA_CAMBIOS.md`
 - `docs/DECISIONES.md`
 - `docs/QA_VISUAL.md`
-- `docs/INVENTARIO_CONTENIDO.md`
 - `docs/PREPARACION_CMS.md`
-
-Los mockups y manuales de marca deben conservarse como referencias oficiales del proyecto y documentarse en el inventario cuando estén disponibles dentro del repositorio.
-
-## Nota sobre tipografía
-
-Montserrat se deja preparada como tipografía de interfaz. Si los archivos oficiales no están disponibles, el proyecto puede apoyarse temporalmente en una carga externa documentada hasta contar con los recursos licenciados.
+- `docs/INVENTARIO_CONTENIDO.md`
 

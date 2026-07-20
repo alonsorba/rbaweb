@@ -1,40 +1,62 @@
-# Documentación técnica
+# Documentacion tecnica
 
 ## Arquitectura base
 
-La primera entrega del sitio se organiza como una base PHP modular sin framework de servidor:
+La base del sitio se mantiene en PHP modular sin framework de servidor.
 
-- `index.php` como punto de entrada visible.
+- `index.php` como punto de entrada existente.
 - `includes/head.php` para metadatos, estilos y apertura del documento.
-- `includes/header.php` para la navegación superior.
-- `includes/footer.php` para el pie de página.
-- `includes/scripts.php` para cargar JavaScript al final del documento.
-- `assets/css/` para variables, estilos base, componentes y responsive.
+- `includes/header.php` para la cabecera actual.
+- `includes/footer.php` para el pie actual.
+- `includes/scripts.php` para el cierre del documento.
+- `includes/components/` para stubs de componentes reutilizables.
+- `assets/css/` para el Design System base.
 - `assets/js/` para comportamiento vanilla.
 
-## Criterios de implementación
+## Arquitectura CSS
 
-- HTML5 semántico.
-- Bootstrap 5.3.3 como base de grid y utilidades.
-- CSS propio para identidad visual, radios, sombras y ajustes responsive.
-- JavaScript mínimo, sin dependencias adicionales.
-- Estructura preparada para crecimiento por secciones y reutilización de componentes.
+`main.css` funciona como unico archivo de carga del sistema y ordena:
 
-## Estrategia de tipografía
+- `variables.css`
+- `reset.css`
+- `layout.css`
+- `utilities.css`
+- `buttons.css`
+- `cards.css`
+- `navbar.css`
+- `hero.css`
+- `sections.css`
+- `carousel.css`
+- `forms.css`
+- `footer.css`
+- `animations.css`
+- `responsive.css`
 
-- Montserrat se prepara como tipografía de interfaz.
-- Mientras no existan archivos licenciados oficiales en el repositorio, la carga se resuelve como recurso externo temporal.
-- La carpeta `assets/fonts/` queda preparada para la etapa en que se incorporen fuentes con licencia y autorización interna.
+## Tokens globales
 
-## Estrategia de activos
+Se definieron variables para:
 
-- El repositorio ya contiene imágenes oficiales y recursos previos en `assets/img/`.
-- No se han eliminado ni renombrado recursos existentes.
-- Las carpetas nuevas bajo `assets/img/brand`, `home`, `icons` y `temporary` se crean para ordenar la futura evolución del sitio.
+- Colores oficiales.
+- Gradientes corporativos.
+- Espaciados.
+- Breakpoints.
+- Border radius.
+- Sombras.
+- Glassmorphism y blur.
+- Transiciones y duraciones.
+- Z-index.
+- Tipografias y pesos.
+- Tamaños de texto y alturas.
+- Contenedores y medidas base.
 
-## Preparación para CMS
+## Sistema de clases
 
-- Las secciones futuras deberán desacoplar contenido, orden, visibilidad e imágenes.
-- Los bloques repetitivos deberán prepararse para iteración desde datos estructurados.
-- La documentación funcional de cada módulo se registrará en `docs/PREPARACION_CMS.md`.
+- Todas las clases nuevas usan prefijo `rb-`.
+- Se mantuvieron alias tecnicos para compatibilidad con la base previa, sin introducir nuevas librerias.
+
+## Preparacion para CMS
+
+- Cada stub PHP deja una variable reservada para futuros datos editables.
+- La separacion de tokens, utilidades y componentes facilita convertir el front en bloques administrables.
+- No se agrego contenido temporal ni lorem ipsum.
 

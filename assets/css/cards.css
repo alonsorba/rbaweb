@@ -1,0 +1,181 @@
+.rb-card,
+.rb-stat-card,
+.rb-image-frame,
+.rb-carousel-card,
+.rb-glass-card,
+.rb-floating-badge {
+    position: relative;
+    border-radius: var(--rb-radius-xl);
+}
+
+.rb-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--rb-white);
+    border: 1px solid var(--rb-color-border);
+    box-shadow: var(--rb-shadow-soft);
+    overflow: hidden;
+}
+
+.rb-card--glass,
+.rb-glass-card {
+    background: var(--rb-glass-bg);
+    border: 1px solid var(--rb-glass-border);
+    backdrop-filter: blur(var(--rb-glass-blur));
+    -webkit-backdrop-filter: blur(var(--rb-glass-blur));
+}
+
+.rb-card--flat {
+    box-shadow: none;
+}
+
+.rb-card--elevated {
+    box-shadow: var(--rb-shadow-elevated);
+}
+
+.rb-card__header,
+.rb-card__body,
+.rb-card__footer {
+    padding: var(--rb-card-padding);
+}
+
+.rb-card__header {
+    border-bottom: 1px solid var(--rb-color-border);
+}
+
+.rb-card__footer {
+    border-top: 1px solid var(--rb-color-border);
+}
+
+.rb-stat-card {
+    padding: var(--rb-card-padding);
+    background: var(--rb-white);
+    border: 1px solid var(--rb-color-border);
+    box-shadow: var(--rb-shadow-soft);
+}
+
+.rb-counter {
+    font-size: var(--rb-font-size-3xl);
+    line-height: 1;
+    font-weight: var(--rb-font-weight-bold);
+    color: var(--rb-color-primary-900);
+}
+
+.rb-indicator,
+.rb-badge,
+.rb-pill,
+.rb-floating-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--rb-space-2);
+    font-weight: var(--rb-font-weight-semibold);
+}
+
+.rb-badge {
+    min-height: 1.75rem;
+    padding-inline: var(--rb-space-3);
+    border-radius: var(--rb-radius-pill);
+    background: rgba(12, 50, 89, 0.08);
+    color: var(--rb-color-primary-900);
+}
+
+.rb-pill {
+    min-height: 2rem;
+    padding-inline: var(--rb-space-4);
+    border-radius: var(--rb-radius-pill);
+    background: var(--rb-color-surface-alt);
+    color: var(--rb-color-primary-900);
+}
+
+.rb-indicator {
+    width: var(--rb-indicator-size);
+    height: var(--rb-indicator-size);
+    border-radius: 50%;
+    background: var(--rb-color-primary-500);
+    box-shadow: var(--rb-shadow-soft);
+}
+
+.rb-floating-badge {
+    position: absolute;
+    top: var(--rb-space-4);
+    right: var(--rb-space-4);
+    padding-inline: var(--rb-space-3);
+    min-height: 2rem;
+    border-radius: var(--rb-radius-pill);
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: var(--rb-shadow-soft);
+}
+
+.rb-image-frame {
+    overflow: hidden;
+    background: var(--rb-color-surface-alt);
+    border: 1px solid var(--rb-color-border);
+}
+
+.rb-image-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.rb-icon-circle {
+    width: var(--rb-icon-circle-size);
+    height: var(--rb-icon-circle-size);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(34, 139, 209, 0.12);
+    color: var(--rb-color-primary-500);
+}
+
+.rb-status-card,
+.rb-mini-card {
+    padding: var(--rb-card-padding);
+    background: var(--rb-glass-bg);
+    border: 1px solid var(--rb-color-border);
+    box-shadow: var(--rb-shadow-soft);
+    backdrop-filter: blur(var(--rb-glass-blur));
+    -webkit-backdrop-filter: blur(var(--rb-glass-blur));
+}
+
+.rb-status-card {
+    display: grid;
+    gap: var(--rb-space-4);
+}
+
+.rb-status-list {
+    display: grid;
+    gap: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.rb-status-list li {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--rb-space-4);
+    padding: var(--rb-space-3) 0;
+    border-bottom: 1px solid var(--rb-color-border);
+}
+
+.rb-status-list li:last-child {
+    border-bottom: 0;
+}
+
+.rb-status-list span {
+    color: var(--rb-color-text-muted);
+}
+
+.rb-status-list strong {
+    color: var(--rb-color-primary-900);
+}
+
+.rb-status-note {
+    padding: 1rem 1.15rem;
+    border-radius: var(--rb-radius-md);
+    background: var(--rb-gradient-soft);
+    color: var(--rb-color-text-muted);
+}

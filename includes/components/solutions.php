@@ -1,0 +1,2 @@
+<?php
+$rbSolutionsData = $rbSolutionsData ?? [];

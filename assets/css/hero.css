@@ -1,0 +1,55 @@
+.hero-shell,
+.rb-hero {
+    position: relative;
+}
+
+.rb-hero {
+    padding-block: var(--rb-space-8);
+}
+
+.rb-hero__container {
+    display: grid;
+    gap: var(--rb-space-6);
+    align-items: center;
+}
+
+.rb-hero__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--rb-space-4);
+}
+
+.rb-hero__media {
+    position: relative;
+    min-height: var(--rb-hero-media-min-height);
+}
+
+.rb-hero__title {
+    margin: 0;
+    font-size: var(--rb-font-size-4xl);
+    line-height: var(--rb-line-height-tight);
+    font-weight: var(--rb-font-weight-bold);
+    color: var(--rb-color-primary-900);
+}
+
+.rb-hero__subtitle {
+    margin: 0;
+    font-size: var(--rb-font-size-lg);
+    color: var(--rb-color-text-muted);
+}
+
+.rb-hero__lead {
+    margin: 0;
+    font-size: var(--rb-font-size-md);
+    color: var(--rb-color-text-muted);
+}
+
+.rb-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--rb-space-3);
+}
+
+.rb-hero__badge {
+    width: fit-content;
+}

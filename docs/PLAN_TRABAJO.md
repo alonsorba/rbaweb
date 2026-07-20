@@ -1,24 +1,24 @@
-# Plan de trabajo - Renovación del sitio web de R. Baidón
+# Plan de trabajo - Renovacion del sitio web de R. Baidon
 
 ## Seguimiento
 
 | ID | Fase | Tarea | Estado | Dependencias | Evidencia | Commit |
 |---|---|---|---|---|---|---|
-| WEB-001 | Base | Crear estructura inicial del sitio | Bloqueado | Repositorio local y recursos de marca disponibles | Estructura modular creada localmente; validada con servidor PHP y capturas mobile/desktop; push bloqueado por ausencia de remoto configurado | `bc7502d` |
+| WEB-001 | Base | Crear estructura inicial del sitio | Bloqueado | Repositorio local y recursos de marca disponibles | Base PHP modular, validacion local y push bloqueado por falta de remoto | `bc7502d` |
+| WEB-002 | Base | Creacion del Design System Base | Bloqueado | Base PHP existente, Bootstrap 5.3.3 y recursos de marca | Sistema CSS modular, stubs PHP de componentes y validacion local de carga | Pendiente |
 
-## Alcance del proyecto
+## Fases generales
 
-- Base técnica.
+- Base tecnica.
 - Home por secciones.
-- Páginas internas.
+- Paginas internas.
 - Responsive y accesibilidad.
-- SEO técnico.
+- SEO tecnico.
 - QA visual.
-- Publicación.
-- Preparación para CMS.
+- Publicacion.
+- Preparacion para CMS.
 
-## Observaciones
+## Estado actual
 
-- El plan original y esta base se enfocan en front-end primero.
-- La documentación del CMS debe ir creciendo conforme cada sección quede definida y aprobada.
-- El cierre real de WEB-001 queda condicionado a confirmar remoto y publicar el commit.
+- WEB-002 quedo preparado localmente sin tocar `index.php` ni el contenido del Home.
+- La salida formal sigue bloqueada hasta configurar remoto y poder hacer push.

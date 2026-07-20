@@ -1,0 +1,50 @@
+.rb-carousel {
+    position: relative;
+}
+
+.rb-carousel__track {
+    display: grid;
+    gap: var(--rb-space-4);
+}
+
+.rb-carousel-card {
+    background: var(--rb-white);
+    border: 1px solid var(--rb-color-border);
+    box-shadow: var(--rb-shadow-soft);
+    overflow: hidden;
+}
+
+.rb-carousel-nav {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--rb-space-2);
+}
+
+.rb-carousel-button {
+    width: var(--rb-control-height-md);
+    height: var(--rb-control-height-md);
+    border: 1px solid var(--rb-color-border-strong);
+    border-radius: 50%;
+    background: var(--rb-white);
+    color: var(--rb-color-primary-900);
+    transition:
+        transform var(--rb-duration-fast) var(--rb-easing-standard),
+        box-shadow var(--rb-duration-fast) var(--rb-easing-standard);
+}
+
+.rb-carousel-button:hover,
+.rb-carousel-button:focus-visible {
+    transform: translateY(-1px);
+    box-shadow: var(--rb-shadow-soft);
+}
+
+.rb-carousel-indicator {
+    width: var(--rb-indicator-size);
+    height: var(--rb-indicator-size);
+    border-radius: 50%;
+    background: rgba(12, 50, 89, 0.18);
+}
+
+.rb-carousel-indicator.is-active {
+    background: var(--rb-color-primary-500);
+}

@@ -1,0 +1,2 @@
+<?php
+$rbFooterData = $rbFooterData ?? [];

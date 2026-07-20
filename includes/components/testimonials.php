@@ -1,0 +1,2 @@
+<?php
+$rbTestimonialsData = $rbTestimonialsData ?? [];

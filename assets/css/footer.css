@@ -1,0 +1,35 @@
+.rb-footer {
+    position: relative;
+    background: var(--rb-white);
+    border-top: 1px solid var(--rb-color-border);
+}
+
+.rb-footer__brand,
+.rb-footer__links,
+.rb-footer__social,
+.rb-footer__note {
+    display: flex;
+    flex-direction: column;
+    gap: var(--rb-space-3);
+}
+
+.rb-footer__links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.rb-footer__social {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.rb-footer__link {
+    color: var(--rb-color-text);
+    text-decoration: none;
+}
+
+.rb-footer__link:hover,
+.rb-footer__link:focus-visible {
+    color: var(--rb-color-primary-500);
+}

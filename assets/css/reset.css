@@ -1,0 +1,79 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: var(--rb-font-family-interface);
+    font-size: var(--rb-font-size-md);
+    line-height: var(--rb-line-height-base);
+    color: var(--rb-color-text);
+    background:
+        radial-gradient(circle at top left, rgba(34, 139, 209, 0.08), transparent 30%),
+        radial-gradient(circle at top right, rgba(12, 50, 89, 0.08), transparent 28%),
+        var(--rb-color-page);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration-color: currentColor;
+    text-underline-offset: 0.18em;
+}
+
+main,
+header,
+footer,
+nav,
+section,
+article,
+aside {
+    display: block;
+}
+
+:focus {
+    outline: none;
+}
+
+:focus-visible {
+    box-shadow: var(--rb-shadow-focus);
+}
+
+.rb-skip-link {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    z-index: var(--rb-z-tooltip);
+    padding: 0.75rem 1rem;
+    border-radius: var(--rb-radius-pill);
+    background: var(--rb-color-primary-900);
+    color: var(--rb-white);
+}
+
+.rb-skip-link:focus-visible {
+    box-shadow: var(--rb-shadow-focus);
+}
