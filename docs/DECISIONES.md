@@ -20,3 +20,9 @@
 ## Compatibilidad
 
 - Se conservan alias tecnicos necesarios para la base previa mientras el sistema evoluciona hacia los nuevos componentes.
+
+## Home inicial
+
+- El logo de cabecera y la imagen principal del hero se toman de recursos locales ya disponibles para no introducir dependencias nuevas.
+- La navegacion superior inicia transparente sobre el hero y cambia al hacer scroll mediante una clase controlada por JavaScript.
+- El contenido visible del Home se alimenta desde variables PHP para facilitar el futuro CMS.

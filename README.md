@@ -54,6 +54,10 @@ http://localhost:8000
 
 El sistema visual se construye con clases propias prefijadas `rb-` y con `main.css` como importador central. La estructura ya esta preparada para reutilizar componentes y evolucionar hacia un CMS.
 
+## Estado del Home
+
+WEB-003 ya compone el arranque visible del Home con navbar, hero y metricas, usando solo recursos locales existentes y variables PHP preparadas para edicion posterior.
+
 ## Manuales y mockups
 
 - `docs/PLAN_TRABAJO.md`
@@ -63,4 +67,3 @@ El sistema visual se construye con clases propias prefijadas `rb-` y con `main.c
 - `docs/QA_VISUAL.md`
 - `docs/PREPARACION_CMS.md`
 - `docs/INVENTARIO_CONTENIDO.md`
-

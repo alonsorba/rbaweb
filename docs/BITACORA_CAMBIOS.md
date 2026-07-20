@@ -50,3 +50,36 @@
 - Rama: `feature/base-project`
 - Commit: `d53bbac`
 - Push: bloqueado por falta de remoto configurado
+
+## 2026-07-20 - WEB-003 - Encabezado, hero y metricas del home
+
+### Cambios
+- Se reemplazo el bloque provisional del Home por una composicion real de navbar, hero y metricas.
+- Se preparo el menu responsive con Bootstrap collapse y estado `rb-navbar--scrolled`.
+- Se reutilizaron recursos locales existentes para logo e imagen principal.
+- Se agregaron datos del Home en variables PHP para preparacion de CMS.
+
+### Archivos
+- `index.php`
+- `includes/head.php`
+- `includes/header.php`
+- `includes/components/navbar.php`
+- `includes/components/hero.php`
+- `includes/components/stats.php`
+- `assets/js/main.js`
+- `assets/css/variables.css`
+- `assets/css/buttons.css`
+- `assets/css/cards.css`
+- `assets/css/navbar.css`
+- `assets/css/hero.css`
+- `assets/css/sections.css`
+- `assets/css/responsive.css`
+
+### Pruebas
+- Sintaxis PHP pendiente de ejecucion final.
+- Verificacion visual y captura pendiente de ejecucion final.
+
+### Git
+- Rama: `feature/base-project`
+- Commit: pendiente
+- Push: pendiente

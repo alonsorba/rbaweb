@@ -9,6 +9,10 @@
     padding-block: var(--rb-space-8);
 }
 
+.rb-main--home {
+    padding-top: 0;
+}
+
 .rb-container {
     width: min(100%, calc(var(--rb-container-max) + (var(--rb-container-padding-x) * 2)));
     margin-inline: auto;

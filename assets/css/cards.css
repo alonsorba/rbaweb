@@ -179,3 +179,44 @@
     background: var(--rb-gradient-soft);
     color: var(--rb-color-text-muted);
 }
+
+.rb-floating-card {
+    padding: var(--rb-card-padding);
+    border-radius: var(--rb-radius-xl);
+    max-width: var(--rb-hero-floating-max-width);
+}
+
+.rb-stats__panel {
+    padding: var(--rb-stats-panel-padding);
+    background: var(--rb-white);
+    box-shadow: var(--rb-shadow-card);
+    overflow: hidden;
+}
+
+.rb-stats__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--rb-stats-grid-gap);
+}
+
+.rb-stats__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 6.5rem;
+}
+
+.rb-stats__value {
+    margin: 0;
+    font-size: clamp(2rem, 3vw, 3rem);
+    line-height: 1;
+    font-weight: var(--rb-font-weight-extrabold);
+    color: var(--rb-color-primary-500);
+}
+
+.rb-stats__label {
+    margin: 0;
+    font-size: var(--rb-font-size-md);
+    line-height: var(--rb-line-height-base);
+    color: var(--rb-color-text);
+}

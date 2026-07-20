@@ -17,9 +17,14 @@
     --rb-color-text-muted: #4f6a82;
     --rb-color-text-soft: #6c8096;
     --rb-white: #ffffff;
+    --rb-color-navbar-ink: #ffffff;
+    --rb-color-navbar-ink-scrolled: var(--rb-color-primary-900);
+    --rb-color-navbar-surface: rgba(8, 25, 45, 0.18);
+    --rb-color-navbar-surface-scrolled: rgba(255, 255, 255, 0.96);
 
     --rb-gradient-brand: linear-gradient(135deg, var(--rb-color-primary-900) 0%, #154b82 45%, var(--rb-color-primary-500) 100%);
     --rb-gradient-soft: linear-gradient(135deg, rgba(12, 50, 89, 0.06), rgba(34, 139, 209, 0.10));
+    --rb-gradient-hero-overlay: linear-gradient(180deg, rgba(8, 25, 45, 0.72) 0%, rgba(8, 25, 45, 0.28) 48%, rgba(8, 25, 45, 0.76) 100%);
 
     --rb-space-0: 0;
     --rb-space-1: 0.25rem;
@@ -105,6 +110,11 @@
 
     --rb-navbar-height: 4.5rem;
     --rb-hero-media-min-height: 18rem;
+    --rb-hero-min-height: clamp(38rem, 78vh, 56rem);
+    --rb-hero-content-max-width: 38rem;
+    --rb-hero-floating-max-width: 19rem;
+    --rb-stats-panel-padding: clamp(1.25rem, 2.5vw, 2rem);
+    --rb-stats-grid-gap: var(--rb-space-6);
     --rb-textarea-min-height: 9rem;
     --rb-indicator-size: 0.75rem;
     --rb-icon-circle-size: 3rem;
@@ -123,4 +133,3 @@
     --bs-body-color: var(--rb-color-text);
     --bs-body-bg: var(--rb-color-page);
 }
-

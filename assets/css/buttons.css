@@ -82,3 +82,47 @@
     flex-wrap: wrap;
     gap: var(--rb-space-3);
 }
+
+.rb-button--nav {
+    min-height: 2.75rem;
+    padding: 0.7rem 1rem;
+    border-color: rgba(255, 255, 255, 0.32);
+    background: transparent;
+    color: var(--rb-color-navbar-ink);
+    box-shadow: none;
+}
+
+.rb-button--nav:hover,
+.rb-button--nav:focus-visible {
+    color: var(--rb-color-navbar-ink);
+    border-color: rgba(255, 255, 255, 0.55);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.rb-button--nav-accent {
+    min-height: 2.75rem;
+    padding: 0.7rem 1rem;
+    border-color: var(--rb-color-primary-100);
+    background: var(--rb-color-primary-100);
+    color: var(--rb-color-primary-900);
+    box-shadow: none;
+}
+
+.rb-button--nav-accent:hover,
+.rb-button--nav-accent:focus-visible {
+    background: #d1ecff;
+    border-color: #d1ecff;
+    color: var(--rb-color-primary-900);
+}
+
+.rb-navbar--scrolled .rb-button--nav {
+    border-color: var(--rb-color-border-strong);
+    color: var(--rb-color-navbar-ink-scrolled);
+}
+
+.rb-navbar--scrolled .rb-button--nav:hover,
+.rb-navbar--scrolled .rb-button--nav:focus-visible {
+    color: var(--rb-color-navbar-ink-scrolled);
+    border-color: var(--rb-color-primary-500);
+    background: rgba(34, 139, 209, 0.08);
+}

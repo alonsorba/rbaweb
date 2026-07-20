@@ -43,3 +43,7 @@
 .rb-section-divider--center {
     margin-inline: auto;
 }
+
+.rb-stats {
+    background: var(--rb-color-surface-alt);
+}

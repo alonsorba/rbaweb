@@ -1,47 +1,84 @@
-.hero-shell,
 .rb-hero {
+    margin-top: calc(var(--rb-navbar-height) * -1);
+    padding-top: calc(var(--rb-navbar-height) + var(--rb-space-5));
+    padding-bottom: var(--rb-space-6);
+}
+
+.rb-hero__stage {
     position: relative;
-}
-
-.rb-hero {
-    padding-block: var(--rb-space-8);
-}
-
-.rb-hero__container {
     display: grid;
-    gap: var(--rb-space-6);
-    align-items: center;
+    align-items: end;
+    min-height: var(--rb-hero-min-height);
+    padding: clamp(1.25rem, 3vw, 2.5rem);
+    overflow: hidden;
+    border-radius: var(--rb-radius-xl);
+    background:
+        linear-gradient(180deg, rgba(8, 25, 45, 0.12), rgba(8, 25, 45, 0.28)),
+        var(--rb-gradient-brand);
+    box-shadow: var(--rb-shadow-elevated);
+}
+
+.rb-hero__stage::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: var(--rb-hero-bg-image);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: scale(1.02);
+}
+
+.rb-hero__stage::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--rb-gradient-hero-overlay);
+}
+
+.rb-hero__content,
+.rb-hero__floating-card {
+    position: relative;
+    z-index: 1;
 }
 
 .rb-hero__content {
     display: flex;
     flex-direction: column;
     gap: var(--rb-space-4);
+    width: min(100%, var(--rb-hero-content-max-width));
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+    background: rgba(8, 25, 45, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: var(--rb-white);
+    backdrop-filter: blur(var(--rb-glass-blur));
+    -webkit-backdrop-filter: blur(var(--rb-glass-blur));
 }
 
-.rb-hero__media {
-    position: relative;
-    min-height: var(--rb-hero-media-min-height);
+.rb-hero__eyebrow {
+    color: var(--rb-color-primary-100);
 }
 
 .rb-hero__title {
+    display: grid;
+    gap: 0.05em;
     margin: 0;
-    font-size: var(--rb-font-size-4xl);
-    line-height: var(--rb-line-height-tight);
-    font-weight: var(--rb-font-weight-bold);
-    color: var(--rb-color-primary-900);
+    font-size: clamp(2.25rem, 4.4vw, 4.75rem);
+    line-height: 0.97;
+    font-weight: var(--rb-font-weight-extrabold);
+    letter-spacing: -0.04em;
+}
+
+.rb-hero__title-line {
+    display: block;
 }
 
 .rb-hero__subtitle {
     margin: 0;
-    font-size: var(--rb-font-size-lg);
-    color: var(--rb-color-text-muted);
-}
-
-.rb-hero__lead {
-    margin: 0;
-    font-size: var(--rb-font-size-md);
-    color: var(--rb-color-text-muted);
+    max-width: 28rem;
+    font-size: clamp(1rem, 1.4vw, 1.25rem);
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.86);
 }
 
 .rb-hero__actions {
@@ -50,6 +87,31 @@
     gap: var(--rb-space-3);
 }
 
-.rb-hero__badge {
-    width: fit-content;
+.rb-hero__floating-card {
+    position: absolute;
+    right: clamp(1rem, 2.5vw, 2.5rem);
+    bottom: clamp(1rem, 2.5vw, 2.5rem);
+    width: min(100%, var(--rb-hero-floating-max-width));
+    padding: clamp(1rem, 2vw, 1.5rem);
+    color: var(--rb-white);
+    background: rgba(8, 25, 45, 0.68);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: var(--rb-shadow-elevated);
+}
+
+.rb-hero__floating-label {
+    color: var(--rb-color-primary-100);
+}
+
+.rb-hero__floating-title {
+    margin: 0;
+    font-size: var(--rb-font-size-lg);
+    line-height: 1.3;
+    font-weight: var(--rb-font-weight-bold);
+}
+
+.rb-hero__floating-text {
+    font-size: var(--rb-font-size-sm);
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.82);
 }

@@ -72,8 +72,18 @@ aside {
     border-radius: var(--rb-radius-pill);
     background: var(--rb-color-primary-900);
     color: var(--rb-white);
+    transform: translateY(-160%);
+    opacity: 0;
+    pointer-events: none;
+    transition:
+        transform var(--rb-duration-fast) var(--rb-easing-standard),
+        opacity var(--rb-duration-fast) var(--rb-easing-standard);
 }
 
+.rb-skip-link:focus,
 .rb-skip-link:focus-visible {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
     box-shadow: var(--rb-shadow-focus);
 }
