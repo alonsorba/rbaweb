@@ -81,5 +81,5 @@
 
 ### Git
 - Rama: `feature/base-project`
-- Commit: pendiente
+- Commit: `2bc44a9`
 - Push: pendiente
