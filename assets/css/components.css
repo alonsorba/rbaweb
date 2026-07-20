@@ -4,7 +4,10 @@
 
 .rb-brand-logo {
     display: block;
-    width: clamp(140px, 18vw, 180px);
+    max-width: clamp(140px, 18vw, 180px);
+    max-height: 64px;
+    width: auto;
+    height: auto;
     object-fit: contain;
 }
 
@@ -76,4 +79,3 @@
 .rb-footer {
     position: relative;
 }
-

@@ -40,3 +40,25 @@
 - Rama: `feature/base-project`
 - Commit: pendiente
 
+## 2026-07-20 - WEB-001 - Ajuste visual de cabecera
+
+### Cambios
+- Se cambió la variante de logotipo usada en la cabecera por una versión horizontal más adecuada para el espacio superior disponible.
+- Se ajustó la escala responsiva de la marca para evitar que la cabecera se volviera excesivamente alta en móvil.
+- Se repitió la captura visual en viewport móvil para validar el ajuste.
+
+### Archivos
+- `includes/header.php`
+- `assets/css/components.css`
+- `assets/css/responsive.css`
+
+### Pruebas
+- `php -l includes/header.php`
+- Captura HTML en `430 x 900` con Chrome headless.
+
+### Pendientes o riesgos
+- El push sigue bloqueado porque no hay remoto configurado.
+
+### Git
+- Rama: `feature/base-project`
+- Commit: pendiente de registrar el hash del ajuste visual

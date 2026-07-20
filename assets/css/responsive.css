@@ -26,9 +26,13 @@
         padding-top: 2rem;
     }
 
+    .rb-brand-logo {
+        max-width: 148px;
+        max-height: 52px;
+    }
+
     .rb-status-card,
     .rb-mini-card {
         padding: 1.25rem;
     }
 }
-

@@ -22,3 +22,6 @@ Se conserva el archivo oficial ya presente en el repositorio y no se reconstruye
 
 Se creó `assets/img/temporary/` para separar recursos provisionales de los definitivos y facilitar limpieza posterior.
 
+### 6. Variante de logotipo para cabecera
+
+Se eligió `assets/img/R BAIDON V3 RGB (WEB).png` para la cabecera porque su proporción horizontal encaja mejor en el espacio disponible sin reconstruir ni alterar el archivo oficial.

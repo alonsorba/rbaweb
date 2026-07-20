@@ -23,5 +23,6 @@ La validación visual de esta entrega se limita a la base técnica inicial. El o
 ## Observaciones
 
 - La base usa contenedores fluidos y evita anchuras fijas que provoquen scroll horizontal.
+- Se validó una primera pasada con capturas en móvil y escritorio para comprobar que el layout inicial no rompe el viewport.
+- La cabecera usa una variante horizontal del logotipo para reducir la altura en móvil.
 - El próximo ciclo debe registrar capturas comparativas cuando existan mockups definitivos para el home.
-
