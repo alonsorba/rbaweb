@@ -33,7 +33,7 @@
 
 ### Git
 - Rama: `feature/base-project`
-- Commit: `pendiente`
+- Commit: `1610330`
 - Push: pendiente
 
 # 2026-07-21 - WEB-012 - Implementacion de la seccion Contacto
