@@ -31,7 +31,7 @@
 
 ### Git
 - Rama: `feature/base-project`
-- Commit: pendiente
+- Commit: `534968d`
 - Push: pendiente
 
 # 2026-07-21 - VIS-002 - Correccion visual de ESR y Nuestro compromiso
