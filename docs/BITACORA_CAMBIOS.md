@@ -1,5 +1,43 @@
 # Bitacora de cambios
 
+# 2026-07-21 - WEB-012 - Implementacion de la seccion Contacto
+
+### Cambios
+- Se agrego la seccion Contacto despues del CTA final, sin modificar navbar, hero, soluciones, testimonios ni footer.
+- Se implemento un formulario accesible con nombre, correo, telefono, tipo de cliente, solucion de interes, mensaje y aceptacion de privacidad.
+- Se preparo la logica cliente para validar campos, mostrar errores por control y bloquear el envio real hasta que exista backend.
+- Se creo una ruta provisional de privacidad en `aviso-privacidad.php` para que el enlace legal sea funcional sin inventar contenido legal definitivo.
+- Se confirmo que no existian correo, telefono o direccion corporativos respaldados en el repositorio, por lo que no se renderizo una columna lateral inventada.
+
+### Archivos
+- `index.php`
+- `includes/components/contact.php`
+- `aviso-privacidad.php`
+- `assets/css/forms.css`
+- `assets/css/sections.css`
+- `assets/css/responsive.css`
+- `assets/js/main.js`
+- `docs/PLAN_TRABAJO.md`
+- `docs/DOCUMENTACION_TECNICA.md`
+- `docs/DECISIONES.md`
+- `docs/QA_VISUAL.md`
+- `docs/INVENTARIO_CONTENIDO.md`
+- `docs/PREPARACION_CMS.md`
+- `README.md`
+
+### Pruebas
+- Sintaxis PHP validada en `index.php`, `includes/components/contact.php` y `aviso-privacidad.php`.
+- Revision de JS validada con `node --check`.
+- Carga local confirmada con respuesta HTTP 200 en `http://127.0.0.1:8080/rba_web/index.php`.
+- Revision de diff sin conflictos de formato con `git diff --check`.
+- Capturas headless persistidas para 1366x768, 1024x768, 430x900, una vista completa de escritorio y dos vistas completas de mobile.
+- Captura anclada a `#contacto` en mobile se registro en blanco y se descarto como evidencia util.
+
+### Git
+- Rama: `feature/base-project`
+- Commit: `pendiente`
+- Push: pendiente
+
 # 2026-07-21 - WEB-011 - Implementacion del bloque CTA final
 
 ### Cambios

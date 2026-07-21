@@ -87,6 +87,20 @@ Validacion inicial de la base del Design System.
 - Sintaxis PHP, JS, diff y respuesta HTTP 200 validadas correctamente.
 - Captura headless pendiente de una revision visual final en esta sesion.
 
+## WEB-012
+
+- Seccion Contacto integrada despues del CTA final con encabezado, formulario accesible y enlace funcional al Aviso de Privacidad.
+- En escritorio la composicion se resolvio en una sola tarjeta centrada porque no existian datos corporativos confirmados para una columna lateral real.
+- Los campos usan labels visibles, errores asociados y boton real sin enviar datos al backend.
+- Capturas revisadas:
+  - `1366x768` en Edge headless, generada para la base general del Home.
+  - `1024x768` en Edge headless, generada para la base general del Home.
+  - `430x900` en Edge headless, generada para la base mobile del Home.
+  - `1366x12000` en Edge headless, valida el cierre del Home con CTA final, Contacto y el inicio del footer.
+  - `430x10000` y `430x14000` en Edge headless, revisadas para confirmar el bloque Contacto y su continuidad hacia el footer.
+- Warning no bloqueante de Edge visible en varias capturas: `Every renderer should have at least one task provided by a primary task provider`.
+- La captura con ancla `#contacto` en mobile no aterrizo en el bloque y se descarto; la evidencia util se tomo con capturas completas de pagina.
+
 ## Criterios revisados
 
 - Sin desbordamiento horizontal en la base existente.
@@ -99,6 +113,7 @@ Validacion inicial de la base del Design System.
 - Sin desbordamiento horizontal observado en la seccion de Soluciones.
 - Sin desbordamiento horizontal observado en la seccion ¿Por qué nosotros?.
 - Sin desbordamiento horizontal observado en el bloque CTA final.
+- Sin desbordamiento horizontal observado en la seccion Contacto.
 - El sitio responde con HTTP 200 desde el servidor local.
 ## Pendiente
 

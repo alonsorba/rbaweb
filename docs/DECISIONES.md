@@ -86,3 +86,11 @@
 - El gradiente azul y la capa glass se usaron para mantener continuidad con la identidad corporativa sin competir con el contenido precedente.
 - Los enlaces del CTA se limitaron a `#contacto` y `#soluciones` para evitar destinos ambiguos antes de que el CMS administre la navegacion final.
 - Se reforzo el contraste del boton outline dentro del bloque para conservar legibilidad sobre el fondo oscuro.
+
+## Contacto
+
+- Se implemento `includes/components/contact.php` como formulario de una sola columna porque no existian datos corporativos confirmados para una vista lateral real.
+- Se reutilizaron las categorias de `WEB-007` para poblar la opcion de solucion de interes y evitar duplicar contenido en el formulario.
+- La validacion se resolvio con HTML5 nativo mas JavaScript propio para mostrar errores accesibles sin enviar datos a un backend inexistente.
+- `aviso-privacidad.php` se creo como ruta provisional para que el checkbox y el enlace del formulario apunten a un destino funcional sin inventar el texto legal final.
+- Se mantuvo el envio neutral con `action=""` para no simular procesado ni confirmar un envio que todavia no existe.

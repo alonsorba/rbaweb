@@ -525,6 +525,144 @@ $rbFinalCtaData = [
         'variant' => 'outline',
     ],
 ];
+
+$rbContactSolutionOptions = [];
+if (is_array($rbSolutionsData['categories'] ?? null)) {
+    foreach ($rbSolutionsData['categories'] as $rbContactSolutionCategory) {
+        if (!is_array($rbContactSolutionCategory)) {
+            continue;
+        }
+
+        $rbContactSolutionLabel = trim((string) ($rbContactSolutionCategory['label'] ?? ''));
+        $rbContactSolutionValue = trim((string) ($rbContactSolutionCategory['id'] ?? ''));
+
+        if ($rbContactSolutionLabel === '' || $rbContactSolutionValue === '') {
+            continue;
+        }
+
+        $rbContactSolutionOptions[] = [
+            'value' => $rbContactSolutionValue,
+            'label' => $rbContactSolutionLabel,
+        ];
+    }
+}
+
+if ($rbContactSolutionOptions === []) {
+    $rbContactSolutionOptions = [
+        ['value' => 'empresas', 'label' => 'Empresas'],
+        ['value' => 'personas', 'label' => 'Personas'],
+        ['value' => 'gestion-integral', 'label' => 'Gestión Integral'],
+    ];
+}
+
+$rbContactData = [
+    'section_id' => 'contacto',
+    'title' => 'Contáctanos',
+    'description' => 'Cuéntanos qué necesitas y uno de nuestros asesores se pondrá en contacto contigo.',
+    'intro' => 'Los campos marcados con * son obligatorios.',
+    'form' => [
+        'action' => '',
+        'method' => 'post',
+        'submit_label' => 'ENVIAR SOLICITUD',
+        'fields' => [
+            [
+                'name' => 'full_name',
+                'type' => 'text',
+                'label' => 'Nombre completo',
+                'placeholder' => 'Escribe tu nombre completo',
+                'required' => true,
+                'autocomplete' => 'name',
+                'minlength' => 3,
+                'maxlength' => 120,
+            ],
+            [
+                'name' => 'email',
+                'type' => 'email',
+                'label' => 'Correo electrónico',
+                'placeholder' => 'tu@correo.com',
+                'required' => true,
+                'autocomplete' => 'email',
+                'maxlength' => 120,
+            ],
+            [
+                'name' => 'phone',
+                'type' => 'tel',
+                'label' => 'Teléfono',
+                'placeholder' => 'Tu número de contacto',
+                'required' => true,
+                'autocomplete' => 'tel',
+                'inputmode' => 'tel',
+                'maxlength' => 20,
+            ],
+            [
+                'name' => 'client_type',
+                'type' => 'select',
+                'label' => 'Tipo de cliente',
+                'required' => true,
+                'options' => [
+                    [
+                        'value' => '',
+                        'label' => 'Selecciona una opción',
+                        'disabled' => true,
+                        'selected' => true,
+                    ],
+                    [
+                        'value' => 'persona',
+                        'label' => 'Persona',
+                    ],
+                    [
+                        'value' => 'empresa',
+                        'label' => 'Empresa',
+                    ],
+                ],
+            ],
+            [
+                'name' => 'solution_interest',
+                'type' => 'select',
+                'label' => 'Solución de interés',
+                'required' => true,
+                'full_width' => true,
+                'options' => array_merge(
+                    [
+                        [
+                            'value' => '',
+                            'label' => 'Selecciona una opción',
+                            'disabled' => true,
+                            'selected' => true,
+                        ],
+                    ],
+                    $rbContactSolutionOptions
+                ),
+            ],
+            [
+                'name' => 'message',
+                'type' => 'textarea',
+                'label' => 'Mensaje',
+                'placeholder' => 'Cuéntanos brevemente lo que necesitas',
+                'required' => true,
+                'full_width' => true,
+                'minlength' => 10,
+                'maxlength' => 1000,
+            ],
+            [
+                'name' => 'privacy_acceptance',
+                'type' => 'checkbox',
+                'label' => 'Acepto el tratamiento de mis datos conforme al',
+                'required' => true,
+                'full_width' => true,
+            ],
+        ],
+        'status_message' => 'El formulario está listo para integrarse con el servicio de envío. Actualmente no realiza envíos.',
+    ],
+    'privacy' => [
+        'label' => 'Acepto el tratamiento de mis datos conforme al',
+        'link_label' => 'Aviso de Privacidad',
+        'url' => 'aviso-privacidad.php',
+        'suffix' => '.',
+    ],
+    'contact_items' => [],
+    'provisional' => true,
+];
 ?>
 <?php require __DIR__ . '/includes/header.php'; ?>
 
@@ -539,6 +677,7 @@ $rbFinalCtaData = [
     <?php require __DIR__ . '/includes/components/partners.php'; ?>
     <?php require __DIR__ . '/includes/components/testimonials.php'; ?>
     <?php require __DIR__ . '/includes/components/final-cta.php'; ?>
+    <?php require __DIR__ . '/includes/components/contact.php'; ?>
 </main>
 
 <?php require __DIR__ . '/includes/footer.php'; ?>

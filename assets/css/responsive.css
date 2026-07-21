@@ -525,6 +525,10 @@
         font-size: var(--rb-font-size-xs);
     }
 
+    .rb-contact__layout--split {
+        grid-template-columns: 1fr;
+    }
+
     .rb-why__header {
         margin-bottom: var(--rb-space-5);
     }
@@ -577,6 +581,23 @@
 
     .rb-testimonials__quote {
         font-size: var(--rb-font-size-md);
+    }
+
+    .rb-contact__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rb-contact__layout {
+        gap: var(--rb-space-5);
+    }
+
+    .rb-contact__actions {
+        justify-content: stretch;
+    }
+
+    .rb-contact__submit {
+        width: 100%;
+        min-width: 0;
     }
 
     .rb-final-cta__shell {

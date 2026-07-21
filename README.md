@@ -74,6 +74,8 @@ WEB-010 agrega la seccion de Testimonios con tres tarjetas provisionales, avatar
 
 WEB-011 agrega el bloque CTA final con dos acciones reales, sin forzar una imagen provisional y manteniendo el cierre del Home listo para CMS.
 
+WEB-012 agrega la seccion de Contacto con formulario accesible, validacion cliente y aviso de privacidad funcional, sin backend ni datos corporativos inventados.
+
 ## Manuales y mockups
 
 - `docs/PLAN_TRABAJO.md`

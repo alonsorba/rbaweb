@@ -102,6 +102,17 @@ WEB-011 agrega el bloque CTA final despues de Testimonios.
 - Los enlaces estan restringidos a `#contacto` y `#soluciones` para evitar salidas no previstas mientras el CMS no exponga destinos definitivos.
 - El bloque queda listo para CMS porque el copy, la jerarquia y las acciones dependen de variables PHP y no del marcado fijo.
 
+## Contacto
+
+WEB-012 agrega la seccion Contacto despues del CTA final.
+
+- `includes/components/contact.php` valida la estructura minima del bloque, renderiza el encabezado y construye los campos por iteracion desde datos PHP.
+- La composicion se resolvio en una sola columna porque no se encontro contenido corporativo respaldado para poblar una columna lateral de datos reales.
+- Los selectores de tipo de cliente y solucion de interes se preparan desde datos del Home y no se duplican manualmente en el markup.
+- La validacion del lado del cliente usa `checkValidity()` con mensajes accesibles, enfoque del primer control invalido y estado informativo solo despues de un submit valido.
+- La ruta `aviso-privacidad.php` se creo como destino provisional para mantener funcional el enlace de privacidad sin inventar un texto legal definitivo.
+- El bloque queda listo para CMS y backend futuro porque el copy, las etiquetas, las opciones y los mensajes viven en PHP y no en texto fijo embebido.
+
 ## Arquitectura CSS
 
 `main.css` funciona como unico archivo de carga del sistema y ordena:

@@ -65,3 +65,163 @@
     font-size: var(--rb-font-size-sm);
     color: var(--rb-color-text-soft);
 }
+
+.rb-contact__form {
+    gap: var(--rb-space-5);
+}
+
+.rb-contact__fieldset {
+    display: grid;
+    gap: var(--rb-space-4);
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.rb-contact__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--rb-space-4);
+}
+
+.rb-contact__field {
+    display: grid;
+    gap: var(--rb-space-2);
+    min-width: 0;
+}
+
+.rb-contact__field--full {
+    grid-column: 1 / -1;
+}
+
+.rb-contact__label,
+.rb-contact__checkbox-text {
+    font-size: var(--rb-font-size-sm);
+    font-weight: var(--rb-font-weight-semibold);
+    color: var(--rb-color-primary-900);
+}
+
+.rb-contact__required {
+    margin-inline-start: 0.2rem;
+    color: var(--rb-color-secondary-700);
+}
+
+.rb-contact__input,
+.rb-contact__select,
+.rb-contact__textarea {
+    min-height: 3rem;
+    font-size: 1rem;
+}
+
+.rb-contact__textarea {
+    min-height: 10rem;
+}
+
+.rb-contact__input::placeholder,
+.rb-contact__textarea::placeholder {
+    color: var(--rb-color-text-soft);
+}
+
+.rb-contact__input[aria-invalid="true"],
+.rb-contact__select[aria-invalid="true"],
+.rb-contact__textarea[aria-invalid="true"] {
+    border-color: rgba(197, 48, 48, 0.85);
+    box-shadow: 0 0 0 0.25rem rgba(197, 48, 48, 0.14);
+}
+
+.rb-contact__input:focus-visible,
+.rb-contact__select:focus-visible,
+.rb-contact__textarea:focus-visible,
+.rb-contact__checkbox-input:focus-visible,
+.rb-contact__privacy-link:focus-visible,
+.rb-contact__submit:focus-visible {
+    outline: none;
+    box-shadow: var(--rb-shadow-focus);
+}
+
+.rb-contact__input:valid,
+.rb-contact__select:valid,
+.rb-contact__textarea:valid {
+    border-color: rgba(34, 139, 209, 0.28);
+}
+
+.rb-contact__error {
+    min-height: 1.1rem;
+    margin: 0;
+    font-size: var(--rb-font-size-sm);
+    line-height: 1.35;
+    color: #b42318;
+}
+
+.rb-contact__field:not(.rb-contact__field--checkbox)[aria-invalid="true"] .rb-contact__label,
+.rb-contact__field--invalid .rb-contact__label,
+.rb-contact__field--invalid .rb-contact__checkbox-text {
+    color: #b42318;
+}
+
+.rb-contact__field--checkbox {
+    gap: var(--rb-space-2);
+}
+
+.rb-contact__checkbox-label {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: var(--rb-space-3);
+    margin: 0;
+    cursor: pointer;
+}
+
+.rb-contact__checkbox-input {
+    flex: 0 0 auto;
+    width: 1rem;
+    height: 1rem;
+    margin-top: 0.2rem;
+    accent-color: var(--rb-color-primary-500);
+}
+
+.rb-contact__checkbox-input[aria-invalid="true"] {
+    outline: 2px solid rgba(197, 48, 48, 0.55);
+    outline-offset: 2px;
+}
+
+.rb-contact__checkbox-text {
+    font-weight: var(--rb-font-weight-medium);
+    line-height: 1.5;
+    color: var(--rb-color-text);
+}
+
+.rb-contact__actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.rb-contact__submit {
+    min-width: 13rem;
+}
+
+.rb-contact__status {
+    margin: 0;
+    padding: var(--rb-space-3) var(--rb-space-4);
+    border-radius: var(--rb-radius-md);
+    background: rgba(34, 139, 209, 0.08);
+    color: var(--rb-color-primary-900);
+}
+
+.rb-contact__privacy-note {
+    margin: 0;
+    font-size: var(--rb-font-size-sm);
+    line-height: 1.5;
+    color: var(--rb-color-text-soft);
+}
+
+.rb-contact__privacy-link {
+    color: var(--rb-color-primary-900);
+    font-weight: var(--rb-font-weight-semibold);
+    text-decoration: underline;
+    text-underline-offset: 0.12em;
+}
+
+.rb-contact__privacy-link:hover {
+    color: var(--rb-color-primary-700);
+}

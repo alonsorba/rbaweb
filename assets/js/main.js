@@ -300,5 +300,159 @@ document.addEventListener('DOMContentLoaded', () => {
 
     initSolutions();
 
+    const initContact = () => {
+        const form = document.querySelector('[data-rb-contact-form]');
+
+        if (!form) {
+            return;
+        }
+
+        const status = form.querySelector('[data-rb-contact-status]');
+        const controls = Array.from(form.querySelectorAll('[data-rb-contact-control]'));
+        const defaultStatusMessage = (form.dataset.rbContactStatusMessage || '').trim();
+
+        const hideStatus = () => {
+            if (!status) {
+                return;
+            }
+
+            status.hidden = true;
+            status.textContent = '';
+        };
+
+        const setFieldState = (control, message) => {
+            const field = control.closest('[data-rb-contact-field]') ?? control.closest('.rb-contact__field');
+            const error = field?.querySelector('[data-rb-contact-error]');
+
+            if (message) {
+                control.setAttribute('aria-invalid', 'true');
+                field?.classList.add('rb-contact__field--invalid');
+
+                if (error) {
+                    error.hidden = false;
+                    error.textContent = message;
+                }
+            } else {
+                control.removeAttribute('aria-invalid');
+                field?.classList.remove('rb-contact__field--invalid');
+
+                if (error) {
+                    error.hidden = true;
+                    error.textContent = '';
+                }
+            }
+        };
+
+        const getErrorMessage = (control) => {
+            const value = typeof control.value === 'string' ? control.value.trim() : '';
+
+            if (control.name === 'privacy_acceptance') {
+                return control.checked ? '' : 'Debes aceptar el Aviso de Privacidad.';
+            }
+
+            if (control.name === 'full_name') {
+                if (value === '') {
+                    return 'Escribe tu nombre completo.';
+                }
+            } else if (control.name === 'email') {
+                if (value === '') {
+                    return 'Ingresa un correo electrónico válido.';
+                }
+
+                if (!control.validity.valid || control.validity.typeMismatch) {
+                    return 'Ingresa un correo electrónico válido.';
+                }
+            } else if (control.name === 'phone') {
+                if (value === '') {
+                    return 'Ingresa un teléfono de contacto.';
+                }
+            } else if (control.name === 'client_type') {
+                if (value === '') {
+                    return 'Selecciona un tipo de cliente.';
+                }
+            } else if (control.name === 'solution_interest') {
+                if (value === '') {
+                    return 'Selecciona una solución de interés.';
+                }
+            } else if (control.name === 'message') {
+                if (value === '') {
+                    return 'Escribe un mensaje.';
+                }
+
+                if (control.validity.tooShort) {
+                    return 'Escribe un mensaje.';
+                }
+            }
+
+            if (control.validity.valueMissing) {
+                return 'Completa este campo.';
+            }
+
+            if (control.validity.typeMismatch && control.type === 'email') {
+                return 'Ingresa un correo electrónico válido.';
+            }
+
+            if (control.validity.tooShort && control.name === 'message') {
+                return 'Escribe un mensaje.';
+            }
+
+            return '';
+        };
+
+        const validateControl = (control) => {
+            const isValid = control.checkValidity();
+            const message = isValid ? '' : getErrorMessage(control);
+
+            setFieldState(control, message);
+            return isValid;
+        };
+
+        const validateForm = () => {
+            let firstInvalid = null;
+
+            controls.forEach((control) => {
+                const isValid = validateControl(control);
+
+                if (!isValid && !firstInvalid) {
+                    firstInvalid = control;
+                }
+            });
+
+            return firstInvalid;
+        };
+
+        controls.forEach((control) => {
+            const eventName = control.type === 'checkbox' || control.tagName === 'SELECT' ? 'change' : 'input';
+
+            control.addEventListener(eventName, () => {
+                validateControl(control);
+                hideStatus();
+            });
+
+            control.addEventListener('blur', () => {
+                validateControl(control);
+            });
+        });
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const firstInvalid = validateForm();
+
+            if (firstInvalid) {
+                hideStatus();
+                firstInvalid.focus({ preventScroll: false });
+                return;
+            }
+
+            if (status) {
+                status.hidden = false;
+                status.textContent = defaultStatusMessage || 'El formulario está listo para integrarse con el servicio de envío. Actualmente no realiza envíos.';
+            }
+        });
+    };
+
+    initContact();
+
     document.documentElement.classList.add('js-ready');
 });

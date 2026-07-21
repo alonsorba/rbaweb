@@ -872,3 +872,103 @@
     background: rgba(255, 255, 255, 0.14);
     color: var(--rb-white);
 }
+
+.rb-contact {
+    overflow: hidden;
+    background:
+        radial-gradient(circle at top left, rgba(34, 139, 209, 0.08), transparent 34%),
+        linear-gradient(180deg, var(--rb-color-surface-alt) 0%, #f7fbff 100%);
+}
+
+.rb-contact__inner {
+    display: grid;
+    gap: var(--rb-space-6);
+}
+
+.rb-contact__header {
+    display: grid;
+    gap: var(--rb-space-3);
+    justify-items: start;
+    max-width: 42rem;
+}
+
+.rb-contact__eyebrow {
+    margin: 0;
+}
+
+.rb-contact__title {
+    max-width: 16ch;
+}
+
+.rb-contact__description {
+    margin: 0;
+    font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+    line-height: 1.7;
+    color: var(--rb-color-text-muted);
+}
+
+.rb-contact__intro {
+    margin: 0;
+}
+
+.rb-contact__layout {
+    display: grid;
+    gap: var(--rb-space-6);
+    align-items: start;
+}
+
+.rb-contact__layout--single {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+}
+
+.rb-contact__layout--split {
+    grid-template-columns: minmax(0, 0.9fr) minmax(20rem, 1.1fr);
+}
+
+.rb-contact__details {
+    display: grid;
+    gap: var(--rb-space-4);
+    align-content: start;
+}
+
+.rb-contact__detail {
+    display: grid;
+    gap: var(--rb-space-2);
+    padding: var(--rb-card-padding);
+}
+
+.rb-contact__detail-label {
+    margin: 0;
+    font-size: var(--rb-font-size-sm);
+    font-weight: var(--rb-font-weight-semibold);
+    color: var(--rb-color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.rb-contact__detail-value,
+.rb-contact__detail-link {
+    font-size: var(--rb-font-size-lg);
+    line-height: 1.4;
+    font-weight: var(--rb-font-weight-semibold);
+    color: var(--rb-color-primary-900);
+}
+
+.rb-contact__detail-link {
+    text-decoration: none;
+}
+
+.rb-contact__detail-link:hover,
+.rb-contact__detail-link:focus-visible {
+    text-decoration: underline;
+}
+
+.rb-contact__form-card {
+    width: 100%;
+    padding: clamp(1.25rem, 2.5vw, 2rem);
+    background: var(--rb-white);
+    border: 1px solid var(--rb-color-border);
+    border-radius: var(--rb-radius-xl);
+    box-shadow: var(--rb-shadow-elevated);
+}

@@ -15,7 +15,8 @@
 | WEB-009 | Home | Implementacion de la seccion Aseguradoras aliadas | Completado | ¿Por qué nosotros? ya integrada y logos blancos locales disponibles | Seccion Aseguradoras aliadas con contador +20, mensaje de asesoría y logotipos decorativos parametrizados lista para CMS | `c38ce2d` |
 | WEB-010 | Home | Implementacion de la seccion Testimonios | En progreso | Aseguradoras aliadas ya integrada y recursos provisionales de avatar disponibles | Seccion Testimonios con tres tarjetas, avatares internos y datos preparados para CMS lista para validacion final | `pendiente` |
 
-| WEB-011 | Home | Implementacion del bloque CTA final | Completado | Testimonios ya integrada y cierre visual pendiente | Bloque CTA final con datos PHP, dos acciones reales y composicion responsive listo para CMS | `pendiente` |
+| WEB-011 | Home | Implementacion del bloque CTA final | Completado | Testimonios ya integrada y cierre visual pendiente | Bloque CTA final con datos PHP, dos acciones reales y composicion responsive listo para CMS | `a926245` |
+| WEB-012 | Home | Implementacion de la seccion Contacto | Completado | CTA final ya integrado, contenido corporativo no confirmado y ruta de privacidad provisional disponible | Seccion Contacto con formulario accesible, validacion cliente, aviso de privacidad funcional y preparacion para CMS | `pendiente` |
 
 ## Fases generales
 
@@ -40,3 +41,4 @@
 - WEB-009 completa la seccion Aseguradoras aliadas con logos blancos distribuidos de forma decorativa y sin avanzar a testimonios.
 - WEB-010 avanza con la seccion Testimonios, usando avatares internos provisionales y sin avanzar a formulario ni footer.
 - WEB-011 cierra el Home con un bloque CTA final reutilizable, sin avanzar a contacto ni footer y sin introducir imagen obligatoria.
+- WEB-012 agrega la seccion Contacto despues del CTA final, con formulario accesible, validacion nativa y JavaScript sin backend.

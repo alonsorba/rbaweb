@@ -109,6 +109,8 @@
 - Para WEB-008 se seleccionaron `assets/img/nose.png`, `misa.png`, `jenny.png` e `itzel.png` como base visual de ¿Por qué nosotros?, todos como recursos provisionales y con escala ajustada desde datos PHP.
 - Para WEB-009 se seleccionaron `assets/img/logos blanco/aig.png`, `axa.png`, `Chubb.png`, `GNP.png`, `hdi.png`, `Mapfre.png`, `QUALITAS.png` y `Zurich.png` como base visual de Aseguradoras aliadas, todos como recursos provisionales.
 - Para WEB-010 se selecciono `assets/img/persona.png` como avatar interno provisional y se descartaron `01.jpg`, `02.jpg`, `03.jpg` y `04.jpg` por no corresponder a retratos de avatar.
+- Para WEB-012 no se encontraron correo, telefono, direccion, horarios ni aviso legal definitivo en el repositorio, por lo que la seccion Contacto se preparo sin datos corporativos laterales y con una ruta provisional de privacidad.
+- Para WEB-012 la opcion de solucion de interes se deriva de las categorias ya definidas en WEB-007 para evitar duplicar manualmente una lista extensa.
 - Los hashes `a8ba017` y `8ce6203` corresponden a la base funcional y documental previa de Soluciones y quedan registrados como antecedente directo de WEB-008.
 - Los hashes `a15afc7` y `63ede76` corresponden a la base funcional y documental previa de WEB-008 y quedan registrados como antecedente directo de ese sprint.
 
