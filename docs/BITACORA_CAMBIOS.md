@@ -27,7 +27,7 @@
 
 ### Git
 - Rama: `feature/base-project`
-- Commit: pendiente
+- Commit: `c9db9ff`
 - Push: pendiente
 
 # 2026-07-21 - VIS-001 - Correccion visual de Hero, metricas y presencia nacional
