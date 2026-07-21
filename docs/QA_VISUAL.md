@@ -63,6 +63,14 @@ Validacion inicial de la base del Design System.
 - Warning no bloqueante de Edge visible en varias capturas: `Every renderer should have at least one task provided by a primary task provider`.
 - Los intentos de captura con ancla `#por-que-nosotros` produjeron imagen en blanco y se descartaron; la evidencia final se tomo sin ancla.
 
+## WEB-009
+
+- Seccion Aseguradoras aliadas integrada despues de ¿Por qué nosotros? con contador +20, mensaje de asesoria y logotipos blancos locales.
+- Revisión visual del conjunto de logos confirmada con `.codex-partners-preview.png`, validando contraste, proporción y legibilidad sobre fondo azul.
+- La composicion desktop se mantiene como capa decorativa absoluta y la vista mobile repliega los logotipos a una grilla de dos columnas sin overflow horizontal observado en la revision del CSS y el DOM.
+- El intento de captura headless en PNG no persistio en disco en esta sesion, por lo que se dejo trazabilidad del hallazgo y se tomo como evidencia visual el preview compuesto de logos.
+- Sintaxis PHP, JS, diff y respuesta HTTP 200 validadas correctamente.
+
 ## Criterios revisados
 
 - Sin desbordamiento horizontal en la base existente.

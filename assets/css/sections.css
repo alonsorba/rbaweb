@@ -578,3 +578,161 @@
     font-weight: var(--rb-font-weight-bold);
     color: var(--rb-color-text);
 }
+
+.rb-partners {
+    position: relative;
+    overflow: hidden;
+    color: var(--rb-white);
+    background: linear-gradient(180deg, #0c3259 0%, #092848 56%, #08223e 100%);
+}
+
+.rb-partners::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 16% 20%, rgba(255, 255, 255, 0.08), transparent 28%),
+        radial-gradient(circle at 82% 18%, rgba(255, 255, 255, 0.05), transparent 24%),
+        radial-gradient(circle at 50% 84%, rgba(255, 255, 255, 0.06), transparent 26%);
+    pointer-events: none;
+}
+
+.rb-partners__inner {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(16rem, 0.42fr) minmax(0, 0.58fr);
+    align-items: center;
+    gap: var(--rb-partners-inner-gap);
+    min-height: var(--rb-partners-visual-min-height);
+    padding-block: var(--rb-partners-shell-padding);
+}
+
+.rb-partners__copy {
+    position: relative;
+    z-index: 2;
+    max-width: var(--rb-partners-copy-max-width);
+}
+
+.rb-partners__counter {
+    display: flex;
+    flex-direction: column;
+    gap: 0.05rem;
+    margin: 0;
+    color: var(--rb-white);
+}
+
+.rb-partners__eyebrow {
+    font-size: var(--rb-font-size-md);
+    line-height: 1.15;
+    font-weight: var(--rb-font-weight-semibold);
+    opacity: 0.94;
+}
+
+.rb-partners__value {
+    font-size: clamp(4rem, 7vw, 6.75rem);
+    line-height: 0.88;
+    font-weight: var(--rb-font-weight-extrabold);
+    letter-spacing: -0.06em;
+}
+
+.rb-partners__label {
+    font-size: clamp(1.35rem, 2.15vw, 2rem);
+    line-height: 1.05;
+    font-weight: var(--rb-font-weight-semibold);
+    letter-spacing: -0.02em;
+}
+
+.rb-partners__message {
+    position: relative;
+    z-index: 2;
+    justify-self: end;
+    max-width: var(--rb-partners-message-max-width);
+    margin: 0;
+    font-size: clamp(1.25rem, 2vw, 2rem);
+    line-height: 1.28;
+    font-weight: var(--rb-font-weight-semibold);
+    color: var(--rb-white);
+    text-align: left;
+}
+
+.rb-partners__message-line {
+    display: block;
+}
+
+.rb-partners__logos {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.rb-partners__logo {
+    position: absolute;
+    width: var(--rb-partners-logo-width, var(--rb-partners-logo-size-md));
+    height: var(--rb-partners-logo-height, calc(var(--rb-partners-logo-size-md) * 0.44));
+    opacity: var(--rb-partners-logo-opacity, var(--rb-partners-logo-base-opacity));
+}
+
+.rb-partners__logo-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center center;
+}
+
+.rb-partners__logo--aig {
+    inset-block-start: 5%;
+    inset-inline-start: 3%;
+    --rb-partners-logo-width: 11rem;
+    --rb-partners-logo-height: 4.6rem;
+}
+
+.rb-partners__logo--axa {
+    inset-block-start: 5%;
+    inset-inline-start: 35%;
+    --rb-partners-logo-width: 7.2rem;
+    --rb-partners-logo-height: 7.2rem;
+}
+
+.rb-partners__logo--chubb {
+    inset-block-start: 6%;
+    inset-inline-end: 3%;
+    --rb-partners-logo-width: 12rem;
+    --rb-partners-logo-height: 3.9rem;
+}
+
+.rb-partners__logo--hdi {
+    inset-block-start: 39%;
+    inset-inline-start: 4%;
+    --rb-partners-logo-width: 8.2rem;
+    --rb-partners-logo-height: 5.2rem;
+}
+
+.rb-partners__logo--gnp {
+    inset-block-start: 35%;
+    inset-inline-end: 5%;
+    --rb-partners-logo-width: 12.5rem;
+    --rb-partners-logo-height: 5rem;
+}
+
+.rb-partners__logo--mapfre {
+    inset-block-end: 10%;
+    inset-inline-start: 12%;
+    --rb-partners-logo-width: 10rem;
+    --rb-partners-logo-height: 4rem;
+}
+
+.rb-partners__logo--qualitas {
+    inset-block-end: 12%;
+    inset-inline-end: 18%;
+    --rb-partners-logo-width: 12.25rem;
+    --rb-partners-logo-height: 4.6rem;
+}
+
+.rb-partners__logo--zurich {
+    inset-block-end: 6%;
+    inset-inline-end: 3%;
+    --rb-partners-logo-width: 10rem;
+    --rb-partners-logo-height: 4rem;
+}

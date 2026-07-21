@@ -1,5 +1,41 @@
 # Bitacora de cambios
 
+# 2026-07-20 - WEB-009 - Implementacion de la seccion Aseguradoras aliadas
+
+### Cambios
+- Se agrego la seccion Aseguradoras aliadas despues de ¿Por qué nosotros?, sin avanzar a testimonios ni formulario.
+- Se construyo un fondo azul corporativo de ancho completo con contador +20, mensaje de asesoría y logotipos blancos decorativos.
+- Se parametrizaron el contador, el mensaje y los logos desde PHP para facilitar edición futura desde CMS.
+- Se seleccionaron los logos blancos locales AIG, AXA, Chubb, GNP, HDI, Mapfre, Quálitas y Zurich por su legibilidad y cercanía al mockup.
+- Se documento que `a15afc7` y `63ede76` corresponden a WEB-008 y quedan como antecedente inmediato de este sprint.
+
+### Archivos
+- `index.php`
+- `includes/components/partners.php`
+- `assets/css/variables.css`
+- `assets/css/sections.css`
+- `assets/css/responsive.css`
+- `docs/PLAN_TRABAJO.md`
+- `docs/DOCUMENTACION_TECNICA.md`
+- `docs/DECISIONES.md`
+- `docs/QA_VISUAL.md`
+- `docs/INVENTARIO_CONTENIDO.md`
+- `docs/PREPARACION_CMS.md`
+- `README.md`
+
+### Pruebas
+- Sintaxis PHP validada en `index.php` e `includes/components/partners.php`.
+- Revision de JS validada con `node --check`.
+- Carga local confirmada con respuesta HTTP 200 en `http://127.0.0.1:8080/rba_web/index.php`.
+- Revision de diff sin conflictos de formato con `git diff --check`.
+- Revision visual de la composicion confirmada con el preview compuesto de logos y con la CSS responsive.
+- La captura headless no persistio en disco en esta sesion, por lo que se dejo trazabilidad del intento sin usarla como evidencia final.
+
+### Git
+- Rama: `feature/base-project`
+- Commit: `pendiente`
+- Push: pendiente
+
 # 2026-07-20 - WEB-008 - Implementacion de la seccion ¿Por qué nosotros?
 
 ### Cambios

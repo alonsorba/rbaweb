@@ -159,6 +159,52 @@
     .rb-why__grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+
+    .rb-partners {
+        --rb-partners-visual-min-height: clamp(24rem, 44vw, 32rem);
+        --rb-partners-copy-max-width: 16rem;
+        --rb-partners-message-max-width: 24rem;
+    }
+
+    .rb-partners__logo--aig {
+        --rb-partners-logo-width: 9.5rem;
+        --rb-partners-logo-height: 4rem;
+    }
+
+    .rb-partners__logo--axa {
+        --rb-partners-logo-width: 6.4rem;
+        --rb-partners-logo-height: 6.4rem;
+    }
+
+    .rb-partners__logo--chubb {
+        --rb-partners-logo-width: 10.4rem;
+        --rb-partners-logo-height: 3.4rem;
+    }
+
+    .rb-partners__logo--hdi {
+        --rb-partners-logo-width: 7rem;
+        --rb-partners-logo-height: 4.4rem;
+    }
+
+    .rb-partners__logo--gnp {
+        --rb-partners-logo-width: 10.8rem;
+        --rb-partners-logo-height: 4.2rem;
+    }
+
+    .rb-partners__logo--mapfre {
+        --rb-partners-logo-width: 8.6rem;
+        --rb-partners-logo-height: 3.4rem;
+    }
+
+    .rb-partners__logo--qualitas {
+        --rb-partners-logo-width: 10.2rem;
+        --rb-partners-logo-height: 3.8rem;
+    }
+
+    .rb-partners__logo--zurich {
+        --rb-partners-logo-width: 8.8rem;
+        --rb-partners-logo-height: 3.4rem;
+    }
 }
 
 @media (min-width: 992px) {
@@ -303,6 +349,55 @@
     .rb-why__grid {
         grid-template-columns: 1fr;
     }
+
+    .rb-partners {
+        --rb-partners-visual-min-height: auto;
+    }
+
+    .rb-partners__inner {
+        grid-template-columns: 1fr;
+        min-height: 0;
+        padding-block: var(--rb-space-6);
+    }
+
+    .rb-partners__copy {
+        max-width: 100%;
+    }
+
+    .rb-partners__message {
+        justify-self: start;
+        max-width: 100%;
+        margin-top: calc(var(--rb-space-4) * -0.25);
+    }
+
+    .rb-partners__logos {
+        position: static;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--rb-space-4);
+        margin-top: var(--rb-space-6);
+        pointer-events: auto;
+    }
+
+    .rb-partners__logo {
+        position: relative;
+        inset: auto;
+        width: 100%;
+        height: 3.75rem;
+        opacity: 0.92;
+    }
+
+    .rb-partners__logo--aig,
+    .rb-partners__logo--axa,
+    .rb-partners__logo--chubb,
+    .rb-partners__logo--hdi,
+    .rb-partners__logo--gnp,
+    .rb-partners__logo--mapfre,
+    .rb-partners__logo--qualitas,
+    .rb-partners__logo--zurich {
+        --rb-partners-logo-width: auto;
+        --rb-partners-logo-height: 3.75rem;
+    }
 }
 
 @media (max-width: 575.98px) {
@@ -415,5 +510,34 @@
 
     .rb-why__caption {
         padding-inline: var(--rb-space-3);
+    }
+
+    .rb-partners__inner {
+        padding-block: var(--rb-space-5);
+    }
+
+    .rb-partners__counter {
+        gap: 0.1rem;
+    }
+
+    .rb-partners__value {
+        font-size: clamp(3.4rem, 17vw, 4.8rem);
+    }
+
+    .rb-partners__label {
+        font-size: clamp(1.2rem, 6vw, 1.6rem);
+    }
+
+    .rb-partners__message {
+        font-size: clamp(1.05rem, 4.8vw, 1.35rem);
+    }
+
+    .rb-partners__logos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--rb-space-3);
+    }
+
+    .rb-partners__logo {
+        height: 3.25rem;
     }
 }

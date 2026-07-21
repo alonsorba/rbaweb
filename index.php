@@ -396,6 +396,78 @@ $rbWhyData = [
         ],
     ],
 ];
+
+$rbPartnersData = [
+    'section_id' => 'aseguradoras',
+    'counter' => [
+        'eyebrow' => 'Trabajamos con',
+        'value' => '+20',
+        'label' => 'aseguradoras',
+    ],
+    'message_lines' => [
+        'Te asesoramos para',
+        'seleccionar la mejor opción',
+        'de protección',
+    ],
+    'logos' => [
+        [
+            'name' => 'AIG',
+            'image' => SITE_BASE_URL . '/assets/img/logos%20blanco/' . rawurlencode('aig.png'),
+            'alt' => 'AIG',
+            'position' => 'aig',
+            'opacity' => 0.8,
+        ],
+        [
+            'name' => 'AXA',
+            'image' => SITE_BASE_URL . '/assets/img/logos%20blanco/' . rawurlencode('axa.png'),
+            'alt' => 'AXA',
+            'position' => 'axa',
+            'opacity' => 0.82,
+        ],
+        [
+            'name' => 'Chubb',
+            'image' => SITE_BASE_URL . '/assets/img/logos%20blanco/' . rawurlencode('Chubb.png'),
+            'alt' => 'Chubb',
+            'position' => 'chubb',
+            'opacity' => 0.74,
+        ],
+        [
+            'name' => 'GNP',
+            'image' => SITE_BASE_URL . '/assets/img/logos%20blanco/' . rawurlencode('GNP.png'),
+            'alt' => 'GNP Seguros',
+            'position' => 'gnp',
+            'opacity' => 0.8,
+        ],
+        [
+            'name' => 'HDI',
+            'image' => SITE_BASE_URL . '/assets/img/logos%20blanco/' . rawurlencode('hdi.png'),
+            'alt' => 'HDI Seguros',
+            'position' => 'hdi',
+            'opacity' => 0.76,
+        ],
+        [
+            'name' => 'Mapfre',
+            'image' => SITE_BASE_URL . '/assets/img/logos%20blanco/' . rawurlencode('Mapfre.png'),
+            'alt' => 'Mapfre',
+            'position' => 'mapfre',
+            'opacity' => 0.82,
+        ],
+        [
+            'name' => 'Quálitas',
+            'image' => SITE_BASE_URL . '/assets/img/logos%20blanco/' . rawurlencode('QUALITAS.png'),
+            'alt' => 'Quálitas',
+            'position' => 'qualitas',
+            'opacity' => 0.8,
+        ],
+        [
+            'name' => 'Zurich',
+            'image' => SITE_BASE_URL . '/assets/img/logos%20blanco/' . rawurlencode('Zurich.png'),
+            'alt' => 'Zurich',
+            'position' => 'zurich',
+            'opacity' => 0.78,
+        ],
+    ],
+];
 ?>
 <?php require __DIR__ . '/includes/header.php'; ?>
 
@@ -407,6 +479,7 @@ $rbWhyData = [
     <?php require __DIR__ . '/includes/components/commitment.php'; ?>
     <?php require __DIR__ . '/includes/components/solutions.php'; ?>
     <?php require __DIR__ . '/includes/components/why.php'; ?>
+    <?php require __DIR__ . '/includes/components/partners.php'; ?>
 </main>
 
 <?php require __DIR__ . '/includes/footer.php'; ?>

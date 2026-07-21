@@ -62,3 +62,11 @@
 - Se mantuvo un fondo azul independiente detras de cada recorte para aproximar el mockup sin convertir el bloque en una tarjeta completamente azul.
 - La etiqueta blanca inferior se superpone ligeramente al visual para replicar la jerarquia observada en la referencia.
 - Las diferencias de escala entre retratos se corrigieron con una variable CSS individual por item en lugar de valores fijos dispersos.
+
+## Aseguradoras aliadas
+
+- Se implemento `includes/components/partners.php` como bloque data-driven para sostener contador, mensaje y logos sin contenido fijo embebido.
+- Se eligieron variantes blancas locales de AIG, AXA, Chubb, GNP, HDI, Mapfre, Quálitas y Zurich por su legibilidad sobre el fondo azul corporativo.
+- La composicion se resolvio con logos posicionados de forma decorativa en escritorio y con grilla simple de dos columnas en mobile para conservar claridad.
+- No se aplicaron filtros ni recoloreado por CSS para evitar degradar la nitidez de los archivos ya preparados.
+- La opacidad de cada logo se ajusta por datos para equilibrar jerarquia visual sin cambiar el asset original.

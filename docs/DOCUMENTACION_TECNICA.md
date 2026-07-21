@@ -70,6 +70,18 @@ WEB-008 agrega la seccion ¿Por qué nosotros? despues de Soluciones.
 - La composicion se mantiene sin carrusel ni JavaScript adicional, con un grid que desciende a dos columnas y luego a una columna en mobile.
 - El bloque queda listo para CMS porque el texto, el orden y el recurso visual dependen de estructura de datos y no del marcado fijo.
 
+## Aseguradoras aliadas
+
+WEB-009 agrega la seccion Aseguradoras aliadas despues de ¿Por qué nosotros?.
+
+- `includes/components/partners.php` construye el contador, el mensaje y los logos con datos PHP.
+- El componente valida que cada logo exista en la carpeta local, resuelve sus dimensiones reales y omite los archivos que no esten disponibles.
+- La composicion se resuelve con fondo azul corporativo, capa decorativa absoluta en escritorio y grilla simple en mobile.
+- Los logos visibles se toman de variantes blancas locales para evitar filtros agresivos y mantener coherencia con la marca.
+- El bloque sigue siendo editable desde CMS porque el orden, la opacidad y la ruta de cada logo viven en una estructura de datos.
+- La vista mobile reorganiza los logotipos en una grilla de dos columnas para conservar legibilidad sin slider.
+- Los datos de la seccion viven en variables PHP en `index.php`, lo que facilita la edicion futura desde CMS.
+
 ## Arquitectura CSS
 
 `main.css` funciona como unico archivo de carga del sistema y ordena:
@@ -123,3 +135,5 @@ Se definieron variables para:
 - La seccion de compromiso usa variables para separacion, ancho maximo, altura minima del visual y escala maxima de la imagen.
 - La seccion de Soluciones usa variables para espaciado del shell, tabs, pista del carrusel, ancho de card, alto minimo, media y padding lateral.
 - La seccion ¿Por qué nosotros? usa variables para separacion del grid, altura minima de card, altura minima del visual, solape de la etiqueta y padding de imagen.
+- La seccion Aseguradoras aliadas usa variables para el padding del shell, el gap interno, la altura minima del bloque, el ancho maximo de texto y escalas base de logotipos.
+- La seccion Aseguradoras aliadas usa variables para opacidad base, tamanos de logo por contexto y ajustes responsive por breakpoint.

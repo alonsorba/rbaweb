@@ -63,7 +63,20 @@
 
 ### Aseguradoras y aliados
 
-- Logos en `assets/img/logos blanco/`.
+| Recurso | Dimensiones | Extension | Transparencia | Orientacion | Calidad | Ajuste al mockup | Estado |
+|---|---:|---|---|---|---|---|---|
+| `assets/img/logos blanco/aig.png` | 2560 x 1315 | PNG | Si | Horizontal | Alta para web | Muy buena para el logotipo blanco sobre azul | Seleccionado |
+| `assets/img/logos blanco/axa.png` | 2363 x 2363 | PNG | Si | Cuadrada | Alta para web | Buena para una presencia secundaria equilibrada | Seleccionado |
+| `assets/img/logos blanco/Chubb.png` | 3654 x 390 | PNG | Si | Horizontal | Alta para web | Muy buena para un logo ancho en la franja superior | Seleccionado |
+| `assets/img/logos blanco/GNP.png` | 2560 x 973 | PNG | Si | Horizontal | Alta para web | Muy buena para lectura inmediata en desktop | Seleccionado |
+| `assets/img/logos blanco/hdi.png` | 656 x 412 | PNG | Si | Horizontal | Buena para web | Buena para una pieza compacta de apoyo | Seleccionado |
+| `assets/img/logos blanco/Mapfre.png` | 1280 x 576 | PNG | Si | Horizontal | Alta para web | Buena para equilibrio en la zona inferior izquierda | Seleccionado |
+| `assets/img/logos blanco/QUALITAS.png` | 3942 x 1204 | PNG | Si | Horizontal | Alta para web | Muy buena para la parte baja derecha por proporción extensa | Seleccionado |
+| `assets/img/logos blanco/Zurich.png` | 2560 x 605 | PNG | Si | Horizontal | Alta para web | Muy buena como ancla visual inferior derecha | Seleccionado |
+| `assets/img/logos blanco/general de salud.png` | 2774 x 1568 | PNG | Si | Horizontal | Alta para web | Alternativa valida pero no priorizada en esta composicion | No seleccionado |
+| `assets/img/logos blanco/general de seguros.png` | 400 x 153 | PNG | Si | Horizontal | Media para web | Compacta, pero menos limpia que las variantes elegidas | No seleccionado |
+| `assets/img/logos blanco/QSalud.png` | 844 x 296 | PNG | Si | Horizontal | Buena para web | Alternativa funcional, pero fuera del set final de aliados | No seleccionado |
+| `assets/img/logos blanco/seguros-atlas.png` | 1067 x 359 | PNG | Si | Horizontal | Buena para web | Alternativa funcional, pero no usada en esta entrega | No seleccionado |
 
 ### Recursos para ¿Por qué nosotros?
 
@@ -84,7 +97,9 @@
 - Para WEB-006 se selecciono `assets/img/compromiso.png` como recurso principal porque ya incluye el fondo azul integrado y es el mejor candidato local para el bloque de compromiso.
 - Para WEB-007 se seleccionaron `assets/img/escudo.png`, `carro.png`, `corazon.png`, `vida.png`, `avion.png`, `fianzas.png`, `servicios actuariales.png`, `asesoria.png`, `reclamaciones.png`, `siniestro.png` y `prevención de riesgos.png` como base visual de Soluciones, todos como recursos provisionales.
 - Para WEB-008 se seleccionaron `assets/img/nose.png`, `misa.png`, `jenny.png` e `itzel.png` como base visual de ¿Por qué nosotros?, todos como recursos provisionales y con escala ajustada desde datos PHP.
+- Para WEB-009 se seleccionaron `assets/img/logos blanco/aig.png`, `axa.png`, `Chubb.png`, `GNP.png`, `hdi.png`, `Mapfre.png`, `QUALITAS.png` y `Zurich.png` como base visual de Aseguradoras aliadas, todos como recursos provisionales.
 - Los hashes `a8ba017` y `8ce6203` corresponden a la base funcional y documental previa de Soluciones y quedan registrados como antecedente directo de WEB-008.
+- Los hashes `a15afc7` y `63ede76` corresponden a la base funcional y documental previa de WEB-008 y quedan registrados como antecedente directo de ese sprint.
 
 ## Recomendacion para la siguiente fase
 

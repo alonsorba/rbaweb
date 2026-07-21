@@ -68,6 +68,8 @@ WEB-007 agrega la seccion de Soluciones con tabs accesibles, carrusel horizontal
 
 WEB-008 agrega la seccion ¿Por qué nosotros? con grid de cuatro beneficios, retratos recortados y etiquetas inferiores, sin avanzar a aseguradoras.
 
+WEB-009 agrega la seccion de Aseguradoras aliadas con contador, mensaje y logos blancos decorativos, sin avanzar a testimonios ni formulario.
+
 ## Manuales y mockups
 
 - `docs/PLAN_TRABAJO.md`
