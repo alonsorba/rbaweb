@@ -78,6 +78,8 @@ WEB-012 agrega la seccion de Contacto con formulario accesible, validacion clien
 
 WEB-013 agrega el footer institucional reutilizable con marca, navegacion interna, enlaces legales y copyright dinamico, sin inventar datos de contacto ni redes sociales.
 
+WEB-014 agrega la pagina institucional Quiénes somos con hero interior, introduccion, diferenciadores, CTA y footer reutilizable, sin historia ni valores inventados.
+
 ## Manuales y mockups
 
 - `docs/PLAN_TRABAJO.md`

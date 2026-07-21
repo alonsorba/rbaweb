@@ -112,6 +112,19 @@ Validacion inicial de la base del Design System.
   - `.codex-footer-mobile.png` en Edge headless, valida el footer apilado en mobile.
   - `.codex-footer-privacy.png` en Edge headless, valida la reutilizacion del footer en `aviso-privacidad.php`.
 
+## WEB-014
+
+- Pagina institucional `quienes.php` integrada con navbar interno solido, hero interior, introduccion, diferenciadores, CTA y footer reutilizable.
+- La fotografia del hero se visualiza correctamente con `EDIFICIO-RBA-DIA.png` y conserva contraste suficiente sobre el overlay.
+- El navbar muestra `Quiénes somos` como enlace activo con `aria-current="page"` y mantiene el regreso al Home mediante enlaces funcionales.
+- No se renderizaron secciones vacias de historia, mision, vision o valores porque no existe respaldo editorial en el repositorio.
+- Capturas revisadas:
+  - `.codex-quienes-1366-final.png` en Edge headless, valida el hero interior y la composicion desktop.
+  - `.codex-quienes-1024.png` en Edge headless, valida el comportamiento en laptop.
+  - `.codex-quienes-430-final.png` en Edge headless, valida el apilado mobile y el hero con imagen.
+  - `.codex-home-final.png` en Edge headless, confirma que Home no presenta regresiones.
+  - `.codex-privacy-final.png` en Edge headless, confirma que el footer reutilizado sigue funcionando en `aviso-privacidad.php`.
+
 ## Criterios revisados
 
 - Sin desbordamiento horizontal en la base existente.
@@ -126,6 +139,7 @@ Validacion inicial de la base del Design System.
 - Sin desbordamiento horizontal observado en el bloque CTA final.
 - Sin desbordamiento horizontal observado en la seccion Contacto.
 - Sin desbordamiento horizontal observado en el footer institucional.
+- Sin desbordamiento horizontal observado en la pagina institucional Quiénes somos.
 - El sitio responde con HTTP 200 desde el servidor local.
 ## Pendiente
 

@@ -124,6 +124,20 @@ WEB-013 agrega el footer institucional reutilizable despues de Contacto.
 - El copyright usa el anio dinamico de PHP para evitar mantenimiento manual.
 - El componente queda listo para CMS porque cada bloque visible depende de variables PHP y no de contenido fijo en el marcado.
 
+## Quiénes somos
+
+WEB-014 agrega la pagina institucional `quienes.php` como primera pagina interna real del sitio.
+
+- La pagina define una estructura de datos maestra en PHP para hero, introduccion, diferenciadores, historia, principios y CTA, manteniendo los bloques opcionales desactivados cuando no existe respaldo.
+- `includes/components/internal-hero.php` renderiza el hero interior con titulo, descripcion e imagen local, y puede funcionar sin imagen si el recurso no es adecuado.
+- `includes/components/institutional-intro.php` concentra la introduccion institucional y un bloque de proceso o enfoque de trabajo sin dejar columnas vacias.
+- `includes/components/institutional-differentiators.php` reutiliza los cuatro conceptos ya presentes en el Home con una composicion editorial distinta y numeracion simple.
+- `includes/components/internal-cta.php` cierra la pagina con enlaces reales hacia `index.php#soluciones` e `index.php#contacto`.
+- El navbar usa el contexto `internal` para mostrarse solido desde el inicio, con `aria-current="page"` en la seccion activa y sin alterar el comportamiento del Home.
+- La imagen seleccionada para el hero fue `assets/img/EDIFICIO-RBA-DIA.png` por su composicion diurna, amplitud y mejor lectura en desktop y mobile.
+- Los bloques de historia, mision, vision y valores quedan omitidos por falta de texto respaldado y se documentan como pendientes para Comunicacion.
+- La pagina queda lista para CMS porque todo copy visible vive en variables PHP y no en texto fijo embebido.
+
 ## Arquitectura CSS
 
 `main.css` funciona como unico archivo de carga del sistema y ordena:
@@ -139,6 +153,7 @@ WEB-013 agrega el footer institucional reutilizable despues de Contacto.
 - `sections.css`
 - `carousel.css`
 - `forms.css`
+- `internal-pages.css`
 - `footer.css`
 - `animations.css`
 - `responsive.css`
@@ -180,3 +195,4 @@ Se definieron variables para:
 - La seccion Aseguradoras aliadas usa variables para el padding del shell, el gap interno, la altura minima del bloque, el ancho maximo de texto y escalas base de logotipos.
 - La seccion Aseguradoras aliadas usa variables para opacidad base, tamanos de logo por contexto y ajustes responsive por breakpoint.
 - La seccion Testimonios usa variables para el gap del grid, el padding de cada card, la altura minima, el tamano del avatar y el color de las estrellas.
+- La pagina Quiénes somos usa variables para el hero interior, el ancho editorial, el panel de imagen, la grilla de diferenciadores y el CTA final.

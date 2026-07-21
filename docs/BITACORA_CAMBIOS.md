@@ -1,5 +1,50 @@
 # Bitacora de cambios
 
+# 2026-07-21 - WEB-014 - Implementacion de la pagina institucional Quiénes somos
+
+### Cambios
+- Se creo `quienes.php` como pagina institucional real sin tocar el Home ni avanzar a Servicios o Ubicaciones.
+- Se reutilizo el navbar en modo interno con estado solido desde el inicio y enlace activo a la pagina actual.
+- Se implementaron un hero interior, una introduccion institucional, cuatro diferenciadores y un CTA final reutilizando el sistema `rb-`.
+- Se selecciono `assets/img/EDIFICIO-RBA-DIA.png` para el hero interior por su composicion diurna, lectura clara y espacio util para la jerarquia editorial.
+- Se actualizo el footer institucional para incluir el enlace a `quienes.php` y se mantuvo `aviso-privacidad.php` funcional.
+
+### Archivos
+- `quienes.php`
+- `includes/components/internal-hero.php`
+- `includes/components/institutional-intro.php`
+- `includes/components/institutional-differentiators.php`
+- `includes/components/internal-cta.php`
+- `includes/components/navbar.php`
+- `includes/head.php`
+- `assets/css/internal-pages.css`
+- `assets/css/main.css`
+- `assets/css/navbar.css`
+- `assets/css/responsive.css`
+- `assets/js/main.js`
+- `index.php`
+- `aviso-privacidad.php`
+- `includes/components/footer.php`
+- `docs/PLAN_TRABAJO.md`
+- `docs/DOCUMENTACION_TECNICA.md`
+- `docs/DECISIONES.md`
+- `docs/QA_VISUAL.md`
+- `docs/INVENTARIO_CONTENIDO.md`
+- `docs/PREPARACION_CMS.md`
+- `README.md`
+
+### Pruebas
+- Sintaxis PHP validada en `quienes.php`, `index.php`, `includes/components/internal-hero.php`, `includes/components/institutional-intro.php`, `includes/components/institutional-differentiators.php`, `includes/components/internal-cta.php`, `includes/components/navbar.php`, `includes/components/footer.php`, `includes/head.php` y `aviso-privacidad.php`.
+- Revision de JS validada con `node --check`.
+- Carga local confirmada con respuesta HTTP 200 en `quienes.php`, `index.php` y `aviso-privacidad.php`.
+- Revision de diff sin conflictos de formato con `git diff --check`.
+- Capturas headless generadas para desktop, laptop y mobile, ademas de Home y Aviso de Privacidad.
+
+### Git
+- Rama: `feature/base-project`
+- Commit: `pendiente`
+- Push: pendiente
+
 # 2026-07-21 - WEB-013 - Implementacion del footer institucional
 
 ### Cambios

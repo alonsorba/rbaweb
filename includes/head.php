@@ -8,6 +8,7 @@ if (!defined('SITE_BASE_URL')) {
 }
 $pageTitle = $pageTitle ?? 'R. Baidón';
 $pageDescription = $pageDescription ?? 'Sitio institucional de R. Baidón.';
+$bodyClass = $bodyClass ?? 'rb-page';
 ?>
 <!doctype html>
 <html lang="es">
@@ -23,5 +24,5 @@ $pageDescription = $pageDescription ?? 'Sitio institucional de R. Baidón.';
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhj6uW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="<?= htmlspecialchars(SITE_BASE_URL, ENT_QUOTES, 'UTF-8') ?>/assets/css/main.css">
 </head>
-<body class="rb-page">
+<body class="<?= htmlspecialchars($bodyClass, ENT_QUOTES, 'UTF-8') ?>">
 <a class="visually-hidden-focusable rb-skip-link" href="#main-content">Saltar al contenido principal</a>

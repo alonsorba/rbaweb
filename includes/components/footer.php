@@ -15,6 +15,10 @@ $rbFooterResolveHref = static function (string $rbFooterHref) use ($rbFooterCurr
         return $rbFooterHref;
     }
 
+    if (defined('SITE_BASE_URL') && SITE_BASE_URL !== '' && str_starts_with($rbFooterHref, SITE_BASE_URL)) {
+        return $rbFooterHref;
+    }
+
     if ($rbFooterHref[0] === '#') {
         return $rbFooterCurrentScript === 'index.php' ? $rbFooterHref : $rbFooterHomePath . $rbFooterHref;
     }

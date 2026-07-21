@@ -683,6 +683,10 @@ $rbFooterData = [
                 'href' => '#inicio',
             ],
             [
+                'label' => 'Quiénes somos',
+                'href' => SITE_BASE_URL . '/quienes.php',
+            ],
+            [
                 'label' => 'Soluciones',
                 'href' => '#soluciones',
             ],

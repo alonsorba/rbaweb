@@ -113,8 +113,20 @@
 - Para WEB-012 la opcion de solucion de interes se deriva de las categorias ya definidas en WEB-007 para evitar duplicar manualmente una lista extensa.
 - Para WEB-013 se selecciono `assets/img/R BAIDON V3 BLANCO.png` como logo principal del footer por ser el recurso horizontal blanco de mejor legibilidad sobre fondo azul oscuro.
 - Para WEB-013 no se encontraron redes sociales ni datos corporativos de contacto adicionales en el repositorio, por lo que el footer institucional se limito a marca, navegacion interna, enlace legal y copyright dinamico.
+- Para WEB-014 se selecciono `assets/img/EDIFICIO-RBA-DIA.png` como hero interior por equilibrio entre fachada, cielo y espacio util para copy.
+- Para WEB-014 se documentaron `EDIFICIO-RBA-NOCHE.jpg`, `DSC_1181.png`, `edificio.png` y `compromiso.png` como alternativas revisadas y descartadas en esta entrega.
 - Los hashes `a8ba017` y `8ce6203` corresponden a la base funcional y documental previa de Soluciones y quedan registrados como antecedente directo de WEB-008.
 - Los hashes `a15afc7` y `63ede76` corresponden a la base funcional y documental previa de WEB-008 y quedan registrados como antecedente directo de ese sprint.
+
+### Recursos para Quiénes somos
+
+| Recurso | Dimensiones | Extension | Transparencia | Orientacion | Calidad | Fondo | Uso sugerido | Git | Estado |
+|---|---:|---|---|---|---|---|---|---|---|
+| `assets/img/EDIFICIO-RBA-DIA.png` | 4256 x 2832 | PNG | No visible | Horizontal | Alta para web | Fondo diurno real con cielo y fachada limpia | Hero interior principal por composicion, lectura y amplitud | No versionado | Seleccionado, provisional |
+| `assets/img/EDIFICIO-RBA-NOCHE.jpg` | 4242 x 2823 | JPG | No | Horizontal | Alta para web | Fondo nocturno con iluminacion marcada | Alternativa valida para una variacion mas sobria | No versionado | No seleccionado |
+| `assets/img/DSC_1181.png` | 6000 x 4000 | PNG | No visible | Horizontal | Alta para web | Escena fotografica amplia | Recurso alterno para hero o seccion editorial si se requiere otra vista | No versionado | No seleccionado |
+| `assets/img/edificio.png` | 4096 x 4096 | PNG | No visible | Cuadrada | Alta para web | Fondo no confirmado por el nombre del archivo | Opcion secundaria, pero menos adecuada por su formato cuadrado | No versionado | No seleccionado |
+| `assets/img/compromiso.png` | 3931 x 2675 | PNG | Parcial | Horizontal | Alta para web | Fondo azul integrado en la escena | Alternativa de respaldo, pero ya utilizada en otra seccion del Home | No versionado | No seleccionado |
 
 ## Recomendacion para la siguiente fase
 

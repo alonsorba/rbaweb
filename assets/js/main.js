@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navbar = document.querySelector('.rb-navbar');
     const toggleButton = document.querySelector('[data-rb-navbar-toggle]');
     const collapseElement = document.getElementById('rbNavbarMenu');
+    const navbarContext = navbar?.dataset.rbNavbarContext || 'home';
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     const syncNavbarState = () => {
@@ -22,8 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
         collapseElement.classList.toggle('rb-navbar__collapse--open', isOpen);
     };
 
-    syncNavbarState();
-    window.addEventListener('scroll', syncNavbarState, { passive: true });
+    if (navbarContext !== 'internal') {
+        syncNavbarState();
+        window.addEventListener('scroll', syncNavbarState, { passive: true });
+    } else if (navbar) {
+        navbar.classList.add('rb-navbar--internal');
+    }
 
     if (toggleButton && collapseElement) {
         toggleButton.addEventListener('click', () => {

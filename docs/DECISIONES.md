@@ -102,3 +102,12 @@
 - Se resolvieron los enlaces internos con anchors del Home y con una adaptacion automatica para paginas internas, evitando duplicar navegacion distinta por plantilla.
 - No se incorporaron datos de contacto ni redes sociales porque el repositorio no contiene fuentes corporativas confirmadas para ese contenido.
 - Se mantuvo el footer listo para CMS al reservar los textos visibles en variables PHP y no en el marcado del componente.
+
+## Quiénes somos
+
+- Se implemento `quienes.php` como la primera pagina institucional interna del sitio para no avanzar a Servicios ni Ubicaciones.
+- Se eligio `assets/img/EDIFICIO-RBA-DIA.png` para el hero interior por su composicion diurna, espacio util para la jerarquia de copy y lectura clara sobre overlay.
+- Se reforzo el hero con `background-image` ademas del `<img>` para evitar capturas vacias en headless y mantener el recurso local visible de forma estable.
+- Se activo un contexto `internal` en el navbar para mostrarlo solido desde el inicio sin tocar la experiencia del Home.
+- No se incluyeron historia, mision, vision ni valores porque no existe texto oficial respaldado en el repositorio.
+- El CTA final se limito a `index.php#soluciones` e `index.php#contacto` para mantener la navegacion funcional y sin rutas inventadas.

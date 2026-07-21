@@ -22,6 +22,7 @@ Cada seccion futura debera documentar campos editables, limites, imagenes, orden
 - WEB-010 usa variables para nombre, cargo, empresa, avatar, rating, cita y estado provisional de cada testimonio.
 - WEB-012 usa variables para titulo, descripcion, introduccion, campos de formulario, mensaje de estado y privacidad, sin datos corporativos laterales confirmados.
 - WEB-013 usa variables para marca, logo, navegacion interna, enlaces legales, metadatos y copyright dinamico.
+- WEB-014 usa variables para hero interior, introduccion, diferenciadores, CTA, imagen de portada y bloques opcionales de historia o principios desactivados.
 - La validacion de existencia del recurso permite reemplazar el mapa sin cambiar la estructura del componente.
 - La misma logica permite sustituir los recursos ESR sin modificar el marcado general.
 - La misma logica se reutiliza en compromiso para cambiar la imagen sin tocar el markup.
@@ -29,6 +30,7 @@ Cada seccion futura debera documentar campos editables, limites, imagenes, orden
 - La misma logica se reutiliza en Aseguradoras aliadas para omitir logos faltantes sin romper la composicion general.
 - La misma logica se reutiliza en Testimonios para usar un avatar interno provisional cuando no exista un retrato aprobado.
 - La misma logica se reutiliza en Contacto para validar campos, selects, checkbox y estados informativos sin backend.
+- La misma logica se reutiliza en Quiénes somos para omitir historia, mision, vision y valores cuando no existan textos oficiales.
 
 ## Regla de trabajo
 
