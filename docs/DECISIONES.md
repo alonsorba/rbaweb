@@ -1,3 +1,11 @@
+# VIS-004
+
+- Se identifico que Aseguradoras aliadas estaba contenida por un layout demasiado corto, con contador y mensaje poco dominantes y logos con poca presencia sobre el fondo azul.
+- Se resolvio Aseguradoras aliadas como un bloque azul de ancho completo con jerarquia editorial mas fuerte, logos decorativos mas distribuidos y contrapunto visual entre contador y mensaje.
+- Se identifico que Testimonios seguia leyendose como tres tarjetas blancas sobre fondo claro y con avatares que no coincidian con la referencia.
+- Se resolvio Testimonios como un contenedor azul oscuro redondeado con tres tarjetas visibles, titulo alineado al mockup y avatares ocultos visualmente sin perder la estructura data-driven.
+- WEB-014 permanece pausado para no mezclar la correccion visual del Home con una pagina interna aun pendiente.
+
 # Decisiones tecnicas
 
 ## Base inicial

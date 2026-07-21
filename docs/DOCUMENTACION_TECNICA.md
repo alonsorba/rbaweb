@@ -1,3 +1,12 @@
+# VIS-004
+
+VIS-004 corrige exclusivamente la fidelidad visual de Aseguradoras aliadas y Testimonios sin avanzar a CTA final, Contacto, Footer ni paginas internas.
+
+- Aseguradoras aliadas se reequilibra como un bloque azul de ancho completo con contador dominante, mensaje mas amplio y logos decorativos con mejor distribucion.
+- Testimonios se convierte en un contenedor azul oscuro redondeado con tres tarjetas visibles y titulo alineado al mockup.
+- Los cambios se sostienen con variables CSS, grid real y ajustes responsive, sin reconstruir la logica PHP ni introducir librerias nuevas.
+- WEB-014 permanece pausado para mantener separada la pagina interna mientras el Home sigue en correccion visual.
+
 # Documentacion tecnica
 
 ## Arquitectura base

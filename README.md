@@ -1,3 +1,7 @@
+# VIS-004
+
+VIS-004 corrige la escala visual de Aseguradoras aliadas y Testimonios con un bloque azul de ancho completo y un contenedor azul oscuro redondeado, sin avanzar a CTA final, Contacto, Footer ni paginas internas.
+
 # R. Baidon - Sitio institucional
 
 ## Objetivo

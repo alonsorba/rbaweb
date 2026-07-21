@@ -119,48 +119,50 @@ if ($rbTestimonialsSectionId === '' || $rbTestimonialsTitle === '' || $rbTestimo
 ?>
 <section class="rb-section rb-testimonials" id="<?= htmlspecialchars($rbTestimonialsSectionId, ENT_QUOTES, 'UTF-8') ?>" aria-labelledby="rb-testimonials-title" data-rb-testimonials>
     <div class="rb-container">
-        <header class="rb-testimonials__header">
-            <h2 class="rb-section-title rb-testimonials__title" id="rb-testimonials-title"><?= htmlspecialchars($rbTestimonialsTitle, ENT_QUOTES, 'UTF-8') ?></h2>
-        </header>
+        <div class="rb-testimonials__shell">
+            <header class="rb-testimonials__header">
+                <h2 class="rb-testimonials__title" id="rb-testimonials-title"><?= htmlspecialchars($rbTestimonialsTitle, ENT_QUOTES, 'UTF-8') ?></h2>
+            </header>
 
-        <ul class="rb-testimonials__grid" role="list">
-            <?php foreach ($rbTestimonialsItemsToRender as $rbTestimonialsItem): ?>
-                <li class="rb-testimonials__item">
-                    <article class="rb-card rb-testimonials__card"<?= $rbTestimonialsItem['provisional'] ? ' data-rb-provisional="true"' : '' ?>>
-                        <div class="rb-testimonials__card-header">
-                            <div class="rb-testimonials__avatar<?= $rbTestimonialsItem['avatar_is_placeholder'] ? ' rb-testimonials__avatar--placeholder' : '' ?>"<?= $rbTestimonialsItem['avatar_has_image'] ? '' : ' role="img" aria-label="' . htmlspecialchars($rbTestimonialsItem['avatar_alt'], ENT_QUOTES, 'UTF-8') . '"' ?>>
-                                <?php if ($rbTestimonialsItem['avatar']['url'] !== ''): ?>
-                                    <img
-                                        class="rb-testimonials__avatar-image"
-                                        src="<?= htmlspecialchars($rbTestimonialsItem['avatar']['url'], ENT_QUOTES, 'UTF-8') ?>"
-                                        alt="<?= htmlspecialchars($rbTestimonialsItem['avatar_alt'], ENT_QUOTES, 'UTF-8') ?>"
-                                        width="<?= $rbTestimonialsItem['avatar']['width'] > 0 ? $rbTestimonialsItem['avatar']['width'] : 256 ?>"
-                                        height="<?= $rbTestimonialsItem['avatar']['height'] > 0 ? $rbTestimonialsItem['avatar']['height'] : 256 ?>"
-                                        loading="lazy"
-                                        decoding="async"
-                                    >
-                                <?php else: ?>
-                                    <span class="rb-testimonials__avatar-fallback" aria-hidden="true"><?= htmlspecialchars($rbTestimonialsItem['avatar_initials'], ENT_QUOTES, 'UTF-8') ?></span>
-                                <?php endif; ?>
+            <ul class="rb-testimonials__grid" role="list">
+                <?php foreach ($rbTestimonialsItemsToRender as $rbTestimonialsItem): ?>
+                    <li class="rb-testimonials__item">
+                        <article class="rb-testimonials__card"<?= $rbTestimonialsItem['provisional'] ? ' data-rb-provisional="true"' : '' ?>>
+                            <div class="rb-testimonials__card-header">
+                                <div class="rb-testimonials__avatar<?= $rbTestimonialsItem['avatar_is_placeholder'] ? ' rb-testimonials__avatar--placeholder' : '' ?>"<?= $rbTestimonialsItem['avatar_has_image'] ? '' : ' role="img" aria-label="' . htmlspecialchars($rbTestimonialsItem['avatar_alt'], ENT_QUOTES, 'UTF-8') . '"' ?>>
+                                    <?php if ($rbTestimonialsItem['avatar']['url'] !== ''): ?>
+                                        <img
+                                            class="rb-testimonials__avatar-image"
+                                            src="<?= htmlspecialchars($rbTestimonialsItem['avatar']['url'], ENT_QUOTES, 'UTF-8') ?>"
+                                            alt="<?= htmlspecialchars($rbTestimonialsItem['avatar_alt'], ENT_QUOTES, 'UTF-8') ?>"
+                                            width="<?= $rbTestimonialsItem['avatar']['width'] > 0 ? $rbTestimonialsItem['avatar']['width'] : 256 ?>"
+                                            height="<?= $rbTestimonialsItem['avatar']['height'] > 0 ? $rbTestimonialsItem['avatar']['height'] : 256 ?>"
+                                            loading="lazy"
+                                            decoding="async"
+                                        >
+                                    <?php else: ?>
+                                        <span class="rb-testimonials__avatar-fallback" aria-hidden="true"><?= htmlspecialchars($rbTestimonialsItem['avatar_initials'], ENT_QUOTES, 'UTF-8') ?></span>
+                                    <?php endif; ?>
+                                </div>
+
+                                <div class="rb-testimonials__identity">
+                                    <p class="rb-testimonials__name"><?= htmlspecialchars($rbTestimonialsItem['name'], ENT_QUOTES, 'UTF-8') ?></p>
+                                    <p class="rb-testimonials__role"><?= htmlspecialchars($rbTestimonialsItem['role'], ENT_QUOTES, 'UTF-8') ?></p>
+                                    <p class="rb-testimonials__company"><?= htmlspecialchars($rbTestimonialsItem['company'], ENT_QUOTES, 'UTF-8') ?></p>
+                                </div>
+
+                                <div class="rb-testimonials__rating" aria-label="<?= htmlspecialchars((string) $rbTestimonialsItem['rating'], ENT_QUOTES, 'UTF-8') ?> de 5 estrellas">
+                                    <?php for ($rbTestimonialsStar = 1; $rbTestimonialsStar <= 5; $rbTestimonialsStar++): ?>
+                                        <span class="rb-testimonials__star <?= $rbTestimonialsStar <= $rbTestimonialsItem['rating'] ? 'rb-testimonials__star--filled' : 'rb-testimonials__star--empty' ?>" aria-hidden="true"><?= $rbTestimonialsStar <= $rbTestimonialsItem['rating'] ? '&#9733;' : '&#9734;' ?></span>
+                                    <?php endfor; ?>
+                                </div>
                             </div>
 
-                            <div class="rb-testimonials__identity">
-                                <p class="rb-testimonials__name"><?= htmlspecialchars($rbTestimonialsItem['name'], ENT_QUOTES, 'UTF-8') ?></p>
-                                <p class="rb-testimonials__role"><?= htmlspecialchars($rbTestimonialsItem['role'], ENT_QUOTES, 'UTF-8') ?></p>
-                                <p class="rb-testimonials__company"><?= htmlspecialchars($rbTestimonialsItem['company'], ENT_QUOTES, 'UTF-8') ?></p>
-                            </div>
-                        </div>
-
-                        <div class="rb-testimonials__rating" aria-label="<?= htmlspecialchars((string) $rbTestimonialsItem['rating'], ENT_QUOTES, 'UTF-8') ?> de 5 estrellas">
-                            <?php for ($rbTestimonialsStar = 1; $rbTestimonialsStar <= 5; $rbTestimonialsStar++): ?>
-                                <span class="rb-testimonials__star <?= $rbTestimonialsStar <= $rbTestimonialsItem['rating'] ? 'rb-testimonials__star--filled' : 'rb-testimonials__star--empty' ?>" aria-hidden="true"><?= $rbTestimonialsStar <= $rbTestimonialsItem['rating'] ? '&#9733;' : '&#9734;' ?></span>
-                            <?php endfor; ?>
-                        </div>
-
-                        <p class="rb-testimonials__quote"><?= htmlspecialchars($rbTestimonialsItem['quote'], ENT_QUOTES, 'UTF-8') ?></p>
-                    </article>
-                </li>
-            <?php endforeach; ?>
-        </ul>
+                            <p class="rb-testimonials__quote"><?= htmlspecialchars($rbTestimonialsItem['quote'], ENT_QUOTES, 'UTF-8') ?></p>
+                        </article>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
     </div>
 </section>

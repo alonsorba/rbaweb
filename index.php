@@ -469,7 +469,7 @@ $rbPartnersData = [
 
 $rbTestimonialsData = [
     'section_id' => 'testimonios',
-    'title' => 'Testimonios',
+    'title' => 'Lo que dicen nuestros clientes',
     'items' => [
         [
             'name' => 'Cliente provisional 01',

@@ -649,6 +649,11 @@
     background: linear-gradient(180deg, #0c3259 0%, #092848 56%, #08223e 100%);
 }
 
+.rb-partners > .rb-container {
+    width: min(100% - 2.5rem, 1360px);
+    padding-inline: 0;
+}
+
 .rb-partners::before {
     content: "";
     position: absolute;
@@ -663,7 +668,7 @@
 .rb-partners__inner {
     position: relative;
     display: grid;
-    grid-template-columns: minmax(16rem, 0.42fr) minmax(0, 0.58fr);
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
     align-items: center;
     gap: var(--rb-partners-inner-gap);
     min-height: var(--rb-partners-visual-min-height);
@@ -673,33 +678,34 @@
 .rb-partners__copy {
     position: relative;
     z-index: 2;
+    align-self: center;
     max-width: var(--rb-partners-copy-max-width);
 }
 
 .rb-partners__counter {
     display: flex;
     flex-direction: column;
-    gap: 0.05rem;
+    gap: 0.1rem;
     margin: 0;
     color: var(--rb-white);
 }
 
 .rb-partners__eyebrow {
-    font-size: var(--rb-font-size-md);
-    line-height: 1.15;
+    font-size: clamp(1.75rem, 2.4vw, 2.25rem);
+    line-height: 1.1;
     font-weight: var(--rb-font-weight-semibold);
     opacity: 0.94;
 }
 
 .rb-partners__value {
-    font-size: clamp(4rem, 7vw, 6.75rem);
-    line-height: 0.88;
+    font-size: clamp(6rem, 10vw, 9.375rem);
+    line-height: 0.9;
     font-weight: var(--rb-font-weight-extrabold);
     letter-spacing: -0.06em;
 }
 
 .rb-partners__label {
-    font-size: clamp(1.35rem, 2.15vw, 2rem);
+    font-size: clamp(1.9rem, 2.9vw, 2.65rem);
     line-height: 1.05;
     font-weight: var(--rb-font-weight-semibold);
     letter-spacing: -0.02em;
@@ -709,11 +715,12 @@
     position: relative;
     z-index: 2;
     justify-self: end;
+    align-self: center;
     max-width: var(--rb-partners-message-max-width);
     margin: 0;
-    font-size: clamp(1.25rem, 2vw, 2rem);
-    line-height: 1.28;
-    font-weight: var(--rb-font-weight-semibold);
+    font-size: clamp(2rem, 3.1vw, 3.25rem);
+    line-height: 1.12;
+    font-weight: var(--rb-font-weight-medium);
     color: var(--rb-white);
     text-align: left;
 }
@@ -745,74 +752,97 @@
 }
 
 .rb-partners__logo--aig {
-    inset-block-start: 5%;
-    inset-inline-start: 3%;
-    --rb-partners-logo-width: 11rem;
-    --rb-partners-logo-height: 4.6rem;
+    inset-block-start: 6%;
+    inset-inline-start: 4%;
+    --rb-partners-logo-width: 13rem;
+    --rb-partners-logo-height: 5.2rem;
+    --rb-partners-logo-opacity: 0.42;
 }
 
 .rb-partners__logo--axa {
-    inset-block-start: 5%;
-    inset-inline-start: 35%;
-    --rb-partners-logo-width: 7.2rem;
-    --rb-partners-logo-height: 7.2rem;
+    inset-block-start: 6%;
+    inset-inline-start: 34%;
+    --rb-partners-logo-width: 8.75rem;
+    --rb-partners-logo-height: 8.75rem;
+    --rb-partners-logo-opacity: 0.4;
 }
 
 .rb-partners__logo--chubb {
-    inset-block-start: 6%;
-    inset-inline-end: 3%;
-    --rb-partners-logo-width: 12rem;
-    --rb-partners-logo-height: 3.9rem;
+    inset-block-start: 7%;
+    inset-inline-end: 4%;
+    --rb-partners-logo-width: 13.5rem;
+    --rb-partners-logo-height: 4.5rem;
+    --rb-partners-logo-opacity: 0.38;
 }
 
 .rb-partners__logo--hdi {
-    inset-block-start: 39%;
-    inset-inline-start: 4%;
-    --rb-partners-logo-width: 8.2rem;
-    --rb-partners-logo-height: 5.2rem;
+    inset-block-start: 38%;
+    inset-inline-start: 6%;
+    --rb-partners-logo-width: 9.5rem;
+    --rb-partners-logo-height: 6rem;
+    --rb-partners-logo-opacity: 0.45;
 }
 
 .rb-partners__logo--gnp {
-    inset-block-start: 35%;
-    inset-inline-end: 5%;
-    --rb-partners-logo-width: 12.5rem;
-    --rb-partners-logo-height: 5rem;
+    inset-block-start: 34%;
+    inset-inline-end: 6%;
+    --rb-partners-logo-width: 14.5rem;
+    --rb-partners-logo-height: 5.8rem;
+    --rb-partners-logo-opacity: 0.5;
 }
 
 .rb-partners__logo--mapfre {
-    inset-block-end: 10%;
-    inset-inline-start: 12%;
-    --rb-partners-logo-width: 10rem;
-    --rb-partners-logo-height: 4rem;
+    inset-block-end: 11%;
+    inset-inline-start: 10%;
+    --rb-partners-logo-width: 12rem;
+    --rb-partners-logo-height: 4.4rem;
+    --rb-partners-logo-opacity: 0.36;
 }
 
 .rb-partners__logo--qualitas {
-    inset-block-end: 12%;
+    inset-block-end: 13%;
     inset-inline-end: 18%;
-    --rb-partners-logo-width: 12.25rem;
-    --rb-partners-logo-height: 4.6rem;
+    --rb-partners-logo-width: 13rem;
+    --rb-partners-logo-height: 4.8rem;
+    --rb-partners-logo-opacity: 0.45;
 }
 
 .rb-partners__logo--zurich {
-    inset-block-end: 6%;
-    inset-inline-end: 3%;
-    --rb-partners-logo-width: 10rem;
-    --rb-partners-logo-height: 4rem;
+    inset-block-end: 7%;
+    inset-inline-end: 4%;
+    --rb-partners-logo-width: 11.5rem;
+    --rb-partners-logo-height: 4.4rem;
+    --rb-partners-logo-opacity: 0.4;
 }
 
 .rb-testimonials {
-    background: linear-gradient(180deg, var(--rb-color-surface-alt) 0%, var(--rb-white) 100%);
+    background: var(--rb-white);
+}
+
+.rb-testimonials > .rb-container {
+    width: min(100% - 2.5rem, 1360px);
+    padding-inline: 0;
+}
+
+.rb-testimonials__shell {
+    padding: var(--rb-testimonials-shell-padding);
+    border-radius: var(--rb-testimonials-shell-radius);
+    background: var(--rb-color-primary-900);
+    box-shadow: none;
 }
 
 .rb-testimonials__header {
     display: grid;
     justify-items: center;
     gap: var(--rb-space-3);
-    margin-bottom: var(--rb-space-6);
+    margin-bottom: clamp(2rem, 3.5vw, 3rem);
 }
 
 .rb-testimonials__title {
-    max-width: 18ch;
+    max-width: var(--rb-testimonials-title-max-width);
+    font-size: clamp(2.375rem, 4vw, 3.625rem);
+    line-height: 1.05;
+    color: var(--rb-white);
     text-align: center;
 }
 

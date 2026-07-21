@@ -317,9 +317,9 @@
     }
 
     .rb-partners {
-        --rb-partners-visual-min-height: clamp(24rem, 44vw, 32rem);
-        --rb-partners-copy-max-width: 16rem;
-        --rb-partners-message-max-width: 24rem;
+        --rb-partners-visual-min-height: clamp(34rem, 52vw, 42rem);
+        --rb-partners-copy-max-width: 18rem;
+        --rb-partners-message-max-width: 28rem;
     }
 
     .rb-partners__logo--aig {
@@ -364,6 +364,14 @@
 
     .rb-testimonials__grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .rb-testimonials__shell {
+        padding: clamp(2.5rem, 4vw, 3.5rem);
+    }
+
+    .rb-testimonials__title {
+        font-size: clamp(2rem, 3.5vw, 3rem);
     }
 }
 
@@ -531,7 +539,7 @@
     .rb-partners__inner {
         grid-template-columns: 1fr;
         min-height: 0;
-        padding-block: var(--rb-space-6);
+        padding-block: var(--rb-space-5);
     }
 
     .rb-partners__copy {
@@ -541,7 +549,7 @@
     .rb-partners__message {
         justify-self: start;
         max-width: 100%;
-        margin-top: calc(var(--rb-space-4) * -0.25);
+        margin-top: calc(var(--rb-space-4) * -0.1);
     }
 
     .rb-partners__logos {
@@ -549,7 +557,7 @@
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: var(--rb-space-4);
-        margin-top: var(--rb-space-6);
+        margin-top: var(--rb-space-5);
         pointer-events: auto;
     }
 
@@ -579,6 +587,27 @@
 
     .rb-testimonials__card {
         min-height: 0;
+    }
+
+    .rb-testimonials__shell {
+        padding: var(--rb-space-5);
+        border-radius: var(--rb-radius-xl);
+    }
+
+    .rb-testimonials__header {
+        margin-bottom: var(--rb-space-5);
+    }
+
+    .rb-testimonials__title {
+        font-size: clamp(1.75rem, 7vw, 2.4rem);
+    }
+
+    .rb-testimonials__card-header {
+        gap: var(--rb-space-3);
+    }
+
+    .rb-testimonials__rating {
+        padding-left: var(--rb-space-3);
     }
 
     .rb-final-cta__inner {
@@ -801,7 +830,7 @@
     }
 
     .rb-partners__inner {
-        padding-block: var(--rb-space-5);
+        padding-block: var(--rb-space-4);
     }
 
     .rb-partners__counter {
@@ -809,15 +838,15 @@
     }
 
     .rb-partners__value {
-        font-size: clamp(3.4rem, 17vw, 4.8rem);
+        font-size: clamp(3.75rem, 18vw, 5rem);
     }
 
     .rb-partners__label {
-        font-size: clamp(1.2rem, 6vw, 1.6rem);
+        font-size: clamp(1.35rem, 6vw, 1.75rem);
     }
 
     .rb-partners__message {
-        font-size: clamp(1.05rem, 4.8vw, 1.35rem);
+        font-size: clamp(1.15rem, 5vw, 1.45rem);
     }
 
     .rb-partners__logos {
@@ -833,6 +862,14 @@
         margin-bottom: var(--rb-space-5);
     }
 
+    .rb-testimonials__shell {
+        padding: var(--rb-space-4);
+    }
+
+    .rb-testimonials__title {
+        font-size: clamp(1.6rem, 8vw, 2.2rem);
+    }
+
     .rb-testimonials__card {
         padding: var(--rb-space-4);
     }
@@ -843,7 +880,7 @@
     }
 
     .rb-testimonials__quote {
-        font-size: var(--rb-font-size-md);
+        font-size: 0.95rem;
     }
 
     .rb-contact__grid {

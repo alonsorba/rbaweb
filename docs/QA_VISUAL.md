@@ -1,3 +1,11 @@
+# VIS-004
+
+- Se corrigio la escala visual de Aseguradoras aliadas y Testimonios sin modificar CTA final, Contacto, Footer ni paginas internas.
+- La causa principal de Aseguradoras aliadas era una composicion demasiado angosta y con logos decorativos poco presentes para la referencia.
+- La causa principal de Testimonios era un bloque blanco con tarjetas pequeñas y avatares visibles que no coincidian con el mockup.
+- Se amplio Aseguradoras aliadas con jerarquia de contador mas fuerte, mensaje mas protagonista y logos distribuidos sobre el fondo azul.
+- Se convierto Testimonios en un contenedor azul oscuro redondeado con tres tarjetas visibles y avatares ocultos visualmente.
+
 # QA visual
 
 ## Estado

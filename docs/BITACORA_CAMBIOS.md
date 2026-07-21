@@ -568,3 +568,36 @@
 - Rama: `feature/base-project`
 - Commit: `fb1f511`
 - Push: pendiente
+# 2026-07-21 - VIS-004 - Correccion visual de Aseguradoras aliadas y Testimonios
+
+### Cambios
+- Se amplió la sección Aseguradoras aliadas para convertirla en un bloque azul de ancho completo con contador dominante, mensaje más amplio y logos decorativos más presentes.
+- Se reestructuró Testimonios como un contenedor azul oscuro redondeado con tres tarjetas visibles, título alineado al mockup y avatares ocultos visualmente.
+- Se ajustaron variables, contenedores, tarjetas y responsive para mantener la experiencia data-driven, accesible y preparada para CMS sin reconstruir la lógica.
+- Se mantuvo WEB-014 pausado y no se tocaron CTA final, Contacto, Footer ni páginas internas.
+
+### Archivos
+- `index.php`
+- `includes/components/partners.php`
+- `includes/components/testimonials.php`
+- `assets/css/variables.css`
+- `assets/css/cards.css`
+- `assets/css/sections.css`
+- `assets/css/responsive.css`
+- `docs/PLAN_TRABAJO.md`
+- `docs/BITACORA_CAMBIOS.md`
+- `docs/DECISIONES.md`
+- `docs/QA_VISUAL.md`
+- `docs/DOCUMENTACION_TECNICA.md`
+- `README.md`
+
+### Pruebas
+- Sintaxis PHP validada en `index.php`, `includes/components/partners.php` y `includes/components/testimonials.php`.
+- Revision de JS validada con `node --check` sin errores.
+- Revision de CSS y diff validada con `git diff --check`.
+- Validacion visual local pendiente de captura en esta sesion por el alcance del entorno.
+
+### Git
+- Rama: `feature/base-project`
+- Commit: pendiente
+- Push: pendiente
