@@ -94,3 +94,11 @@
 - La validacion se resolvio con HTML5 nativo mas JavaScript propio para mostrar errores accesibles sin enviar datos a un backend inexistente.
 - `aviso-privacidad.php` se creo como ruta provisional para que el checkbox y el enlace del formulario apunten a un destino funcional sin inventar el texto legal final.
 - Se mantuvo el envio neutral con `action=""` para no simular procesado ni confirmar un envio que todavia no existe.
+
+## Footer institucional
+
+- Se implemento `includes/components/footer.php` como bloque data-driven para reutilizar marca, navegacion, legales y copyright sin contenido embebido.
+- Se eligio `R BAIDON V3 BLANCO.png` por ser el logo horizontal de mejor lectura sobre el fondo azul oscuro del footer.
+- Se resolvieron los enlaces internos con anchors del Home y con una adaptacion automatica para paginas internas, evitando duplicar navegacion distinta por plantilla.
+- No se incorporaron datos de contacto ni redes sociales porque el repositorio no contiene fuentes corporativas confirmadas para ese contenido.
+- Se mantuvo el footer listo para CMS al reservar los textos visibles en variables PHP y no en el marcado del componente.

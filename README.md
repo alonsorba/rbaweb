@@ -76,6 +76,8 @@ WEB-011 agrega el bloque CTA final con dos acciones reales, sin forzar una image
 
 WEB-012 agrega la seccion de Contacto con formulario accesible, validacion cliente y aviso de privacidad funcional, sin backend ni datos corporativos inventados.
 
+WEB-013 agrega el footer institucional reutilizable con marca, navegacion interna, enlaces legales y copyright dinamico, sin inventar datos de contacto ni redes sociales.
+
 ## Manuales y mockups
 
 - `docs/PLAN_TRABAJO.md`

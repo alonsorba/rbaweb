@@ -111,6 +111,8 @@
 - Para WEB-010 se selecciono `assets/img/persona.png` como avatar interno provisional y se descartaron `01.jpg`, `02.jpg`, `03.jpg` y `04.jpg` por no corresponder a retratos de avatar.
 - Para WEB-012 no se encontraron correo, telefono, direccion, horarios ni aviso legal definitivo en el repositorio, por lo que la seccion Contacto se preparo sin datos corporativos laterales y con una ruta provisional de privacidad.
 - Para WEB-012 la opcion de solucion de interes se deriva de las categorias ya definidas en WEB-007 para evitar duplicar manualmente una lista extensa.
+- Para WEB-013 se selecciono `assets/img/R BAIDON V3 BLANCO.png` como logo principal del footer por ser el recurso horizontal blanco de mejor legibilidad sobre fondo azul oscuro.
+- Para WEB-013 no se encontraron redes sociales ni datos corporativos de contacto adicionales en el repositorio, por lo que el footer institucional se limito a marca, navegacion interna, enlace legal y copyright dinamico.
 - Los hashes `a8ba017` y `8ce6203` corresponden a la base funcional y documental previa de Soluciones y quedan registrados como antecedente directo de WEB-008.
 - Los hashes `a15afc7` y `63ede76` corresponden a la base funcional y documental previa de WEB-008 y quedan registrados como antecedente directo de ese sprint.
 
@@ -118,4 +120,5 @@
 
 - Ordenar los recursos por secciones de home.
 - Confirmar cual archivo de logotipo sera el oficial para cabecera, footer y variantes de contraste.
+- Confirmar si el footer institucional requerira en el futuro una columna de contacto o redes cuando existan datos aprobados por Comunicacion.
 - Registrar que imagenes quedan como temporales y cuales ya estan aprobadas por Comunicacion.

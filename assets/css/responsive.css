@@ -419,6 +419,14 @@
         justify-self: start;
         justify-content: flex-start;
     }
+
+    .rb-footer__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .rb-footer__brand {
+        grid-column: 1 / -1;
+    }
 }
 
 @media (max-width: 575.98px) {
@@ -620,5 +628,22 @@
 
     .rb-final-cta__action {
         width: 100%;
+    }
+
+    .rb-footer__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rb-footer__brand {
+        gap: var(--rb-space-3);
+    }
+
+    .rb-footer__brand-logo {
+        max-width: 16.5rem;
+    }
+
+    .rb-footer__meta {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }

@@ -1,5 +1,41 @@
 # Bitacora de cambios
 
+# 2026-07-21 - WEB-013 - Implementacion del footer institucional
+
+### Cambios
+- Se agrego un footer institucional reutilizable con marca, navegacion interna, enlace legal y copyright dinamico.
+- Se reutilizo el logo blanco horizontal aprobado para una lectura consistente sobre fondo azul corporativo.
+- Se preparo la composicion para reutilizacion en paginas internas sin inventar datos de contacto ni redes sociales no confirmadas.
+- Se mantuvo `aviso-privacidad.php` como pagina provisional y se conecto al mismo footer institucional para asegurar continuidad visual.
+
+### Archivos
+- `includes/components/footer.php`
+- `includes/footer.php`
+- `index.php`
+- `aviso-privacidad.php`
+- `assets/css/footer.css`
+- `assets/css/responsive.css`
+- `docs/PLAN_TRABAJO.md`
+- `docs/DOCUMENTACION_TECNICA.md`
+- `docs/BITACORA_CAMBIOS.md`
+- `docs/DECISIONES.md`
+- `docs/QA_VISUAL.md`
+- `docs/INVENTARIO_CONTENIDO.md`
+- `docs/PREPARACION_CMS.md`
+- `README.md`
+
+### Pruebas
+- Sintaxis PHP validada en `includes/components/footer.php`, `index.php` y `aviso-privacidad.php`.
+- Revision de JS validada con `node --check`.
+- Carga local confirmada con respuesta HTTP 200 en `index.php` y `aviso-privacidad.php`.
+- Revision de diff sin conflictos de formato con `git diff --check`.
+- Capturas visuales generadas para escritorio, mobile y `aviso-privacidad.php`.
+
+### Git
+- Rama: `feature/base-project`
+- Commit: `pendiente`
+- Push: pendiente
+
 # 2026-07-21 - WEB-012 - Implementacion de la seccion Contacto
 
 ### Cambios

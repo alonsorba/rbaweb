@@ -113,6 +113,17 @@ WEB-012 agrega la seccion Contacto despues del CTA final.
 - La ruta `aviso-privacidad.php` se creo como destino provisional para mantener funcional el enlace de privacidad sin inventar un texto legal definitivo.
 - El bloque queda listo para CMS y backend futuro porque el copy, las etiquetas, las opciones y los mensajes viven en PHP y no en texto fijo embebido.
 
+## Footer institucional
+
+WEB-013 agrega el footer institucional reutilizable despues de Contacto.
+
+- `includes/components/footer.php` recibe marca, navegacion, enlaces legales y metadatos por estructura PHP y no contiene copy institucional embebido.
+- El logo blanco horizontal se usa para mantener contraste sobre el fondo azul oscuro del footer y se carga con `loading="lazy"` por estar al final del documento.
+- La navegacion interna se resuelve con anchors del Home y se adapta a paginas internas reutilizando el mismo componente.
+- El enlace legal apunta a `aviso-privacidad.php` sin inventar nuevas rutas ni datos corporativos de contacto.
+- El copyright usa el anio dinamico de PHP para evitar mantenimiento manual.
+- El componente queda listo para CMS porque cada bloque visible depende de variables PHP y no de contenido fijo en el marcado.
+
 ## Arquitectura CSS
 
 `main.css` funciona como unico archivo de carga del sistema y ordena:

@@ -21,6 +21,7 @@ Cada seccion futura debera documentar campos editables, limites, imagenes, orden
 - WEB-009 usa variables para contador, mensaje, logos, rutas, opacidad y posicion de cada aseguradora aliada.
 - WEB-010 usa variables para nombre, cargo, empresa, avatar, rating, cita y estado provisional de cada testimonio.
 - WEB-012 usa variables para titulo, descripcion, introduccion, campos de formulario, mensaje de estado y privacidad, sin datos corporativos laterales confirmados.
+- WEB-013 usa variables para marca, logo, navegacion interna, enlaces legales, metadatos y copyright dinamico.
 - La validacion de existencia del recurso permite reemplazar el mapa sin cambiar la estructura del componente.
 - La misma logica permite sustituir los recursos ESR sin modificar el marcado general.
 - La misma logica se reutiliza en compromiso para cambiar la imagen sin tocar el markup.

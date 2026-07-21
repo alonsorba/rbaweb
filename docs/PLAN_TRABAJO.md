@@ -16,7 +16,8 @@
 | WEB-010 | Home | Implementacion de la seccion Testimonios | En progreso | Aseguradoras aliadas ya integrada y recursos provisionales de avatar disponibles | Seccion Testimonios con tres tarjetas, avatares internos y datos preparados para CMS lista para validacion final | `pendiente` |
 
 | WEB-011 | Home | Implementacion del bloque CTA final | Completado | Testimonios ya integrada y cierre visual pendiente | Bloque CTA final con datos PHP, dos acciones reales y composicion responsive listo para CMS | `a926245` |
-| WEB-012 | Home | Implementacion de la seccion Contacto | Completado | CTA final ya integrado, contenido corporativo no confirmado y ruta de privacidad provisional disponible | Seccion Contacto con formulario accesible, validacion cliente, aviso de privacidad funcional y preparacion para CMS | `pendiente` |
+| WEB-012 | Home | Implementacion de la seccion Contacto | Completado | CTA final ya integrado, contenido corporativo no confirmado y ruta de privacidad provisional disponible | Seccion Contacto con formulario accesible, validacion cliente, aviso de privacidad funcional y preparacion para CMS | `49782ff` |
+| WEB-013 | Footer | Implementacion del footer institucional | Completado | Home ya cerrado con CTA final y contacto, sin datos corporativos ni redes sociales confirmadas | Footer institucional reutilizable con marca, navegacion interna, enlaces legales y copyright dinamico listo para CMS | `pendiente` |
 
 ## Fases generales
 
@@ -42,3 +43,4 @@
 - WEB-010 avanza con la seccion Testimonios, usando avatares internos provisionales y sin avanzar a formulario ni footer.
 - WEB-011 cierra el Home con un bloque CTA final reutilizable, sin avanzar a contacto ni footer y sin introducir imagen obligatoria.
 - WEB-012 agrega la seccion Contacto despues del CTA final, con formulario accesible, validacion nativa y JavaScript sin backend.
+- WEB-013 agrega el footer institucional reutilizable, con navegacion interna, enlace legal y copyright dinamico sin inventar datos de contacto o redes.

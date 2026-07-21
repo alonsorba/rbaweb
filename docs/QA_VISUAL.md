@@ -101,6 +101,17 @@ Validacion inicial de la base del Design System.
 - Warning no bloqueante de Edge visible en varias capturas: `Every renderer should have at least one task provided by a primary task provider`.
 - La captura con ancla `#contacto` en mobile no aterrizo en el bloque y se descarto; la evidencia util se tomo con capturas completas de pagina.
 
+## WEB-013
+
+- Footer institucional integrado al final del sitio con marca, navegacion interna, enlace legal y copyright dinamico.
+- La composicion usa fondo azul oscuro, grid de tres columnas en desktop y apilado progresivo en tablet y mobile.
+- El logo blanco horizontal se mantiene legible sobre el fondo y no genera overflow horizontal en la parte baja de la pagina.
+- `aviso-privacidad.php` reutiliza el mismo footer para conservar consistencia visual en paginas internas.
+- Capturas revisadas:
+  - `.codex-footer-desktop.png` en Edge headless, valida el cierre de `index.php` con footer completo.
+  - `.codex-footer-mobile.png` en Edge headless, valida el footer apilado en mobile.
+  - `.codex-footer-privacy.png` en Edge headless, valida la reutilizacion del footer en `aviso-privacidad.php`.
+
 ## Criterios revisados
 
 - Sin desbordamiento horizontal en la base existente.
@@ -114,6 +125,7 @@ Validacion inicial de la base del Design System.
 - Sin desbordamiento horizontal observado en la seccion ¿Por qué nosotros?.
 - Sin desbordamiento horizontal observado en el bloque CTA final.
 - Sin desbordamiento horizontal observado en la seccion Contacto.
+- Sin desbordamiento horizontal observado en el footer institucional.
 - El sitio responde con HTTP 200 desde el servidor local.
 ## Pendiente
 
