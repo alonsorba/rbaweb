@@ -70,6 +70,8 @@ WEB-008 agrega la seccion ¿Por qué nosotros? con grid de cuatro beneficios, re
 
 WEB-009 agrega la seccion de Aseguradoras aliadas con contador, mensaje y logos blancos decorativos, sin avanzar a testimonios ni formulario.
 
+WEB-010 agrega la seccion de Testimonios con tres tarjetas provisionales, avatares internos y rating configurable, sin avanzar a formulario ni footer.
+
 ## Manuales y mockups
 
 - `docs/PLAN_TRABAJO.md`

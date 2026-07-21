@@ -1,5 +1,40 @@
 # Bitacora de cambios
 
+# 2026-07-21 - WEB-010 - Implementacion de la seccion Testimonios
+
+### Cambios
+- Se agrego la seccion Testimonios despues de Aseguradoras aliadas, sin avanzar al selector final de soluciones, formulario ni footer.
+- Se definieron tres tarjetas visibles en desktop con avatares internos provisionales, nombre, cargo, empresa, calificacion y testimonio.
+- Se marcaron los datos como provisionales en PHP para que Comunicacion valide textos, cargos y posibles avatares definitivos.
+- Se reutilizo `persona.png` como imagen interna de reemplazo para cuando no exista un avatar aprobado, manteniendo una salida segura y sin recursos externos.
+
+### Archivos
+- `index.php`
+- `includes/components/testimonials.php`
+- `assets/css/variables.css`
+- `assets/css/cards.css`
+- `assets/css/sections.css`
+- `assets/css/responsive.css`
+- `docs/PLAN_TRABAJO.md`
+- `docs/DOCUMENTACION_TECNICA.md`
+- `docs/DECISIONES.md`
+- `docs/QA_VISUAL.md`
+- `docs/INVENTARIO_CONTENIDO.md`
+- `docs/PREPARACION_CMS.md`
+- `README.md`
+
+### Pruebas
+- Sintaxis PHP validada en `index.php` e `includes/components/testimonials.php`.
+- Revision de JS validada con `node --check`.
+- Carga local confirmada con respuesta HTTP 200 en `http://127.0.0.1:8080/rba_web/index.php`.
+- Revision de diff sin conflictos de formato con `git diff --check`.
+- Revision visual de la seccion de testimonios pendiente de captura final en esta sesion.
+
+### Git
+- Rama: `feature/base-project`
+- Commit: `pendiente`
+- Push: pendiente
+
 # 2026-07-20 - WEB-009 - Implementacion de la seccion Aseguradoras aliadas
 
 ### Cambios

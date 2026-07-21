@@ -82,6 +82,16 @@ WEB-009 agrega la seccion Aseguradoras aliadas despues de ¿Por qué nosotros?.
 - La vista mobile reorganiza los logotipos en una grilla de dos columnas para conservar legibilidad sin slider.
 - Los datos de la seccion viven en variables PHP en `index.php`, lo que facilita la edicion futura desde CMS.
 
+## Testimonios
+
+WEB-010 agrega la seccion Testimonios despues de Aseguradoras aliadas.
+
+- `includes/components/testimonials.php` construye tres tarjetas desde datos PHP y valida rating, avatares y textos antes de renderizar.
+- El componente usa `persona.png` como avatar interno provisional cuando no existe un retrato aprobado para evitar imagenes rotas o dependencias externas.
+- Los textos, nombres, cargos y empresas quedan marcados como provisionales en los datos para que Comunicacion los valide antes de publicacion.
+- La composicion se resuelve con grid de tres columnas en desktop, dos en laptop y una en mobile, sin autoplay ni carrusel.
+- El rating se dibuja con estrellas configurables y el bloque queda listo para CMS porque el contenido no vive embebido en el marcado.
+
 ## Arquitectura CSS
 
 `main.css` funciona como unico archivo de carga del sistema y ordena:
@@ -137,3 +147,4 @@ Se definieron variables para:
 - La seccion ¿Por qué nosotros? usa variables para separacion del grid, altura minima de card, altura minima del visual, solape de la etiqueta y padding de imagen.
 - La seccion Aseguradoras aliadas usa variables para el padding del shell, el gap interno, la altura minima del bloque, el ancho maximo de texto y escalas base de logotipos.
 - La seccion Aseguradoras aliadas usa variables para opacidad base, tamanos de logo por contexto y ajustes responsive por breakpoint.
+- La seccion Testimonios usa variables para el gap del grid, el padding de cada card, la altura minima, el tamano del avatar y el color de las estrellas.

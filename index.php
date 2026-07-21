@@ -468,6 +468,46 @@ $rbPartnersData = [
         ],
     ],
 ];
+
+$rbTestimonialsData = [
+    'section_id' => 'testimonios',
+    'title' => 'Testimonios',
+    'items' => [
+        [
+            'name' => 'Cliente provisional 01',
+            'role' => 'Direccion administrativa',
+            'company' => 'Empresa industrial mediana',
+            'avatar' => '',
+            'avatar_alt' => 'Avatar provisional de Cliente provisional 01',
+            'avatar_initials' => '01',
+            'rating' => 5,
+            'quote' => 'La atencion fue clara, ordenada y con seguimiento puntual desde el primer contacto.',
+            'provisional' => true,
+        ],
+        [
+            'name' => 'Cliente provisional 02',
+            'role' => 'Gerencia de operaciones',
+            'company' => 'Firma logistica regional',
+            'avatar' => '',
+            'avatar_alt' => 'Avatar provisional de Cliente provisional 02',
+            'avatar_initials' => '02',
+            'rating' => 5,
+            'quote' => 'Recibimos opciones entendibles y respuestas rapidas para comparar coberturas sin perder tiempo.',
+            'provisional' => true,
+        ],
+        [
+            'name' => 'Cliente provisional 03',
+            'role' => 'Recursos humanos',
+            'company' => 'Grupo de servicios profesionales',
+            'avatar' => '',
+            'avatar_alt' => 'Avatar provisional de Cliente provisional 03',
+            'avatar_initials' => '03',
+            'rating' => 5,
+            'quote' => 'El acompanamiento nos ayudo a definir una proteccion mas completa para el equipo.',
+            'provisional' => true,
+        ],
+    ],
+];
 ?>
 <?php require __DIR__ . '/includes/header.php'; ?>
 
@@ -480,6 +520,7 @@ $rbPartnersData = [
     <?php require __DIR__ . '/includes/components/solutions.php'; ?>
     <?php require __DIR__ . '/includes/components/why.php'; ?>
     <?php require __DIR__ . '/includes/components/partners.php'; ?>
+    <?php require __DIR__ . '/includes/components/testimonials.php'; ?>
 </main>
 
 <?php require __DIR__ . '/includes/footer.php'; ?>

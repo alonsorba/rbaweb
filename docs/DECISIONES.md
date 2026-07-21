@@ -70,3 +70,11 @@
 - La composicion se resolvio con logos posicionados de forma decorativa en escritorio y con grilla simple de dos columnas en mobile para conservar claridad.
 - No se aplicaron filtros ni recoloreado por CSS para evitar degradar la nitidez de los archivos ya preparados.
 - La opacidad de cada logo se ajusta por datos para equilibrar jerarquia visual sin cambiar el asset original.
+
+## Testimonios
+
+- Se implemento `includes/components/testimonials.php` como bloque data-driven para permitir validacion de contenido sin duplicar markup.
+- Se eligio `persona.png` como avatar interno provisional porque funciona como reemplazo generico y evita depender de retratos no aprobados.
+- Los textos y metadatos se dejaron como provisionales para no presentar testimonios como contenido final hasta validacion de Comunicacion.
+- La composicion se resolvio con cards limpias, fondo blanco, estrellas azules y grid responsive para mantener legibilidad sin autoplay.
+- Se priorizo la accesibilidad con texto real, ratings etiquetados y fallback seguro cuando un avatar no exista.

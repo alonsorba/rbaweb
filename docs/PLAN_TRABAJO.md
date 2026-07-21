@@ -12,7 +12,8 @@
 | WEB-006 | Home | Implementacion de la seccion Nuestro compromiso | Completado | ESR ya integrada y recurso local de compromiso disponible | Seccion de compromiso con texto segmentado, imagen profesional y composicion responsive lista para CMS | `829932d` |
 | WEB-007 | Home | Implementacion de la seccion Soluciones | Completado | Compromiso ya integrado y recursos locales para tarjetas de soluciones disponibles | Seccion Soluciones con tabs accesibles, carrusel horizontal, drag y cards reutilizables lista para CMS | `a8ba017` |
 | WEB-008 | Home | Implementacion de la seccion ¿Por qué nosotros? | Completado | Soluciones ya integrada y recursos de personas disponibles | Seccion ¿Por qué nosotros? con grid de beneficios, retratos recortados y etiquetas inferiores lista para CMS | `a15afc7` |
-| WEB-009 | Home | Implementacion de la seccion Aseguradoras aliadas | Completado | ¿Por qué nosotros? ya integrada y logos blancos locales disponibles | Seccion Aseguradoras aliadas con contador +20, mensaje de asesoría y logotipos decorativos parametrizados lista para CMS | `pendiente` |
+| WEB-009 | Home | Implementacion de la seccion Aseguradoras aliadas | Completado | ¿Por qué nosotros? ya integrada y logos blancos locales disponibles | Seccion Aseguradoras aliadas con contador +20, mensaje de asesoría y logotipos decorativos parametrizados lista para CMS | `c38ce2d` |
+| WEB-010 | Home | Implementacion de la seccion Testimonios | En progreso | Aseguradoras aliadas ya integrada y recursos provisionales de avatar disponibles | Seccion Testimonios con tres tarjetas, avatares internos y datos preparados para CMS lista para validacion final | `pendiente` |
 
 ## Fases generales
 
@@ -35,3 +36,4 @@
 - WEB-007 completa la seccion de Soluciones con navegacion por categorias y carrusel horizontal accesible.
 - WEB-008 completa la seccion ¿Por qué nosotros? con cuatro beneficios visuales y sin avanzar a aseguradoras.
 - WEB-009 completa la seccion Aseguradoras aliadas con logos blancos distribuidos de forma decorativa y sin avanzar a testimonios.
+- WEB-010 avanza con la seccion Testimonios, usando avatares internos provisionales y sin avanzar a formulario ni footer.

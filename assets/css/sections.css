@@ -736,3 +736,32 @@
     --rb-partners-logo-width: 10rem;
     --rb-partners-logo-height: 4rem;
 }
+
+.rb-testimonials {
+    background: linear-gradient(180deg, var(--rb-color-surface-alt) 0%, var(--rb-white) 100%);
+}
+
+.rb-testimonials__header {
+    display: grid;
+    justify-items: center;
+    gap: var(--rb-space-3);
+    margin-bottom: var(--rb-space-6);
+}
+
+.rb-testimonials__title {
+    max-width: 18ch;
+    text-align: center;
+}
+
+.rb-testimonials__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--rb-testimonials-grid-gap);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.rb-testimonials__item {
+    min-width: 0;
+}

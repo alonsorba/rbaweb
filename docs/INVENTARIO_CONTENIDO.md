@@ -78,6 +78,16 @@
 | `assets/img/logos blanco/QSalud.png` | 844 x 296 | PNG | Si | Horizontal | Buena para web | Alternativa funcional, pero fuera del set final de aliados | No seleccionado |
 | `assets/img/logos blanco/seguros-atlas.png` | 1067 x 359 | PNG | Si | Horizontal | Buena para web | Alternativa funcional, pero no usada en esta entrega | No seleccionado |
 
+### Recursos para Testimonios
+
+| Recurso | Dimensiones | Extension | Transparencia | Orientacion | Calidad | Ajuste al mockup | Estado |
+|---|---:|---|---|---|---|---|---|
+| `assets/img/persona.png` | 4096 x 4096 | PNG | Si | Cuadrada | Alta para web | Sirve como avatar interno generico para testimonios provisionales | Seleccionado como placeholder interno |
+| `assets/img/01.jpg` | 1366 x 429 | JPG | No | Horizontal | Buena para web | Escena corporativa, no retrato de avatar | No seleccionado |
+| `assets/img/02.jpg` | 1136 x 366 | JPG | No | Horizontal | Buena para web | Escena de oficina, no retrato de avatar | No seleccionado |
+| `assets/img/03.jpg` | 1366 x 436 | JPG | No | Horizontal | Buena para web | Escena institucional util, pero no avatar | No seleccionado |
+| `assets/img/04.jpg` | 2000 x 516 | JPG | No | Horizontal | Buena para web | Escena corporativa, no avatar final | No seleccionado |
+
 ### Recursos para ¿Por qué nosotros?
 
 | Recurso | Beneficio asignado | Dimensiones | Extension | Transparencia | Orientacion | Fondo incluido | Calidad | Coincidencia con el mockup | Versionado | Estado | Escala CSS |
@@ -98,6 +108,7 @@
 - Para WEB-007 se seleccionaron `assets/img/escudo.png`, `carro.png`, `corazon.png`, `vida.png`, `avion.png`, `fianzas.png`, `servicios actuariales.png`, `asesoria.png`, `reclamaciones.png`, `siniestro.png` y `prevención de riesgos.png` como base visual de Soluciones, todos como recursos provisionales.
 - Para WEB-008 se seleccionaron `assets/img/nose.png`, `misa.png`, `jenny.png` e `itzel.png` como base visual de ¿Por qué nosotros?, todos como recursos provisionales y con escala ajustada desde datos PHP.
 - Para WEB-009 se seleccionaron `assets/img/logos blanco/aig.png`, `axa.png`, `Chubb.png`, `GNP.png`, `hdi.png`, `Mapfre.png`, `QUALITAS.png` y `Zurich.png` como base visual de Aseguradoras aliadas, todos como recursos provisionales.
+- Para WEB-010 se selecciono `assets/img/persona.png` como avatar interno provisional y se descartaron `01.jpg`, `02.jpg`, `03.jpg` y `04.jpg` por no corresponder a retratos de avatar.
 - Los hashes `a8ba017` y `8ce6203` corresponden a la base funcional y documental previa de Soluciones y quedan registrados como antecedente directo de WEB-008.
 - Los hashes `a15afc7` y `63ede76` corresponden a la base funcional y documental previa de WEB-008 y quedan registrados como antecedente directo de ese sprint.
 

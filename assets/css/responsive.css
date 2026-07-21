@@ -205,6 +205,10 @@
         --rb-partners-logo-width: 8.8rem;
         --rb-partners-logo-height: 3.4rem;
     }
+
+    .rb-testimonials__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 @media (min-width: 992px) {
@@ -398,6 +402,14 @@
         --rb-partners-logo-width: auto;
         --rb-partners-logo-height: 3.75rem;
     }
+
+    .rb-testimonials__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rb-testimonials__card {
+        min-height: 0;
+    }
 }
 
 @media (max-width: 575.98px) {
@@ -539,5 +551,22 @@
 
     .rb-partners__logo {
         height: 3.25rem;
+    }
+
+    .rb-testimonials__header {
+        margin-bottom: var(--rb-space-5);
+    }
+
+    .rb-testimonials__card {
+        padding: var(--rb-space-4);
+    }
+
+    .rb-testimonials__avatar {
+        width: var(--rb-testimonials-avatar-size-sm);
+        height: var(--rb-testimonials-avatar-size-sm);
+    }
+
+    .rb-testimonials__quote {
+        font-size: var(--rb-font-size-md);
     }
 }

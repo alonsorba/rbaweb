@@ -167,6 +167,14 @@
     --rb-partners-logo-size-md: clamp(6rem, 10vw, 8.5rem);
     --rb-partners-logo-size-lg: clamp(7rem, 12vw, 11rem);
     --rb-partners-logo-size-xl: clamp(8rem, 13vw, 13rem);
+    --rb-testimonials-grid-gap: clamp(1rem, 2vw, 1.5rem);
+    --rb-testimonials-card-padding: clamp(1.25rem, 2.4vw, 1.75rem);
+    --rb-testimonials-card-min-height: 18rem;
+    --rb-testimonials-avatar-size: 4rem;
+    --rb-testimonials-avatar-size-sm: 3.5rem;
+    --rb-testimonials-star-size: 1rem;
+    --rb-testimonials-star-color: var(--rb-color-secondary-500);
+    --rb-testimonials-star-muted: rgba(47, 157, 232, 0.18);
     --rb-textarea-min-height: 9rem;
     --rb-indicator-size: 0.75rem;
     --rb-icon-circle-size: 3rem;

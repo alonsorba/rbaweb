@@ -71,6 +71,14 @@ Validacion inicial de la base del Design System.
 - El intento de captura headless en PNG no persistio en disco en esta sesion, por lo que se dejo trazabilidad del hallazgo y se tomo como evidencia visual el preview compuesto de logos.
 - Sintaxis PHP, JS, diff y respuesta HTTP 200 validadas correctamente.
 
+## WEB-010
+
+- Seccion Testimonios integrada despues de Aseguradoras aliadas con tres tarjetas provisionales y avatares internos genericos.
+- Grid de tres columnas en desktop, dos en laptop y una columna en mobile sin overflow horizontal observado en la revision del CSS y el DOM.
+- Los textos y metadatos quedan marcados como provisionales y el avatar interno `persona.png` evita imagenes rotas mientras Comunicacion valida el contenido.
+- La captura headless no persistio en disco por un fallo de GPU en Chrome headless, por lo que no se tomo como evidencia final en esta sesion.
+- Sintaxis PHP, JS, diff y respuesta HTTP 200 validadas correctamente.
+
 ## Criterios revisados
 
 - Sin desbordamiento horizontal en la base existente.
