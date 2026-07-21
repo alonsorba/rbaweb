@@ -9,6 +9,7 @@ if ($rbNavbarContext === 'internal') {
 
 $rbNavbarBrandHref = $rbNavbarData['brandHref'] ?? '#inicio';
 $rbNavbarBrandSrc = $rbNavbarData['brandSrc'] ?? '';
+$rbNavbarBrandScrolledSrc = $rbNavbarData['brandScrolledSrc'] ?? '';
 $rbNavbarBrandAlt = $rbNavbarData['brandAlt'] ?? 'R. Baidón';
 $rbNavbarLabel = $rbNavbarData['label'] ?? 'Navegación principal';
 $rbNavbarToggleLabel = $rbNavbarData['toggleLabel'] ?? 'Abrir navegación principal';
@@ -21,8 +22,17 @@ $rbNavbarActions = is_array($rbNavbarData['actions'] ?? null) ? $rbNavbarData['a
         <a class="rb-navbar__brand" href="<?= htmlspecialchars($rbNavbarBrandHref, ENT_QUOTES, 'UTF-8') ?>" aria-label="<?= htmlspecialchars($rbNavbarBrandAlt, ENT_QUOTES, 'UTF-8') ?>">
             <?php if ($rbNavbarBrandSrc !== ''): ?>
                 <img
-                    class="rb-brand-logo"
+                    class="rb-brand-logo rb-brand-logo--default"
                     src="<?= htmlspecialchars($rbNavbarBrandSrc, ENT_QUOTES, 'UTF-8') ?>"
+                    alt="<?= htmlspecialchars($rbNavbarBrandAlt, ENT_QUOTES, 'UTF-8') ?>"
+                    loading="eager"
+                    decoding="async"
+                >
+            <?php endif; ?>
+            <?php if ($rbNavbarBrandScrolledSrc !== ''): ?>
+                <img
+                    class="rb-brand-logo rb-brand-logo--scrolled"
+                    src="<?= htmlspecialchars($rbNavbarBrandScrolledSrc, ENT_QUOTES, 'UTF-8') ?>"
                     alt="<?= htmlspecialchars($rbNavbarBrandAlt, ENT_QUOTES, 'UTF-8') ?>"
                     loading="eager"
                     decoding="async"

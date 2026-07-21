@@ -8,7 +8,7 @@
     position: relative;
     width: 100%;
     min-height: var(--rb-navbar-height);
-    padding-block: 0.35rem;
+    padding-block: 0.5rem;
     color: var(--rb-color-navbar-ink);
     background: linear-gradient(180deg, rgba(8, 25, 45, 0.68) 0%, rgba(8, 25, 45, 0.18) 68%, rgba(8, 25, 45, 0) 100%);
     border-bottom: 1px solid transparent;
@@ -39,24 +39,39 @@
 }
 
 .rb-navbar__inner {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: var(--rb-space-4);
-    min-height: calc(var(--rb-navbar-height) - 0.7rem);
+    min-height: calc(var(--rb-navbar-height) - 0.5rem);
 }
 
 .rb-navbar__brand {
     display: inline-flex;
     align-items: center;
     flex-shrink: 0;
+    position: relative;
+    z-index: 2;
 }
 
 .rb-brand-logo {
     width: auto;
-    max-width: clamp(140px, 18vw, 190px);
-    max-height: 58px;
+    max-width: clamp(16rem, 22vw, 21.25rem);
+    max-height: 4.75rem;
     object-fit: contain;
+}
+
+.rb-brand-logo--scrolled {
+    display: none;
+}
+
+.rb-navbar--scrolled .rb-brand-logo--default {
+    display: none;
+}
+
+.rb-navbar--scrolled .rb-brand-logo--scrolled {
+    display: block;
 }
 
 .rb-navbar__toggle {
@@ -93,6 +108,7 @@
 
 .rb-navbar__collapse {
     width: 100%;
+    flex: 1 1 auto;
 }
 
 .rb-navbar__collapse:not(.rb-navbar__collapse--open) {
@@ -102,14 +118,16 @@
 .rb-navbar__menu {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: var(--rb-space-5);
+    width: 100%;
 }
 
 .rb-navbar__nav {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: var(--rb-space-4);
+    gap: clamp(1rem, 2vw, 1.75rem);
     list-style: none;
     margin: 0;
     padding: 0;
@@ -119,6 +137,8 @@
     display: inline-flex;
     align-items: center;
     min-height: var(--rb-control-height-md);
+    font-size: var(--rb-font-size-md);
+    letter-spacing: 0.01em;
     color: var(--rb-color-navbar-ink);
     font-weight: var(--rb-font-weight-semibold);
     text-decoration: none;
@@ -170,6 +190,7 @@
     align-items: center;
     flex-wrap: wrap;
     gap: var(--rb-space-3);
+    margin-left: auto;
 }
 
 .rb-navbar__menu .rb-button {
@@ -180,4 +201,13 @@
     border-color: var(--rb-color-border-strong);
     background: rgba(255, 255, 255, 0.92);
     color: var(--rb-color-primary-900);
+}
+
+@media (min-width: 992px) {
+    .rb-navbar__brand {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
 }

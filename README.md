@@ -58,6 +58,8 @@ El sistema visual se construye con clases propias prefijadas `rb-` y con `main.c
 
 WEB-003 ya compone el arranque visible del Home con navbar, hero y metricas, usando solo recursos locales existentes y variables PHP preparadas para edicion posterior.
 
+VIS-001 corrige la escala visual inicial del Home en Hero, metricas y presencia nacional para acercarlo al mockup de Comunicacion sin tocar las secciones posteriores.
+
 WEB-004 agrega presencia nacional con mapa de Mexico, marcador de matriz en Sonora y contador de estados, manteniendo la misma base editable para CMS.
 
 WEB-005 agrega la seccion de Empresa Socialmente Responsable con aniversario, pilares, distintivo secundario y trofeo principal, sin avanzar al bloque de compromiso.
@@ -66,7 +68,7 @@ WEB-006 agrega la seccion de Nuestro compromiso con texto segmentado e imagen lo
 
 WEB-007 agrega la seccion de Soluciones con tabs accesibles, carrusel horizontal y cards reutilizables, sin avanzar a otras secciones.
 
-WEB-008 agrega la seccion ¿Por qué nosotros? con grid de cuatro beneficios, retratos recortados y etiquetas inferiores, sin avanzar a aseguradoras.
+WEB-008 agrega la seccion Â¿Por quÃ© nosotros? con grid de cuatro beneficios, retratos recortados y etiquetas inferiores, sin avanzar a aseguradoras.
 
 WEB-009 agrega la seccion de Aseguradoras aliadas con contador, mensaje y logos blancos decorativos, sin avanzar a testimonios ni formulario.
 
@@ -78,7 +80,7 @@ WEB-012 agrega la seccion de Contacto con formulario accesible, validacion clien
 
 WEB-013 agrega el footer institucional reutilizable con marca, navegacion interna, enlaces legales y copyright dinamico, sin inventar datos de contacto ni redes sociales.
 
-WEB-014 agrega la pagina institucional Quiénes somos con hero interior, introduccion, diferenciadores, CTA y footer reutilizable, sin historia ni valores inventados.
+WEB-014 queda pausado temporalmente por priorizacion de fidelidad visual del Home.
 
 ## Manuales y mockups
 

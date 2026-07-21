@@ -1,6 +1,41 @@
 # Bitacora de cambios
 
-# 2026-07-21 - WEB-014 - Implementacion de la pagina institucional Quiénes somos
+# 2026-07-21 - VIS-001 - Correccion visual de Hero, metricas y presencia nacional
+
+### Cambios
+- Se amplio el Hero a ancho completo, se reforzo la tarjeta principal y se ajusto el navbar para integrarse sobre la imagen con logo blanco inicial y cambio de logo al hacer scroll.
+- Se escalaron las metricas con una tarjeta blanca amplia y tipografia mas grande, manteniendo los valores existentes de `+150`, `+35` y `+80`.
+- Se rearmo la seccion de presencia nacional para que el mapa de Mexico domine la composicion, con el indicador de Ciudad Obregon, Sonora y el contador `+25` con mayor jerarquia visual.
+- Se corrigieron proporciones, contenedores y comportamiento responsive para desktop, laptop y mobile sin usar `zoom` ni `transform: scale()`.
+- Se dejo WEB-014 pausado por priorizacion de fidelidad visual del Home.
+
+### Archivos
+- `index.php`
+- `includes/components/navbar.php`
+- `includes/components/presence.php`
+- `assets/css/variables.css`
+- `assets/css/navbar.css`
+- `assets/css/hero.css`
+- `assets/css/sections.css`
+- `assets/css/responsive.css`
+- `docs/PLAN_TRABAJO.md`
+- `docs/BITACORA_CAMBIOS.md`
+- `docs/QA_VISUAL.md`
+- `docs/DECISIONES.md`
+- `README.md`
+
+### Pruebas
+- Sintaxis PHP validada en `index.php`, `includes/components/navbar.php` y `includes/components/presence.php`.
+- Revision de JS validada con `node --check`.
+- Revision de formato validada con `git diff --check`.
+- Carga local confirmada con respuesta HTTP 200 en `index.php`.
+- Capturas headless generadas para `1440x900`, `1366x768`, `1024x768`, `768x1024`, `430x900`, `390x844`, `360x800`, ademas de vistas individuales de Hero, metricas, presencia nacional y del tramo completo hasta presencia.
+
+### Git
+- Rama: `feature/base-project`
+- Commit: `pendiente`
+- Push: pendiente
+# 2026-07-21 - WEB-014 - Implementacion de la pagina institucional QuiÃ©nes somos
 
 ### Cambios
 - Se creo `quienes.php` como pagina institucional real sin tocar el Home ni avanzar a Servicios o Ubicaciones.
@@ -188,10 +223,10 @@
 # 2026-07-20 - WEB-009 - Implementacion de la seccion Aseguradoras aliadas
 
 ### Cambios
-- Se agrego la seccion Aseguradoras aliadas despues de ¿Por qué nosotros?, sin avanzar a testimonios ni formulario.
-- Se construyo un fondo azul corporativo de ancho completo con contador +20, mensaje de asesoría y logotipos blancos decorativos.
-- Se parametrizaron el contador, el mensaje y los logos desde PHP para facilitar edición futura desde CMS.
-- Se seleccionaron los logos blancos locales AIG, AXA, Chubb, GNP, HDI, Mapfre, Quálitas y Zurich por su legibilidad y cercanía al mockup.
+- Se agrego la seccion Aseguradoras aliadas despues de Â¿Por quÃ© nosotros?, sin avanzar a testimonios ni formulario.
+- Se construyo un fondo azul corporativo de ancho completo con contador +20, mensaje de asesorÃ­a y logotipos blancos decorativos.
+- Se parametrizaron el contador, el mensaje y los logos desde PHP para facilitar ediciÃ³n futura desde CMS.
+- Se seleccionaron los logos blancos locales AIG, AXA, Chubb, GNP, HDI, Mapfre, QuÃ¡litas y Zurich por su legibilidad y cercanÃ­a al mockup.
 - Se documento que `a15afc7` y `63ede76` corresponden a WEB-008 y quedan como antecedente inmediato de este sprint.
 
 ### Archivos
@@ -221,10 +256,10 @@
 - Commit: `pendiente`
 - Push: pendiente
 
-# 2026-07-20 - WEB-008 - Implementacion de la seccion ¿Por qué nosotros?
+# 2026-07-20 - WEB-008 - Implementacion de la seccion Â¿Por quÃ© nosotros?
 
 ### Cambios
-- Se agrego la seccion ¿Por qué nosotros? despues de Soluciones, sin avanzar a aseguradoras, testimonios ni formulario.
+- Se agrego la seccion Â¿Por quÃ© nosotros? despues de Soluciones, sin avanzar a aseguradoras, testimonios ni formulario.
 - Se definio un grid de cuatro beneficios con retratos recortados, fondo azul superior y etiqueta blanca inferior.
 - Se parametrizaron los titulos por linea, las imagenes, el texto alternativo y la escala individual de cada tarjeta desde PHP.
 - Se seleccionaron `nose.png`, `misa.png`, `jenny.png` e `itzel.png` como base visual provisional por su cercania al mockup y por su consistencia de recorte.

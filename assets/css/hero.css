@@ -1,19 +1,27 @@
 .rb-hero {
     margin-top: calc(var(--rb-navbar-height) * -1);
-    padding-top: calc(var(--rb-navbar-height) + var(--rb-space-5));
+    padding-top: 0;
     padding-bottom: var(--rb-space-6);
+}
+
+.rb-hero > .rb-container {
+    width: 100%;
+    max-width: none;
+    padding-inline: 0;
 }
 
 .rb-hero__stage {
     position: relative;
-    display: grid;
-    align-items: end;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
     min-height: var(--rb-hero-min-height);
-    padding: clamp(1.25rem, 3vw, 2.5rem);
+    padding: clamp(2rem, 3vw, 3rem) clamp(1.5rem, 3vw, 3rem);
     overflow: hidden;
-    border-radius: var(--rb-radius-xl);
+    border-radius: 0;
     background:
-        linear-gradient(180deg, rgba(8, 25, 45, 0.12), rgba(8, 25, 45, 0.28)),
+        linear-gradient(180deg, rgba(8, 25, 45, 0.16), rgba(8, 25, 45, 0.24)),
         var(--rb-gradient-brand);
     box-shadow: var(--rb-shadow-elevated);
 }
@@ -26,7 +34,6 @@
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
-    transform: scale(1.02);
 }
 
 .rb-hero__stage::after {
@@ -47,12 +54,13 @@
     flex-direction: column;
     gap: var(--rb-space-4);
     width: min(100%, var(--rb-hero-content-max-width));
-    padding: clamp(1.5rem, 3vw, 2.5rem);
-    background: rgba(8, 25, 45, 0.72);
+    padding: clamp(2rem, 3.6vw, 3.5rem);
+    background: rgba(8, 25, 45, 0.78);
     border: 1px solid rgba(255, 255, 255, 0.12);
     color: var(--rb-white);
     backdrop-filter: blur(var(--rb-glass-blur));
     -webkit-backdrop-filter: blur(var(--rb-glass-blur));
+    box-shadow: var(--rb-shadow-elevated);
 }
 
 .rb-hero__eyebrow {
@@ -63,8 +71,9 @@
     display: grid;
     gap: 0.05em;
     margin: 0;
-    font-size: clamp(2.25rem, 4.4vw, 4.75rem);
-    line-height: 0.97;
+    max-width: 18ch;
+    font-size: clamp(2.5rem, 4vw, 3.625rem);
+    line-height: 1.08;
     font-weight: var(--rb-font-weight-extrabold);
     letter-spacing: -0.04em;
 }
@@ -75,16 +84,16 @@
 
 .rb-hero__subtitle {
     margin: 0;
-    max-width: 28rem;
-    font-size: clamp(1rem, 1.4vw, 1.25rem);
-    line-height: 1.5;
+    max-width: 26rem;
+    font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+    line-height: 1.55;
     color: rgba(255, 255, 255, 0.86);
 }
 
 .rb-hero__actions {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--rb-space-3);
+    gap: clamp(0.75rem, 1.2vw, 1rem);
 }
 
 .rb-hero__floating-card {

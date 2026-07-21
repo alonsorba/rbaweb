@@ -4,8 +4,10 @@ $pageDescription = 'Base del Home preparada con navbar, hero, métricas, presenc
 require __DIR__ . '/includes/head.php';
 
 $rbNavbarData = [
+    'context' => 'home',
     'brandHref' => '#inicio',
-    'brandSrc' => SITE_BASE_URL . '/assets/img/' . rawurlencode('R BAIDON V3 RGB (WEB).png'),
+    'brandSrc' => SITE_BASE_URL . '/assets/img/' . rawurlencode('R BAIDON V3 BLANCO.png'),
+    'brandScrolledSrc' => SITE_BASE_URL . '/assets/img/' . rawurlencode('R BAIDON V3 RGB (WEB).png'),
     'brandAlt' => 'R. Baidón',
     'label' => 'Navegación principal',
     'toggleLabel' => 'Abrir navegación principal',
@@ -49,11 +51,7 @@ $rbHeroData = [
         'href' => '#soluciones',
         'label' => 'Ver soluciones',
     ],
-    'floatingBadge' => [
-        'label' => 'Atención estratégica',
-        'title' => 'Acompañamiento para decisiones complejas',
-        'text' => 'Una base visual pensada para crecer hacia CMS sin rehacer la estructura principal.',
-    ],
+    'floatingBadge' => [],
 ];
 
 $rbStatsData = [

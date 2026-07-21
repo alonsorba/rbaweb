@@ -24,6 +24,13 @@ Validacion inicial de la base del Design System.
 - Contador +25 alineado con la composicion general.
 - Conector punteado visible en desktop y oculto en mobile para mantener estabilidad.
 
+## VIS-001
+
+- Se corrigio la escala visual del Home en Hero, metricas y presencia nacional sin tocar ESR, compromiso, soluciones, testimonios, CTA, contacto ni footer.
+- La causa principal de la compresion era la suma de un Hero contenido dentro de `rb-container`, un logo pequeno, una tarjeta hero demasiado estrecha y metricas/presencia con escalas tipograficas conservadoras.
+- Se validaron capturas para `1440x900`, `1366x768`, `1024x768`, `768x1024`, `430x900`, `390x844` y `360x800`, ademas de vistas individuales del Hero, metricas, presencia nacional y del tramo completo hasta presencia.
+- No se observo overflow horizontal en las capturas revisadas y el navbar con scroll conserva la navegacion funcional.
+- WEB-014 quedo pausado por priorizacion de fidelidad visual del Home.
 ## WEB-005
 
 - Seccion ESR integrada despues de presencia nacional y antes del bloque de compromiso.
@@ -48,7 +55,7 @@ Validacion inicial de la base del Design System.
 
 ## WEB-008
 
-- Seccion ¿Por qué nosotros? integrada despues de Soluciones con cuatro beneficios visuales y orden original conservado.
+- Seccion Â¿Por quÃ© nosotros? integrada despues de Soluciones con cuatro beneficios visuales y orden original conservado.
 - Grid de cuatro columnas en desktop, dos columnas en tablet y una columna en mobile sin scroll horizontal.
 - Fotografia recortada por tarjeta con fondo azul superior y etiqueta blanca inferior alineada.
 - Capturas revisadas:
@@ -65,8 +72,8 @@ Validacion inicial de la base del Design System.
 
 ## WEB-009
 
-- Seccion Aseguradoras aliadas integrada despues de ¿Por qué nosotros? con contador +20, mensaje de asesoria y logotipos blancos locales.
-- Revisión visual del conjunto de logos confirmada con `.codex-partners-preview.png`, validando contraste, proporción y legibilidad sobre fondo azul.
+- Seccion Aseguradoras aliadas integrada despues de Â¿Por quÃ© nosotros? con contador +20, mensaje de asesoria y logotipos blancos locales.
+- RevisiÃ³n visual del conjunto de logos confirmada con `.codex-partners-preview.png`, validando contraste, proporciÃ³n y legibilidad sobre fondo azul.
 - La composicion desktop se mantiene como capa decorativa absoluta y la vista mobile repliega los logotipos a una grilla de dos columnas sin overflow horizontal observado en la revision del CSS y el DOM.
 - El intento de captura headless en PNG no persistio en disco en esta sesion, por lo que se dejo trazabilidad del hallazgo y se tomo como evidencia visual el preview compuesto de logos.
 - Sintaxis PHP, JS, diff y respuesta HTTP 200 validadas correctamente.
@@ -116,7 +123,7 @@ Validacion inicial de la base del Design System.
 
 - Pagina institucional `quienes.php` integrada con navbar interno solido, hero interior, introduccion, diferenciadores, CTA y footer reutilizable.
 - La fotografia del hero se visualiza correctamente con `EDIFICIO-RBA-DIA.png` y conserva contraste suficiente sobre el overlay.
-- El navbar muestra `Quiénes somos` como enlace activo con `aria-current="page"` y mantiene el regreso al Home mediante enlaces funcionales.
+- El navbar muestra `QuiÃ©nes somos` como enlace activo con `aria-current="page"` y mantiene el regreso al Home mediante enlaces funcionales.
 - No se renderizaron secciones vacias de historia, mision, vision o valores porque no existe respaldo editorial en el repositorio.
 - Capturas revisadas:
   - `.codex-quienes-1366-final.png` en Edge headless, valida el hero interior y la composicion desktop.
@@ -135,11 +142,11 @@ Validacion inicial de la base del Design System.
 - Sin desbordamiento horizontal observado en la seccion ESR.
 - Sin desbordamiento horizontal observado en la seccion de compromiso.
 - Sin desbordamiento horizontal observado en la seccion de Soluciones.
-- Sin desbordamiento horizontal observado en la seccion ¿Por qué nosotros?.
+- Sin desbordamiento horizontal observado en la seccion Â¿Por quÃ© nosotros?.
 - Sin desbordamiento horizontal observado en el bloque CTA final.
 - Sin desbordamiento horizontal observado en la seccion Contacto.
 - Sin desbordamiento horizontal observado en el footer institucional.
-- Sin desbordamiento horizontal observado en la pagina institucional Quiénes somos.
+- Sin desbordamiento horizontal observado en la pagina institucional QuiÃ©nes somos.
 - El sitio responde con HTTP 200 desde el servidor local.
 ## Pendiente
 

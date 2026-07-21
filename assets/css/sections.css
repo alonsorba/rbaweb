@@ -45,20 +45,59 @@
 }
 
 .rb-stats {
+    padding-block: clamp(4rem, 5.5vw, 5.5rem);
     background: var(--rb-color-surface-alt);
 }
 
+.rb-stats > .rb-container {
+    width: min(100% - 4rem, 1240px);
+    padding-inline: 0;
+}
+
+.rb-stats__panel {
+    min-height: clamp(13rem, 16vw, 16rem);
+    padding: clamp(2rem, 3.5vw, 3rem);
+}
+
+.rb-stats__grid {
+    gap: clamp(1.5rem, 3vw, 2.75rem);
+}
+
+.rb-stats__item {
+    align-items: center;
+    text-align: center;
+    min-height: 7rem;
+}
+
+.rb-stats__value {
+    font-size: clamp(3.5rem, 6vw, 5.125rem);
+    color: var(--rb-color-primary-500);
+}
+
+.rb-stats__label {
+    font-size: clamp(1.25rem, 1.6vw, 1.625rem);
+    line-height: 1.3;
+    color: var(--rb-color-text-muted);
+}
+
 .rb-presence {
-    background: linear-gradient(180deg, var(--rb-color-surface-alt) 0%, var(--rb-white) 100%);
+    padding-block: clamp(4.25rem, 5.8vw, 5.75rem);
+    background: var(--rb-color-surface-alt);
+}
+
+.rb-presence > .rb-container {
+    width: min(100% - 4rem, 1360px);
+    padding-inline: 0;
 }
 
 .rb-presence__shell {
     display: grid;
-    grid-template-columns: minmax(18rem, 0.9fr) minmax(0, 1.1fr);
+    grid-template-columns: minmax(20rem, 0.76fr) minmax(0, 1.24fr);
     grid-template-areas:
         "copy visual"
         "stat visual";
-    gap: var(--rb-presence-gap);
+    gap: clamp(2rem, 3vw, 3rem);
+    min-height: clamp(40rem, 52vw, 47.5rem);
     padding: var(--rb-presence-shell-padding);
     overflow: hidden;
     background: var(--rb-white);
@@ -70,7 +109,7 @@
     grid-area: copy;
     display: flex;
     flex-direction: column;
-    gap: var(--rb-space-4);
+    gap: var(--rb-space-5);
 }
 
 .rb-presence__header {
@@ -81,7 +120,8 @@
 
 .rb-presence__title {
     margin: 0;
-    font-size: clamp(1.75rem, 2.8vw, 3rem);
+    max-width: 10ch;
+    font-size: clamp(2rem, 3vw, 3.25rem);
     line-height: 1.05;
     font-weight: var(--rb-font-weight-bold);
     color: var(--rb-color-primary-900);
@@ -92,8 +132,8 @@
     flex-direction: column;
     gap: 0.1rem;
     width: fit-content;
-    max-width: var(--rb-presence-location-max-width);
-    padding: 1rem 1.15rem;
+    max-width: 19rem;
+    padding: 1.15rem 1.35rem;
     border-radius: var(--rb-radius-lg);
     background: var(--rb-color-primary-500);
     box-shadow: var(--rb-shadow-soft);
@@ -101,7 +141,7 @@
 
 .rb-presence__location-line {
     display: block;
-    font-size: var(--rb-font-size-lg);
+    font-size: clamp(1.35rem, 1.9vw, 1.9rem);
     line-height: 1.3;
     font-weight: var(--rb-font-weight-semibold);
     color: var(--rb-white);
@@ -110,11 +150,11 @@
 .rb-presence__visual {
     grid-area: visual;
     position: relative;
-    min-height: var(--rb-presence-map-min-height);
+    min-height: clamp(34rem, 48vw, 44rem);
     overflow: visible;
     background-image: var(--rb-presence-map-bg);
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center right;
     background-size: contain;
 }
 
@@ -124,8 +164,8 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
-    object-position: center center;
-    opacity: 0;
+    object-position: center right;
+    opacity: 1;
     pointer-events: none;
 }
 
@@ -160,6 +200,7 @@
     border-radius: 50%;
     background: var(--rb-color-primary-500);
     box-shadow: 0 0 0 0.35rem rgba(34, 139, 209, 0.18), var(--rb-shadow-soft);
+    z-index: 2;
 }
 
 .rb-presence__marker::after {
@@ -173,22 +214,26 @@
 .rb-presence__stat {
     grid-area: stat;
     align-self: end;
-    max-width: 18rem;
+    justify-self: start;
+    max-width: 22rem;
+    padding: clamp(1.75rem, 2.8vw, 2.5rem);
 }
 
 .rb-presence__value {
     margin: 0;
-    font-size: clamp(2rem, 3vw, 3rem);
+    font-size: clamp(6rem, 8.5vw, 8.25rem);
     line-height: 1;
     font-weight: var(--rb-font-weight-extrabold);
     color: var(--rb-color-primary-500);
+    letter-spacing: -0.05em;
 }
 
 .rb-presence__label {
     margin: 0;
-    font-size: var(--rb-font-size-md);
-    line-height: var(--rb-line-height-base);
-    color: var(--rb-color-text);
+    font-size: clamp(2rem, 2.8vw, 2.6rem);
+    line-height: 1.1;
+    font-weight: var(--rb-font-weight-regular);
+    color: var(--rb-color-text-muted);
 }
 
 .rb-esr {

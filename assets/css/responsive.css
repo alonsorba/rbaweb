@@ -2,12 +2,37 @@
     .rb-container {
         --rb-container-padding-x: var(--rb-space-5);
     }
+
+    .rb-stats > .rb-container,
+    .rb-presence > .rb-container {
+        width: min(100% - 3rem, 1360px);
+    }
+
+    .rb-hero__stage {
+        padding-inline: var(--rb-space-5);
+    }
 }
 
 @media (max-width: 1199.98px) {
     .rb-hero__title,
     .rb-section-title {
         font-size: var(--rb-font-size-4xl);
+    }
+
+    .rb-hero__content {
+        max-width: 34rem;
+    }
+
+    .rb-stats__panel {
+        min-height: 12.5rem;
+    }
+
+    .rb-stats__value {
+        font-size: clamp(3rem, 5.5vw, 4.5rem);
+    }
+
+    .rb-stats__label {
+        font-size: clamp(1.1rem, 1.4vw, 1.35rem);
     }
 
     .rb-presence {
@@ -19,7 +44,20 @@
     }
 
     .rb-presence__shell {
-        grid-template-columns: minmax(16rem, 0.92fr) minmax(0, 1.08fr);
+        grid-template-columns: minmax(16rem, 0.82fr) minmax(0, 1.18fr);
+        min-height: clamp(36rem, 54vw, 42rem);
+    }
+
+    .rb-presence__visual {
+        min-height: clamp(28rem, 46vw, 39rem);
+    }
+
+    .rb-presence__value {
+        font-size: clamp(5rem, 7vw, 7rem);
+    }
+
+    .rb-presence__label {
+        font-size: clamp(1.65rem, 2.3vw, 2.1rem);
     }
 
     .rb-esr__shell {
@@ -76,6 +114,16 @@
 @media (max-width: 991.98px) {
     .rb-navbar {
         padding-block: 0.5rem;
+    }
+
+    .rb-navbar__brand {
+        position: static;
+        transform: none;
+    }
+
+    .rb-brand-logo {
+        max-width: clamp(11rem, 42vw, 15rem);
+        max-height: 3.25rem;
     }
 
     .rb-navbar__collapse {
@@ -146,11 +194,36 @@
     }
 
     .rb-hero {
-        padding-top: calc(var(--rb-navbar-height) + var(--rb-space-4));
+        padding-bottom: var(--rb-space-5);
     }
 
     .rb-hero__content {
         width: 100%;
+    }
+
+    .rb-hero__title {
+        max-width: 100%;
+        font-size: clamp(1.95rem, 8vw, 2.55rem);
+    }
+
+    .rb-hero__subtitle {
+        max-width: 100%;
+    }
+
+    .rb-hero__stage {
+        min-height: clamp(30rem, 84vw, 40rem);
+        padding: var(--rb-space-4);
+    }
+
+    .rb-hero__actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: var(--rb-space-2);
+    }
+
+    .rb-hero__actions .rb-button {
+        width: 100%;
+        min-width: 0;
     }
 
     .rb-hero__floating-card {
@@ -159,13 +232,70 @@
         max-width: 100%;
     }
 
+    .rb-stats {
+        padding-block: 3.75rem;
+    }
+
+    .rb-stats > .rb-container {
+        width: min(100% - 2rem, 1240px);
+    }
+
     .rb-stats__grid {
         grid-template-columns: 1fr;
         gap: var(--rb-space-4);
     }
 
+    .rb-stats__panel {
+        min-height: auto;
+        padding: var(--rb-space-5);
+    }
+
+    .rb-stats__value {
+        font-size: clamp(2.75rem, 14vw, 4rem);
+    }
+
+    .rb-stats__label {
+        font-size: 1rem;
+    }
+
+    .rb-presence {
+        padding-block: 3.75rem;
+    }
+
+    .rb-presence > .rb-container {
+        width: min(100% - 2rem, 1360px);
+    }
+
+    .rb-presence__shell {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "copy"
+            "visual"
+            "stat";
+        min-height: 0;
+    }
+
     .rb-presence__visual {
-        min-height: clamp(16rem, 32vw, 24rem);
+        min-height: clamp(18rem, 64vw, 26rem);
+        background-position: center center;
+    }
+
+    .rb-presence__map {
+        object-position: center center;
+    }
+
+    .rb-presence__stat {
+        max-width: 100%;
+        width: 100%;
+        padding: var(--rb-space-4);
+    }
+
+    .rb-presence__value {
+        font-size: clamp(4rem, 18vw, 5.75rem);
+    }
+
+    .rb-presence__label {
+        font-size: clamp(1.2rem, 4.8vw, 1.55rem);
     }
 
     .rb-why {
@@ -251,7 +381,7 @@
 
     .rb-hero__title,
     .rb-section-title {
-        font-size: var(--rb-font-size-3xl);
+        font-size: clamp(2rem, 7.5vw, 2.75rem);
     }
 
     .rb-navbar__inner {
@@ -259,7 +389,8 @@
     }
 
     .rb-hero__stage {
-        min-height: auto;
+        min-height: clamp(28rem, 88vw, 36rem);
+        padding: var(--rb-space-4);
     }
 
     .rb-presence__shell {
@@ -272,6 +403,7 @@
 
     .rb-presence__visual {
         min-height: clamp(17rem, 78vw, 24rem);
+        background-position: center center;
     }
 
     .rb-presence__connector {
@@ -280,6 +412,15 @@
 
     .rb-presence__stat {
         max-width: 100%;
+        width: 100%;
+    }
+
+    .rb-presence__value {
+        font-size: clamp(3.5rem, 18vw, 5rem);
+    }
+
+    .rb-presence__label {
+        font-size: clamp(1.1rem, 5vw, 1.35rem);
     }
 
     .rb-esr__shell {
@@ -485,19 +626,23 @@
     }
 
     .rb-brand-logo {
-        max-width: 148px;
-        max-height: 52px;
+        max-width: 11.5rem;
+        max-height: 3.25rem;
     }
 
     .rb-hero__stage {
         padding: var(--rb-space-4);
-        border-radius: var(--rb-radius-lg);
+        border-radius: 0;
     }
 
     .rb-hero__content,
     .rb-hero__floating-card {
         padding: var(--rb-space-4);
         border-radius: var(--rb-radius-lg);
+    }
+
+    .rb-hero__title {
+        font-size: clamp(1.35rem, 6vw, 1.8rem);
     }
 
     .rb-presence__shell {
@@ -511,6 +656,61 @@
 
     .rb-presence__location-line {
         font-size: var(--rb-font-size-md);
+    }
+
+    .rb-stats {
+        padding-block: 3rem;
+    }
+
+    .rb-stats > .rb-container,
+    .rb-presence > .rb-container {
+        width: min(100% - 1rem, 1360px);
+    }
+
+    .rb-stats__panel {
+        padding: var(--rb-space-4);
+    }
+
+    .rb-stats__value {
+        font-size: clamp(2.75rem, 18vw, 3.75rem);
+    }
+
+    .rb-stats__label {
+        font-size: 1rem;
+    }
+
+    .rb-presence {
+        padding-block: 3rem;
+    }
+
+    .rb-presence__title {
+        max-width: 100%;
+        font-size: clamp(1.8rem, 8vw, 2.35rem);
+    }
+
+    .rb-presence__location {
+        width: 100%;
+        max-width: none;
+    }
+
+    .rb-presence__visual {
+        min-height: clamp(16rem, 82vw, 22rem);
+    }
+
+    .rb-presence__connector {
+        display: none;
+    }
+
+    .rb-presence__stat {
+        padding: var(--rb-space-4);
+    }
+
+    .rb-presence__value {
+        font-size: clamp(3.1rem, 20vw, 4.4rem);
+    }
+
+    .rb-presence__label {
+        font-size: 1rem;
     }
 
     .rb-esr__shell {

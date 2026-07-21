@@ -27,6 +27,13 @@
 - La navegacion superior inicia transparente sobre el hero y cambia al hacer scroll mediante una clase controlada por JavaScript.
 - El contenido visible del Home se alimenta desde variables PHP para facilitar el futuro CMS.
 
+## VIS-001
+
+- Se identifico que la reduccion visual provenia de Hero dentro de un contenedor estandar, logo de cabecera pequeño, tarjeta hero demasiado contenida y escalas prudentes en metricas y presencia.
+- El Hero paso a ocupar todo el ancho disponible con un fondo de imagen completo, overlay controlado y tarjeta principal mas ancha para acercarse al mockup sin usar zoom ni `transform: scale()`.
+- Las metricas se ampliaron con una tarjeta blanca horizontal y la presencia nacional paso a una composicion de mapa dominante con indicador y contador mas legibles.
+- Se ajustaron contenedores por seccion para que el Home use mejor el ancho real de pantalla sin reescribir Bootstrap ni tocar las secciones posteriores.
+- WEB-014 quedo pausado temporalmente para no avanzar con una pagina interna mientras la fidelidad del Home seguia por debajo de la referencia.
 ## Presencia nacional
 
 - Se eligio el mapa local `assets/img/mapa al ras.png` por ser el candidato mas cercano al mockup y por contar con transparencia y definicion suficiente.
@@ -55,7 +62,7 @@
 - Se agrego soporte de drag con mouse y touch sobre la pista para mejorar la exploracion de tarjetas sin comprometer teclado.
 - Las imagenes se toman de archivos locales ya disponibles y se validan antes de renderizar para evitar enlaces rotos.
 
-## ¿Por qué nosotros?
+## Â¿Por quÃ© nosotros?
 
 - Se implemento `includes/components/why.php` como bloque data-driven para permitir edicion por CMS sin duplicar markup.
 - Se eligieron `nose.png`, `misa.png`, `jenny.png` e `itzel.png` por ser los mejores candidatos locales para representar asesoria, prevencion, analisis y acompanamiento.
@@ -66,7 +73,7 @@
 ## Aseguradoras aliadas
 
 - Se implemento `includes/components/partners.php` como bloque data-driven para sostener contador, mensaje y logos sin contenido fijo embebido.
-- Se eligieron variantes blancas locales de AIG, AXA, Chubb, GNP, HDI, Mapfre, Quálitas y Zurich por su legibilidad sobre el fondo azul corporativo.
+- Se eligieron variantes blancas locales de AIG, AXA, Chubb, GNP, HDI, Mapfre, QuÃ¡litas y Zurich por su legibilidad sobre el fondo azul corporativo.
 - La composicion se resolvio con logos posicionados de forma decorativa en escritorio y con grilla simple de dos columnas en mobile para conservar claridad.
 - No se aplicaron filtros ni recoloreado por CSS para evitar degradar la nitidez de los archivos ya preparados.
 - La opacidad de cada logo se ajusta por datos para equilibrar jerarquia visual sin cambiar el asset original.
@@ -103,7 +110,7 @@
 - No se incorporaron datos de contacto ni redes sociales porque el repositorio no contiene fuentes corporativas confirmadas para ese contenido.
 - Se mantuvo el footer listo para CMS al reservar los textos visibles en variables PHP y no en el marcado del componente.
 
-## Quiénes somos
+## QuiÃ©nes somos
 
 - Se implemento `quienes.php` como la primera pagina institucional interna del sitio para no avanzar a Servicios ni Ubicaciones.
 - Se eligio `assets/img/EDIFICIO-RBA-DIA.png` para el hero interior por su composicion diurna, espacio util para la jerarquia de copy y lectura clara sobre overlay.

@@ -66,7 +66,7 @@ if ($rbPresenceMapImage !== '') {
                 <span class="rb-presence__marker" aria-hidden="true"></span>
                 <?php if ($rbPresenceMapImage !== ''): ?>
                     <img
-                        class="rb-presence__map visually-hidden"
+                        class="rb-presence__map"
                         src="<?= htmlspecialchars($rbPresenceMapImage, ENT_QUOTES, 'UTF-8') ?>"
                         alt="<?= htmlspecialchars($rbPresenceMapAlt, ENT_QUOTES, 'UTF-8') ?>"
                         width="<?= $rbPresenceMapWidth > 0 ? $rbPresenceMapWidth : 1200 ?>"
