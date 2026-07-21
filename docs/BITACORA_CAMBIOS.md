@@ -33,7 +33,7 @@
 
 ### Git
 - Rama: `feature/base-project`
-- Commit: `pendiente`
+- Commit: `70611a7`
 - Push: pendiente
 # 2026-07-21 - WEB-014 - Implementacion de la pagina institucional QuiÃ©nes somos
 
