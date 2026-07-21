@@ -18,7 +18,7 @@
 | WEB-011 | Home | Implementacion del bloque CTA final | Completado | Testimonios ya integrada y cierre visual pendiente | Bloque CTA final con datos PHP, dos acciones reales y composicion responsive listo para CMS | `a926245` |
 | WEB-012 | Home | Implementacion de la seccion Contacto | Completado | CTA final ya integrado, contenido corporativo no confirmado y ruta de privacidad provisional disponible | Seccion Contacto con formulario accesible, validacion cliente, aviso de privacidad funcional y preparacion para CMS | `49782ff` |
 | WEB-013 | Footer | Implementacion del footer institucional | Completado | Home ya cerrado con CTA final y contacto, sin datos corporativos ni redes sociales confirmadas | Footer institucional reutilizable con marca, navegacion interna, enlaces legales y copyright dinamico listo para CMS | `1610330` |
-| WEB-014 | Pagina interna | Implementacion de la pagina institucional Quiénes somos | Completado | Footer institucional actualizado, hero interior disponible e imagen institucional local confirmada | Pagina institucional con hero interior, introduccion, diferenciadores, CTA y footer reutilizable lista para CMS | `pendiente` |
+| WEB-014 | Pagina interna | Implementacion de la pagina institucional Quiénes somos | Completado | Footer institucional actualizado, hero interior disponible e imagen institucional local confirmada | Pagina institucional con hero interior, introduccion, diferenciadores, CTA y footer reutilizable lista para CMS | `e31028e` |
 
 ## Fases generales
 

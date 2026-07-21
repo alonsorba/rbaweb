@@ -42,7 +42,7 @@
 
 ### Git
 - Rama: `feature/base-project`
-- Commit: `pendiente`
+- Commit: `e31028e`
 - Push: pendiente
 
 # 2026-07-21 - WEB-013 - Implementacion del footer institucional
