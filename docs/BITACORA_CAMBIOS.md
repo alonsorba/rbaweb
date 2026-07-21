@@ -1,5 +1,39 @@
 # Bitacora de cambios
 
+# 2026-07-21 - VIS-003 - Correccion visual de Soluciones y ¿Por qué nosotros?
+
+### Cambios
+- Se amplió la sección Soluciones para que se muestre como un carrusel horizontal de una sola fila con tarjetas más anchas, títulos legibles, imágenes más grandes y tabs más claros.
+- Se reforzó el bloque ¿Por qué nosotros? con tarjetas verticales más altas, retratos de mayor presencia, fondos azules mejor proporcionales y textos inferiores más visibles.
+- Se ajustaron variables, contenedores, track del carrusel, tamaños de tarjeta y navegación para conservar la experiencia drag/tab/accessibility sin reconstruir la lógica.
+- Se mantuvo WEB-014 pausado y no se tocaron Aseguradoras aliadas, Testimonios, CTA final, Contacto, Footer ni páginas internas.
+
+### Archivos
+- `index.php`
+- `assets/css/variables.css`
+- `assets/css/cards.css`
+- `assets/css/carousel.css`
+- `assets/css/sections.css`
+- `assets/css/responsive.css`
+- `assets/js/main.js`
+- `docs/PLAN_TRABAJO.md`
+- `docs/BITACORA_CAMBIOS.md`
+- `docs/DECISIONES.md`
+- `docs/QA_VISUAL.md`
+- `docs/DOCUMENTACION_TECNICA.md`
+- `README.md`
+
+### Pruebas
+- Sintaxis PHP validada en `index.php`.
+- Revision de JS validada con `node --check` pendiente de repetir tras el cambio de `main.js`.
+- Revision de CSS y diff pendiente de validacion final.
+- Validacion visual pendiente de captura local tras el ajuste de carrusel y tarjetas.
+
+### Git
+- Rama: `feature/base-project`
+- Commit: pendiente
+- Push: pendiente
+
 # 2026-07-21 - VIS-002 - Correccion visual de ESR y Nuestro compromiso
 
 ### Cambios

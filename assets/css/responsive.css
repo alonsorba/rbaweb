@@ -98,7 +98,7 @@
     }
 
     .rb-solutions__track {
-        grid-auto-columns: clamp(14.5rem, 17vw, 16.5rem);
+        --rb-solutions-card-width: clamp(17.5rem, 24vw, 19.5rem);
         padding-right: var(--rb-space-5);
     }
 
@@ -308,8 +308,8 @@
     }
 
     .rb-why {
-        --rb-why-card-min-height: 21rem;
-        --rb-why-visual-min-height: clamp(14rem, 28vw, 18rem);
+        --rb-why-card-min-height: clamp(23rem, 30vw, 27rem);
+        --rb-why-visual-min-height: clamp(16rem, 22vw, 20rem);
     }
 
     .rb-why__grid {
@@ -495,6 +495,9 @@
 
     .rb-solutions__tab {
         flex: 0 0 auto;
+        min-width: 8.5rem;
+        min-height: 3.2rem;
+        font-size: 0.95rem;
         white-space: nowrap;
     }
 
@@ -503,18 +506,18 @@
     }
 
     .rb-solutions__track {
-        grid-auto-columns: minmax(16rem, 82vw);
+        --rb-solutions-card-width: min(84vw, 20rem);
         padding-right: var(--rb-space-4);
     }
 
     .rb-solutions__card {
-        min-height: 20.5rem;
+        min-height: 24rem;
     }
 
     .rb-why {
-        --rb-why-card-min-height: 20rem;
-        --rb-why-visual-min-height: clamp(13rem, 56vw, 16rem);
-        --rb-why-caption-min-height: 4.75rem;
+        --rb-why-card-min-height: 26rem;
+        --rb-why-visual-min-height: clamp(17rem, 58vw, 21rem);
+        --rb-why-caption-min-height: 5.5rem;
     }
 
     .rb-why__grid {
@@ -768,17 +771,17 @@
     }
 
     .rb-solutions__track {
-        grid-auto-columns: minmax(15.5rem, 80vw);
+        --rb-solutions-card-width: min(85vw, 18.5rem);
         gap: var(--rb-space-3);
         padding-right: var(--rb-space-3);
     }
 
     .rb-solutions__card-title {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     .rb-solutions__description {
-        font-size: var(--rb-font-size-xs);
+        font-size: 0.93rem;
     }
 
     .rb-contact__layout--split {
@@ -791,6 +794,10 @@
 
     .rb-why__caption {
         padding-inline: var(--rb-space-3);
+    }
+
+    .rb-why__caption-line {
+        font-size: 1rem;
     }
 
     .rb-partners__inner {

@@ -59,6 +59,15 @@ VIS-002 corrige exclusivamente la fidelidad visual de ESR y Nuestro compromiso s
 - Los cambios se sostienen con variables CSS, grid real y tamanos de imagen ajustados, sin usar `zoom` ni `transform: scale()`.
 - WEB-014 permanece pausado para mantener separada la pagina interna mientras el Home sigue en correccion visual.
 
+## VIS-003
+
+VIS-003 corrige exclusivamente la fidelidad visual de Soluciones y ¿Por qué nosotros? sin avanzar a Aseguradoras aliadas ni al resto de las secciones posteriores.
+
+- Soluciones se reequilibra con un track horizontal de una sola fila, tarjetas mas anchas, textos legibles, tabs grandes y controles que avanzan por tarjeta.
+- ¿Por qué nosotros? se refuerza con tarjetas verticales mas altas, retratos mas presentes y captions inferiores con mejor jerarquia visual.
+- Los cambios se sostienen con variables CSS, track flexible y ajustes de scroll en JavaScript, sin reconstruir los datos PHP ni introducir librerias nuevas.
+- WEB-014 permanece pausado para mantener separada la pagina interna mientras el Home sigue en correccion visual.
+
 ## Soluciones
 
 WEB-007 agrega la seccion de Soluciones despues de Nuestro compromiso.

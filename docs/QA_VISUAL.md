@@ -39,6 +39,15 @@ Validacion inicial de la base del Design System.
 - Se amplió ESR con jerarquia tipografica mayor, banda de pilares mas alta, sello secundario mas visible y trofeo con mas presencia en desktop.
 - Se abrio la composicion de Nuestro compromiso con una columna de texto mas amplia y una imagen principal de mayor protagonismo.
 - WEB-014 sigue pausado por priorizacion de fidelidad visual del Home.
+
+## VIS-003
+
+- Se corrigio la escala visual de Soluciones y ¿Por qué nosotros? sin modificar Aseguradoras aliadas, Testimonios, CTA, contacto, footer ni paginas internas.
+- La causa principal de Soluciones era una combinacion de tarjetas demasiado estrechas, medias visuales pequenas y un carrusel que no ocupaba suficiente ancho real.
+- La causa principal de ¿Por qué nosotros? era un conjunto de tarjetas bajas, retratos pequenos y captions inferiores con poco aire y jerarquia insuficiente.
+- Se ampliaron tarjetas, titulos y tabs de Soluciones para lograr una sola fila horizontal más cercana al mockup.
+- Se reforzaron las tarjetas de ¿Por qué nosotros? con mayor altura, retratos mas presentes y una base blanca mas legible.
+- WEB-014 sigue pausado por priorizacion de fidelidad visual del Home.
 ## WEB-005
 
 - Seccion ESR integrada despues de presencia nacional y antes del bloque de compromiso.

@@ -62,6 +62,8 @@ VIS-001 corrige la escala visual inicial del Home en Hero, metricas y presencia 
 
 VIS-002 corrige la escala visual de ESR y Nuestro compromiso para recuperar proporciones reales, jerarquia tipografica y presencia visual sin avanzar a Soluciones ni al resto del Home.
 
+VIS-003 corrige la escala visual de Soluciones y ¿Por qué nosotros? con un carrusel horizontal de una sola fila y tarjetas verticales mas protagonicas.
+
 WEB-004 agrega presencia nacional con mapa de Mexico, marcador de matriz en Sonora y contador de estados, manteniendo la misma base editable para CMS.
 
 WEB-005 agrega la seccion de Empresa Socialmente Responsable con aniversario, pilares, distintivo secundario y trofeo principal, sin avanzar al bloque de compromiso.

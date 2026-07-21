@@ -100,7 +100,11 @@ document.addEventListener('DOMContentLoaded', () => {
                     return;
                 }
 
-                const distance = Math.max(280, Math.round(viewport.clientWidth * 0.78));
+                const firstCard = viewport.querySelector('.rb-solutions__card');
+                const cardWidth = firstCard ? firstCard.getBoundingClientRect().width : viewport.clientWidth * 0.8;
+                const trackStyles = window.getComputedStyle(viewport.querySelector('.rb-solutions__track') ?? viewport);
+                const gapValue = parseFloat(trackStyles.columnGap || trackStyles.gap || '0') || 0;
+                const distance = Math.max(280, Math.round(cardWidth + gapValue));
                 viewport.scrollBy({
                     left: distance * direction,
                     behavior: prefersReducedMotion ? 'auto' : 'smooth',

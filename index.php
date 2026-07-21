@@ -363,7 +363,7 @@ $rbWhyData = [
             ],
             'image' => SITE_BASE_URL . '/assets/img/' . rawurlencode('nose.png'),
             'image_alt' => 'Asesoría personalizada de R. Baidón',
-            'image_scale' => 1.03,
+            'image_scale' => 1.12,
         ],
         [
             'title_lines' => [
@@ -372,7 +372,7 @@ $rbWhyData = [
             ],
             'image' => SITE_BASE_URL . '/assets/img/' . rawurlencode('misa.png'),
             'image_alt' => 'Prevención de riesgos con acompañamiento de R. Baidón',
-            'image_scale' => 1.05,
+            'image_scale' => 1.14,
         ],
         [
             'title_lines' => [
@@ -381,7 +381,7 @@ $rbWhyData = [
             ],
             'image' => SITE_BASE_URL . '/assets/img/' . rawurlencode('jenny.png'),
             'image_alt' => 'Análisis inteligente con una especialista de R. Baidón',
-            'image_scale' => 1.04,
+            'image_scale' => 1.13,
         ],
         [
             'title_lines' => [
@@ -390,7 +390,7 @@ $rbWhyData = [
             ],
             'image' => SITE_BASE_URL . '/assets/img/' . rawurlencode('itzel.png'),
             'image_alt' => 'Acompañamiento constante de R. Baidón',
-            'image_scale' => 1.02,
+            'image_scale' => 1.11,
         ],
     ],
 ];

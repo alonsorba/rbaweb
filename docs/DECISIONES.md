@@ -86,6 +86,14 @@
 - Se abrio la composicion de Nuestro compromiso con una columna de texto mas amplia, una imagen de mayor presencia y un contenedor mas equilibrado.
 - WEB-014 permanece pausado para no mezclar la correccion visual del Home con una pagina interna aun pendiente.
 
+## VIS-003
+
+- Se identifico que Soluciones perdia fuerza visual por un track demasiado contenido, tarjetas estrechas, imagenes pequenas y recorridos de carrusel poco relacionados con el ancho real de pantalla.
+- Se resolvio Soluciones con una sola fila horizontal de tarjetas mas amplias, contenedor mas abierto, tabs mas grandes y navegacion por tarjeta para mantener la lectura del carrusel.
+- Se identifico que ¿Por qué nosotros? quedaba subescala por tarjetas bajas, retratos pequenos y una base inferior demasiado discreta.
+- Se reforzo ¿Por qué nosotros? con mayor altura, imagenes mas protagonistas y una base blanca mas visible para aproximarse a la referencia.
+- WEB-014 permanece pausado para no mezclar la correccion visual del Home con una pagina interna aun pendiente.
+
 ## Testimonios
 
 - Se implemento `includes/components/testimonials.php` como bloque data-driven para permitir validacion de contenido sin duplicar markup.
