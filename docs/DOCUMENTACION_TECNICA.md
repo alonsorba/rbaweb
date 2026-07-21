@@ -50,6 +50,15 @@ WEB-006 agrega la seccion de compromiso inmediatamente despues de ESR.
 - La composicion se resuelve con grid de dos columnas en desktop y se apila en mobile sin generar overflow horizontal.
 - No se agrego un fondo azul adicional porque el recurso ya contiene la coloracion requerida por el mockup.
 
+## VIS-002
+
+VIS-002 corrige exclusivamente la fidelidad visual de ESR y Nuestro compromiso sin avanzar a Soluciones ni al resto de las secciones posteriores.
+
+- ESR se reequilibra con un shell mas ancho, jerarquia tipografica mayor, banda de pilares mas alta y un trofeo con mas presencia en desktop.
+- Nuestro compromiso se abre con una columna de texto mas amplia y una imagen principal mas protagonista.
+- Los cambios se sostienen con variables CSS, grid real y tamanos de imagen ajustados, sin usar `zoom` ni `transform: scale()`.
+- WEB-014 permanece pausado para mantener separada la pagina interna mientras el Home sigue en correccion visual.
+
 ## Soluciones
 
 WEB-007 agrega la seccion de Soluciones despues de Nuestro compromiso.

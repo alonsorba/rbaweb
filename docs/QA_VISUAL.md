@@ -31,6 +31,14 @@ Validacion inicial de la base del Design System.
 - Se validaron capturas para `1440x900`, `1366x768`, `1024x768`, `768x1024`, `430x900`, `390x844` y `360x800`, ademas de vistas individuales del Hero, metricas, presencia nacional y del tramo completo hasta presencia.
 - No se observo overflow horizontal en las capturas revisadas y el navbar con scroll conserva la navegacion funcional.
 - WEB-014 quedo pausado por priorizacion de fidelidad visual del Home.
+
+## VIS-002
+
+- Se corrigio la escala visual de ESR y Nuestro compromiso sin modificar Soluciones, ¿Por qué nosotros?, Aseguradoras, Testimonios, CTA, contacto ni footer.
+- La causa principal estaba en una combinacion de `max-width` conservadores, min-heights altos y una banda de pilares y un trofeo insuficientemente escalados para la referencia.
+- Se amplió ESR con jerarquia tipografica mayor, banda de pilares mas alta, sello secundario mas visible y trofeo con mas presencia en desktop.
+- Se abrio la composicion de Nuestro compromiso con una columna de texto mas amplia y una imagen principal de mayor protagonismo.
+- WEB-014 sigue pausado por priorizacion de fidelidad visual del Home.
 ## WEB-005
 
 - Seccion ESR integrada despues de presencia nacional y antes del bloque de compromiso.

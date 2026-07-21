@@ -61,23 +61,32 @@
     }
 
     .rb-esr__shell {
-        grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.9fr);
+        grid-template-columns: minmax(0, 1.08fr) minmax(22rem, 0.92fr);
+        min-height: clamp(32rem, 46vw, 37rem);
     }
 
     .rb-esr__visual {
-        min-height: clamp(22rem, 34vw, 34rem);
+        min-height: clamp(28rem, 36vw, 32rem);
+    }
+
+    .rb-esr__trophy {
+        width: min(100%, 29rem);
     }
 
     .rb-commitment__inner {
-        grid-template-columns: minmax(0, 1fr) minmax(20rem, 0.95fr);
+        grid-template-columns: minmax(0, 1fr) minmax(22rem, 0.95fr);
     }
 
     .rb-commitment__text {
-        font-size: clamp(1.9rem, 3vw, 3.1rem);
+        font-size: clamp(2rem, 3vw, 3rem);
     }
 
     .rb-commitment__visual {
-        min-height: clamp(18rem, 30vw, 27rem);
+        min-height: clamp(22rem, 30vw, 28rem);
+    }
+
+    .rb-commitment__media {
+        width: min(100%, 32rem);
     }
 
     .rb-solutions__title {
@@ -437,11 +446,11 @@
     }
 
     .rb-esr__secondary-badge {
-        max-width: 8rem;
+        max-width: 9.5rem;
     }
 
     .rb-esr__visual {
-        min-height: clamp(22rem, 86vw, 31rem);
+        min-height: clamp(24rem, 86vw, 32rem);
     }
 
     .rb-commitment__inner {
@@ -454,15 +463,15 @@
     }
 
     .rb-commitment__text {
-        font-size: clamp(1.8rem, 8vw, 2.5rem);
+        font-size: clamp(1.95rem, 8vw, 2.65rem);
     }
 
     .rb-commitment__visual {
-        min-height: clamp(18rem, 82vw, 28rem);
+        min-height: clamp(19rem, 82vw, 28rem);
     }
 
     .rb-commitment__media {
-        width: min(100%, 34rem);
+        width: min(100%, 32rem);
     }
 
     .rb-solutions__header {

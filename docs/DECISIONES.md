@@ -78,6 +78,14 @@
 - No se aplicaron filtros ni recoloreado por CSS para evitar degradar la nitidez de los archivos ya preparados.
 - La opacidad de cada logo se ajusta por datos para equilibrar jerarquia visual sin cambiar el asset original.
 
+## VIS-002
+
+- Se identifico que ESR estaba comprimida por una combinacion de copy demasiado estrecho, trofeo pequeno, banda de pilares subdimensionada y un shell con altura mayor a la necesaria.
+- Se corrigio la seccion ESR con un grid mas abierto, mayor jerarquia tipografica, una banda de pilares mas alta y un trofeo que vuelve a ser protagonista sin usar `scale()`.
+- Se identifico que Nuestro compromiso quedaba contenido por una columna de texto angosta y una imagen visualmente pequena para la referencia.
+- Se abrio la composicion de Nuestro compromiso con una columna de texto mas amplia, una imagen de mayor presencia y un contenedor mas equilibrado.
+- WEB-014 permanece pausado para no mezclar la correccion visual del Home con una pagina interna aun pendiente.
+
 ## Testimonios
 
 - Se implemento `includes/components/testimonials.php` como bloque data-driven para permitir validacion de contenido sin duplicar markup.

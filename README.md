@@ -60,6 +60,8 @@ WEB-003 ya compone el arranque visible del Home con navbar, hero y metricas, usa
 
 VIS-001 corrige la escala visual inicial del Home en Hero, metricas y presencia nacional para acercarlo al mockup de Comunicacion sin tocar las secciones posteriores.
 
+VIS-002 corrige la escala visual de ESR y Nuestro compromiso para recuperar proporciones reales, jerarquia tipografica y presencia visual sin avanzar a Soluciones ni al resto del Home.
+
 WEB-004 agrega presencia nacional con mapa de Mexico, marcador de matriz en Sonora y contador de estados, manteniendo la misma base editable para CMS.
 
 WEB-005 agrega la seccion de Empresa Socialmente Responsable con aniversario, pilares, distintivo secundario y trofeo principal, sin avanzar al bloque de compromiso.

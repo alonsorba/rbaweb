@@ -1,5 +1,35 @@
 # Bitacora de cambios
 
+# 2026-07-21 - VIS-002 - Correccion visual de ESR y Nuestro compromiso
+
+### Cambios
+- Se amplió la seccion ESR para corregir la altura excesiva, la jerarquia tipografica y la escala insuficiente del trofeo, la banda de pilares y el sello secundario.
+- Se ajustó la seccion Nuestro compromiso para abrir la composicion horizontal, agrandar la imagen principal y dar mas presencia al texto institucional.
+- Se corrigieron las proporciones con variables CSS, grid real, espaciado y tamanos de imagen sin usar `zoom` ni `transform: scale()`.
+- Se mantuvo WEB-014 pausado y no se tocaron Soluciones, ¿Por qué nosotros?, Aseguradoras, Testimonios, CTA final, Contacto ni Footer.
+
+### Archivos
+- `assets/css/variables.css`
+- `assets/css/cards.css`
+- `assets/css/sections.css`
+- `assets/css/responsive.css`
+- `docs/PLAN_TRABAJO.md`
+- `docs/BITACORA_CAMBIOS.md`
+- `docs/DECISIONES.md`
+- `docs/QA_VISUAL.md`
+- `docs/DOCUMENTACION_TECNICA.md`
+- `README.md`
+
+### Pruebas
+- Sintaxis PHP validada en `index.php`, `includes/components/esr.php` y `includes/components/commitment.php`.
+- Revision de CSS y diff validada con `git diff --check`.
+- Validacion visual local intentada en servidor embebido, con acceso HTTP limitado por la sesion del entorno.
+
+### Git
+- Rama: `feature/base-project`
+- Commit: pendiente
+- Push: pendiente
+
 # 2026-07-21 - VIS-001 - Correccion visual de Hero, metricas y presencia nacional
 
 ### Cambios

@@ -227,6 +227,7 @@
     gap: var(--rb-esr-pillars-gap);
     margin: 0;
     padding: var(--rb-esr-pillars-padding);
+    min-height: clamp(7.5rem, 9vw, 9rem);
     list-style: none;
     border-radius: var(--rb-radius-xl);
     background: var(--rb-color-primary-900);
@@ -239,8 +240,8 @@
     align-items: center;
     justify-content: center;
     gap: var(--rb-space-3);
-    min-height: 7rem;
-    padding: var(--rb-space-2);
+    min-height: 7.75rem;
+    padding: var(--rb-space-3) var(--rb-space-2);
     text-align: center;
 }
 
@@ -261,8 +262,8 @@
 }
 
 .rb-esr__pillar-label {
-    font-size: clamp(0.85rem, 1vw, 0.98rem);
-    line-height: 1.35;
+    font-size: clamp(0.9rem, 1.05vw, 1.05rem);
+    line-height: 1.25;
     font-weight: var(--rb-font-weight-semibold);
     color: var(--rb-white);
 }
