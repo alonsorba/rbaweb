@@ -92,6 +92,16 @@ WEB-010 agrega la seccion Testimonios despues de Aseguradoras aliadas.
 - La composicion se resuelve con grid de tres columnas en desktop, dos en laptop y una en mobile, sin autoplay ni carrusel.
 - El rating se dibuja con estrellas configurables y el bloque queda listo para CMS porque el contenido no vive embebido en el marcado.
 
+## Bloque CTA final
+
+WEB-011 agrega el bloque CTA final despues de Testimonios.
+
+- `includes/components/final-cta.php` recibe titulo, descripcion y acciones desde datos PHP, valida los enlaces permitidos y renderiza el cierre como una seccion semantica.
+- El bloque se resolvio sin imagen obligatoria porque ningun recurso local evaluado represento con precision el cierre visual requerido.
+- La composicion usa gradiente corporativo, contenedor con efecto glass suave y botones reutilizables con contraste ajustado sobre fondo oscuro.
+- Los enlaces estan restringidos a `#contacto` y `#soluciones` para evitar salidas no previstas mientras el CMS no exponga destinos definitivos.
+- El bloque queda listo para CMS porque el copy, la jerarquia y las acciones dependen de variables PHP y no del marcado fijo.
+
 ## Arquitectura CSS
 
 `main.css` funciona como unico archivo de carga del sistema y ordena:

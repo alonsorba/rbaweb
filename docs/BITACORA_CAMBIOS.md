@@ -1,5 +1,36 @@
 # Bitacora de cambios
 
+# 2026-07-21 - WEB-011 - Implementacion del bloque CTA final
+
+### Cambios
+- Se agrego el bloque CTA final despues de Testimonios, sin avanzar a contacto ni footer.
+- Se definio una composicion editorial con gradiente corporativo, titulo, descripcion y dos acciones reales desde datos PHP.
+- Se preparo el bloque para CMS con variables de seccion, copy y enlaces permitidos a `#contacto` y `#soluciones`.
+- Se evito forzar una imagen provisional porque ningun recurso local evaluado encajo de forma consistente con el cierre visual requerido.
+
+### Archivos
+- `index.php`
+- `includes/components/final-cta.php`
+- `assets/css/sections.css`
+- `assets/css/responsive.css`
+- `docs/PLAN_TRABAJO.md`
+- `docs/DOCUMENTACION_TECNICA.md`
+- `docs/DECISIONES.md`
+- `docs/QA_VISUAL.md`
+- `README.md`
+
+### Pruebas
+- Sintaxis PHP validada en `index.php` e `includes/components/final-cta.php`.
+- Revision de JS validada con `node --check`.
+- Carga local confirmada con respuesta HTTP 200 en `http://127.0.0.1:8080/rba_web/index.php`.
+- Revision de diff sin conflictos de formato con `git diff --check`.
+- Revision visual pendiente de captura final en esta sesion.
+
+### Git
+- Rama: `feature/base-project`
+- Commit: `pendiente`
+- Push: pendiente
+
 # 2026-07-21 - WEB-010 - Implementacion de la seccion Testimonios
 
 ### Cambios

@@ -765,3 +765,110 @@
 .rb-testimonials__item {
     min-width: 0;
 }
+
+.rb-final-cta {
+    position: relative;
+    overflow: hidden;
+    color: var(--rb-white);
+    background: linear-gradient(135deg, #0a2f52 0%, #0f4577 52%, #164f86 100%);
+}
+
+.rb-final-cta::before,
+.rb-final-cta::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    border-radius: 50%;
+}
+
+.rb-final-cta::before {
+    inset-block-start: -6rem;
+    inset-inline-end: -4rem;
+    width: 18rem;
+    height: 18rem;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 68%);
+}
+
+.rb-final-cta::after {
+    inset-block-end: -7rem;
+    inset-inline-start: -5rem;
+    width: 22rem;
+    height: 22rem;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
+}
+
+.rb-final-cta__shell {
+    position: relative;
+    isolation: isolate;
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--rb-radius-xl);
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
+    box-shadow: var(--rb-shadow-elevated);
+    backdrop-filter: blur(var(--rb-glass-blur));
+    -webkit-backdrop-filter: blur(var(--rb-glass-blur));
+}
+
+.rb-final-cta__inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) auto;
+    align-items: center;
+    gap: var(--rb-space-5);
+}
+
+.rb-final-cta__copy {
+    max-width: 48rem;
+}
+
+.rb-final-cta__eyebrow {
+    margin: 0 0 var(--rb-space-3);
+    font-size: var(--rb-font-size-sm);
+    line-height: 1.2;
+    font-weight: var(--rb-font-weight-semibold);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.82);
+}
+
+.rb-final-cta__title {
+    max-width: 20ch;
+    margin-bottom: var(--rb-space-3);
+    color: var(--rb-white);
+}
+
+.rb-final-cta__description {
+    max-width: 42ch;
+    margin: 0;
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.rb-final-cta__actions {
+    justify-self: end;
+    align-self: end;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: var(--rb-space-3);
+}
+
+.rb-final-cta .rb-button--primary {
+    box-shadow: 0 16px 30px rgba(8, 25, 45, 0.24);
+}
+
+.rb-final-cta .rb-button--outline {
+    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--rb-white);
+}
+
+.rb-final-cta .rb-button--outline:hover,
+.rb-final-cta .rb-button--outline:focus-visible {
+    border-color: rgba(255, 255, 255, 0.78);
+    background: rgba(255, 255, 255, 0.14);
+    color: var(--rb-white);
+}

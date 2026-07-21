@@ -72,6 +72,8 @@ WEB-009 agrega la seccion de Aseguradoras aliadas con contador, mensaje y logos 
 
 WEB-010 agrega la seccion de Testimonios con tres tarjetas provisionales, avatares internos y rating configurable, sin avanzar a formulario ni footer.
 
+WEB-011 agrega el bloque CTA final con dos acciones reales, sin forzar una imagen provisional y manteniendo el cierre del Home listo para CMS.
+
 ## Manuales y mockups
 
 - `docs/PLAN_TRABAJO.md`

@@ -508,6 +508,23 @@ $rbTestimonialsData = [
         ],
     ],
 ];
+
+$rbFinalCtaData = [
+    'section_id' => 'solucion-final',
+    'eyebrow' => 'Encuentra la solucion ideal',
+    'title' => 'Encuentra la solucion ideal para proteger lo que mas importa',
+    'description' => 'Nuestro equipo puede ayudarte a comparar opciones y elegir una cobertura de acuerdo con tus necesidades.',
+    'primary_action' => [
+        'href' => '#contacto',
+        'label' => 'HABLAR CON UN ASESOR',
+        'variant' => 'primary',
+    ],
+    'secondary_action' => [
+        'href' => '#soluciones',
+        'label' => 'CONOCER SOLUCIONES',
+        'variant' => 'outline',
+    ],
+];
 ?>
 <?php require __DIR__ . '/includes/header.php'; ?>
 
@@ -521,6 +538,7 @@ $rbTestimonialsData = [
     <?php require __DIR__ . '/includes/components/why.php'; ?>
     <?php require __DIR__ . '/includes/components/partners.php'; ?>
     <?php require __DIR__ . '/includes/components/testimonials.php'; ?>
+    <?php require __DIR__ . '/includes/components/final-cta.php'; ?>
 </main>
 
 <?php require __DIR__ . '/includes/footer.php'; ?>

@@ -79,6 +79,14 @@ Validacion inicial de la base del Design System.
 - La captura headless no persistio en disco por un fallo de GPU en Chrome headless, por lo que no se tomo como evidencia final en esta sesion.
 - Sintaxis PHP, JS, diff y respuesta HTTP 200 validadas correctamente.
 
+## WEB-011
+
+- Bloque CTA final integrado despues de Testimonios con titulo, descripcion y dos acciones reales.
+- Composicion responsive con gradiente corporativo, shell glass y botones de alto contraste sin imagen obligatoria.
+- Revision del DOM y estilos sin overflow horizontal visible en escritorio ni mobile en la base del bloque.
+- Sintaxis PHP, JS, diff y respuesta HTTP 200 validadas correctamente.
+- Captura headless pendiente de una revision visual final en esta sesion.
+
 ## Criterios revisados
 
 - Sin desbordamiento horizontal en la base existente.
@@ -90,6 +98,7 @@ Validacion inicial de la base del Design System.
 - Sin desbordamiento horizontal observado en la seccion de compromiso.
 - Sin desbordamiento horizontal observado en la seccion de Soluciones.
 - Sin desbordamiento horizontal observado en la seccion ¿Por qué nosotros?.
+- Sin desbordamiento horizontal observado en el bloque CTA final.
 - El sitio responde con HTTP 200 desde el servidor local.
 ## Pendiente
 

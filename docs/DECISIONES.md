@@ -78,3 +78,11 @@
 - Los textos y metadatos se dejaron como provisionales para no presentar testimonios como contenido final hasta validacion de Comunicacion.
 - La composicion se resolvio con cards limpias, fondo blanco, estrellas azules y grid responsive para mantener legibilidad sin autoplay.
 - Se priorizo la accesibilidad con texto real, ratings etiquetados y fallback seguro cuando un avatar no exista.
+
+## Bloque CTA final
+
+- Se implemento `includes/components/final-cta.php` como cierre reutilizable del Home con dos acciones reales y datos preparados para CMS.
+- Se eligio una composicion sin imagen obligatoria para no forzar recursos locales que no correspondian de forma clara al bloque de conversacion final.
+- El gradiente azul y la capa glass se usaron para mantener continuidad con la identidad corporativa sin competir con el contenido precedente.
+- Los enlaces del CTA se limitaron a `#contacto` y `#soluciones` para evitar destinos ambiguos antes de que el CMS administre la navegacion final.
+- Se reforzo el contraste del boton outline dentro del bloque para conservar legibilidad sobre el fondo oscuro.

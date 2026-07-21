@@ -410,6 +410,15 @@
     .rb-testimonials__card {
         min-height: 0;
     }
+
+    .rb-final-cta__inner {
+        grid-template-columns: 1fr;
+    }
+
+    .rb-final-cta__actions {
+        justify-self: start;
+        justify-content: flex-start;
+    }
 }
 
 @media (max-width: 575.98px) {
@@ -568,5 +577,27 @@
 
     .rb-testimonials__quote {
         font-size: var(--rb-font-size-md);
+    }
+
+    .rb-final-cta__shell {
+        padding: var(--rb-space-4);
+        border-radius: var(--rb-radius-lg);
+    }
+
+    .rb-final-cta__title {
+        max-width: 100%;
+        font-size: clamp(1.8rem, 8vw, 2.4rem);
+    }
+
+    .rb-final-cta__description {
+        font-size: var(--rb-font-size-md);
+    }
+
+    .rb-final-cta__actions {
+        width: 100%;
+    }
+
+    .rb-final-cta__action {
+        width: 100%;
     }
 }
