@@ -1995,9 +1995,9 @@ footer .brand-mark {
   }
   .infographic-map {
     position: absolute;
-    top: clamp(28px, 2.8vw, 48px);
+    top: clamp(18px, 2vw, 34px);
     left: auto;
-    right: calc(-42vw);
+    right: calc(-46vw);
     width: clamp(980px, 92vw, 1520px);
     margin-right: 0;
     z-index: 2;
