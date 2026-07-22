@@ -117,7 +117,7 @@
               <div class="infographic-map__stage">
                 <svg class="infographic-map__connector" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
                   <line class="infographic-map__connector-line" x1="0" y1="52" x2="26.2" y2="35.2"></line>
-                  <circle class="infographic-map__connector-dot" cx="26.2" cy="35.2" r="1.1"></circle>
+                  <circle class="infographic-map__connector-dot" cx="26.2" cy="35.2" r="0.65"></circle>
                 </svg>
                 <?php if ($mapImageExists): ?>
                   <img src="<?php echo $mapImagePath; ?>" alt="Mapa de México con presencia nacional de RBA" class="infographic-map__image" loading="lazy">
