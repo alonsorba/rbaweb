@@ -76,10 +76,10 @@
       </div>
     </section>
 
-    <section id="trust-bar" class="infographic-section">
+    <section id="indicadores" class="counter-section">
       <div class="container">
-        <div class="infographic-shell">
-          <div class="infographic-stats reveal-on-scroll">
+        <div class="counter-stage">
+          <div class="infographic-stats counter-stats reveal-on-scroll">
             <div class="infographic-stats__item">
               <div class="infographic-stats__number" data-count-target="150" data-count-prefix="+">+150</div>
               <div class="infographic-stats__label">empresas aseguradas</div>
@@ -93,7 +93,13 @@
               <div class="infographic-stats__label">colaboradores</div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
 
+    <section id="trust-bar" class="infographic-section">
+      <div class="container">
+        <div class="infographic-shell">
           <div class="infographic-layout">
             <div class="infographic-copy">
               <div class="infographic-label reveal-on-scroll">

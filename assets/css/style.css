@@ -1553,6 +1553,28 @@ footer .brand-mark {
 /* =========================
    Home / Seccion 2 - Infografia editorial
    ========================= */
+.counter-section {
+  background: #fff;
+  padding: clamp(2.2rem, 4vw, 3.25rem) 0 clamp(1.15rem, 2vw, 1.9rem);
+  overflow-x: clip;
+}
+.counter-stage {
+  display: flex;
+  justify-content: center;
+}
+.counter-stats {
+  width: min(100%, 980px);
+  min-height: 148px;
+  padding: clamp(1.1rem, 2vw, 1.55rem) clamp(1.35rem, 2.2vw, 1.8rem);
+  gap: clamp(0.85rem, 1.6vw, 1.35rem);
+  border-radius: 28px;
+}
+.counter-stats .infographic-stats__number {
+  font-size: clamp(3rem, 5.8vw, 4.6rem);
+}
+.counter-stats .infographic-stats__label {
+  font-size: clamp(0.9rem, 1.1vw, 1.02rem);
+}
 .infographic-section {
   background: #fff;
   padding-top: clamp(0.85rem, 1.5vw, 1.3rem);
