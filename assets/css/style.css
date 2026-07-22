@@ -213,7 +213,7 @@ body.home-index #topNav.home-nav[data-nav-state="top"] .home-nav-shell {
   width: 100%;
   min-height: 118px;
   margin: 0;
-  padding: 18px clamp(1.65rem, 2.35vw, 1.8rem) 0 clamp(1.45rem, 3.3vw, 2.45rem);
+  padding: 10px clamp(1.65rem, 2.35vw, 1.8rem) 0 clamp(1.45rem, 3.3vw, 2.45rem);
   background: transparent;
   border: 1px solid transparent;
   border-radius: 0;
@@ -225,7 +225,7 @@ body.home-index #topNav.home-nav[data-nav-state="transition"] .home-nav-shell,
 body.home-index #topNav.home-nav[data-nav-state="solid"] .home-nav-shell {
   width: calc(100% - 2.5rem);
   min-height: 80px;
-  margin: 12px auto 0;
+  margin: 8px auto 0;
   padding: 12px clamp(1.15rem, 1.8vw, 1.45rem) 12px clamp(1.15rem, 2vw, 1.6rem);
   background: rgba(255,255,255,0.98);
   border: 1px solid rgba(19,92,138,0.12);
@@ -1962,6 +1962,21 @@ footer .brand-mark {
     width: clamp(540px, 49vw, 780px);
     margin: 0;
     z-index: 4;
+  }
+  .counter-section {
+    min-height: clamp(420px, 44vw, 560px);
+  }
+  .counter-section .counter-stage {
+    min-height: clamp(220px, 24vw, 320px);
+  }
+  .counter-section .counter-stats {
+    position: static;
+    top: auto;
+    left: auto;
+    transform: none;
+    width: min(100%, 1040px);
+    margin: 0 auto;
+    z-index: 1;
   }
   .infographic-layout {
     position: relative;
