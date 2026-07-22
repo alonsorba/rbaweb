@@ -5,8 +5,8 @@
   $year = date('Y');
   $homeLogoWhite = 'assets/img/R BAIDON V3 BLANCO.png';
   $homeLogoRgb = 'assets/img/R BAIDON V3 RGB (WEB).png';
-  $mapImagePath = 'assets/img/mapaa.png';
-  $mapImageExists = file_exists(__DIR__ . '/assets/img/mapaa.png');
+  $mapImagePath = 'assets/img/mapa al ras.png';
+  $mapImageExists = file_exists(__DIR__ . '/assets/img/mapa al ras.png');
   $esrImagePath = 'assets/img/esr con sombre.png';
   $esrImageExists = file_exists(__DIR__ . '/assets/img/esr con sombre.png');
   $commitmentImagePath = 'assets/img/compromiso.png';
@@ -123,7 +123,7 @@
                   <img src="<?php echo $mapImagePath; ?>" alt="Mapa de México con presencia nacional de RBA" class="infographic-map__image" loading="lazy">
                 <?php else: ?>
                   <div class="infographic-map__placeholder">
-                    <!-- Reemplazar este bloque por la imagen del mapa cuando esté disponible en assets/img/mapaa.png -->
+                    <!-- Reemplazar este bloque por la imagen del mapa cuando esté disponible en assets/img/mapa al ras.png -->
                     <p>Mapa de México</p>
                   </div>
                 <?php endif; ?>
