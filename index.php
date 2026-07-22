@@ -107,8 +107,6 @@
                 <span class="infographic-label__text">Matriz en Ciudad<br>Obregón, Sonora</span>
               </div>
 
-              <span class="infographic-connector-line" aria-hidden="true"></span>
-
               <div class="infographic-presence reveal-on-scroll">
               <div class="infographic-presence__number" data-count-target="25" data-count-prefix="+">+25</div>
                 <div class="infographic-presence__text">estados con presencia</div>
@@ -117,7 +115,10 @@
 
             <div class="infographic-map reveal-on-scroll">
               <div class="infographic-map__stage">
-                <span class="infographic-map__dot" aria-hidden="true"></span>
+                <svg class="infographic-map__connector" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+                  <line class="infographic-map__connector-line" x1="0" y1="52" x2="26.2" y2="35.2"></line>
+                  <circle class="infographic-map__connector-dot" cx="26.2" cy="35.2" r="1.1"></circle>
+                </svg>
                 <?php if ($mapImageExists): ?>
                   <img src="<?php echo $mapImagePath; ?>" alt="Mapa de México con presencia nacional de RBA" class="infographic-map__image" loading="lazy">
                 <?php else: ?>
