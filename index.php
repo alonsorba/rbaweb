@@ -76,10 +76,16 @@
       </div>
     </section>
 
-    <section id="trust-bar" class="infographic-section">
+    <section id="indicadores" class="counter-section">
       <div class="container">
-        <div class="infographic-shell">
-          <div class="infographic-stats reveal-on-scroll">
+        <div class="counter-shell reveal-on-scroll">
+          <div class="counter-header">
+            <div class="counter-header__eyebrow">Resultados que se sienten</div>
+            <h2 class="counter-header__title">Una operación respaldada por escala, experiencia y cobertura nacional.</h2>
+            <p class="counter-header__copy">Estas cifras resumen el tamaño de nuestra operación y la capacidad de respuesta que llevamos a cada cliente.</p>
+          </div>
+
+          <div class="infographic-stats counter-stats">
             <div class="infographic-stats__item">
               <div class="infographic-stats__number" data-count-target="150" data-count-prefix="+">+150</div>
               <div class="infographic-stats__label">empresas aseguradas</div>
@@ -93,7 +99,13 @@
               <div class="infographic-stats__label">colaboradores</div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
 
+    <section id="trust-bar" class="infographic-section">
+      <div class="container">
+        <div class="infographic-shell">
           <div class="infographic-layout">
             <div class="infographic-copy">
               <div class="infographic-label reveal-on-scroll">
