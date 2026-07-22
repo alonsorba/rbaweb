@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('header.sticky-top');
   const heroCarousel = document.querySelector('body.home-index .hero-carousel');
   const homeLandingHero = document.querySelector('body.home-index .home-landing-hero');
+  const indicatorsSection = document.querySelector('body.home-index #indicadores');
   const trustBar = document.querySelector('body.home-index #trust-bar');
   const heroContent = document.querySelector('body.home-index .hero-v2-content');
   const pageHero = document.querySelector('body:not(.home-index) .page-hero, body:not(.home-index) .qs-hero');
@@ -53,14 +54,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const measureHomeNavStates = () => {
     const heroHeight = homeLandingHero?.offsetHeight || heroCarousel?.offsetHeight || window.innerHeight || 1;
     const heroTop = homeLandingHero?.offsetTop || heroCarousel?.offsetTop || 0;
-    const trustTop = trustBar?.offsetTop || (heroTop + heroHeight);
+    const indicatorTop = indicatorsSection?.offsetTop || trustBar?.offsetTop || (heroTop + heroHeight);
     const navHeight = nav?.offsetHeight || header?.offsetHeight || 0;
 
     const topEnd = heroTop + Math.max(28, heroHeight * 0.06);
     const transitionEnd = heroTop + Math.max(heroHeight * 0.3, navHeight * 1.15, 150);
     const hiddenStart = Math.max(
-      transitionEnd + Math.max(heroHeight * 0.18, 120),
-      trustTop - Math.max(navHeight * 0.2, 28)
+      transitionEnd + Math.max(heroHeight * 0.16, 96),
+      indicatorTop - Math.max(navHeight * 0.55, 32)
     );
 
     return {
@@ -76,10 +77,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const heroHeight = homeLandingHero?.offsetHeight || heroCarousel?.offsetHeight || window.innerHeight || 1;
     const heroTop = homeLandingHero?.offsetTop || heroCarousel?.offsetTop || 0;
     const heroEnd = heroTop + heroHeight;
-    const trustTop = trustBar?.offsetTop || heroEnd;
+    const indicatorTop = indicatorsSection?.offsetTop || trustBar?.offsetTop || heroEnd;
     const navHeight = nav?.offsetHeight || header?.offsetHeight || 0;
-    const fadeStart = Math.max(trustTop - Math.max(navHeight * 0.25, 20), heroEnd);
-    const fadeEnd = trustTop + Math.max(navHeight * 0.9, 120);
+    const fadeStart = Math.max(indicatorTop - Math.max(navHeight * 1.1, 140), heroEnd);
+    const fadeEnd = indicatorTop + Math.max(navHeight * 0.28, 24);
     const fadeRange = Math.max(fadeEnd - fadeStart, 1);
     const rawProgress = (scrollY - fadeStart) / fadeRange;
     const progress = Math.min(Math.max(rawProgress, 0), 1);
