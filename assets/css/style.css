@@ -1591,6 +1591,11 @@ footer .brand-mark {
   padding-bottom: clamp(1.2rem, 2vw, 1.9rem);
   overflow-x: clip;
 }
+.infographic-esr-section {
+  background: rgba(255,255,255,0.76);
+  padding: clamp(0.5rem, 1.4vw, 1rem) 0 clamp(1.6rem, 3vw, 2.6rem);
+  overflow-x: clip;
+}
 .infographic-shell {
   width: 100%;
   max-width: 1000px;
@@ -1882,6 +1887,11 @@ footer .brand-mark {
     justify-self: start;
     margin-top: 0;
   }
+  .infographic-esr--standalone {
+    position: static;
+    width: min(100%, 760px);
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -1929,6 +1939,9 @@ footer .brand-mark {
   }
   .infographic-esr__bar {
     padding: 0.22rem;
+  }
+  .infographic-esr--standalone {
+    width: 100%;
   }
 }
 
@@ -2055,6 +2068,20 @@ footer .brand-mark {
   .infographic-esr__image,
   .infographic-esr__placeholder {
     width: clamp(210px, 20vw, 330px);
+  }
+  .infographic-esr--standalone {
+    position: static;
+    left: auto;
+    top: auto;
+    right: auto;
+    width: min(100%, 1040px);
+    max-width: 1040px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: clamp(1rem, 2vw, 1.75rem);
+    z-index: 1;
   }
 }
 

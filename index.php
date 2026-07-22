@@ -137,7 +137,13 @@
             </div>
           </div>
 
-          <div class="infographic-esr reveal-on-scroll">
+        </div>
+      </div>
+    </section>
+
+    <section id="esr-section" class="infographic-esr-section">
+      <div class="container">
+        <div class="infographic-esr infographic-esr--standalone reveal-on-scroll">
             <div class="infographic-esr__content">
               <div class="infographic-esr__eyebrow">XV años</div>
               <h2 class="infographic-esr__title">
