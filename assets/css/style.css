@@ -1939,6 +1939,7 @@ footer .brand-mark {
   min-height: 100vh;
   position: relative;
   overflow: hidden;
+  margin-top: clamp(-5rem, -4vw, -2rem);
 }
 .infographic-section > .container {
   width: min(100%, 1440px);
