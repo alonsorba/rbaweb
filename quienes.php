@@ -45,7 +45,7 @@
 
   <main>
     <!-- Hero institucional de la pagina -->
-    <section class="qs-hero py-5 position-relative overflow-hidden">
+    <section id="nosotros" class="qs-hero py-5 position-relative overflow-hidden">
       <div class="container py-4">
         <div class="row align-items-end">
           <div class="col-lg-7">
@@ -83,7 +83,7 @@
     </section>
 
     <!-- Valores de la empresa en formato destacado -->
-    <section class="values-banner position-relative py-5 overflow-hidden text-white">
+    <section id="alianzas" class="values-banner position-relative py-5 overflow-hidden text-white">
       <div class="container position-relative">
         <div class="row g-4 align-items-center">
           <div class="col-lg-6">
@@ -106,7 +106,7 @@
     </section>
 
     <!-- Mensaje del director con card de contenido -->
-    <section class="director-banner position-relative py-5 text-white overflow-hidden">
+    <section id="equipo" class="director-banner position-relative py-5 text-white overflow-hidden">
       <div class="container position-relative">
         <div class="row g-4 align-items-center">
           <div class="col-lg-4">

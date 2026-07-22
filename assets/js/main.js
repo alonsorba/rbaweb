@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentScrollY = window.scrollY;
   let targetScrollY = window.scrollY;
   let currentHomeNavState = '';
+  let homeNavRevealTimer = null;
   let revealObserver;
   let countObserver;
 
@@ -69,6 +70,24 @@ document.addEventListener('DOMContentLoaded', () => {
     };
   };
 
+  const updateHomeNavFade = scrollY => {
+    if (!nav || (!homeLandingHero && !heroCarousel)) return;
+
+    const heroHeight = homeLandingHero?.offsetHeight || heroCarousel?.offsetHeight || window.innerHeight || 1;
+    const heroTop = homeLandingHero?.offsetTop || heroCarousel?.offsetTop || 0;
+    const heroEnd = heroTop + heroHeight;
+    const navHeight = nav?.offsetHeight || header?.offsetHeight || 0;
+    const fadeStart = heroEnd - Math.max(navHeight * 1.35, 140);
+    const fadeEnd = heroEnd + Math.max(navHeight * 0.35, 44);
+    const fadeRange = Math.max(fadeEnd - fadeStart, 1);
+    const rawProgress = (scrollY - fadeStart) / fadeRange;
+    const progress = Math.min(Math.max(rawProgress, 0), 1);
+    const easedProgress = 1 - Math.pow(1 - progress, 1.8);
+    const fadeOpacity = 1 - easedProgress;
+
+    nav.style.setProperty('--home-nav-fade-opacity', fadeOpacity.toFixed(3));
+  };
+
   const getHomeNavState = scrollY => {
     if (!nav || (!homeLandingHero && !heroCarousel)) {
       return scrollY > 24 ? 'solid' : 'top';
@@ -94,14 +113,34 @@ document.addEventListener('DOMContentLoaded', () => {
   const applyHomeNavState = state => {
     if (!nav || !header || currentHomeNavState === state) return;
 
+    const wasHidden = currentHomeNavState === 'hidden';
     currentHomeNavState = state;
     nav.dataset.navState = state;
     nav.classList.toggle('is-scrolled', state === 'transition' || state === 'solid');
     nav.classList.toggle('is-nav-hidden', state === 'hidden');
     header.classList.toggle('is-nav-hidden', state === 'hidden');
+
+    if (homeNavRevealTimer) {
+      window.clearTimeout(homeNavRevealTimer);
+      homeNavRevealTimer = null;
+    }
+
+    nav.classList.remove('is-nav-entering');
+
     if (state === 'hidden' && nav.contains(document.activeElement)) {
       document.activeElement.blur();
     }
+
+    if (wasHidden && state !== 'hidden') {
+      window.requestAnimationFrame(() => {
+        nav.classList.add('is-nav-entering');
+        homeNavRevealTimer = window.setTimeout(() => {
+          nav.classList.remove('is-nav-entering');
+          homeNavRevealTimer = null;
+        }, 400);
+      });
+    }
+
     updateHomeBrandLogos(state);
   };
 
@@ -145,6 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     applyHomeNavState(homeNavState);
+    updateHomeNavFade(scrollY);
     updateHeroScrollEffect(scrollY);
     updatePageHeroEffect(scrollY);
   };

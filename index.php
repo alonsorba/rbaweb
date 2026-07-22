@@ -39,8 +39,8 @@
         <div class="collapse navbar-collapse home-nav-collapse" id="navbarNav">
           <div class="home-nav-content">
             <ul class="navbar-nav home-nav-menu home-nav-menu-left">
-              <li class="nav-item"><a class="nav-link" href="servicios.php#empresarial-pane">Empresas</a></li>
-              <li class="nav-item"><a class="nav-link" href="servicios.php#personales-pane">Personas</a></li>
+              <li class="nav-item"><a class="nav-link" href="servicios.php#portafolio">Empresas</a></li>
+              <li class="nav-item"><a class="nav-link" href="servicios.php#portafolio">Personas</a></li>
               <li class="nav-item"><a class="nav-link" href="servicios.php">Gestión Integral</a></li>
               <li class="nav-item"><a class="nav-link" href="quienes.php">Nosotros</a></li>
             </ul>
