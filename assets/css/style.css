@@ -1610,7 +1610,7 @@ footer .brand-mark {
   border-radius: 28px;
   background: #fff;
   border: 1px solid #e2ebf5;
-  box-shadow: 0 18px 42px rgba(12,46,84,0.08);
+  box-shadow: none;
 }
 .infographic-stats__item {
   text-align: center;
