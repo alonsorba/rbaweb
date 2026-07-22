@@ -1949,7 +1949,7 @@ footer .brand-mark {
 .infographic-shell {
   position: relative;
   width: min(100%, 1440px);
-  min-height: 100vh;
+  min-height: 75vh;
   max-width: none;
   margin: 0 auto;
   gap: 0;
@@ -1981,21 +1981,21 @@ footer .brand-mark {
   .infographic-layout {
     position: relative;
     width: 100%;
-    min-height: clamp(640px, 56vw, 840px);
+    min-height: clamp(480px, 42vw, 630px);
     display: block;
     gap: 0;
   }
   .infographic-copy {
     position: absolute;
     left: clamp(3.5rem, 13.5vw, 13.5rem);
-    top: clamp(124px, 11.8vw, 180px);
+    top: clamp(94px, 8.9vw, 135px);
     width: clamp(250px, 23vw, 330px);
     gap: clamp(0.35rem, 0.7vw, 0.55rem);
     z-index: 3;
   }
   .infographic-map {
     position: absolute;
-    top: clamp(84px, 6.8vw, 122px);
+    top: clamp(64px, 5.1vw, 92px);
     right: clamp(-170px, -7vw, -72px);
     width: clamp(640px, 56vw, 920px);
     margin-right: 0;
