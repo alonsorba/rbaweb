@@ -1996,8 +1996,8 @@ footer .brand-mark {
   .infographic-map {
     position: absolute;
     top: clamp(48px, 3.8vw, 68px);
-    right: clamp(-170px, -7vw, -72px);
-    width: clamp(640px, 56vw, 920px);
+    right: clamp(-360px, -16vw, -180px);
+    width: clamp(760px, 68vw, 1120px);
     margin-right: 0;
     z-index: 2;
   }
