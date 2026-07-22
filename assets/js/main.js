@@ -56,11 +56,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const trustTop = trustBar?.offsetTop || (heroTop + heroHeight);
     const navHeight = nav?.offsetHeight || header?.offsetHeight || 0;
 
-    const topEnd = heroTop + Math.max(24, heroHeight * 0.08);
-    const transitionEnd = heroTop + Math.max(heroHeight * 0.42, navHeight * 1.35, 180);
+    const topEnd = heroTop + Math.max(28, heroHeight * 0.06);
+    const transitionEnd = heroTop + Math.max(heroHeight * 0.3, navHeight * 1.15, 150);
     const hiddenStart = Math.max(
-      transitionEnd + Math.max(heroHeight * 0.12, 96),
-      trustTop - Math.max(navHeight * 0.5, 56)
+      transitionEnd + Math.max(heroHeight * 0.18, 120),
+      trustTop - Math.max(navHeight * 0.2, 28)
     );
 
     return {
@@ -77,12 +77,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const heroTop = homeLandingHero?.offsetTop || heroCarousel?.offsetTop || 0;
     const heroEnd = heroTop + heroHeight;
     const navHeight = nav?.offsetHeight || header?.offsetHeight || 0;
-    const fadeStart = heroEnd - Math.max(navHeight * 1.35, 140);
-    const fadeEnd = heroEnd + Math.max(navHeight * 0.35, 44);
+    const fadeStart = heroTop + Math.max(heroHeight * 0.36, navHeight * 1.1, 220);
+    const fadeEnd = heroEnd + Math.max(navHeight * 0.25, 28);
     const fadeRange = Math.max(fadeEnd - fadeStart, 1);
     const rawProgress = (scrollY - fadeStart) / fadeRange;
     const progress = Math.min(Math.max(rawProgress, 0), 1);
-    const easedProgress = 1 - Math.pow(1 - progress, 1.8);
+    const easedProgress = 1 - Math.pow(1 - progress, 1.6);
     const fadeOpacity = 1 - easedProgress;
 
     nav.style.setProperty('--home-nav-fade-opacity', fadeOpacity.toFixed(3));
