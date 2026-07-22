@@ -64,7 +64,7 @@ a:hover, .link-primary:hover {
 body {
   font-family: 'Poppins', 'Segoe UI', sans-serif;
   color: var(--text-dark);
-  background: #f8fafc;
+  background: linear-gradient(180deg, rgba(248,250,252,0.86) 0%, rgba(248,250,252,0.78) 100%);
 }
 .btn,
 .nav-link,
@@ -1554,7 +1554,7 @@ footer .brand-mark {
    Home / Seccion 2 - Infografia editorial
    ========================= */
 .counter-section {
-  background: #fff;
+  background: rgba(255,255,255,0.78);
   display: flex;
   align-items: center;
   min-height: clamp(170px, 18vw, 240px);
@@ -1586,7 +1586,7 @@ footer .brand-mark {
   font-size: clamp(0.9rem, 1vw, 1rem);
 }
 .infographic-section {
-  background: #fff;
+  background: rgba(255,255,255,0.76);
   padding-top: clamp(0.85rem, 1.5vw, 1.3rem);
   padding-bottom: clamp(1.2rem, 2vw, 1.9rem);
   overflow-x: clip;
@@ -2166,7 +2166,7 @@ footer .brand-mark {
 /* Home / Sección 3 - Compromiso */
 .commitment-section {
   min-height: calc(100svh - var(--header-height));
-  background: #fff;
+  background: rgba(255,255,255,0.78);
   display: grid;
   align-items: center;
   overflow: hidden;
