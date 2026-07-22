@@ -1557,8 +1557,8 @@ footer .brand-mark {
   background: #fff;
   display: flex;
   align-items: center;
-  min-height: clamp(250px, 28vw, 360px);
-  padding: clamp(1.8rem, 3vw, 2.4rem) 0;
+  min-height: clamp(170px, 18vw, 240px);
+  padding: clamp(0.9rem, 1.6vw, 1.25rem) 0;
   overflow-x: clip;
 }
 .counter-stage {
@@ -1571,11 +1571,11 @@ footer .brand-mark {
   top: auto;
   left: auto;
   transform: none;
-  width: min(100%, 980px);
-  min-height: 148px;
-  padding: clamp(1.05rem, 1.8vw, 1.35rem) clamp(1.25rem, 2vw, 1.65rem);
-  gap: clamp(0.6rem, 1.1vw, 0.95rem);
-  border-radius: 30px;
+  width: min(100%, 920px);
+  min-height: 128px;
+  padding: clamp(0.85rem, 1.35vw, 1.1rem) clamp(1.1rem, 1.7vw, 1.35rem);
+  gap: clamp(0.55rem, 0.95vw, 0.8rem);
+  border-radius: 28px;
   margin: 0 auto;
 }
 .counter-stats .infographic-stats__number {
@@ -1964,10 +1964,10 @@ footer .brand-mark {
     z-index: 4;
   }
   .counter-section {
-    min-height: clamp(420px, 44vw, 560px);
+    min-height: clamp(220px, 24vw, 320px);
   }
   .counter-section .counter-stage {
-    min-height: clamp(220px, 24vw, 320px);
+    min-height: 0;
   }
   .counter-section .counter-stats {
     position: static;
