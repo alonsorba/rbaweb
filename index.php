@@ -209,6 +209,11 @@
       <div class="container">
         <div class="services-solutions__header text-center">
           <h2 class="services-solutions__title" id="solutionsTitle">Soluciones</h2>
+          <div class="services-solutions__pills" role="tablist" aria-label="Tipos de solución">
+            <button type="button" class="services-solutions__pill active" data-solution-key="empresas" aria-pressed="true">Empresas</button>
+            <button type="button" class="services-solutions__pill" data-solution-key="personas" aria-pressed="false">Personas</button>
+            <button type="button" class="services-solutions__pill" data-solution-key="gestion" aria-pressed="false">Gestión Integral</button>
+          </div>
         </div>
         <div class="services-solutions__carousel-shell">
           <div class="services-solutions__carousel solutions-carousel" id="solutionsCarousel" data-solution-carousel aria-label="Carrusel de soluciones">

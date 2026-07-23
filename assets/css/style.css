@@ -2425,6 +2425,40 @@ footer .brand-mark {
   letter-spacing: -0.05em;
 }
 
+.services-solutions__pills {
+  display: inline-flex;
+  justify-content: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  margin: 0 auto 1rem;
+}
+
+.services-solutions__pill {
+  min-width: 138px;
+  border: 1.5px solid var(--brand-900);
+  background: #fff;
+  color: #555;
+  border-radius: 999px;
+  padding: 0.82rem 1.35rem;
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.services-solutions__pill.active {
+  background: var(--brand-900);
+  color: #fff;
+  box-shadow: 0 14px 28px rgba(11,48,95,0.18);
+  transform: translateY(-1px);
+}
+
+.services-solutions__pill:focus-visible,
+.solution-card__btn:focus-visible {
+  outline: 2px solid rgba(32, 151, 220, 0.72);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 4px rgba(32, 151, 220, 0.14);
+}
+
 .services-solutions__carousel-shell {
   width: 100%;
   overflow: hidden;
@@ -2589,6 +2623,16 @@ footer .brand-mark {
     width: 100%;
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+
+  .services-solutions__pills {
+    gap: 0.55rem;
+  }
+
+  .services-solutions__pill {
+    min-width: 0;
+    padding: 0.7rem 0.95rem;
+    font-size: 0.84rem;
   }
 
   .solution-card {
