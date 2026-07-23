@@ -275,7 +275,7 @@
 
           <article class="why-us-card why-us-card--scene">
             <div class="why-us-card__visual">
-              <img src="assets/img/04.jpg" alt="Prevención de riesgos" class="why-us-card__image" loading="lazy" decoding="async">
+              <img src="assets/img/nose.png" alt="Prevención de riesgos" class="why-us-card__image" loading="lazy" decoding="async">
             </div>
             <div class="why-us-card__label">Prevención<br>de riesgos</div>
           </article>
