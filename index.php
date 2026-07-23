@@ -116,7 +116,7 @@
             <div class="infographic-map reveal-on-scroll">
               <div class="infographic-map__stage presence-map-wrapper">
                 <svg class="infographic-map__connector presence-map-indicator" viewBox="0 0 4114 2712" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
-                  <line class="infographic-map__connector-line presence-map-line" x1="220" y1="1295" x2="890" y2="760"></line>
+                  <line class="infographic-map__connector-line presence-map-line" x1="120" y1="1215" x2="890" y2="760"></line>
                   <circle class="infographic-map__connector-dot presence-map-point" cx="890" cy="760" r="27"></circle>
                 </svg>
                 <?php if ($mapImageExists): ?>
