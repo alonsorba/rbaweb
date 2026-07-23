@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let revealObserver;
   let countObserver;
   let partnersBouncers = [];
+  let partnersAnimationRequested = false;
 
   const updateHomeBrandLogos = state => {
     const shouldUseRgb = state === 'transition' || state === 'solid';
@@ -182,8 +183,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!partnersPanel || !partnersLogos.length) return;
 
     partnersBouncers = partnersLogos.map((logo, index) => {
-      logo.style.transform = 'translate3d(0, 0, 0)';
-
       const panelRect = partnersPanel.getBoundingClientRect();
       const logoRect = logo.getBoundingClientRect();
 
@@ -195,7 +194,13 @@ document.addEventListener('DOMContentLoaded', () => {
       const currentX = Math.min(Math.max(logoRect.left - panelRect.left, 0), maxX);
       const currentY = Math.min(Math.max(logoRect.top - panelRect.top, 0), maxY);
 
-      const baseSpeed = 0.34 + (index * 0.06);
+      logo.style.left = `${currentX}px`;
+      logo.style.top = `${currentY}px`;
+      logo.style.right = 'auto';
+      logo.style.bottom = 'auto';
+      logo.style.transform = 'translate3d(0, 0, 0)';
+
+      const baseSpeed = 0.56 + (index * 0.08);
       const dirX = index % 2 === 0 ? 1 : -1;
       const dirY = index % 3 === 0 ? 1 : -1;
 
@@ -241,8 +246,39 @@ document.addEventListener('DOMContentLoaded', () => {
         bouncer.vy *= -1;
       }
 
-      bouncer.element.style.transform = `translate3d(${(bouncer.x - bouncer.baseX).toFixed(2)}px, ${(bouncer.y - bouncer.baseY).toFixed(2)}px, 0)`;
+      bouncer.element.style.left = `${bouncer.x.toFixed(2)}px`;
+      bouncer.element.style.top = `${bouncer.y.toFixed(2)}px`;
     });
+
+    partnersAnimationFrame = window.requestAnimationFrame(animatePartnersBouncers);
+  };
+
+  const waitForPartnersImages = () => Promise.all(partnersLogos.map(logo => {
+    if (logo.complete && logo.naturalWidth > 0 && logo.naturalHeight > 0) {
+      return Promise.resolve();
+    }
+
+    return new Promise(resolve => {
+      const done = () => resolve();
+      logo.addEventListener('load', done, { once: true });
+      logo.addEventListener('error', done, { once: true });
+    });
+  }));
+
+  const startPartnersAnimation = async () => {
+    if (!partnersPanel || !partnersLogos.length || prefersReducedMotion || partnersAnimationRequested) return;
+
+    partnersAnimationRequested = true;
+
+    await waitForPartnersImages();
+
+    if (!partnersPanel || !partnersLogos.length || prefersReducedMotion) return;
+
+    initPartnersBouncers();
+
+    if (partnersAnimationFrame !== null) {
+      window.cancelAnimationFrame(partnersAnimationFrame);
+    }
 
     partnersAnimationFrame = window.requestAnimationFrame(animatePartnersBouncers);
   };
@@ -293,26 +329,22 @@ document.addEventListener('DOMContentLoaded', () => {
   requestScrollFrame();
 
   if (partnersPanel && partnersLogos.length) {
-    const startPartnersAnimation = () => {
-      if (prefersReducedMotion) return;
-      initPartnersBouncers();
-      if (partnersAnimationFrame !== null) {
-        window.cancelAnimationFrame(partnersAnimationFrame);
-      }
-      partnersAnimationFrame = window.requestAnimationFrame(animatePartnersBouncers);
-    };
-
     const rebuildPartnersAnimation = () => {
       if (prefersReducedMotion) return;
+      partnersAnimationRequested = false;
       startPartnersAnimation();
     };
 
     window.addEventListener('resize', rebuildPartnersAnimation);
-    window.addEventListener('load', startPartnersAnimation, { once: true });
-    window.addEventListener('pageshow', startPartnersAnimation, { once: true });
-    window.requestAnimationFrame(() => {
+    window.addEventListener('load', () => {
+      partnersAnimationRequested = false;
       startPartnersAnimation();
-    });
+    }, { once: true });
+    window.addEventListener('pageshow', () => {
+      partnersAnimationRequested = false;
+      startPartnersAnimation();
+    }, { once: true });
+    window.requestAnimationFrame(() => startPartnersAnimation());
   }
 
   document.querySelectorAll('a.nav-link[href^="#"]').forEach(link => {
