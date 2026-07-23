@@ -2608,9 +2608,10 @@ footer .brand-mark {
 }
 
 .why-us-card--scene .why-us-card__image {
-  width: 100%;
-  object-fit: cover;
-  object-position: center 22%;
+  width: min(90%, 250px);
+  height: 96%;
+  object-fit: contain;
+  object-position: center center;
 }
 
 .why-us-card__label {
