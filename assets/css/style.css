@@ -2543,86 +2543,118 @@ footer .brand-mark {
 /* Home / Seccion 5 - Por que nosotros */
 .why-us-section {
   background: #fff;
-  padding: clamp(4.5rem, 8vw, 7rem) 0 clamp(5rem, 8vw, 7.5rem);
+  padding: clamp(3.5rem, 5.8vw, 5.25rem) 0 clamp(4rem, 6vw, 5.5rem);
 }
 
 .why-us-section__header {
-  margin-bottom: clamp(2rem, 4vw, 3rem);
+  margin-bottom: clamp(1.4rem, 2.8vw, 2.15rem);
 }
 
 .why-us-section__title {
   margin: 0;
   color: #595959;
-  font-size: clamp(2.1rem, 4.1vw, 3.5rem);
-  line-height: 1.05;
-  font-weight: 600;
+  font-size: clamp(2.35rem, 3.35vw, 3.35rem);
+  line-height: 1.02;
+  font-weight: 700;
   letter-spacing: -0.05em;
 }
 
 .why-us-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(1rem, 1.8vw, 1.5rem);
+  gap: clamp(1rem, 1.6vw, 1.45rem);
+  align-items: start;
 }
 
 .why-us-card {
-  overflow: hidden;
-  border-radius: 28px;
-  background: #fff;
-  box-shadow: 0 18px 38px rgba(12, 46, 84, 0.08);
-  transition: transform var(--dur-base) var(--ease-apple), box-shadow var(--dur-base) var(--ease-apple);
-}
-
-.why-us-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 24px 44px rgba(12, 46, 84, 0.13);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background: transparent;
+  overflow: visible;
+  border-radius: 0;
+  box-shadow: none;
+  max-width: 100%;
 }
 
 .why-us-card__visual {
   position: relative;
-  height: clamp(220px, 26vw, 300px);
-  background: linear-gradient(180deg, #0e5f95 0%, #0a4a76 100%);
-  overflow: hidden;
+  height: clamp(230px, 25vw, 304px);
+  overflow: visible;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  isolation: isolate;
+}
+
+.why-us-card__visual::before {
+  content: "";
+  position: absolute;
+  inset: 36px 14px 34px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #0b4d7f 0%, #0d5d97 48%, #0a4471 100%);
+  z-index: 0;
 }
 
 .why-us-card__image {
+  position: relative;
+  z-index: 1;
   display: block;
-  width: 100%;
+  width: min(92%, 270px);
   height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+  filter: drop-shadow(0 10px 12px rgba(7, 31, 62, 0.16));
+}
+
+.why-us-card--scene .why-us-card__image {
+  width: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center 22%;
 }
 
 .why-us-card__label {
-  min-height: 92px;
+  min-height: 72px;
+  width: min(100%, 168px);
+  margin: 0 auto;
   display: grid;
   place-items: center;
-  padding: 1rem 1.2rem 1.15rem;
+  padding: 0.55rem 1rem 0;
   color: #5c5c5c;
   text-align: center;
-  font-size: clamp(0.95rem, 1.1vw, 1.08rem);
-  line-height: 1.18;
-  font-weight: 600;
+  font-size: clamp(0.95rem, 1.02vw, 1.08rem);
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+.why-us-card__label br {
+  display: block;
+}
+
+@media (max-width: 1399.98px) {
+  .why-us-card__visual {
+    height: 262px;
+  }
 }
 
 @media (max-width: 1199.98px) {
   .why-us-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.25rem;
+    gap: 1.2rem;
   }
 
   .why-us-card__visual {
-    height: 280px;
+    height: 250px;
   }
 }
 
 @media (max-width: 575.98px) {
   .why-us-section {
-    padding: 4rem 0 4.5rem;
+    padding: 3.25rem 0 3.75rem;
   }
 
   .why-us-section__header {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.15rem;
   }
 
   .why-us-grid {
@@ -2630,12 +2662,12 @@ footer .brand-mark {
   }
 
   .why-us-card__visual {
-    height: 245px;
+    height: 232px;
   }
 
   .why-us-card__label {
-    min-height: 82px;
-    font-size: 0.98rem;
+    min-height: 68px;
+    font-size: 0.96rem;
   }
 }
 

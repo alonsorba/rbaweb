@@ -266,32 +266,32 @@
         </div>
 
         <div class="why-us-grid">
-          <article class="why-us-card">
+          <article class="why-us-card why-us-card--portrait">
             <div class="why-us-card__visual">
               <img src="assets/img/itzel.png" alt="Asesoría personalizada" class="why-us-card__image" loading="lazy" decoding="async">
             </div>
-            <div class="why-us-card__label">Asesoría personalizada</div>
+            <div class="why-us-card__label">Asesoría<br>personalizada</div>
           </article>
 
-          <article class="why-us-card">
+          <article class="why-us-card why-us-card--scene">
             <div class="why-us-card__visual">
-              <img src="assets/img/03.jpg" alt="Prevención de riesgos" class="why-us-card__image" loading="lazy" decoding="async">
+              <img src="assets/img/04.jpg" alt="Prevención de riesgos" class="why-us-card__image" loading="lazy" decoding="async">
             </div>
-            <div class="why-us-card__label">Prevención de riesgos</div>
+            <div class="why-us-card__label">Prevención<br>de riesgos</div>
           </article>
 
-          <article class="why-us-card">
+          <article class="why-us-card why-us-card--portrait">
             <div class="why-us-card__visual">
               <img src="assets/img/jenny.png" alt="Análisis inteligente" class="why-us-card__image" loading="lazy" decoding="async">
             </div>
-            <div class="why-us-card__label">Análisis inteligente</div>
+            <div class="why-us-card__label">Análisis<br>inteligente</div>
           </article>
 
-          <article class="why-us-card">
+          <article class="why-us-card why-us-card--portrait">
             <div class="why-us-card__visual">
               <img src="assets/img/misa.png" alt="Acompañamiento constante" class="why-us-card__image" loading="lazy" decoding="async">
             </div>
-            <div class="why-us-card__label">Acompañamiento constante</div>
+            <div class="why-us-card__label">Acompañamiento<br>constante</div>
           </article>
         </div>
       </div>
@@ -499,15 +499,4 @@
   <script src="assets/js/main.js?v=8"></script>
 </body>
 </html>
-
-
-
-
-
-
- 
-
-
-
-
 
