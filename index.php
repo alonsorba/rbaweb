@@ -144,26 +144,34 @@
 
     <section id="esr-section" class="infographic-esr-section">
       <div class="container">
-        <div class="infographic-esr infographic-esr--standalone reveal-on-scroll">
+          <div class="infographic-esr infographic-esr--standalone reveal-on-scroll">
             <div class="infographic-esr__content">
-              <div class="infographic-esr__eyebrow">XV años</div>
+              <div class="infographic-esr__eyebrow">XV años <span>de ser</span></div>
               <h2 class="infographic-esr__title">
-                <span>de ser</span>
-                <span>Empresa Socialmente</span>
-                <span>Responsable</span>
+                  <span>Empresa Socialmente</span>
+                  <span>Responsable</span>
               </h2>
               <p class="infographic-esr__copy">Seguimos construyendo un futuro más responsable todos los días.</p>
 
               <div class="infographic-esr__bar">
-                <span>Ética Empresarial</span>
-                <span>Cuidado del Medio Ambiente</span>
-                <span>Bienestar Social</span>
+                  <span class="infographic-esr__bar-item">
+                    <img src="assets/img/Ética empresarial.png" alt="" class="infographic-esr__bar-icon" loading="lazy" decoding="async">
+                    <span class="infographic-esr__bar-label">Ética<br>Empresarial</span>
+                  </span>
+                  <span class="infographic-esr__bar-item">
+                    <img src="assets/img/Cuidado del medio ambiente.png" alt="" class="infographic-esr__bar-icon" loading="lazy" decoding="async">
+                    <span class="infographic-esr__bar-label">Cuidado del<br>Medio Ambiente</span>
+                  </span>
+                  <span class="infographic-esr__bar-item">
+                    <img src="assets/img/Bienestar social.png" alt="" class="infographic-esr__bar-icon" loading="lazy" decoding="async">
+                    <span class="infographic-esr__bar-label">Bienestar<br>Social</span>
+                  </span>
               </div>
             </div>
 
             <div class="infographic-esr__media">
               <?php if ($esrImageExists): ?>
-                <img src="<?php echo $esrImagePath; ?>" alt="Reconocimiento ESR de RBA Seguros y Fianzas" class="infographic-esr__image" loading="lazy">
+                <img src="<?php echo $esrImagePath; ?>" alt="Reconocimiento ESR de RBA Seguros y Fianzas" class="infographic-esr__image" loading="lazy" decoding="async">
               <?php else: ?>
                 <div class="infographic-esr__placeholder">
                   <!-- Reemplazar este bloque por la imagen del reconocimiento ESR cuando esté disponible en assets/img/esr con sombre.png -->
