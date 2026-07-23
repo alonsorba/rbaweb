@@ -2102,6 +2102,8 @@ footer .brand-mark {
     top: clamp(430px, 34vw, 560px);
     width: clamp(250px, 23vw, 330px);
     gap: clamp(0.35rem, 0.7vw, 0.55rem);
+    transform: scale(1.5);
+    transform-origin: top left;
     z-index: 3;
   }
   .infographic-map {
