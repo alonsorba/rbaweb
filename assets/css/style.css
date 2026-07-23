@@ -2305,15 +2305,17 @@ footer .brand-mark {
   margin: 0 auto;
   padding: clamp(2.75rem, 5.5vh, 4.5rem) clamp(1.25rem, 5vw, 5rem);
   display: grid;
-  grid-template-columns: minmax(0, 0.44fr) minmax(560px, 1fr);
+  grid-template-columns: minmax(0, 0.42fr) minmax(540px, 1fr);
   align-items: center;
-  gap: clamp(9rem, 13vw, 12rem);
+  gap: clamp(9rem, 14vw, 13rem);
   justify-content: space-between;
 }
 .commitment-copy {
-  max-width: 500px;
+  max-width: 460px;
   padding-right: 0;
   justify-self: start;
+  position: relative;
+  z-index: 2;
 }
 .commitment-title {
   margin: 0;
@@ -2334,11 +2336,11 @@ footer .brand-mark {
   font-weight: 700;
 }
 .commitment-media {
-  width: min(100%, 720px);
+  width: min(100%, 660px);
   max-width: 100%;
   justify-self: end;
   transform: none;
-  margin-left: clamp(6rem, 8vw, 10rem);
+  margin-left: clamp(8rem, 12vw, 14rem);
 }
 .commitment-image-card {
   width: 100%;
