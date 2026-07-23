@@ -2092,14 +2092,14 @@ footer .brand-mark {
   .infographic-layout {
     position: relative;
     width: 100%;
-    min-height: clamp(360px, 31vw, 500px);
+    min-height: clamp(820px, 56vw, 980px);
     display: block;
     gap: 0;
   }
   .infographic-copy {
     position: absolute;
     left: clamp(3.5rem, 13.5vw, 13.5rem);
-    top: clamp(70px, 6.8vw, 102px);
+    top: clamp(430px, 34vw, 560px);
     width: clamp(250px, 23vw, 330px);
     gap: clamp(0.35rem, 0.7vw, 0.55rem);
     z-index: 3;
@@ -2187,10 +2187,10 @@ footer .brand-mark {
 
 @media (min-width: 1200px) and (max-width: 1499.98px) {
   .infographic-layout {
-    min-height: clamp(640px, 56vw, 840px);
+    min-height: clamp(820px, 56vw, 980px);
   }
   .infographic-copy {
-    top: clamp(125px, 12vw, 180px);
+    top: clamp(430px, 34vw, 560px);
   }
   .infographic-map {
     top: clamp(84px, 6.5vw, 126px);
