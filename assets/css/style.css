@@ -2587,15 +2587,6 @@ footer .brand-mark {
   isolation: isolate;
 }
 
-.why-us-card__visual::before {
-  content: "";
-  position: absolute;
-  inset: 36px 14px 34px;
-  border-radius: 24px;
-  background: linear-gradient(135deg, #0b4d7f 0%, #0d5d97 48%, #0a4471 100%);
-  z-index: 0;
-}
-
 .why-us-card__image {
   position: relative;
   z-index: 1;
