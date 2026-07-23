@@ -259,6 +259,44 @@
       </div>
     </section>
 
+    <section id="por-que-nosotros" class="why-us-section">
+      <div class="container">
+        <div class="why-us-section__header text-center">
+          <h2 class="why-us-section__title">¿Por qué nosotros?</h2>
+        </div>
+
+        <div class="why-us-grid">
+          <article class="why-us-card">
+            <div class="why-us-card__visual">
+              <img src="assets/img/03.jpg" alt="Asesoría personalizada" class="why-us-card__image" loading="lazy" decoding="async">
+            </div>
+            <div class="why-us-card__label">Asesoría personalizada</div>
+          </article>
+
+          <article class="why-us-card">
+            <div class="why-us-card__visual">
+              <img src="assets/img/02.jpg" alt="Prevención de riesgos" class="why-us-card__image" loading="lazy" decoding="async">
+            </div>
+            <div class="why-us-card__label">Prevención de riesgos</div>
+          </article>
+
+          <article class="why-us-card">
+            <div class="why-us-card__visual">
+              <img src="assets/img/04.jpg" alt="Análisis inteligente" class="why-us-card__image" loading="lazy" decoding="async">
+            </div>
+            <div class="why-us-card__label">Análisis inteligente</div>
+          </article>
+
+          <article class="why-us-card">
+            <div class="why-us-card__visual">
+              <img src="assets/img/01.jpg" alt="Acompañamiento constante" class="why-us-card__image" loading="lazy" decoding="async">
+            </div>
+            <div class="why-us-card__label">Acompañamiento constante</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section id="testimonios" class="py-5 testimonials-section">
       <div class="container">
         <div class="testimonials-section__header d-flex justify-content-between align-items-end flex-wrap gap-3 mb-4">
