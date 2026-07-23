@@ -2305,13 +2305,13 @@ footer .brand-mark {
   margin: 0 auto;
   padding: clamp(2.75rem, 5.5vh, 4.5rem) clamp(1.25rem, 5vw, 5rem);
   display: grid;
-  grid-template-columns: minmax(0, 0.54fr) minmax(520px, 1fr);
+  grid-template-columns: minmax(0, 0.44fr) minmax(560px, 1fr);
   align-items: center;
-  gap: clamp(6rem, 10vw, 9rem);
+  gap: clamp(9rem, 13vw, 12rem);
   justify-content: space-between;
 }
 .commitment-copy {
-  max-width: 560px;
+  max-width: 500px;
   padding-right: 0;
   justify-self: start;
 }
@@ -2338,6 +2338,7 @@ footer .brand-mark {
   max-width: 100%;
   justify-self: end;
   transform: none;
+  margin-left: clamp(2rem, 4vw, 4.5rem);
 }
 .commitment-image-card {
   width: 100%;
