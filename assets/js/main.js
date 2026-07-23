@@ -206,8 +206,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
       return {
         element: logo,
-        baseX: currentX,
-        baseY: currentY,
         x: currentX,
         y: currentY,
         vx: baseSpeed * dirX,
@@ -218,6 +216,55 @@ document.addEventListener('DOMContentLoaded', () => {
         maxY
       };
     });
+  };
+
+  const resolvePartnersCollision = (a, b) => {
+    const aLeft = a.x;
+    const aTop = a.y;
+    const aRight = a.x + a.width;
+    const aBottom = a.y + a.height;
+    const bLeft = b.x;
+    const bTop = b.y;
+    const bRight = b.x + b.width;
+    const bBottom = b.y + b.height;
+
+    const overlapX = Math.min(aRight, bRight) - Math.max(aLeft, bLeft);
+    const overlapY = Math.min(aBottom, bBottom) - Math.max(aTop, bTop);
+
+    if (overlapX <= 0 || overlapY <= 0) return;
+
+    const aCenterX = a.x + (a.width / 2);
+    const aCenterY = a.y + (a.height / 2);
+    const bCenterX = b.x + (b.width / 2);
+    const bCenterY = b.y + (b.height / 2);
+
+    if (overlapX < overlapY) {
+      const push = overlapX / 2 + 0.5;
+      if (aCenterX <= bCenterX) {
+        a.x -= push;
+        b.x += push;
+      } else {
+        a.x += push;
+        b.x -= push;
+      }
+
+      const tempVx = a.vx;
+      a.vx = b.vx;
+      b.vx = tempVx;
+    } else {
+      const push = overlapY / 2 + 0.5;
+      if (aCenterY <= bCenterY) {
+        a.y -= push;
+        b.y += push;
+      } else {
+        a.y += push;
+        b.y -= push;
+      }
+
+      const tempVy = a.vy;
+      a.vy = b.vy;
+      b.vy = tempVy;
+    }
   };
 
   const animatePartnersBouncers = () => {
@@ -245,7 +292,17 @@ document.addEventListener('DOMContentLoaded', () => {
         bouncer.y = bouncer.maxY;
         bouncer.vy *= -1;
       }
+    });
 
+    for (let i = 0; i < partnersBouncers.length; i += 1) {
+      for (let j = i + 1; j < partnersBouncers.length; j += 1) {
+        resolvePartnersCollision(partnersBouncers[i], partnersBouncers[j]);
+      }
+    }
+
+    partnersBouncers.forEach(bouncer => {
+      bouncer.x = Math.min(Math.max(bouncer.x, 0), bouncer.maxX);
+      bouncer.y = Math.min(Math.max(bouncer.y, 0), bouncer.maxY);
       bouncer.element.style.left = `${bouncer.x.toFixed(2)}px`;
       bouncer.element.style.top = `${bouncer.y.toFixed(2)}px`;
     });
