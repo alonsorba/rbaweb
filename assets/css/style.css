@@ -2307,7 +2307,7 @@ footer .brand-mark {
   display: grid;
   grid-template-columns: minmax(0, 0.62fr) minmax(520px, 1fr);
   align-items: center;
-  gap: clamp(3rem, 5.5vw, 5rem);
+  gap: clamp(4.5rem, 7.5vw, 7.5rem);
   justify-content: space-between;
 }
 .commitment-copy {
