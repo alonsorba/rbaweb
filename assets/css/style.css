@@ -2305,13 +2305,13 @@ footer .brand-mark {
   margin: 0 auto;
   padding: clamp(2.75rem, 5.5vh, 4.5rem) clamp(1.25rem, 5vw, 5rem);
   display: grid;
-  grid-template-columns: minmax(0, 0.62fr) minmax(520px, 1fr);
+  grid-template-columns: minmax(0, 0.54fr) minmax(520px, 1fr);
   align-items: center;
-  gap: clamp(4.5rem, 7.5vw, 7.5rem);
+  gap: clamp(6rem, 10vw, 9rem);
   justify-content: space-between;
 }
 .commitment-copy {
-  max-width: 620px;
+  max-width: 560px;
   padding-right: 0;
   justify-self: start;
 }
