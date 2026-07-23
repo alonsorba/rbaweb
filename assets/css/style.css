@@ -1728,8 +1728,8 @@ footer .brand-mark {
 .presence-map-line {
   fill: none;
   stroke: #1e88e5;
-  stroke-width: 2.8;
-  stroke-dasharray: 4.6 3.2;
+  stroke-width: 1.8;
+  stroke-dasharray: 3.2 2.2;
   stroke-linecap: round;
   opacity: 0.95;
   vector-effect: non-scaling-stroke;
@@ -1738,7 +1738,7 @@ footer .brand-mark {
 .presence-map-point {
   fill: #fff;
   stroke: var(--brand-700);
-  stroke-width: 0.6;
+  stroke-width: 0.35;
   vector-effect: non-scaling-stroke;
   shape-rendering: geometricPrecision;
 }
