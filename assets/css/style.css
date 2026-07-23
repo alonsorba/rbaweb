@@ -1951,7 +1951,7 @@ footer .brand-mark {
 }
 .infographic-esr__image {
   display: block;
-  width: min(100%, 580px);
+  width: min(100%, 610px);
   height: auto;
   border: 0;
   background: transparent;
@@ -1959,7 +1959,7 @@ footer .brand-mark {
   filter: drop-shadow(0 18px 22px rgba(7,23,42,0.18));
 }
 .infographic-esr__placeholder {
-  width: min(100%, 580px);
+  width: min(100%, 610px);
   min-height: 340px;
   display: grid;
   place-content: center;
