@@ -1806,43 +1806,6 @@ footer .brand-mark {
   box-shadow: 0 0 0 10px rgba(19,92,138,0.12), 0 0 0 20px rgba(19,92,138,0.04);
   z-index: 3;
 }
-.infographic-map__hover {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity var(--dur-base) var(--ease-apple), visibility var(--dur-base) var(--ease-apple);
-  background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.28));
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  z-index: 3;
-}
-.infographic-map:hover .infographic-map__hover,
-.infographic-map:focus-within .infographic-map__hover {
-  opacity: 1;
-  visibility: visible;
-}
-.infographic-map__hover-card {
-  padding: 1rem 1.15rem;
-  border-radius: 18px;
-  background: rgba(255,255,255,0.97);
-  box-shadow: 0 18px 36px rgba(12,46,84,0.18), inset 0 1px 0 rgba(255,255,255,0.84);
-  color: var(--text-dark);
-  text-align: center;
-  max-width: 320px;
-}
-.infographic-map__hover-card strong {
-  display: block;
-  color: var(--brand-700);
-  margin-bottom: 0.35rem;
-}
-.infographic-map__hover-card p {
-  margin: 0;
-  font-size: 0.95rem;
-}
 .infographic-esr {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);

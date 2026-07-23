@@ -128,12 +128,6 @@
                   </div>
                 <?php endif; ?>
 
-                <div class="infographic-map__hover">
-                  <div class="infographic-map__hover-card">
-                    <strong>Presencia nacional</strong>
-                    <p>Matriz en Ciudad Obregón, Sonora. Cobertura activa en 25 estados.</p>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
