@@ -32,14 +32,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const heroContent = document.querySelector('body.home-index .hero-v2-content');
   const pageHero = document.querySelector('body:not(.home-index) .page-hero, body:not(.home-index) .qs-hero');
   const homeBrandLogos = Array.from(document.querySelectorAll('body.home-index .brand-logo[data-home-logo-light][data-home-logo-dark]'));
+  const partnersPanel = document.querySelector('.partners-section__panel');
+  const partnersLogos = Array.from(document.querySelectorAll('.partners-section .partners-logo'));
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   let animationFrame = null;
+  let partnersAnimationFrame = null;
   let currentScrollY = window.scrollY;
   let targetScrollY = window.scrollY;
   let currentHomeNavState = '';
   let homeNavRevealTimer = null;
   let revealObserver;
   let countObserver;
+  let partnersBouncers = [];
 
   const updateHomeBrandLogos = state => {
     const shouldUseRgb = state === 'transition' || state === 'solid';
@@ -174,6 +178,75 @@ document.addEventListener('DOMContentLoaded', () => {
     pageHero.style.setProperty('--page-hero-progress', easedProgress.toFixed(3));
   };
 
+  const initPartnersBouncers = () => {
+    if (!partnersPanel || !partnersLogos.length) return;
+
+    partnersBouncers = partnersLogos.map((logo, index) => {
+      logo.style.transform = 'translate3d(0, 0, 0)';
+
+      const panelRect = partnersPanel.getBoundingClientRect();
+      const logoRect = logo.getBoundingClientRect();
+
+      const width = Math.max(logoRect.width, 1);
+      const height = Math.max(logoRect.height, 1);
+      const maxX = Math.max(panelRect.width - width, 0);
+      const maxY = Math.max(panelRect.height - height, 0);
+
+      const currentX = Math.min(Math.max(logoRect.left - panelRect.left, 0), maxX);
+      const currentY = Math.min(Math.max(logoRect.top - panelRect.top, 0), maxY);
+
+      const baseSpeed = 0.34 + (index * 0.06);
+      const dirX = index % 2 === 0 ? 1 : -1;
+      const dirY = index % 3 === 0 ? 1 : -1;
+
+      return {
+        element: logo,
+        baseX: currentX,
+        baseY: currentY,
+        x: currentX,
+        y: currentY,
+        vx: baseSpeed * dirX,
+        vy: (baseSpeed * 0.78) * dirY,
+        width,
+        height,
+        maxX,
+        maxY
+      };
+    });
+  };
+
+  const animatePartnersBouncers = () => {
+    if (!partnersBouncers.length) {
+      partnersAnimationFrame = null;
+      return;
+    }
+
+    partnersBouncers.forEach(bouncer => {
+      bouncer.x += bouncer.vx;
+      bouncer.y += bouncer.vy;
+
+      if (bouncer.x <= 0) {
+        bouncer.x = 0;
+        bouncer.vx *= -1;
+      } else if (bouncer.x >= bouncer.maxX) {
+        bouncer.x = bouncer.maxX;
+        bouncer.vx *= -1;
+      }
+
+      if (bouncer.y <= 0) {
+        bouncer.y = 0;
+        bouncer.vy *= -1;
+      } else if (bouncer.y >= bouncer.maxY) {
+        bouncer.y = bouncer.maxY;
+        bouncer.vy *= -1;
+      }
+
+      bouncer.element.style.transform = `translate3d(${(bouncer.x - bouncer.baseX).toFixed(2)}px, ${(bouncer.y - bouncer.baseY).toFixed(2)}px, 0)`;
+    });
+
+    partnersAnimationFrame = window.requestAnimationFrame(animatePartnersBouncers);
+  };
+
   const onScroll = scrollY => {
     const homeNavState = getHomeNavState(scrollY);
 
@@ -218,6 +291,29 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', requestScrollFrame, { passive: true });
   window.addEventListener('resize', requestScrollFrame);
   requestScrollFrame();
+
+  if (partnersPanel && partnersLogos.length) {
+    const startPartnersAnimation = () => {
+      if (prefersReducedMotion) return;
+      initPartnersBouncers();
+      if (partnersAnimationFrame !== null) {
+        window.cancelAnimationFrame(partnersAnimationFrame);
+      }
+      partnersAnimationFrame = window.requestAnimationFrame(animatePartnersBouncers);
+    };
+
+    const rebuildPartnersAnimation = () => {
+      if (prefersReducedMotion) return;
+      startPartnersAnimation();
+    };
+
+    window.addEventListener('resize', rebuildPartnersAnimation);
+    window.addEventListener('load', startPartnersAnimation, { once: true });
+    window.addEventListener('pageshow', startPartnersAnimation, { once: true });
+    window.requestAnimationFrame(() => {
+      startPartnersAnimation();
+    });
+  }
 
   document.querySelectorAll('a.nav-link[href^="#"]').forEach(link => {
     link.addEventListener('click', event => {

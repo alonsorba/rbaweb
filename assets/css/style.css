@@ -2774,6 +2774,9 @@ footer .brand-mark {
   height: auto;
   opacity: 0.18;
   filter: brightness(0) invert(1);
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  pointer-events: none;
 }
 
 .partners-logo--aig {
