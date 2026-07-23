@@ -116,8 +116,8 @@
             <div class="infographic-map reveal-on-scroll">
               <div class="infographic-map__stage presence-map-wrapper">
                 <svg class="infographic-map__connector presence-map-indicator" viewBox="0 0 4114 2712" preserveAspectRatio="xMidYMid meet" aria-hidden="true" focusable="false">
-                  <line class="infographic-map__connector-line presence-map-line" x1="0" y1="1410" x2="1078" y2="954"></line>
-                  <circle class="infographic-map__connector-dot presence-map-point" cx="1078" cy="954" r="27"></circle>
+                  <line class="infographic-map__connector-line presence-map-line" x1="0" y1="1410" x2="980" y2="830"></line>
+                  <circle class="infographic-map__connector-dot presence-map-point" cx="980" cy="830" r="27"></circle>
                 </svg>
                 <?php if ($mapImageExists): ?>
                   <img src="<?php echo $mapImagePath; ?>" alt="Mapa de México con presencia nacional de RBA" class="infographic-map__image presence-map-image" loading="lazy">

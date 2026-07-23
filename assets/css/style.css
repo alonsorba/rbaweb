@@ -1702,8 +1702,7 @@ footer .brand-mark {
   width: 100%;
   overflow: visible;
   margin-top: clamp(2.5rem, 5vw, 5rem);
-  padding-bottom: 2rem;
-  padding-right: 2rem;
+  padding: 0;
 }
 .presence-map-image {
   display: block;
