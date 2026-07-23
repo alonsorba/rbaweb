@@ -2607,11 +2607,10 @@ footer .brand-mark {
 
 .why-us-card__label {
   min-height: 92px;
-  width: min(92%, 270px);
+  width: min(92%, 178px);
   margin: 0 auto;
   display: grid;
   place-items: center;
-  padding: 1rem 1rem 1.05rem;
   color: #5c5c5c;
   text-align: center;
   font-size: clamp(0.95rem, 1.02vw, 1.08rem);
@@ -2619,10 +2618,10 @@ footer .brand-mark {
   font-weight: 700;
   background: #fff;
   border-radius: 24px 24px 0 0;
-  box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.98), 0 14px 28px rgba(12, 46, 84, 0.12);
+  /* box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.98), 0 14px 28px rgba(12, 46, 84, 0.12); */
   position: relative;
   z-index: 2;
-  margin-top: -1.8rem;
+  margin-top: -4rem;
 }
 
 .why-us-card__label br {
@@ -2676,6 +2675,231 @@ footer .brand-mark {
     font-size: 0.96rem;
     width: min(92%, 250px);
     margin-top: -1.35rem;
+  }
+}
+
+/* Home / Seccion 6 - Aseguradoras */
+.partners-section {
+  position: relative;
+  padding: clamp(2.75rem, 4.8vw, 4.25rem) 0;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.12), transparent 34%),
+    radial-gradient(circle at 84% 22%, rgba(255, 255, 255, 0.09), transparent 28%),
+    linear-gradient(180deg, #15508b 0%, #123f71 100%);
+  overflow: hidden;
+}
+
+.partners-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, transparent 28%),
+    linear-gradient(315deg, rgba(255, 255, 255, 0.03) 0%, transparent 24%);
+  pointer-events: none;
+}
+
+.partners-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.partners-section__panel {
+  position: relative;
+  min-height: clamp(320px, 34vw, 420px);
+  display: grid;
+  grid-template-columns: minmax(240px, 0.95fr) minmax(280px, 1.1fr);
+  align-items: center;
+  gap: clamp(1.5rem, 3vw, 3.75rem);
+  border-radius: 0;
+  isolation: isolate;
+}
+
+.partners-section__copy,
+.partners-section__message {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.partners-section__copy {
+  max-width: 340px;
+}
+
+.partners-section__eyebrow {
+  margin: 0 0 0.7rem;
+  font-size: clamp(1.5rem, 2.1vw, 2.15rem);
+  line-height: 1.04;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.partners-section__count {
+  margin: 0;
+  font-size: clamp(4.6rem, 9.2vw, 7.25rem);
+  line-height: 0.88;
+  font-weight: 800;
+  letter-spacing: -0.06em;
+}
+
+.partners-section__label {
+  margin: 0.55rem 0 0;
+  font-size: clamp(1.45rem, 2vw, 2rem);
+  line-height: 1.05;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.partners-section__message {
+  max-width: 460px;
+  margin-inline-start: auto;
+  text-align: center;
+  font-size: clamp(1.35rem, 2.35vw, 2.35rem);
+  line-height: 1.14;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+
+.partners-section__logos {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.partners-logo {
+  position: absolute;
+  display: block;
+  width: auto;
+  height: auto;
+  opacity: 0.18;
+  filter: brightness(0) invert(1);
+}
+
+.partners-logo--aig {
+  top: 2.2rem;
+  left: 2rem;
+  width: clamp(72px, 8vw, 108px);
+}
+
+.partners-logo--qualitas {
+  top: 2.8rem;
+  left: 43%;
+  width: clamp(118px, 15vw, 194px);
+}
+
+.partners-logo--axa {
+  top: 0.6rem;
+  right: 3.8rem;
+  width: clamp(74px, 8.8vw, 112px);
+}
+
+.partners-logo--hdi {
+  top: 28%;
+  right: 0.7rem;
+  width: clamp(105px, 13vw, 170px);
+}
+
+.partners-logo--zurich {
+  top: 49%;
+  left: 41%;
+  width: clamp(98px, 11vw, 146px);
+}
+
+.partners-logo--gnp {
+  bottom: 1.9rem;
+  right: 8.8rem;
+  width: clamp(95px, 11vw, 148px);
+}
+
+.partners-logo--mapfre {
+  bottom: 5rem;
+  left: 2.1rem;
+  width: clamp(118px, 14vw, 176px);
+}
+
+.partners-logo--atlas {
+  bottom: -0.1rem;
+  left: 23%;
+  width: clamp(92px, 10vw, 136px);
+}
+
+@media (max-width: 1199.98px) {
+  .partners-section__panel {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    min-height: auto;
+    padding: 0.5rem 0;
+  }
+
+  .partners-section__copy {
+    max-width: none;
+  }
+
+  .partners-section__message {
+    margin-inline-start: 0;
+  }
+
+  .partners-logo--qualitas {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .partners-logo--zurich {
+    left: 52%;
+  }
+
+  .partners-logo--atlas {
+    left: 30%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .partners-section {
+    padding: 2.5rem 0;
+  }
+
+  .partners-section__panel {
+    gap: 1.6rem;
+  }
+
+  .partners-section__eyebrow {
+    font-size: 1.25rem;
+  }
+
+  .partners-section__count {
+    font-size: clamp(4rem, 18vw, 5rem);
+  }
+
+  .partners-section__label {
+    font-size: 1.2rem;
+  }
+
+  .partners-section__message {
+    max-width: 28ch;
+    font-size: 1.1rem;
+  }
+
+  .partners-logo {
+    opacity: 0.12;
+  }
+
+  .partners-logo--axa {
+    right: 1rem;
+  }
+
+  .partners-logo--hdi {
+    right: -0.5rem;
+  }
+
+  .partners-logo--gnp {
+    right: 2rem;
+    bottom: 1rem;
+  }
+
+  .partners-logo--mapfre {
+    left: 0.2rem;
   }
 }
 

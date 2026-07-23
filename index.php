@@ -297,6 +297,33 @@
       </div>
     </section>
 
+    <section id="aseguradoras" class="partners-section">
+      <div class="container">
+        <div class="partners-section__panel">
+          <div class="partners-section__copy">
+            <p class="partners-section__eyebrow">Trabajamos con</p>
+            <div class="partners-section__count">+20</div>
+            <p class="partners-section__label">aseguradoras</p>
+          </div>
+
+          <div class="partners-section__message">
+            Te asesoramos para seleccionar la mejor opción de protección
+          </div>
+
+          <div class="partners-section__logos" aria-hidden="true">
+            <img src="assets/img/logos%20blanco/aig.png" alt="" class="partners-logo partners-logo--aig">
+            <img src="assets/img/logos%20blanco/QUALITAS.png" alt="" class="partners-logo partners-logo--qualitas">
+            <img src="assets/img/logos%20blanco/axa.png" alt="" class="partners-logo partners-logo--axa">
+            <img src="assets/img/logos%20blanco/hdi.png" alt="" class="partners-logo partners-logo--hdi">
+            <img src="assets/img/logos%20blanco/Zurich.png" alt="" class="partners-logo partners-logo--zurich">
+            <img src="assets/img/logos%20blanco/GNP.png" alt="" class="partners-logo partners-logo--gnp">
+            <img src="assets/img/logos%20blanco/Mapfre.png" alt="" class="partners-logo partners-logo--mapfre">
+            <img src="assets/img/logos%20blanco/seguros-atlas.png" alt="" class="partners-logo partners-logo--atlas">
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="testimonios" class="py-5 testimonials-section">
       <div class="container">
         <div class="testimonials-section__header d-flex justify-content-between align-items-end flex-wrap gap-3 mb-4">
