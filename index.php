@@ -259,42 +259,6 @@
       </div>
     </section>
 
-    <section id="proceso" class="py-5 bg-soft process-section">
-      <div class="container">
-        <div class="text-center mb-4 process-header">
-          <div class="eyebrow text-primary">Metodología</div>
-          <h2 class="fw-semibold process-title">Un proceso claro de inicio a fin.</h2>
-          <p class="process-subtitle">Seguimos una secuencia ordenada para diagnosticar, diseñar, implementar y acompañar cada solución.</p>
-        </div>
-        <div class="timeline-v2">
-          <article class="timeline-v2-step">
-            <span class="timeline-v2-step__badge">1</span>
-            <span class="timeline-v2-step__icon" aria-hidden="true"><i class="bi bi-search"></i></span>
-            <h6>Diagnóstico</h6>
-            <p>Revisión de riesgos y pólizas activas.</p>
-          </article>
-          <article class="timeline-v2-step">
-            <span class="timeline-v2-step__badge">2</span>
-            <span class="timeline-v2-step__icon" aria-hidden="true"><i class="bi bi-bezier2"></i></span>
-            <h6>Diseño</h6>
-            <p>Escenarios comparativos por aseguradora.</p>
-          </article>
-          <article class="timeline-v2-step">
-            <span class="timeline-v2-step__badge">3</span>
-            <span class="timeline-v2-step__icon" aria-hidden="true"><i class="bi bi-check2-square"></i></span>
-            <h6>Implementación</h6>
-            <p>Emisión, certificados y onboarding.</p>
-          </article>
-          <article class="timeline-v2-step">
-            <span class="timeline-v2-step__badge">4</span>
-            <span class="timeline-v2-step__icon" aria-hidden="true"><i class="bi bi-people"></i></span>
-            <h6>Acompañamiento</h6>
-            <p>Seguimiento operativo y de siniestros.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
     <section id="testimonios" class="py-5 testimonials-section">
       <div class="container">
         <div class="testimonials-section__header d-flex justify-content-between align-items-end flex-wrap gap-3 mb-4">
