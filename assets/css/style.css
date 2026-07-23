@@ -2338,7 +2338,7 @@ footer .brand-mark {
   max-width: 100%;
   justify-self: end;
   transform: none;
-  margin-left: clamp(2rem, 4vw, 4.5rem);
+  margin-left: clamp(6rem, 8vw, 10rem);
 }
 .commitment-image-card {
   width: 100%;
@@ -2390,6 +2390,7 @@ footer .brand-mark {
     width: min(100%, 680px);
     justify-self: center;
     transform: none;
+    margin-left: 0;
   }
   .commitment-image-card {
     aspect-ratio: 1.18 / 1;
