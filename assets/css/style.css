@@ -1857,7 +1857,7 @@ footer .brand-mark {
   gap: 0.95rem;
   justify-items: start;
   padding-top: 0;
-  max-width: 630px;
+  max-width: 610px;
 }
 .infographic-esr__eyebrow {
   display: flex;
@@ -1877,22 +1877,26 @@ footer .brand-mark {
 }
 .infographic-esr__title {
   margin: 0;
-  color: var(--text-dark);
+  color: #676767;
   font-weight: 700;
-  line-height: 0.93;
-  letter-spacing: -0.04em;
-  max-width: 620px;
+  line-height: 0.9;
+  letter-spacing: -0.05em;
+  max-width: 430px;
 }
 .infographic-esr__title span {
   display: block;
-  font-size: clamp(2.2rem, 3.35vw, 4rem);
+  font-size: clamp(2.35rem, 3.55vw, 4.2rem);
 }
 .infographic-esr__copy {
   margin: 0;
   max-width: 620px;
-  color: var(--muted);
+  color: #6a7280;
   font-size: clamp(1rem, 1.25vw, 1.22rem);
   line-height: 1.42;
+}
+.infographic-esr__copy span {
+  color: var(--brand-700);
+  font-weight: 600;
 }
 .infographic-esr__bar {
   width: 100%;
@@ -1904,9 +1908,12 @@ footer .brand-mark {
   gap: 0;
   padding: clamp(1.4rem, 2.2vw, 2.15rem) clamp(1.3rem, 2.3vw, 2rem);
   border-radius: 1.25rem;
-  background: linear-gradient(180deg, #1d78b9 0%, #0f5f98 100%);
-  border: 1px solid rgba(255,255,255,0.08);
-  box-shadow: 0 12px 24px rgba(11,48,95,0.14);
+  background:
+    radial-gradient(140% 120% at 18% 18%, rgba(255,255,255,0.12), transparent 42%),
+    radial-gradient(120% 90% at 82% 25%, rgba(255,255,255,0.06), transparent 40%),
+    linear-gradient(135deg, var(--brand-900) 0%, var(--brand-700) 48%, #1f88c9 100%);
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 12px 24px rgba(11,48,95,0.14), inset 0 1px 0 rgba(255,255,255,0.08);
 }
 .infographic-esr__bar-item {
   display: flex;
@@ -1922,19 +1929,16 @@ footer .brand-mark {
   text-align: center;
   background: transparent;
 }
-.infographic-esr__bar-item + .infographic-esr__bar-item {
-  border-left: 1px solid rgba(255,255,255,0.14);
-}
 .infographic-esr__bar-icon {
   display: block;
-  width: clamp(42px, 4.2vw, 56px);
+  width: clamp(46px, 4.6vw, 62px);
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0 2px 1px rgba(0,0,0,0.15));
 }
 .infographic-esr__bar-label {
   display: block;
-  font-size: 0.96rem;
+  font-size: 1rem;
   font-weight: 600;
   line-height: 1.15;
   letter-spacing: -0.02em;
@@ -2068,10 +2072,6 @@ footer .brand-mark {
     grid-template-columns: 1fr;
     gap: 0.75rem;
     padding: 1rem;
-  }
-  .infographic-esr__bar-item + .infographic-esr__bar-item {
-    border-left: 0;
-    border-top: 1px solid rgba(255,255,255,0.14);
   }
   .infographic-esr--standalone {
     width: 100%;

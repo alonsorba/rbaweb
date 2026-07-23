@@ -148,10 +148,11 @@
             <div class="infographic-esr__content">
               <div class="infographic-esr__eyebrow">XV años <span>de ser</span></div>
               <h2 class="infographic-esr__title">
-                  <span>Empresa Socialmente</span>
+                  <span>Empresa</span>
+                  <span>Socialmente</span>
                   <span>Responsable</span>
               </h2>
-              <p class="infographic-esr__copy">Seguimos construyendo un futuro más responsable todos los días.</p>
+              <p class="infographic-esr__copy">Seguimos construyendo un futuro <span>más responsable</span> todos los días.</p>
 
               <div class="infographic-esr__bar">
                   <span class="infographic-esr__bar-item">
