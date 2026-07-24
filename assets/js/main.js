@@ -47,6 +47,16 @@ document.addEventListener('DOMContentLoaded', () => {
   let partnersBouncers = [];
   let partnersAnimationRequested = false;
   let testimonialsMarqueeRequested = false;
+  let testimonialsMarqueeFrame = null;
+  let testimonialsMarqueeLastTime = 0;
+  let testimonialsMarqueeOffset = 0;
+  let testimonialsMarqueeBaseWidth = 0;
+  let testimonialsMarqueeOriginalCount = 0;
+  let testimonialsMarqueeDragging = false;
+  let testimonialsMarqueePointerId = null;
+  let testimonialsMarqueeStartX = 0;
+  let testimonialsMarqueeStartOffset = 0;
+  let testimonialsMarqueeResizeTimer = null;
 
   const updateHomeBrandLogos = state => {
     const shouldUseRgb = state === 'transition' || state === 'solid';
@@ -342,6 +352,57 @@ document.addEventListener('DOMContentLoaded', () => {
     partnersAnimationFrame = window.requestAnimationFrame(animatePartnersBouncers);
   };
 
+  const normalizeTestimonialsOffset = offset => {
+    if (!testimonialsMarqueeBaseWidth) return 0;
+
+    const normalized = offset % testimonialsMarqueeBaseWidth;
+    return normalized < 0 ? normalized + testimonialsMarqueeBaseWidth : normalized;
+  };
+
+  const applyTestimonialsMarqueeTransform = () => {
+    if (!testimonialsTrack || !testimonialsMarqueeBaseWidth) return;
+
+    testimonialsMarqueeOffset = normalizeTestimonialsOffset(testimonialsMarqueeOffset);
+    testimonialsTrack.style.transform = `translate3d(${-testimonialsMarqueeOffset}px, 0, 0)`;
+  };
+
+  const measureTestimonialsMarquee = () => {
+    if (!testimonialsTrack) return;
+
+    const children = Array.from(testimonialsTrack.children);
+    const firstOriginal = children[0];
+    const firstClone = children[testimonialsMarqueeOriginalCount];
+    const width = firstOriginal && firstClone
+      ? firstClone.offsetLeft - firstOriginal.offsetLeft
+      : testimonialsTrack.scrollWidth / 2;
+    if (!Number.isFinite(width) || width <= 0) return;
+
+    testimonialsMarqueeBaseWidth = width;
+    testimonialsMarqueeOffset = normalizeTestimonialsOffset(testimonialsMarqueeOffset);
+    applyTestimonialsMarqueeTransform();
+  };
+
+  const animateTestimonialsMarquee = timestamp => {
+    if (!testimonialsTrack || !testimonialsMarqueeBaseWidth) {
+      testimonialsMarqueeFrame = null;
+      return;
+    }
+
+    if (!testimonialsMarqueeLastTime) {
+      testimonialsMarqueeLastTime = timestamp;
+    }
+
+    const delta = timestamp - testimonialsMarqueeLastTime;
+    testimonialsMarqueeLastTime = timestamp;
+
+    if (!prefersReducedMotion && !testimonialsMarqueeDragging) {
+      testimonialsMarqueeOffset += delta * 0.05;
+      applyTestimonialsMarqueeTransform();
+    }
+
+    testimonialsMarqueeFrame = window.requestAnimationFrame(animateTestimonialsMarquee);
+  };
+
   const initTestimonialsMarquee = () => {
     if (!testimonialsTrack || prefersReducedMotion || testimonialsMarqueeRequested) return;
 
@@ -349,6 +410,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!cards.length) return;
 
     testimonialsMarqueeRequested = true;
+    testimonialsMarqueeOriginalCount = cards.length;
     testimonialsTrack.classList.add('is-marquee-active');
 
     cards.forEach(card => {
@@ -356,6 +418,58 @@ document.addEventListener('DOMContentLoaded', () => {
       clone.setAttribute('aria-hidden', 'true');
       testimonialsTrack.appendChild(clone);
     });
+
+    testimonialsTrack.classList.add('is-marquee-active');
+    measureTestimonialsMarquee();
+
+    const onTestimonialsPointerDown = event => {
+      if (event.button !== 0 || !testimonialsMarqueeBaseWidth) return;
+
+      testimonialsMarqueeDragging = true;
+      testimonialsMarqueePointerId = event.pointerId;
+      testimonialsMarqueeStartX = event.clientX;
+      testimonialsMarqueeStartOffset = testimonialsMarqueeOffset;
+      testimonialsTrack.classList.add('is-dragging');
+      testimonialsTrack.setPointerCapture?.(event.pointerId);
+      event.preventDefault();
+    };
+
+    const onTestimonialsPointerMove = event => {
+      if (!testimonialsMarqueeDragging || testimonialsMarqueePointerId !== event.pointerId) return;
+
+      const deltaX = event.clientX - testimonialsMarqueeStartX;
+      testimonialsMarqueeOffset = testimonialsMarqueeStartOffset - deltaX;
+      applyTestimonialsMarqueeTransform();
+    };
+
+    const endTestimonialsDrag = event => {
+      if (testimonialsMarqueePointerId !== null && event.pointerId !== testimonialsMarqueePointerId) return;
+
+      testimonialsMarqueeDragging = false;
+      testimonialsMarqueePointerId = null;
+      testimonialsTrack.classList.remove('is-dragging');
+      testimonialsMarqueeLastTime = 0;
+      event.preventDefault?.();
+    };
+
+    testimonialsTrack.addEventListener('pointerdown', onTestimonialsPointerDown);
+    testimonialsTrack.addEventListener('pointermove', onTestimonialsPointerMove);
+    testimonialsTrack.addEventListener('pointerup', endTestimonialsDrag);
+    testimonialsTrack.addEventListener('pointercancel', endTestimonialsDrag);
+
+    const rebuildTestimonialsMarquee = () => {
+      if (testimonialsMarqueeResizeTimer) {
+        window.clearTimeout(testimonialsMarqueeResizeTimer);
+      }
+
+      testimonialsMarqueeResizeTimer = window.setTimeout(() => {
+        measureTestimonialsMarquee();
+        testimonialsMarqueeResizeTimer = null;
+      }, 120);
+    };
+
+    window.addEventListener('resize', rebuildTestimonialsMarquee);
+    testimonialsMarqueeFrame = window.requestAnimationFrame(animateTestimonialsMarquee);
   };
 
   const onScroll = scrollY => {

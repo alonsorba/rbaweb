@@ -1241,10 +1241,17 @@ main .reveal-on-scroll.is-visible {
   min-width: 100%;
   padding: 0 clamp(0.5rem, 1vw, 1rem);
   will-change: transform;
+  cursor: grab;
+  user-select: none;
+  touch-action: pan-y;
 }
 
 .testimonials-section--home .testimonials-section__track.is-marquee-active {
-  animation: testimonials-marquee 58s linear infinite;
+  animation: none;
+}
+
+.testimonials-section--home .testimonials-section__track.is-dragging {
+  cursor: grabbing;
 }
 
 .testimonials-section--home .testimonials-card {
@@ -1295,16 +1302,6 @@ main .reveal-on-scroll.is-visible {
   font-size: 0.94rem;
   line-height: 1.55;
   max-width: 24ch;
-}
-
-@keyframes testimonials-marquee {
-  from {
-    transform: translate3d(0, 0, 0);
-  }
-
-  to {
-    transform: translate3d(-50%, 0, 0);
-  }
 }
 
 @media (max-width: 1199.98px) {
