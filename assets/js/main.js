@@ -364,6 +364,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     testimonialsMarqueeOffset = normalizeTestimonialsOffset(testimonialsMarqueeOffset);
     testimonialsTrack.style.transform = `translate3d(${-testimonialsMarqueeOffset}px, 0, 0)`;
+    updateTestimonialsMarqueeDepth();
+  };
+
+  const updateTestimonialsMarqueeDepth = () => {
+    if (!testimonialsTrack) return;
+
+    const cards = Array.from(testimonialsTrack.children).filter(child => child.classList.contains('testimonials-card'));
+    if (!cards.length) return;
+
+    const trackRect = testimonialsTrack.getBoundingClientRect();
+    if (!trackRect.width) return;
+
+    const trackCenterX = trackRect.left + (trackRect.width / 2);
+    const halfWidth = Math.max(trackRect.width / 2, 1);
+
+    cards.forEach(card => {
+      const cardRect = card.getBoundingClientRect();
+      const cardCenterX = cardRect.left + (cardRect.width / 2);
+      const distance = Math.min(1, Math.abs(cardCenterX - trackCenterX) / halfWidth);
+      const scale = 0.72 + ((1 - distance) * 0.28);
+      card.style.setProperty('--testimonial-card-scale', scale.toFixed(3));
+    });
   };
 
   const measureTestimonialsMarquee = () => {
@@ -380,6 +402,7 @@ document.addEventListener('DOMContentLoaded', () => {
     testimonialsMarqueeBaseWidth = width;
     testimonialsMarqueeOffset = normalizeTestimonialsOffset(testimonialsMarqueeOffset);
     applyTestimonialsMarqueeTransform();
+    updateTestimonialsMarqueeDepth();
   };
 
   const animateTestimonialsMarquee = timestamp => {
@@ -464,6 +487,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       testimonialsMarqueeResizeTimer = window.setTimeout(() => {
         measureTestimonialsMarquee();
+        updateTestimonialsMarqueeDepth();
         testimonialsMarqueeResizeTimer = null;
       }, 120);
     };
