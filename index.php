@@ -41,7 +41,7 @@
             <ul class="navbar-nav home-nav-menu home-nav-menu-left">
               <li class="nav-item"><a class="nav-link" href="servicios.php#portafolio">Empresas</a></li>
               <li class="nav-item"><a class="nav-link" href="servicios.php#portafolio">Personas</a></li>
-              <li class="nav-item"><a class="nav-link" href="servicios.php">GestiÃ³n Integral</a></li>
+              <li class="nav-item"><a class="nav-link" href="servicios.php">Gestión Integral</a></li>
               <li class="nav-item"><a class="nav-link" href="quienes.php">Nosotros</a></li>
             </ul>
             <a class="navbar-brand home-center-brand" href="index.php" aria-label="Inicio RBA Seguros y Fianzas">
@@ -59,10 +59,10 @@
 
   <main>
     <section class="hero-carousel hero-v2 home-landing-hero" aria-labelledby="homeHeroTitle">
-      <img class="home-landing-hero__image" src="assets/img/DSC_1181.png" alt="Interior de oficinas RBA con escaleras y Ã¡rea de recepciÃ³n">
+      <img class="home-landing-hero__image" src="assets/img/DSC_1181.png" alt="Interior de oficinas RBA con escaleras y área de recepción">
       <div class="hero-v2-content home-hero-card">
-        <h1 class="hero-v2-title" id="homeHeroTitle">Seguros empresariales y<br>personales para optimizar<br>tu administraciÃ³n<br>de riesgos</h1>
-        <p class="hero-v2-copy">Menos riesgo. MÃ¡s control. Mejores decisiones.</p>
+        <h1 class="hero-v2-title" id="homeHeroTitle">Seguros empresariales y<br>personales para optimizar<br>tu administración<br>de riesgos</h1>
+        <p class="hero-v2-copy">Menos riesgo. Más control. Mejores decisiones.</p>
         <div class="hero-v2-actions">
           <a class="btn home-primary-btn" href="#contacto">
             <i class="bi bi-chat-dots" aria-hidden="true"></i>
@@ -86,7 +86,7 @@
             </div>
             <div class="infographic-stats__item">
               <div class="infographic-stats__number" data-count-target="35" data-count-prefix="+">+35</div>
-              <div class="infographic-stats__label">aÃ±os de experiencia</div>
+              <div class="infographic-stats__label">años de experiencia</div>
             </div>
             <div class="infographic-stats__item">
               <div class="infographic-stats__number" data-count-target="80" data-count-prefix="+">+80</div>
@@ -104,7 +104,7 @@
             <div class="infographic-copy">
               <div class="infographic-label reveal-on-scroll">
                 <span class="infographic-label__icon"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i></span>
-                <span class="infographic-label__text">Matriz en Ciudad<br>ObregÃ³n, Sonora</span>
+                <span class="infographic-label__text">Matriz en Ciudad<br>Obregón, Sonora</span>
               </div>
 
               <div class="infographic-presence reveal-on-scroll">
@@ -120,11 +120,11 @@
                   <circle class="infographic-map__connector-dot presence-map-point" cx="890" cy="760" r="27"></circle>
                 </svg>
                 <?php if ($mapImageExists): ?>
-                  <img src="<?php echo $mapImagePath; ?>" alt="Mapa de MÃ©xico con presencia nacional de RBA" class="infographic-map__image presence-map-image" loading="lazy">
+                  <img src="<?php echo $mapImagePath; ?>" alt="Mapa de México con presencia nacional de RBA" class="infographic-map__image presence-map-image" loading="lazy">
                 <?php else: ?>
                   <div class="infographic-map__placeholder">
-                    <!-- Reemplazar este bloque por la imagen del mapa cuando estÃ© disponible en assets/img/mapa al ras.png -->
-                    <p>Mapa de MÃ©xico</p>
+                    <!-- Reemplazar este bloque por la imagen del mapa cuando esté disponible en assets/img/mapa al ras.png -->
+                    <p>Mapa de México</p>
                   </div>
                 <?php endif; ?>
 
@@ -140,18 +140,18 @@
       <div class="container">
           <div class="infographic-esr infographic-esr--standalone reveal-on-scroll">
             <div class="infographic-esr__content">
-              <div class="infographic-esr__eyebrow">XV aÃ±os <span>de ser</span></div>
+              <div class="infographic-esr__eyebrow">XV años <span>de ser</span></div>
               <h2 class="infographic-esr__title">
                   <span>Empresa</span>
                   <span>Socialmente</span>
                   <span>Responsable</span>
               </h2>
-              <p class="infographic-esr__copy">Seguimos construyendo un futuro <span>mÃ¡s responsable</span> todos los dÃ­as.</p>
+              <p class="infographic-esr__copy">Seguimos construyendo un futuro <span>más responsable</span> todos los días.</p>
 
               <div class="infographic-esr__bar">
                   <span class="infographic-esr__bar-item">
-                    <img src="assets/img/Ã‰tica empresarial.png" alt="" class="infographic-esr__bar-icon" loading="lazy" decoding="async">
-                    <span class="infographic-esr__bar-label">Ã‰tica<br>Empresarial</span>
+                    <img src="assets/img/Ética empresarial.png" alt="" class="infographic-esr__bar-icon" loading="lazy" decoding="async">
+                    <span class="infographic-esr__bar-label">Ética<br>Empresarial</span>
                   </span>
                   <span class="infographic-esr__bar-item">
                     <img src="assets/img/Cuidado del medio ambiente.png" alt="" class="infographic-esr__bar-icon" loading="lazy" decoding="async">
@@ -169,9 +169,9 @@
                 <img src="<?php echo $esrImagePath; ?>" alt="Reconocimiento ESR de RBA Seguros y Fianzas" class="infographic-esr__image" loading="lazy" decoding="async">
               <?php else: ?>
                 <div class="infographic-esr__placeholder">
-                  <!-- Reemplazar este bloque por la imagen del reconocimiento ESR cuando estÃ© disponible en assets/img/esr con sombre.png -->
+                  <!-- Reemplazar este bloque por la imagen del reconocimiento ESR cuando esté disponible en assets/img/esr con sombre.png -->
                   <div class="infographic-esr__placeholder-eyebrow">Reconocimiento ESR</div>
-                  <p>Colocar aquÃ­ el trofeo ESR.</p>
+                  <p>Colocar aquí el trofeo ESR.</p>
                 </div>
               <?php endif; ?>
             </div>
@@ -186,15 +186,15 @@
           <h2 class="commitment-title">
             <span><strong>Nuestro compromiso</strong> es brindarte</span>
             <span>un <strong>servicio de excelencia</strong> para</span>
-            <span>lograr al mÃ¡ximo <strong>tus necesidades</strong></span>
-            <span><strong>de protecciÃ³n.</strong></span>
+            <span>lograr al máximo <strong>tus necesidades</strong></span>
+            <span><strong>de protección.</strong></span>
           </h2>
         </div>
 
         <div class="commitment-media reveal-on-scroll">
           <div class="commitment-image-card">
             <?php if ($commitmentImageExists): ?>
-              <img src="<?php echo $commitmentImagePath; ?>" alt="AsesorÃ­a profesional RBA" class="commitment-image" loading="lazy">
+              <img src="<?php echo $commitmentImagePath; ?>" alt="Asesoría profesional RBA" class="commitment-image" loading="lazy">
             <?php else: ?>
               <div class="commitment-image commitment-image--placeholder">
                 <span>RBA</span>
@@ -209,20 +209,20 @@
       <div class="container">
         <div class="services-solutions__header text-center">
           <h2 class="services-solutions__title" id="solutionsTitle">Soluciones</h2>
-          <div class="services-solutions__pills" role="tablist" aria-label="Tipos de soluciÃ³n">
+          <div class="services-solutions__pills" role="tablist" aria-label="Tipos de solución">
             <button type="button" class="services-solutions__pill active" data-solution-key="empresas" aria-pressed="true">Empresas</button>
             <button type="button" class="services-solutions__pill" data-solution-key="personas" aria-pressed="false">Personas</button>
-            <button type="button" class="services-solutions__pill" data-solution-key="gestion" aria-pressed="false">GestiÃ³n Integral</button>
+            <button type="button" class="services-solutions__pill" data-solution-key="gestion" aria-pressed="false">Gestión Integral</button>
           </div>
         </div>
         <div class="services-solutions__carousel-shell">
           <div class="services-solutions__carousel solutions-carousel" id="solutionsCarousel" data-solution-carousel aria-label="Carrusel de soluciones">
             <div class="services-solutions__track solutions-track" id="solutionsTrack" data-solution-track>
               <article class="solution-card">
-                <img src="assets/img/escudo.png" alt="DaÃ±os" class="solution-card__image">
+                <img src="assets/img/escudo.png" alt="Daños" class="solution-card__image">
                 <div class="solution-card__content">
-                  <h3>DaÃ±os</h3>
-                  <p>ProtecciÃ³n para los activos de tu empresa y su responsabilidad civil ante siniestros.</p>
+                  <h3>Daños</h3>
+                  <p>Protección para los activos de tu empresa y su responsabilidad civil ante siniestros.</p>
                   <a href="#contacto" class="solution-card__btn">VER COBERTURA</a>
                 </div>
               </article>
@@ -231,16 +231,16 @@
                 <img src="assets/img/carro.png" alt="Autos" class="solution-card__image">
                 <div class="solution-card__content">
                   <h3>Autos</h3>
-                  <p>ProtecciÃ³n para vehÃ­culos empresariales y de colaboradores.</p>
+                  <p>Protección para vehículos empresariales y de colaboradores.</p>
                   <a href="#contacto" class="solution-card__btn">VER COBERTURA</a>
                 </div>
               </article>
 
               <article class="solution-card">
-                <img src="assets/img/corazon.png" alt="Gastos MÃ©dicos" class="solution-card__image">
+                <img src="assets/img/corazon.png" alt="Gastos Médicos" class="solution-card__image">
                 <div class="solution-card__content">
-                  <h3>Gastos MÃ©dicos</h3>
-                  <p>Cobertura de salud para colaboradores con planes diseÃ±ados para tu empresa.</p>
+                  <h3>Gastos Médicos</h3>
+                  <p>Cobertura de salud para colaboradores con planes diseñados para tu empresa.</p>
                   <a href="#contacto" class="solution-card__btn">VER COBERTURA</a>
                 </div>
               </article>
@@ -249,7 +249,7 @@
                 <img src="assets/img/asesoria.png" alt="Vida" class="solution-card__image">
                 <div class="solution-card__content">
                   <h3>Vida</h3>
-                  <p>ProtecciÃ³n econÃ³mica para colaboradores y sus familias.</p>
+                  <p>Protección económica para colaboradores y sus familias.</p>
                   <a href="#contacto" class="solution-card__btn">VER COBERTURA</a>
                 </div>
               </article>
@@ -262,36 +262,36 @@
     <section id="por-que-nosotros" class="why-us-section">
       <div class="container">
         <div class="why-us-section__header text-center">
-          <h2 class="why-us-section__title">Â¿Por quÃ© nosotros?</h2>
+          <h2 class="why-us-section__title">¿Por qué nosotros?</h2>
         </div>
 
         <div class="why-us-grid">
           <article class="why-us-card why-us-card--portrait">
             <div class="why-us-card__visual">
-              <img src="assets/img/itzel.png" alt="AsesorÃ­a personalizada" class="why-us-card__image" loading="lazy" decoding="async">
+              <img src="assets/img/itzel.png" alt="Asesoría personalizada" class="why-us-card__image" loading="lazy" decoding="async">
             </div>
-            <div class="why-us-card__label">AsesorÃ­a<br>personalizada</div>
+            <div class="why-us-card__label">Asesoría<br>personalizada</div>
           </article>
 
           <article class="why-us-card why-us-card--scene">
             <div class="why-us-card__visual">
-              <img src="assets/img/nose.png" alt="PrevenciÃ³n de riesgos" class="why-us-card__image" loading="lazy" decoding="async">
+              <img src="assets/img/nose.png" alt="Prevención de riesgos" class="why-us-card__image" loading="lazy" decoding="async">
             </div>
-            <div class="why-us-card__label">PrevenciÃ³n<br>de riesgos</div>
+            <div class="why-us-card__label">Prevención<br>de riesgos</div>
           </article>
 
           <article class="why-us-card why-us-card--portrait">
             <div class="why-us-card__visual">
-              <img src="assets/img/jenny.png" alt="AnÃ¡lisis inteligente" class="why-us-card__image" loading="lazy" decoding="async">
+              <img src="assets/img/jenny.png" alt="Análisis inteligente" class="why-us-card__image" loading="lazy" decoding="async">
             </div>
-            <div class="why-us-card__label">AnÃ¡lisis<br>inteligente</div>
+            <div class="why-us-card__label">Análisis<br>inteligente</div>
           </article>
 
           <article class="why-us-card why-us-card--portrait">
             <div class="why-us-card__visual">
-              <img src="assets/img/misa.png" alt="AcompaÃ±amiento constante" class="why-us-card__image" loading="lazy" decoding="async">
+              <img src="assets/img/misa.png" alt="Acompañamiento constante" class="why-us-card__image" loading="lazy" decoding="async">
             </div>
-            <div class="why-us-card__label">AcompaÃ±amiento<br>constante</div>
+            <div class="why-us-card__label">Acompañamiento<br>constante</div>
           </article>
         </div>
       </div>
@@ -318,7 +318,7 @@
           </div>
 
           <div class="partners-section__message">
-            Te asesoramos para seleccionar la mejor opciÃ³n de protecciÃ³n
+            Te asesoramos para seleccionar la mejor opción de protección
           </div>
 
         </div>
@@ -330,12 +330,12 @@
           <div class="col-lg-5">
             <div class="tile h-100 cta-copy-v2">
               <div class="eyebrow text-primary">Listos para empezar</div>
-              <h2 class="fw-semibold">Hablemos de tu prÃ³ximo proyecto o pÃ³liza.</h2>
+              <h2 class="fw-semibold">Hablemos de tu próximo proyecto o póliza.</h2>
               <p class="text-muted">Te asignamos un asesor para construir una propuesta clara, accionable y alineada a tus riesgos reales.</p>
               <div class="d-flex flex-column gap-3">
                 <div class="d-flex gap-3 align-items-center"><i class="bi bi-telephone-forward text-primary fs-4"></i><span><?php echo $phone; ?></span></div>
                 <div class="d-flex gap-3 align-items-center"><i class="bi bi-envelope-open text-primary fs-4"></i><span><?php echo $email; ?></span></div>
-                <div class="d-flex gap-3 align-items-center"><i class="bi bi-geo-alt text-primary fs-4"></i><span>CDMX y atenciÃ³n nacional</span></div>
+                <div class="d-flex gap-3 align-items-center"><i class="bi bi-geo-alt text-primary fs-4"></i><span>CDMX y atención nacional</span></div>
               </div>
             </div>
           </div>
@@ -351,14 +351,14 @@
                   <input type="email" name="correo" class="form-control" placeholder="correo@ejemplo.com" required>
                 </div>
                 <div class="col-md-6">
-                  <label class="form-label">TelÃ©fono</label>
+                  <label class="form-label">Teléfono</label>
                   <input type="tel" name="telefono" class="form-control" placeholder="55 0000 0000" required>
                 </div>
                 <div class="col-md-6">
-                  <label class="form-label">Servicio de interÃ©s</label>
+                  <label class="form-label">Servicio de interés</label>
                   <select name="servicio" class="form-select">
                     <option>Seguros Empresariales</option>
-                    <option>Gastos MÃ©dicos</option>
+                    <option>Gastos Médicos</option>
                     <option>Autos</option>
                     <option>Vida</option>
                     <option>Fianzas</option>
@@ -366,7 +366,7 @@
                 </div>
                 <div class="col-12">
                   <label class="form-label">Mensaje</label>
-                  <textarea name="mensaje" rows="4" class="form-control" placeholder="CuÃ©ntanos quÃ© necesitas" required></textarea>
+                  <textarea name="mensaje" rows="4" class="form-control" placeholder="Cuéntanos qué necesitas" required></textarea>
                 </div>
                 <div class="col-12 d-flex justify-content-between align-items-center flex-wrap gap-2">
                   <div class="form-check">
@@ -398,7 +398,7 @@
           </ul>
         </div>
         <div class="col-6 col-md-4 col-lg-2">
-          <h6 class="footer-heading">Â¿QuiÃ©nes somos?</h6>
+          <h6 class="footer-heading">¿Quiénes somos?</h6>
           <ul class="list-unstyled footer-links">
             <li><a href="quienes.php#nosotros">Sobre Nosotros</a></li>
             <li><a href="quienes.php#equipo">Mensaje del Director</a></li>
@@ -418,7 +418,7 @@
           <ul class="list-unstyled footer-links">
             <li><a href="#contacto">Formulario de Contacto</a></li>
             <li><a href="aviso-privacidad.php">Aviso de Privacidad</a></li>
-            <li><a href="ubicacion.php#cd-obregon">UbicaciÃ³n</a></li>
+            <li><a href="ubicacion.php#cd-obregon">Ubicación</a></li>
           </ul>
         </div>
       </div>
@@ -439,5 +439,6 @@
   <script src="assets/js/main.js?v=8"></script>
 </body>
 </html>
+
 
 
