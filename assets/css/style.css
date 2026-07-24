@@ -3507,6 +3507,298 @@ body.home-index .testimonials-section--home {
 
 
 
+/* Ajustes finos para equilibrar el home en resoluciones intermedias y móviles. */
+@media (min-width: 1200px) {
+  body.home-index .services-solutions .container,
+  body.home-index .why-us-section .container,
+  body.home-index .partners-section .container,
+  body.home-index .testimonials-section--home .container {
+    width: min(100% - 1.5rem, 1440px);
+  }
+
+  body.home-index .testimonials-section--home .testimonials-card {
+    min-height: 280px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  body.home-index .home-landing-hero__image {
+    object-position: center 20%;
+  }
+
+  body.home-index .infographic-layout {
+    grid-template-columns: minmax(260px, 0.88fr) minmax(0, 1.45fr);
+    gap: clamp(0.6rem, 1.2vw, 1rem);
+  }
+
+  body.home-index .infographic-copy {
+    transform: scale(1.24);
+    transform-origin: left top;
+  }
+
+  body.home-index .infographic-esr {
+    gap: clamp(1.6rem, 3vw, 2.4rem);
+  }
+
+  body.home-index .infographic-esr__bar {
+    max-width: 680px;
+  }
+
+  body.home-index .commitment-container {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 2rem;
+  }
+
+  body.home-index .commitment-copy {
+    max-width: 760px;
+  }
+
+  body.home-index .commitment-media {
+    margin-left: 0;
+    width: min(100%, 540px);
+  }
+
+  body.home-index .why-us-grid {
+    gap: 1rem;
+  }
+
+  body.home-index .partners-section__panel {
+    min-height: 300px;
+  }
+
+  body.home-index .partners-logo {
+    opacity: 0.24 !important;
+  }
+
+  body.home-index .testimonials-section--home .testimonials-section__panel {
+    padding-inline: 1.2rem;
+  }
+
+  body.home-index .testimonials-section--home .testimonials-card {
+    flex-basis: clamp(240px, 31vw, 300px);
+    min-height: 260px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  body.home-index .home-landing-hero__image {
+    object-position: center 16%;
+  }
+
+  body.home-index .infographic-layout {
+    gap: 1rem;
+  }
+
+  body.home-index .infographic-copy {
+    justify-items: center;
+    text-align: center;
+  }
+
+  body.home-index .infographic-label {
+    margin-inline: auto;
+  }
+
+  body.home-index .infographic-presence {
+    justify-items: center;
+    text-align: center;
+  }
+
+  body.home-index .infographic-esr {
+    gap: 1.1rem;
+  }
+
+  body.home-index .infographic-esr__content {
+    max-width: 640px;
+  }
+
+  body.home-index .commitment-container {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  body.home-index .commitment-copy {
+    max-width: 760px;
+  }
+
+  body.home-index .commitment-media {
+    margin-left: 0;
+    width: min(100%, 560px);
+  }
+
+  body.home-index .services-solutions .container {
+    width: min(100% - 1rem, 1140px);
+  }
+
+  body.home-index .partners-section__panel {
+    min-height: 280px;
+  }
+
+  body.home-index .partners-logo {
+    opacity: 0.2 !important;
+  }
+
+  body.home-index .testimonials-section--home .testimonials-card {
+    flex-basis: clamp(250px, 76vw, 320px);
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  body.home-index .home-landing-hero {
+    min-height: 620px;
+  }
+
+  body.home-index .home-landing-hero__image {
+    object-position: center 14%;
+  }
+
+  body.home-index .hero-v2-copy {
+    font-size: 0.96rem;
+  }
+
+  body.home-index .infographic-map__stage,
+  body.home-index .infographic-map__placeholder {
+    min-height: 230px;
+  }
+
+  body.home-index .infographic-esr__image,
+  body.home-index .infographic-esr__placeholder {
+    width: min(100%, 360px);
+  }
+
+  body.home-index .why-us-section__title {
+    font-size: clamp(1.85rem, 8vw, 2.5rem);
+  }
+
+  body.home-index .why-us-grid {
+    gap: 0.75rem;
+  }
+
+  body.home-index .why-us-card__visual {
+    height: 196px;
+  }
+
+  body.home-index .why-us-card__label {
+    width: min(92%, 230px);
+  }
+
+  body.home-index .partners-section__panel {
+    min-height: 240px;
+    gap: 1rem;
+  }
+
+  body.home-index .partners-section__message {
+    max-width: 24ch;
+    font-size: 1rem;
+  }
+
+  body.home-index .partners-logo {
+    opacity: 0.16 !important;
+  }
+
+  body.home-index .partners-logo--aig {
+    top: 1rem;
+    left: 1rem;
+  }
+
+  body.home-index .partners-logo--axa {
+    right: 1rem;
+  }
+
+  body.home-index .partners-logo--hdi {
+    right: 0.25rem;
+  }
+
+  body.home-index .partners-logo--mapfre {
+    left: 0.25rem;
+    bottom: 3.75rem;
+  }
+
+  body.home-index .testimonials-section--home {
+    padding-top: 1.1rem;
+  }
+
+  body.home-index .testimonials-section--home .testimonials-section__track {
+    gap: 0.75rem;
+    padding-inline: 0.25rem;
+  }
+
+  body.home-index .testimonials-section--home .testimonials-card {
+    flex-basis: min(86vw, 320px);
+    width: min(86vw, 320px);
+    min-height: 240px;
+    padding: 1.15rem 1rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  body.home-index .home-landing-hero {
+    min-height: 580px;
+  }
+
+  body.home-index .home-landing-hero__image {
+    object-position: 54% center;
+  }
+
+  body.home-index .home-hero-card.hero-v2-content {
+    padding: 1.05rem;
+    border-radius: 18px;
+  }
+
+  body.home-index .home-hero-card .hero-v2-title {
+    max-width: 10.5em;
+    font-size: clamp(1.45rem, 8vw, 1.8rem);
+  }
+
+  body.home-index .counter-section .counter-stats {
+    border-radius: 22px;
+    padding: 0.85rem 0.9rem;
+  }
+
+  body.home-index .services-solutions__carousel-shell {
+    margin-inline: -0.15rem;
+  }
+
+  body.home-index .why-us-section {
+    padding-bottom: 3rem;
+  }
+
+  body.home-index .why-us-card__visual {
+    height: 184px;
+  }
+
+  body.home-index .why-us-card__label {
+    min-height: 64px;
+    width: min(92%, 220px);
+  }
+
+  body.home-index .partners-section {
+    padding-block: 2rem;
+  }
+
+  body.home-index .partners-section__count {
+    font-size: clamp(3.2rem, 18vw, 4.4rem);
+  }
+
+  body.home-index .partners-section__message {
+    font-size: 0.98rem;
+  }
+
+  body.home-index .testimonials-section--home {
+    padding: 0.85rem 0 2.2rem;
+  }
+
+  body.home-index .testimonials-section--home .testimonials-section__panel {
+    padding: 1.25rem 0.85rem 1.1rem;
+  }
+
+  body.home-index .testimonials-section--home .testimonials-card {
+    flex-basis: min(88vw, 320px);
+    width: min(88vw, 320px);
+  }
+}
+
 
 
 

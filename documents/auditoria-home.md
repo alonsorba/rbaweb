@@ -421,3 +421,8 @@ Estado: en curso de validacion.
 - Se suavizaron tamaños, margenes y radios en tablet y movil para mantener un aspecto limpio sin cambiar la identidad visual.
 - La normalizacion de textos de soluciones sigue activa para evitar que reaparezcan caracteres rotos en el render dinamico.
 - Queda pendiente una verificacion visual por resolucion para confirmar que el ajuste de escala se comporta bien en monitores grandes, tablets y telefonos.
+## 30. Afinacion responsive adicional
+Estado: aplicada.
+- Se corrigieron puntos de tension extra entre hero, presencia nacional, compromiso, por que nosotros, partners y testimonios con ajustes mas finos de escala y separacion.
+- Se redujo la carga visual de los logos institucionales en pantallas pequenas para evitar competencia con los textos fijos.
+- Se reforzo la distribucion interna de las tarjetas de testimonios para que no se vean recortadas en mobile ni demasiado anchas en desktop intermedio.
