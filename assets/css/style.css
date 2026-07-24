@@ -2772,7 +2772,7 @@ footer .brand-mark {
   display: block;
   width: auto;
   height: auto;
-  opacity: 0.62;
+  opacity: 0.28;
   filter: brightness(0) invert(1);
   will-change: transform;
   transform: translate3d(0, 0, 0);
@@ -2885,7 +2885,7 @@ footer .brand-mark {
   }
 
   .partners-logo {
-    opacity: 0.6;
+    opacity: 0.24;
   }
 
   .partners-logo--axa {
