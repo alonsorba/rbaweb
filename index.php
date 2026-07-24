@@ -400,6 +400,62 @@
               </div>
               <p>Migramos toda la póliza corporativa sin interrupciones. El seguimiento a siniestros es impecable.</p>
             </article>
+
+            <article class="testimonials-card">
+              <div class="testimonials-card__name-row">
+                <h3>Luis Hernández</h3>
+                <div class="testimonials-card__stars" aria-label="5 de 5 estrellas">
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                </div>
+              </div>
+              <p>Me dieron opciones claras y rápidas. La asesoría fue muy profesional y eso me ahorró bastante tiempo.</p>
+            </article>
+
+            <article class="testimonials-card">
+              <div class="testimonials-card__name-row">
+                <h3>Patricia Soto</h3>
+                <div class="testimonials-card__stars" aria-label="5 de 5 estrellas">
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                </div>
+              </div>
+              <p>Me acompañaron en cada paso del proceso. Siempre tuve respuesta oportuna y seguimiento puntual.</p>
+            </article>
+
+            <article class="testimonials-card testimonials-card--featured">
+              <div class="testimonials-card__name-row">
+                <h3>Fernando Reyes</h3>
+                <div class="testimonials-card__stars" aria-label="5 de 5 estrellas">
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                </div>
+              </div>
+              <p>Encontraron una cobertura mejor de la que teníamos antes y con condiciones más claras. Excelente servicio.</p>
+            </article>
+
+            <article class="testimonials-card">
+              <div class="testimonials-card__name-row">
+                <h3>Valeria Luna</h3>
+                <div class="testimonials-card__stars" aria-label="5 de 5 estrellas">
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                </div>
+              </div>
+              <p>La experiencia fue sencilla, clara y sin complicaciones. Hoy tengo más confianza en mis decisiones.</p>
+            </article>
           </div>
         </div>
       </div>

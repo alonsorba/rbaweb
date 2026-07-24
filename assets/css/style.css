@@ -1234,10 +1234,17 @@ main .reveal-on-scroll.is-visible {
 .testimonials-section--home .testimonials-section__track {
   display: flex;
   align-items: stretch;
-  justify-content: center;
+  justify-content: flex-start;
   gap: clamp(0.9rem, 1.4vw, 1.4rem);
   overflow: hidden;
+  width: max-content;
+  min-width: 100%;
   padding: 0 clamp(0.5rem, 1vw, 1rem);
+  will-change: transform;
+}
+
+.testimonials-section--home .testimonials-section__track.is-marquee-active {
+  animation: testimonials-marquee 58s linear infinite;
 }
 
 .testimonials-section--home .testimonials-card {
@@ -1290,22 +1297,19 @@ main .reveal-on-scroll.is-visible {
   max-width: 24ch;
 }
 
+@keyframes testimonials-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
 @media (max-width: 1199.98px) {
-  .testimonials-section--home .testimonials-section__track {
-    justify-content: flex-start;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
-
-  .testimonials-section--home .testimonials-section__track::-webkit-scrollbar {
-    display: none;
-  }
-
   .testimonials-section--home .testimonials-card {
     flex-basis: clamp(240px, 78vw, 320px);
-    scroll-snap-align: center;
   }
 }
 

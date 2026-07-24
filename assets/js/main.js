@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const homeBrandLogos = Array.from(document.querySelectorAll('body.home-index .brand-logo[data-home-logo-light][data-home-logo-dark]'));
   const partnersSection = document.querySelector('.partners-section');
   const partnersLogos = Array.from(document.querySelectorAll('.partners-section .partners-logo'));
+  const testimonialsTrack = document.querySelector('.testimonials-section--home .testimonials-section__track');
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   let animationFrame = null;
   let partnersAnimationFrame = null;
@@ -45,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let countObserver;
   let partnersBouncers = [];
   let partnersAnimationRequested = false;
+  let testimonialsMarqueeRequested = false;
 
   const updateHomeBrandLogos = state => {
     const shouldUseRgb = state === 'transition' || state === 'solid';
@@ -340,6 +342,22 @@ document.addEventListener('DOMContentLoaded', () => {
     partnersAnimationFrame = window.requestAnimationFrame(animatePartnersBouncers);
   };
 
+  const initTestimonialsMarquee = () => {
+    if (!testimonialsTrack || prefersReducedMotion || testimonialsMarqueeRequested) return;
+
+    const cards = Array.from(testimonialsTrack.children).filter(child => child.classList.contains('testimonials-card'));
+    if (!cards.length) return;
+
+    testimonialsMarqueeRequested = true;
+    testimonialsTrack.classList.add('is-marquee-active');
+
+    cards.forEach(card => {
+      const clone = card.cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true');
+      testimonialsTrack.appendChild(clone);
+    });
+  };
+
   const onScroll = scrollY => {
     const homeNavState = getHomeNavState(scrollY);
 
@@ -403,6 +421,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { once: true });
     window.requestAnimationFrame(() => startPartnersAnimation());
   }
+
+  initTestimonialsMarquee();
 
   document.querySelectorAll('a.nav-link[href^="#"]').forEach(link => {
     link.addEventListener('click', event => {
