@@ -324,6 +324,87 @@
         </div>
       </div>
     </section>
+
+    <section id="testimonios" class="testimonials-section testimonials-section--home">
+      <div class="container">
+        <div class="testimonials-section__panel">
+          <h2 class="testimonials-section__title">Lo que dicen nuestros clientes</h2>
+
+          <div class="testimonials-section__track" aria-label="Testimonios de clientes">
+            <article class="testimonials-card testimonials-card--featured">
+              <div class="testimonials-card__name-row">
+                <h3>Roberto García</h3>
+                <div class="testimonials-card__stars" aria-label="5 de 5 estrellas">
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                </div>
+              </div>
+              <p>La verdad no sabía qué seguro elegir y me explicaron todo con mucha paciencia. Se siente que sí les importa ayudarte.</p>
+            </article>
+
+            <article class="testimonials-card">
+              <div class="testimonials-card__name-row">
+                <h3>Gabriela Pérez</h3>
+                <div class="testimonials-card__stars" aria-label="5 de 5 estrellas">
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                </div>
+              </div>
+              <p>Tuve un siniestro y me acompañaron en todo el proceso. No me dejaron sola en ningún momento, eso se agradece muchísimo.</p>
+            </article>
+
+            <article class="testimonials-card">
+              <div class="testimonials-card__name-row">
+                <h3>Pablo Ibarra</h3>
+                <div class="testimonials-card__stars" aria-label="5 de 5 estrellas">
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                </div>
+              </div>
+              <p>Parte importante para mí es que mi equipo esté bien protegido. Me ayudaron a encontrar la mejor opción y hoy me quedo mucho más tranquilo.</p>
+            </article>
+
+            <article class="testimonials-card">
+              <div class="testimonials-card__name-row">
+                <h3>Ana López</h3>
+                <div class="testimonials-card__stars" aria-label="5 de 5 estrellas">
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                </div>
+              </div>
+              <p>La atención fue rápida, clara y muy profesional. Siento que tengo un respaldo real para mi empresa y mi familia.</p>
+            </article>
+
+            <article class="testimonials-card testimonials-card--featured">
+              <div class="testimonials-card__name-row">
+                <h3>Jessica G.</h3>
+                <div class="testimonials-card__stars" aria-label="5 de 5 estrellas">
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                  <i class="bi bi-star-fill" aria-hidden="true"></i>
+                </div>
+              </div>
+              <p>Migramos toda la póliza corporativa sin interrupciones. El seguimiento a siniestros es impecable.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="contacto" class="py-5 cta-contact-v2">
       <div class="container">
         <div class="row g-4 align-items-stretch">
