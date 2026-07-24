@@ -403,3 +403,21 @@ Riesgos pendientes:
 - El retorno al estado estable implica que cualquier nuevo refinamiento del navbar debe partir de una comparacion visual muy estricta para no repetir el error.
 - Si se vuelve a trabajar el navbar, conviene hacerlo sobre una copia validada por captura y no sobre la logica estable sin respaldo.
 - Cualquier nuevo override global en header/nav debe revisarse para no romper el estado recuperado.
+
+## 28. Auditoria responsive del Home
+Estado: identificado.
+- El home conserva una buena base visual, pero varias secciones siguen dependiendo de anchos, alturas y offsets demasiado especificos para escritorio.
+- El hero necesita una adaptacion mas suave en pantallas medianas para evitar que la tarjeta principal quede demasiado pegada al borde inferior.
+- La infografia de presencia nacional y la seccion ESR siguen siendo los tramos mas sensibles por la composicion absoluta del mapa, el punto de ubicacion y el trofeo.
+- La seccion de compromiso necesita menos separacion horizontal entre texto e imagen en resoluciones intermedias.
+- Soluciones, por que nosotros, aseguradoras y testimonios requieren ajustes de escala para que la lectura sea limpia en laptop, tablet y movil.
+- El objetivo de la revision es mantener el estilo original, pero con un flujo mas flexible en resoluciones 4K, wide, desktop normal, tablet y celular.
+
+## 29. Ajustes responsive aplicados
+Estado: en curso de validacion.
+- Se añadieron overrides especificos para `body.home-index` con el fin de evitar desbordes horizontales y conservar la lectura del home completo.
+- Se redujeron los cortes bruscos en el hero, el bloque de compromiso, soluciones y testimonios en rangos de 992px a 1399px.
+- Se reforzaron dimensiones fluidas en la infografia, ESR y el carrusel de testimonios para que el layout no pierda equilibrio al escalar.
+- Se suavizaron tamaños, margenes y radios en tablet y movil para mantener un aspecto limpio sin cambiar la identidad visual.
+- La normalizacion de textos de soluciones sigue activa para evitar que reaparezcan caracteres rotos en el render dinamico.
+- Queda pendiente una verificacion visual por resolucion para confirmar que el ajuste de escala se comporta bien en monitores grandes, tablets y telefonos.

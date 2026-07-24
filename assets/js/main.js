@@ -724,6 +724,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
   solutionData.fianzas = solutionData.gestion;
 
+  const solutionTextFixes = {
+    'DaÃ±os': 'Daños',
+    'ProtecciÃ³n': 'Protección',
+    'fenÃ³menos': 'fenómenos',
+    'pÃ©rdidas': 'pérdidas',
+    'ProtecciÃ³n de daÃ±os': 'Protección de daños',
+    'Gastos MÃ©dicos': 'Gastos Médicos',
+    'AtenciÃ³n': 'Atención',
+    'mÃ©dica': 'médica',
+    'mÃ©dicos': 'médicos',
+    'PlaneaciÃ³n': 'Planeación',
+    'prÃ¡ctica': 'práctica',
+    'fÃ¡cil': 'fácil',
+    'vehÃ­culo': 'vehículo',
+    'daÃ±os': 'daños',
+    'atenciÃ³n': 'atención',
+    'mÃ©dica': 'médica',
+    'econÃ³mico': 'económico',
+    'AdministraciÃ³n': 'Administración',
+    'AcompaÃ±amiento': 'Acompañamiento',
+    'GestiÃ³n': 'Gestión',
+    'resoluciÃ³n': 'resolución',
+    'DiseÃ±o': 'Diseño',
+    'operaciÃ³n': 'operación'
+  };
+
+  const normalizeSolutionText = value => {
+    if (typeof value !== 'string') return value;
+
+    return Object.entries(solutionTextFixes).reduce((acc, [from, to]) => acc.split(from).join(to), value);
+  };
+
+  Object.keys(solutionData).forEach(category => {
+    solutionData[category] = solutionData[category].map(item => ({
+      ...item,
+      title: normalizeSolutionText(item.title),
+      description: normalizeSolutionText(item.description),
+      alt: normalizeSolutionText(item.alt)
+    }));
+  });
+
   const renderSolutions = key => {
     if (!solutionTrack) return;
     const items = solutionData[key] || solutionData.empresas;

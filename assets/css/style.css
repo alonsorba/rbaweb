@@ -3033,6 +3033,472 @@ footer .brand-mark {
   }
 }
 
+/* Home responsive audit overrides */
+body.home-index {
+  overflow-x: hidden;
+}
+
+body.home-index .counter-section,
+body.home-index .infographic-section,
+body.home-index .infographic-esr-section,
+body.home-index .commitment-section,
+body.home-index .services-solutions,
+body.home-index .why-us-section,
+body.home-index .partners-section,
+body.home-index .testimonials-section--home {
+  width: 100%;
+}
+
+@media (min-width: 1400px) {
+  body.home-index .services-solutions .container,
+  body.home-index .why-us-section .container,
+  body.home-index .partners-section .container,
+  body.home-index .testimonials-section--home .container {
+    width: min(100% - 2rem, 1440px);
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  body.home-index .home-landing-hero {
+    min-height: 92svh;
+  }
+
+  body.home-index .hero-v2-content {
+    max-width: 740px;
+  }
+
+  body.home-index .infographic-layout {
+    min-height: clamp(760px, 54vw, 900px);
+  }
+
+  body.home-index .infographic-copy {
+    left: clamp(2.4rem, 10vw, 8.5rem);
+    top: clamp(390px, 31vw, 520px);
+    transform: scale(1.6);
+  }
+
+  body.home-index .infographic-map {
+    right: clamp(-280px, -18vw, -130px);
+    width: clamp(860px, 82vw, 1320px);
+  }
+
+  body.home-index .infographic-map__dot {
+    left: 28%;
+    top: 30.8%;
+  }
+
+  body.home-index .infographic-connector-line {
+    left: clamp(16rem, 20vw, 22rem);
+    top: clamp(140px, 11vw, 188px);
+    width: clamp(12rem, 19vw, 20rem);
+  }
+
+  body.home-index .infographic-esr {
+    gap: clamp(2.4rem, 5vw, 4rem);
+  }
+
+  body.home-index .infographic-esr__content {
+    max-width: 580px;
+  }
+
+  body.home-index .infographic-esr__image,
+  body.home-index .infographic-esr__placeholder {
+    width: min(100%, 580px);
+  }
+
+  body.home-index .commitment-container {
+    gap: clamp(4rem, 8vw, 7rem);
+  }
+
+  body.home-index .commitment-media {
+    margin-left: clamp(2rem, 4vw, 4rem);
+  }
+
+  body.home-index .solution-card {
+    flex-basis: 300px;
+    width: 300px;
+  }
+
+  body.home-index .testimonials-section--home .testimonials-card {
+    flex-basis: clamp(265px, 26vw, 330px);
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  body.home-index .home-landing-hero {
+    min-height: 86svh;
+  }
+
+  body.home-index .home-hero-card.hero-v2-content {
+    left: clamp(1rem, 2.2vw, 1.6rem);
+    right: clamp(1rem, 2.2vw, 1.6rem);
+    bottom: clamp(1rem, 2.6vw, 2rem);
+    width: auto;
+    max-width: 620px;
+    padding: 1.6rem;
+  }
+
+  body.home-index .home-hero-card .hero-v2-title {
+    font-size: clamp(1.85rem, 3.6vw, 2.55rem);
+  }
+
+  body.home-index .counter-section {
+    min-height: 200px;
+  }
+
+  body.home-index .counter-section .counter-stats {
+    width: min(100%, 840px);
+  }
+
+  body.home-index .infographic-layout {
+    min-height: 720px;
+  }
+
+  body.home-index .infographic-copy {
+    left: clamp(1.5rem, 3vw, 2.75rem);
+    top: clamp(315px, 28vw, 440px);
+    transform: scale(1.4);
+  }
+
+  body.home-index .infographic-map {
+    right: clamp(-250px, -16vw, -120px);
+    width: clamp(760px, 74vw, 1150px);
+  }
+
+  body.home-index .infographic-map__dot {
+    left: 29%;
+    top: 29.6%;
+  }
+
+  body.home-index .infographic-connector-line {
+    left: clamp(13rem, 17vw, 19rem);
+    top: clamp(115px, 9.5vw, 172px);
+    width: clamp(10rem, 16vw, 15rem);
+  }
+
+  body.home-index .infographic-esr {
+    gap: clamp(2rem, 4vw, 3rem);
+  }
+
+  body.home-index .infographic-esr__content {
+    max-width: 520px;
+  }
+
+  body.home-index .infographic-esr__image,
+  body.home-index .infographic-esr__placeholder {
+    width: min(100%, 540px);
+  }
+
+  body.home-index .commitment-container {
+    grid-template-columns: minmax(0, 0.48fr) minmax(440px, 0.92fr);
+    gap: clamp(2.5rem, 6vw, 4.5rem);
+  }
+
+  body.home-index .commitment-media {
+    width: min(100%, 560px);
+    margin-left: 0;
+  }
+
+  body.home-index .services-solutions .container,
+  body.home-index .why-us-section .container,
+  body.home-index .partners-section .container,
+  body.home-index .testimonials-section--home .container {
+    width: min(100% - 2rem, 1140px);
+  }
+
+  body.home-index .solution-card {
+    flex-basis: 286px;
+    width: 286px;
+    min-height: 400px;
+  }
+
+  body.home-index .why-us-card__visual {
+    height: 230px;
+  }
+
+  body.home-index .testimonials-section--home .testimonials-section__panel {
+    padding-inline: 1.6rem;
+  }
+
+  body.home-index .testimonials-section--home .testimonials-card {
+    flex-basis: clamp(255px, 32vw, 315px);
+  }
+}
+
+@media (max-width: 991.98px) {
+  body.home-index .home-landing-hero {
+    min-height: 680px;
+  }
+
+  body.home-index .home-hero-card.hero-v2-content {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1.25rem;
+    padding: 1.5rem;
+    border-radius: 24px;
+  }
+
+  body.home-index .home-hero-card .hero-v2-title {
+    font-size: clamp(1.7rem, 7vw, 2.15rem);
+  }
+
+  body.home-index .counter-section {
+    min-height: 180px;
+  }
+
+  body.home-index .counter-section .counter-stats {
+    width: min(100%, 760px);
+  }
+
+  body.home-index .infographic-layout {
+    min-height: 0;
+  }
+
+  body.home-index .infographic-map__stage,
+  body.home-index .infographic-map__placeholder {
+    min-height: 280px;
+  }
+
+  body.home-index .infographic-esr {
+    gap: 1.5rem;
+  }
+
+  body.home-index .infographic-esr__media {
+    width: 100%;
+  }
+
+  body.home-index .infographic-esr__image,
+  body.home-index .infographic-esr__placeholder {
+    width: min(100%, 520px);
+  }
+
+  body.home-index .commitment-container {
+    gap: 1.5rem;
+  }
+
+  body.home-index .commitment-media {
+    width: min(100%, 560px);
+  }
+
+  body.home-index .services-solutions__carousel-shell {
+    padding-inline: 0.25rem;
+  }
+
+  body.home-index .solution-card {
+    flex-basis: clamp(250px, 42vw, 300px);
+    width: clamp(250px, 42vw, 300px);
+  }
+
+  body.home-index .why-us-card__visual {
+    height: 220px;
+  }
+
+  body.home-index .why-us-card__image {
+    width: min(92%, 230px);
+  }
+
+  body.home-index .partners-section__panel {
+    min-height: 290px;
+    gap: 1.2rem;
+  }
+
+  body.home-index .partners-section__count {
+    font-size: clamp(4rem, 14vw, 5.5rem);
+  }
+
+  body.home-index .partners-logo {
+    opacity: 0.32 !important;
+  }
+
+  body.home-index .testimonials-section--home .testimonials-section__panel {
+    border-radius: 34px;
+    padding: 1.5rem 1.15rem 1.4rem;
+  }
+
+  body.home-index .testimonials-section--home .testimonials-card {
+    flex-basis: clamp(245px, 72vw, 300px);
+  }
+}
+
+@media (max-width: 767.98px) {
+  body.home-index .home-landing-hero {
+    min-height: 640px;
+  }
+
+  body.home-index .home-hero-card.hero-v2-content {
+    left: 0.85rem;
+    right: 0.85rem;
+    bottom: 0.85rem;
+    padding: 1.35rem;
+  }
+
+  body.home-index .home-hero-card .hero-v2-title {
+    max-width: 12em;
+    font-size: clamp(1.6rem, 8vw, 2rem);
+  }
+
+  body.home-index .hero-v2-copy {
+    font-size: 0.98rem;
+  }
+
+  body.home-index .counter-section {
+    min-height: auto;
+    padding-block: 0.8rem;
+  }
+
+  body.home-index .counter-section .counter-stats {
+    width: min(100%, 620px);
+    min-height: auto;
+    padding: 0.95rem 1rem;
+  }
+
+  body.home-index .infographic-section {
+    padding-top: 0.85rem;
+  }
+
+  body.home-index .infographic-map__stage,
+  body.home-index .infographic-map__placeholder {
+    min-height: 250px;
+  }
+
+  body.home-index .infographic-esr__image,
+  body.home-index .infographic-esr__placeholder {
+    width: min(100%, 420px);
+  }
+
+  body.home-index .commitment-container {
+    padding-inline: 1rem;
+  }
+
+  body.home-index .commitment-title {
+    font-size: clamp(1.55rem, 7vw, 2rem);
+  }
+
+  body.home-index .services-solutions .container {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+  }
+
+  body.home-index .services-solutions__pill {
+    padding-inline: 0.9rem;
+  }
+
+  body.home-index .solution-card {
+    flex-basis: min(82vw, 300px);
+    width: min(82vw, 300px);
+    min-height: 360px;
+  }
+
+  body.home-index .solution-card__image {
+    width: 120px;
+    height: 112px;
+  }
+
+  body.home-index .why-us-grid {
+    gap: 0.85rem;
+  }
+
+  body.home-index .why-us-card__visual {
+    height: 208px;
+  }
+
+  body.home-index .why-us-card__label {
+    min-height: 70px;
+    width: min(92%, 238px);
+    margin-top: -1.2rem;
+  }
+
+  body.home-index .partners-section {
+    padding-block: 2.25rem;
+  }
+
+  body.home-index .partners-section__panel {
+    min-height: 240px;
+    gap: 1rem;
+  }
+
+  body.home-index .partners-logo {
+    opacity: 0.24 !important;
+  }
+
+  body.home-index .partners-logo--hdi {
+    right: -0.5rem;
+  }
+
+  body.home-index .partners-logo--gnp {
+    right: 1.5rem;
+    bottom: 0.9rem;
+  }
+
+  body.home-index .testimonials-section--home {
+    padding-top: 0.9rem;
+  }
+
+  body.home-index .testimonials-section--home .testimonials-section__panel {
+    padding: 1.35rem 0.9rem 1.1rem;
+  }
+
+  body.home-index .testimonials-section--home .testimonials-section__title {
+    font-size: 1.6rem;
+  }
+
+  body.home-index .testimonials-section--home .testimonials-card {
+    flex-basis: 85vw;
+    min-height: 250px;
+    padding: 1.2rem 1rem 1rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  body.home-index .home-landing-hero {
+    min-height: 600px;
+  }
+
+  body.home-index .home-hero-card.hero-v2-content {
+    left: 0.75rem;
+    right: 0.75rem;
+    bottom: 0.75rem;
+    padding: 1.2rem;
+    border-radius: 20px;
+  }
+
+  body.home-index .home-hero-card .hero-v2-title {
+    max-width: 11em;
+  }
+
+  body.home-index .counter-section .counter-stats {
+    border-radius: 24px;
+  }
+
+  body.home-index .services-solutions__carousel-shell {
+    padding-inline: 0;
+  }
+
+  body.home-index .why-us-section {
+    padding-bottom: 3.25rem;
+  }
+
+  body.home-index .why-us-card__visual {
+    height: 196px;
+  }
+
+  body.home-index .why-us-card__label {
+    width: min(92%, 220px);
+  }
+
+  body.home-index .partners-section__count {
+    font-size: clamp(3.5rem, 18vw, 4.6rem);
+  }
+
+  body.home-index .partners-section__message {
+    font-size: 1rem;
+  }
+
+  body.home-index .testimonials-section--home .testimonials-card {
+    flex-basis: 86vw;
+  }
+}
+
 
 
 
