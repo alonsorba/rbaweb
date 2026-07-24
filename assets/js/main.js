@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const heroContent = document.querySelector('body.home-index .hero-v2-content');
   const pageHero = document.querySelector('body:not(.home-index) .page-hero, body:not(.home-index) .qs-hero');
   const homeBrandLogos = Array.from(document.querySelectorAll('body.home-index .brand-logo[data-home-logo-light][data-home-logo-dark]'));
-  const partnersPanel = document.querySelector('.partners-section__panel');
+  const partnersSection = document.querySelector('.partners-section');
   const partnersLogos = Array.from(document.querySelectorAll('.partners-section .partners-logo'));
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   let animationFrame = null;
@@ -180,19 +180,19 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const initPartnersBouncers = () => {
-    if (!partnersPanel || !partnersLogos.length) return;
+    if (!partnersSection || !partnersLogos.length) return;
 
     partnersBouncers = partnersLogos.map((logo, index) => {
-      const panelRect = partnersPanel.getBoundingClientRect();
+      const sectionRect = partnersSection.getBoundingClientRect();
       const logoRect = logo.getBoundingClientRect();
 
       const width = Math.max(logoRect.width, 1);
       const height = Math.max(logoRect.height, 1);
-      const maxX = Math.max(panelRect.width - width, 0);
-      const maxY = Math.max(panelRect.height - height, 0);
+      const maxX = Math.max(sectionRect.width - width, 0);
+      const maxY = Math.max(sectionRect.height - height, 0);
 
-      const currentX = Math.min(Math.max(logoRect.left - panelRect.left, 0), maxX);
-      const currentY = Math.min(Math.max(logoRect.top - panelRect.top, 0), maxY);
+      const currentX = Math.min(Math.max(logoRect.left - sectionRect.left, 0), maxX);
+      const currentY = Math.min(Math.max(logoRect.top - sectionRect.top, 0), maxY);
 
       logo.style.left = `${currentX}px`;
       logo.style.top = `${currentY}px`;
@@ -323,13 +323,13 @@ document.addEventListener('DOMContentLoaded', () => {
   }));
 
   const startPartnersAnimation = async () => {
-    if (!partnersPanel || !partnersLogos.length || prefersReducedMotion || partnersAnimationRequested) return;
+    if (!partnersSection || !partnersLogos.length || prefersReducedMotion || partnersAnimationRequested) return;
 
     partnersAnimationRequested = true;
 
     await waitForPartnersImages();
 
-    if (!partnersPanel || !partnersLogos.length || prefersReducedMotion) return;
+    if (!partnersSection || !partnersLogos.length || prefersReducedMotion) return;
 
     initPartnersBouncers();
 
@@ -385,7 +385,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('resize', requestScrollFrame);
   requestScrollFrame();
 
-  if (partnersPanel && partnersLogos.length) {
+  if (partnersSection && partnersLogos.length) {
     const rebuildPartnersAnimation = () => {
       if (prefersReducedMotion) return;
       partnersAnimationRequested = false;

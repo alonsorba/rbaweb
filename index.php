@@ -298,6 +298,17 @@
     </section>
 
     <section id="aseguradoras" class="partners-section">
+      <div class="partners-section__logos" aria-hidden="true">
+        <img src="assets/img/logos%20blanco/aig.png" alt="" class="partners-logo partners-logo--aig">
+        <img src="assets/img/logos%20blanco/QUALITAS.png" alt="" class="partners-logo partners-logo--qualitas">
+        <img src="assets/img/logos%20blanco/axa.png" alt="" class="partners-logo partners-logo--axa">
+        <img src="assets/img/logos%20blanco/hdi.png" alt="" class="partners-logo partners-logo--hdi">
+        <img src="assets/img/logos%20blanco/Zurich.png" alt="" class="partners-logo partners-logo--zurich">
+        <img src="assets/img/logos%20blanco/GNP.png" alt="" class="partners-logo partners-logo--gnp">
+        <img src="assets/img/logos%20blanco/Mapfre.png" alt="" class="partners-logo partners-logo--mapfre">
+        <img src="assets/img/logos%20blanco/seguros-atlas.png" alt="" class="partners-logo partners-logo--atlas">
+      </div>
+
       <div class="container">
         <div class="partners-section__panel">
           <div class="partners-section__copy">
@@ -310,16 +321,6 @@
             Te asesoramos para seleccionar la mejor opción de protección
           </div>
 
-          <div class="partners-section__logos" aria-hidden="true">
-            <img src="assets/img/logos%20blanco/aig.png" alt="" class="partners-logo partners-logo--aig">
-            <img src="assets/img/logos%20blanco/QUALITAS.png" alt="" class="partners-logo partners-logo--qualitas">
-            <img src="assets/img/logos%20blanco/axa.png" alt="" class="partners-logo partners-logo--axa">
-            <img src="assets/img/logos%20blanco/hdi.png" alt="" class="partners-logo partners-logo--hdi">
-            <img src="assets/img/logos%20blanco/Zurich.png" alt="" class="partners-logo partners-logo--zurich">
-            <img src="assets/img/logos%20blanco/GNP.png" alt="" class="partners-logo partners-logo--gnp">
-            <img src="assets/img/logos%20blanco/Mapfre.png" alt="" class="partners-logo partners-logo--mapfre">
-            <img src="assets/img/logos%20blanco/seguros-atlas.png" alt="" class="partners-logo partners-logo--atlas">
-          </div>
         </div>
       </div>
     </section>
