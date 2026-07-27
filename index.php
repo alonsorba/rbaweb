@@ -461,6 +461,56 @@
       </div>
     </section>
 
+    <section id="solucion-ayuda" class="help-solution-section">
+      <div class="container">
+        <div class="help-solution-section__inner">
+          <h2 class="help-solution-section__title">
+            Te ayudamos a encontrar la mejor<br>
+            solución <span>para ti o tu empresa</span>
+          </h2>
+
+          <p class="help-solution-section__subtitle">
+            Diseñamos propuestas cuidando lo que es importante para ti.
+          </p>
+
+          <h3 class="help-solution-section__question">¿Cómo podemos ayudarte?</h3>
+
+          <div class="help-solution-section__choices" aria-label="Opciones de ayuda">
+            <article class="help-solution-card is-selected">
+              <span class="help-solution-card__badge" aria-hidden="true">
+                <i class="bi bi-check-lg"></i>
+              </span>
+              <div class="help-solution-card__media">
+                <img src="assets/img/edificio.png" alt="Empresas">
+              </div>
+              <h4>Empresas</h4>
+              <p>Protege tu empresa, sus activos y a tu equipo ante cualquier riesgo.</p>
+            </article>
+
+            <article class="help-solution-card">
+              <div class="help-solution-card__media">
+                <img src="assets/img/persona.png" alt="Personas">
+              </div>
+              <h4>Personas</h4>
+              <p>Protege tu salud, tu patrimonio y a quienes dependen de ti.</p>
+            </article>
+
+            <article class="help-solution-card">
+              <div class="help-solution-card__media">
+                <img src="assets/img/asesoria.png" alt="Asesoría integral">
+              </div>
+              <h4>Asesoría integral</h4>
+              <p>Te ayudamos a construir la mejor estrategia de protección y previsión.</p>
+            </article>
+          </div>
+
+          <div class="help-solution-section__cta-wrap">
+            <a class="help-solution-section__cta" href="servicios.php#portafolio">Continuar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- Footer global con enlaces utiles -->
