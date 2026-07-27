@@ -84,6 +84,7 @@
 
     <!-- Valores de la empresa en formato destacado -->
     <section id="alianzas" class="values-banner position-relative py-5 overflow-hidden text-white">
+      <span id="esr" class="position-absolute top-0 start-0"></span>
       <div class="container position-relative">
         <div class="row g-4 align-items-center">
           <div class="col-lg-6">

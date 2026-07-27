@@ -521,52 +521,87 @@
 
   <!-- Footer global con enlaces utiles -->
   <footer class="footer-main">
-    <div class="container py-5">
-      <div class="row g-4 align-items-start">
-        <div class="col-6 col-md-4 col-lg-2">
-          <h6 class="footer-heading">Nuestros Servicios</h6>
-          <ul class="list-unstyled footer-links">
-            <li><a href="servicios.php#portafolio">Seguros Personales</a></li>
-            <li><a href="servicios.php#portafolio">Seguros Empresariales</a></li>
-            <li><a href="servicios.php#portafolio">Seguros de Gobierno</a></li>
-            <li><a href="servicios.php#portafolio">Fianzas</a></li>
-            <li><a href="servicios.php#portafolio">Seguro RC USA</a></li>
-          </ul>
+    <div class="container">
+      <div class="footer-main__panel">
+        <div class="footer-main__columns">
+          <div class="footer-main__column">
+            <h6 class="footer-main__title">Empresas</h6>
+            <ul class="list-unstyled footer-main__list">
+              <li><a href="servicios.php#portafolio">Daños</a></li>
+              <li><a href="servicios.php#portafolio">Autos</a></li>
+              <li><a href="servicios.php#portafolio">Gastos Médicos</a></li>
+              <li><a href="servicios.php#portafolio">Vida</a></li>
+              <li><a href="servicios.php#portafolio">Viaje</a></li>
+              <li><a href="servicios.php#portafolio">Fianzas</a></li>
+              <li><a href="servicios.php#portafolio">Servicios Actuariales</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-main__column">
+            <h6 class="footer-main__title">Personas</h6>
+            <ul class="list-unstyled footer-main__list">
+              <li><a href="servicios.php#portafolio">Autos</a></li>
+              <li><a href="servicios.php#portafolio">Gastos Médicos</a></li>
+              <li><a href="servicios.php#portafolio">Vida</a></li>
+              <li><a href="servicios.php#portafolio">Viaje</a></li>
+              <li><a href="servicios.php#portafolio">Hogar</a></li>
+              <li><a href="servicios.php#portafolio">RC USA</a></li>
+              <li><a href="servicios.php#portafolio">Servicios Actuariales</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-main__column">
+            <h6 class="footer-main__title">Gestión Integral</h6>
+            <ul class="list-unstyled footer-main__list">
+              <li><a href="servicio-cliente.php#siniestros">Siniestros</a></li>
+              <li><a href="servicio-cliente.php#reclamaciones">Reclamaciones</a></li>
+              <li><a href="servicios.php#portafolio">Prevención e Ingeniería de riesgo</a></li>
+              <li><a href="https://neo.rbaidon.com/" target="_blank" rel="noopener">Portal Clientes 24/7</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-main__column">
+            <h6 class="footer-main__title">Nosotros</h6>
+            <ul class="list-unstyled footer-main__list">
+              <li><a href="quienes.php#nosotros">¿Quiénes Somos?</a></li>
+              <li><a href="quienes.php#esr">Empresa Socialmente Responsable</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-main__column footer-main__column--contact">
+            <h6 class="footer-main__title">Contacto</h6>
+            <ul class="list-unstyled footer-main__list footer-main__list--contact">
+              <li><a href="servicio-cliente.php#soporte" class="is-strong">Preguntas frecuentes</a></li>
+              <li><a href="aviso-privacidad.php" class="is-strong">Aviso de privacidad</a></li>
+            </ul>
+            <a class="footer-main__access-btn" href="https://neo.rbaidon.com/" target="_blank" rel="noopener">Acceso a usuarios</a>
+          </div>
         </div>
-        <div class="col-6 col-md-4 col-lg-2">
-          <h6 class="footer-heading">¿Quiénes somos?</h6>
-          <ul class="list-unstyled footer-links">
-            <li><a href="quienes.php#nosotros">Sobre Nosotros</a></li>
-            <li><a href="quienes.php#equipo">Mensaje del Director</a></li>
-            <li><a href="quienes.php#alianzas">Alianzas</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md-4 col-lg-2">
-          <h6 class="footer-heading">Servicio al cliente</h6>
-          <ul class="list-unstyled footer-links">
-            <li><a href="servicio-cliente.php#reclamaciones">Reclamaciones</a></li>
-            <li><a href="servicio-cliente.php#siniestros">Siniestros</a></li>
-            <li><a href="servicio-cliente.php#soporte">Preguntas Frecuentes</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md-4 col-lg-2">
-          <h6 class="footer-heading">Contacto</h6>
-          <ul class="list-unstyled footer-links">
-            <li><a href="#contacto">Formulario de Contacto</a></li>
-            <li><a href="aviso-privacidad.php">Aviso de Privacidad</a></li>
-            <li><a href="ubicacion.php#cd-obregon">Ubicación</a></li>
-          </ul>
+
+        <div class="footer-main__meta">
+          <div class="footer-main__meta-left">
+            <div class="footer-main__social">
+              <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+              <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            </div>
+            <div class="footer-main__contact-line">
+              <span>+52 (644) 410 8600</span>
+              <span>|</span>
+              <a href="mailto:obregon@rbaidon.com.mx">obregon@rbaidon.com.mx</a>
+            </div>
+          </div>
+
+          <div class="footer-main__meta-right">
+            Morelos No. 522 Ote. Col. Zona Norte. Cd. Obregón, Sonora. C.P. 85010<br>
+            <?php echo $year; ?> © R. Baidón Agente de Seguros y de Fianzas.<br>
+            Todos los derechos reservados.
+          </div>
         </div>
       </div>
-      <div class="footer-bottom pt-4 mt-3 border-top">
-        <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center gap-3">
-          <div class="d-flex align-items-center gap-3">
-            <img src="<?php echo $homeLogoRgb; ?>" class="footer-logo" alt="RBA Seguros &amp; Fianzas">
-          </div>
-          <div class="text-muted small text-center text-lg-end">
-            &copy; <?php echo $year; ?> R. Baidon Agente de Seguros y de Fianzas.
-          </div>
-        </div>
+
+      <div class="footer-main__cta-strip">
+        <a class="footer-main__cta-btn" href="https://neo.rbaidon.com/" target="_blank" rel="noopener">Habla con un asesor</a>
       </div>
     </div>
   </footer>
