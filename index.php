@@ -488,6 +488,9 @@
             </article>
 
             <article class="help-solution-card">
+              <span class="help-solution-card__badge" aria-hidden="true">
+                <i class="bi bi-check-lg"></i>
+              </span>
               <div class="help-solution-card__media">
                 <img src="assets/img/persona.png" alt="Personas">
               </div>
@@ -496,6 +499,9 @@
             </article>
 
             <article class="help-solution-card">
+              <span class="help-solution-card__badge" aria-hidden="true">
+                <i class="bi bi-check-lg"></i>
+              </span>
               <div class="help-solution-card__media">
                 <img src="assets/img/asesoria.png" alt="Asesoría integral">
               </div>

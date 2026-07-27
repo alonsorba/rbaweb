@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const partnersSection = document.querySelector('.partners-section');
   const partnersLogos = Array.from(document.querySelectorAll('.partners-section .partners-logo'));
   const testimonialsTrack = document.querySelector('.testimonials-section--home .testimonials-section__track');
+  const helpSolutionSection = document.querySelector('.help-solution-section');
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   let animationFrame = null;
   let partnersAnimationFrame = null;
@@ -537,6 +538,36 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   initTestimonialsMarquee();
+
+  const helpSolutionCards = helpSolutionSection ? Array.from(helpSolutionSection.querySelectorAll('.help-solution-card')) : [];
+  if (helpSolutionCards.length) {
+    const setActiveHelpCard = activeCard => {
+      helpSolutionCards.forEach(card => {
+        const isActive = card === activeCard;
+        card.classList.toggle('is-selected', isActive);
+        card.setAttribute('aria-pressed', String(isActive));
+        card.setAttribute('tabindex', isActive ? '0' : '0');
+      });
+    };
+
+    helpSolutionCards.forEach(card => {
+      card.setAttribute('role', 'button');
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('aria-pressed', card.classList.contains('is-selected') ? 'true' : 'false');
+
+      card.addEventListener('click', () => setActiveHelpCard(card));
+      card.addEventListener('keydown', event => {
+        if (event.key !== 'Enter' && event.key !== ' ') return;
+        event.preventDefault();
+        setActiveHelpCard(card);
+      });
+    });
+
+    const initialSelectedCard = helpSolutionCards.find(card => card.classList.contains('is-selected')) || helpSolutionCards[0];
+    if (initialSelectedCard) {
+      setActiveHelpCard(initialSelectedCard);
+    }
+  }
 
   document.querySelectorAll('a.nav-link[href^="#"]').forEach(link => {
     link.addEventListener('click', event => {
