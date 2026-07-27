@@ -130,58 +130,6 @@
     </section>
   </main>
 
-  <!-- Footer institucional compartido -->
-  <footer class="footer-main">
-    <div class="container py-5">
-      <div class="row g-4 align-items-start">
-        <div class="col-6 col-md-4 col-lg-2">
-          <h6 class="footer-heading">Nuestros Servicios</h6>
-          <ul class="list-unstyled footer-links">
-            <li><a href="servicios.php#portafolio">Seguros Personales</a></li>
-            <li><a href="servicios.php#portafolio">Seguros Empresariales</a></li>
-            <li><a href="servicios.php#portafolio">Seguros de Gobierno</a></li>
-            <li><a href="servicios.php#portafolio">Fianzas</a></li>
-            <li><a href="servicios.php#portafolio">Seguro RC USA</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md-4 col-lg-2">
-          <h6 class="footer-heading">¿Quiénes somos?</h6>
-          <ul class="list-unstyled footer-links">
-            <li><a href="quienes.php#nosotros">Sobre Nosotros</a></li>
-            <li><a href="quienes.php#equipo">Equipo</a></li>
-            <li><a href="quienes.php#alianzas">Alianzas</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md-4 col-lg-2">
-          <h6 class="footer-heading">Servicio al cliente</h6>
-          <ul class="list-unstyled footer-links">
-            <li><a href="servicio-cliente.php#reclamaciones">Reclamaciones</a></li>
-            <li><a href="servicio-cliente.php#siniestros">Siniestros</a></li>
-            <li><a href="servicio-cliente.php#soporte">Preguntas Frecuentes</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md-4 col-lg-2">
-          <h6 class="footer-heading">Contacto</h6>
-          <ul class="list-unstyled footer-links">
-            <li><a href="index.php#contacto">Formulario de Contacto</a></li>
-            <li><a href="aviso-privacidad.php">Aviso de Privacidad</a></li>
-            <li><a href="ubicacion.php#cd-obregon">Ubicación</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom pt-4 mt-3 border-top">
-        <div class="d-flex flex-column flex-lg-row justify-content-between align-items-center gap-3">
-          <div class="d-flex align-items-center gap-3">
-            <img src="assets/img/R BAIDON V3 RGB (WEB).png" class="footer-logo" alt="RBA Seguros &amp; Fianzas">
-          </div>
-          <div class="text-muted small text-center text-lg-end">
-            &copy; <?php echo $year; ?> R. Baidon Agente de Seguros y de Fianzas.
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   <script src="assets/js/main.js?v=5"></script>
 </body>
