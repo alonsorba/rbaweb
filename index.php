@@ -461,63 +461,6 @@
       </div>
     </section>
 
-    <section id="contacto" class="py-5 cta-contact-v2">
-      <div class="container">
-        <div class="row g-4 align-items-stretch">
-          <div class="col-lg-5">
-            <div class="tile h-100 cta-copy-v2">
-              <div class="eyebrow text-primary">Listos para empezar</div>
-              <h2 class="fw-semibold">Hablemos de tu próximo proyecto o póliza.</h2>
-              <p class="text-muted">Te asignamos un asesor para construir una propuesta clara, accionable y alineada a tus riesgos reales.</p>
-              <div class="d-flex flex-column gap-3">
-                <div class="d-flex gap-3 align-items-center"><i class="bi bi-telephone-forward text-primary fs-4"></i><span><?php echo $phone; ?></span></div>
-                <div class="d-flex gap-3 align-items-center"><i class="bi bi-envelope-open text-primary fs-4"></i><span><?php echo $email; ?></span></div>
-                <div class="d-flex gap-3 align-items-center"><i class="bi bi-geo-alt text-primary fs-4"></i><span>CDMX y atención nacional</span></div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-7">
-            <div class="tile p-4 shadow-sm h-100">
-              <form method="post" action="procesar-contacto.php" class="row g-3">
-                <div class="col-md-6">
-                  <label class="form-label">Nombre</label>
-                  <input type="text" name="nombre" class="form-control" placeholder="Tu nombre" required>
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label">Correo</label>
-                  <input type="email" name="correo" class="form-control" placeholder="correo@ejemplo.com" required>
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label">Teléfono</label>
-                  <input type="tel" name="telefono" class="form-control" placeholder="55 0000 0000" required>
-                </div>
-                <div class="col-md-6">
-                  <label class="form-label">Servicio de interés</label>
-                  <select name="servicio" class="form-select">
-                    <option>Seguros Empresariales</option>
-                    <option>Gastos Médicos</option>
-                    <option>Autos</option>
-                    <option>Vida</option>
-                    <option>Fianzas</option>
-                  </select>
-                </div>
-                <div class="col-12">
-                  <label class="form-label">Mensaje</label>
-                  <textarea name="mensaje" rows="4" class="form-control" placeholder="Cuéntanos qué necesitas" required></textarea>
-                </div>
-                <div class="col-12 d-flex justify-content-between align-items-center flex-wrap gap-2">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="1" id="aviso" required>
-                    <label class="form-check-label" for="aviso">Acepto el <a class="link-primary" href="aviso-privacidad.php">Aviso de Privacidad</a></label>
-                  </div>
-                  <button type="submit" class="btn btn-gradient">Enviar</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
   <!-- Footer global con enlaces utiles -->
