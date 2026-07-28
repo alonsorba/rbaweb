@@ -3374,15 +3374,11 @@ body.home-index {
   overflow-x: hidden;
 }
 
-body.home-index .counter-section,
-body.home-index .infographic-section,
-body.home-index .infographic-esr-section,
-body.home-index .commitment-section,
-body.home-index .services-solutions,
-body.home-index .why-us-section,
-body.home-index .partners-section,
-body.home-index .testimonials-section--home {
+body.home-index main > section {
   width: 100%;
+  min-height: calc(100vh - var(--header-height));
+  min-height: calc(100svh - var(--header-height));
+  scroll-margin-top: var(--header-height);
 }
 
 @media (min-width: 1400px) {
