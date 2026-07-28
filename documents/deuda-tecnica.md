@@ -76,3 +76,7 @@
 - La deuda mas importante no es funcional, sino estructural.
 - El mayor riesgo de la siguiente fase es tocar paginas internas sin modularizar componentes comunes.
 - Antes del rediseño profundo conviene consolidar inventario, includes y convenciones de assets.
+## 12. Actualizacion 2026-07-28
+- La duplicacion de footer ya quedo resuelta con `partials/footer.php`, pero el header sigue repetido por pagina y todavia representa deuda estructural.
+- Las secciones del home ahora dependen mas de alturas ligadas al viewport, asi que cualquier ajuste visual requiere pruebas cuidadosas en desktop, tablet y mobile.
+- El worktree conserva archivos nuevos sin rastrear en `assets/css/` y `assets/img/`, por lo que sigue siendo importante clasificar que se versiona y que queda como material de trabajo local.

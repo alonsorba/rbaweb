@@ -141,3 +141,11 @@ Para que un agente de IA trabaje bien sobre este proyecto, conviene asumir lo si
 - Diferencia con remoto: `main` va 4 commits adelante de `origin/main`.
 - Tiempo exacto: no registrado; historial visible entre `2025-12-23` y `2026-07-02`.
 - Principal dificultad tecnica: codificacion de caracteres y mantenimiento de una base visual grande.
+
+## 13. Actualizacion 2026-07-28
+- Rama de trabajo activa: `feature/normalizacion-base`.
+- Commit base mas reciente: `c107142` (`feat: ajustar altura de secciones del home`).
+- El home ya quedo organizado como una secuencia completa: hero, indicadores, trust bar, ESR, compromiso, soluciones, por que nosotros, partners, testimonios, contacto y footer compartido.
+- El footer paso a un include comun (`partials/footer.php`) y se reutiliza en las paginas principales.
+- Las secciones del home usan una altura minima ligada al viewport (`100vh`/`100svh` menos la altura del header) y `scroll-margin-top` para mantener la navegacion por anclas limpia.
+- La base responsive sigue en consolidacion y el worktree todavia contiene archivos nuevos sin rastrear en `assets/css/` y `assets/img/` como parte de la normalizacion visual.

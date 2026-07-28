@@ -426,3 +426,12 @@ Estado: aplicada.
 - Se corrigieron puntos de tension extra entre hero, presencia nacional, compromiso, por que nosotros, partners y testimonios con ajustes mas finos de escala y separacion.
 - Se redujo la carga visual de los logos institucionales en pantallas pequenas para evitar competencia con los textos fijos.
 - Se reforzo la distribucion interna de las tarjetas de testimonios para que no se vean recortadas en mobile ni demasiado anchas en desktop intermedio.
+
+## 31. Estado actual del home
+Estado: consolidado en revision.
+- El home ya recorre una secuencia completa de hero, indicadores, trust bar, ESR, compromiso, soluciones, por que nosotros, partners, testimonios, contacto y footer compartido.
+- El footer ya no se repite por pagina: ahora vive en `partials/footer.php`.
+- Las secciones del home trabajan con una altura minima asociada al viewport para que cada bloque ocupe mejor la pantalla al hacer scroll.
+- La seccion de testimonios se mantiene como carrusel horizontal con movimiento continuo y arrastre manual.
+- La seccion de partners conserva su campo azul con logos en movimiento dentro de sus limites visuales.
+- La revision responsive sigue abierta para escritorio, tablet, laptop, movil y pantallas amplias, con especial atencion al espaciado entre bloques.

@@ -79,3 +79,9 @@
 - Los assets nuevos usan nombres con espacios y acentos; conviene normalizarlos antes de incorporarlos.
 - Hay archivos con variantes muy parecidas que pueden generar confusion en futuras tareas.
 - Los PSD grandes deben quedar fuera de la entrega web y solo como fuente local de trabajo.
+
+## G. Estado actual de uso de assets
+- El home actual ya consume varios recursos visuales del arbol de `assets/img/`: hero, mapa de presencia, trofeo ESR, logos de aseguradoras, imagenes de compromiso, imagenes de colaboradores, logos de partners y recursos de footer.
+- El footer compartido ya depende de logos e iconografia comunes, por lo que conviene mantener esos archivos en una convencion estable.
+- Las carpetas nuevas sin rastrear en `assets/img/brand/`, `assets/img/home/`, `assets/img/icons/` y `assets/img/temporary/` apuntan a una reorganizacion del inventario visual que todavia no termina de consolidarse.
+- Sigue pendiente normalizar nombres con espacios o acentos antes de incorporar mas recursos al flujo estable del sitio.

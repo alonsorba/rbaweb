@@ -135,3 +135,10 @@
 - `fallback`: plan B cuando una libreria no carga.
 - `sticky header`: barra superior que se queda pegada al top.
 
+## 11) Estado actual del proyecto
+- Rama de trabajo activa: `feature/normalizacion-base`.
+- El home ya concentra hero, indicadores, trust bar, ESR, compromiso, soluciones, por que nosotros, partners, testimonios, contacto y footer compartido.
+- El footer se centralizo en `partials/footer.php` y ya no depende de copias sueltas por pagina.
+- Las secciones principales del home usan una altura minima ligada al viewport para mantener una lectura mas limpia al pasar de bloque en bloque.
+- La base responsive sigue en consolidacion para desktop, tablet, laptop, celular y pantallas amplias.
+- En el worktree todavia hay archivos nuevos sin rastrear en `assets/css/` y `assets/img/` que forman parte de la normalizacion visual y del inventario de recursos.

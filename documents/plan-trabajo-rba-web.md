@@ -1037,3 +1037,11 @@ Una vez Codex entregue su salida, se debe compartir:
 - errores o advertencias.
 
 Con eso se podrá decidir si se continúa con la auditoría del home o si primero se sincroniza el repositorio remoto.
+## Estado actual al 2026-07-28
+
+- Rama de trabajo activa: `feature/normalizacion-base`.
+- El home ya esta estructurado con hero, indicadores, trust bar, ESR, compromiso, soluciones, por que nosotros, partners, testimonios, contacto y footer compartido.
+- El footer ya no vive duplicado por pagina: ahora se reutiliza desde `partials/footer.php`.
+- Las secciones del home usan una altura minima ligada al viewport para dar una experiencia mas limpia al pasar de bloque en bloque.
+- El worktree aun conserva archivos nuevos sin rastrear en `assets/css/` y `assets/img/` como parte del proceso de normalizacion y reorganizacion visual.
+- La prioridad inmediata sigue siendo validar la presentacion responsive en desktop, tablet, laptop, celular y pantallas amplias sin perder la identidad original.

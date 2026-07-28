@@ -328,3 +328,8 @@ Este inventario documenta los componentes visuales y funcionales que hoy existen
 - El sitio ya tiene componentes base reutilizables, pero todavia estan distribuidos entre CSS global y reglas especificas por seccion.
 - La siguiente fase deberia consolidar estos componentes en una estrategia mas modular.
 - La base actual es suficiente para seguir con el rediseño de paginas internas sin rehacer el Home.
+## 13. Estado actual del sistema
+- El footer ya quedo centralizado en `partials/footer.php` y se reutiliza en las paginas principales.
+- El home ya incluye una familia mas amplia de bloques: hero, indicadores, trust bar, ESR, compromiso, soluciones, por que nosotros, partners, testimonios, contacto y footer.
+- Las tarjetas de testimonios y las cards de soluciones siguen siendo los componentes visuales mas sensibles por su dependencia de escala, texto y comportamiento horizontal.
+- El sistema de componentes debe seguir actualizandose cada vez que cambie el nombre de una card, un bloque o una clase global, para evitar desalineaciones entre paginas.

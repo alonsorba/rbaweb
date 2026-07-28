@@ -239,6 +239,14 @@ Estado: ajustado.
 - El indicador de matriz y el contador `+25 estados con presencia` quedaron como anclas visuales del bloque.
 - La validacion responsive quedo documentada y pendiente de un repaso manual en navegador normal por la limitacion de las capturas headless.
 
+## 21. Estado actual de la base
+- Rama de trabajo activa: `feature/normalizacion-base`.
+- El home ya integra la ruta completa de bloques: hero, indicadores, trust bar, ESR, compromiso, soluciones, por que nosotros, partners, testimonios, contacto y footer compartido.
+- El footer se centralizo en `partials/footer.php`; el header sigue como estructura repetida por pagina.
+- El home utiliza una altura minima ligada al viewport para que cada seccion respire mejor al pasar por ella.
+- La referencia historica de `main` adelantada 4 commits quedo como contexto anterior; el trabajo operativo actual se mueve sobre la rama de normalizacion.
+- Sigue pendiente una validacion visual manual en escritorio y movil para cerrar la fase responsive.
+
 ## 21. Seccion ESR
 Estado: ajustado.
 - Se reajusto la composicion del bloque ESR para equilibrar el texto, los pilares y el reconocimiento institucional.
