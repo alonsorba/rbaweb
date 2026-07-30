@@ -1,0 +1,72 @@
+.rb-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.rb-main {
+    flex: 1 0 auto;
+    padding-block: var(--rb-space-8);
+}
+
+.rb-main--home {
+    padding-top: 0;
+}
+
+.rb-container {
+    width: min(100%, calc(var(--rb-container-max) + (var(--rb-container-padding-x) * 2)));
+    margin-inline: auto;
+    padding-inline: var(--rb-container-padding-x);
+}
+
+.rb-container--sm {
+    width: min(100%, calc(var(--rb-container-sm) + (var(--rb-container-padding-x) * 2)));
+}
+
+.rb-container--md {
+    width: min(100%, calc(var(--rb-container-md) + (var(--rb-container-padding-x) * 2)));
+}
+
+.rb-container--lg {
+    width: min(100%, calc(var(--rb-container-lg) + (var(--rb-container-padding-x) * 2)));
+}
+
+.rb-section {
+    position: relative;
+    padding-block: var(--rb-section-space-y);
+}
+
+.rb-section--tight {
+    padding-block: var(--rb-space-6);
+}
+
+.rb-section--alt {
+    background: var(--rb-color-surface-alt);
+}
+
+.rb-grid {
+    display: grid;
+    gap: var(--rb-space-6);
+}
+
+.rb-grid--2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.rb-grid--3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.rb-grid--4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.rb-grid--auto {
+    grid-template-columns: repeat(auto-fit, minmax(var(--rb-grid-min-column), 1fr));
+}
+
+.rb-stack {
+    display: flex;
+    flex-direction: column;
+    gap: var(--rb-space-4);
+}

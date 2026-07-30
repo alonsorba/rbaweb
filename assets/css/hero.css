@@ -1,0 +1,126 @@
+.rb-hero {
+    margin-top: calc(var(--rb-navbar-height) * -1);
+    padding-top: 0;
+    padding-bottom: var(--rb-space-6);
+}
+
+.rb-hero > .rb-container {
+    width: 100%;
+    max-width: none;
+    padding-inline: 0;
+}
+
+.rb-hero__stage {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    min-height: var(--rb-hero-min-height);
+    padding: clamp(2rem, 3vw, 3rem) clamp(1.5rem, 3vw, 3rem);
+    overflow: hidden;
+    border-radius: 0;
+    background:
+        linear-gradient(180deg, rgba(8, 25, 45, 0.16), rgba(8, 25, 45, 0.24)),
+        var(--rb-gradient-brand);
+    box-shadow: var(--rb-shadow-elevated);
+}
+
+.rb-hero__stage::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: var(--rb-hero-bg-image);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.rb-hero__stage::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--rb-gradient-hero-overlay);
+}
+
+.rb-hero__content,
+.rb-hero__floating-card {
+    position: relative;
+    z-index: 1;
+}
+
+.rb-hero__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--rb-space-4);
+    width: min(100%, var(--rb-hero-content-max-width));
+    padding: clamp(2rem, 3.6vw, 3.5rem);
+    background: rgba(8, 25, 45, 0.78);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: var(--rb-white);
+    backdrop-filter: blur(var(--rb-glass-blur));
+    -webkit-backdrop-filter: blur(var(--rb-glass-blur));
+    box-shadow: var(--rb-shadow-elevated);
+}
+
+.rb-hero__eyebrow {
+    color: var(--rb-color-primary-100);
+}
+
+.rb-hero__title {
+    display: grid;
+    gap: 0.05em;
+    margin: 0;
+    max-width: 18ch;
+    font-size: clamp(2.5rem, 4vw, 3.625rem);
+    line-height: 1.08;
+    font-weight: var(--rb-font-weight-extrabold);
+    letter-spacing: -0.04em;
+}
+
+.rb-hero__title-line {
+    display: block;
+}
+
+.rb-hero__subtitle {
+    margin: 0;
+    max-width: 26rem;
+    font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.86);
+}
+
+.rb-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(0.75rem, 1.2vw, 1rem);
+}
+
+.rb-hero__floating-card {
+    position: absolute;
+    right: clamp(1rem, 2.5vw, 2.5rem);
+    bottom: clamp(1rem, 2.5vw, 2.5rem);
+    width: min(100%, var(--rb-hero-floating-max-width));
+    padding: clamp(1rem, 2vw, 1.5rem);
+    color: var(--rb-white);
+    background: rgba(8, 25, 45, 0.68);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: var(--rb-shadow-elevated);
+}
+
+.rb-hero__floating-label {
+    color: var(--rb-color-primary-100);
+}
+
+.rb-hero__floating-title {
+    margin: 0;
+    font-size: var(--rb-font-size-lg);
+    line-height: 1.3;
+    font-weight: var(--rb-font-weight-bold);
+}
+
+.rb-hero__floating-text {
+    font-size: var(--rb-font-size-sm);
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.82);
+}

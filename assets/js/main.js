@@ -755,47 +755,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   solutionData.fianzas = solutionData.gestion;
 
-  const solutionTextFixes = {
-    'DaÃ±os': 'Daños',
-    'ProtecciÃ³n': 'Protección',
-    'fenÃ³menos': 'fenómenos',
-    'pÃ©rdidas': 'pérdidas',
-    'ProtecciÃ³n de daÃ±os': 'Protección de daños',
-    'Gastos MÃ©dicos': 'Gastos Médicos',
-    'AtenciÃ³n': 'Atención',
-    'mÃ©dica': 'médica',
-    'mÃ©dicos': 'médicos',
-    'PlaneaciÃ³n': 'Planeación',
-    'prÃ¡ctica': 'práctica',
-    'fÃ¡cil': 'fácil',
-    'vehÃ­culo': 'vehículo',
-    'daÃ±os': 'daños',
-    'atenciÃ³n': 'atención',
-    'mÃ©dica': 'médica',
-    'econÃ³mico': 'económico',
-    'AdministraciÃ³n': 'Administración',
-    'AcompaÃ±amiento': 'Acompañamiento',
-    'GestiÃ³n': 'Gestión',
-    'resoluciÃ³n': 'resolución',
-    'DiseÃ±o': 'Diseño',
-    'operaciÃ³n': 'operación'
-  };
-
-  const normalizeSolutionText = value => {
-    if (typeof value !== 'string') return value;
-
-    return Object.entries(solutionTextFixes).reduce((acc, [from, to]) => acc.split(from).join(to), value);
-  };
-
-  Object.keys(solutionData).forEach(category => {
-    solutionData[category] = solutionData[category].map(item => ({
-      ...item,
-      title: normalizeSolutionText(item.title),
-      description: normalizeSolutionText(item.description),
-      alt: normalizeSolutionText(item.alt)
-    }));
-  });
-
   const renderSolutions = key => {
     if (!solutionTrack) return;
     const items = solutionData[key] || solutionData.empresas;
@@ -818,6 +777,59 @@ document.addEventListener('DOMContentLoaded', () => {
     window.requestAnimationFrame(updateSolutionCarouselState);
   };
 
+  const updateSolutionCardDepth = () => {
+    if (!solutionCarousel || !solutionTrack) return;
+
+    const cards = Array.from(solutionTrack.querySelectorAll('.solution-card'));
+    if (!cards.length) return;
+
+    const carouselRect = solutionCarousel.getBoundingClientRect();
+    const carouselCenter = carouselRect.left + carouselRect.width / 2;
+    const halfWidth = Math.max(carouselRect.width / 2, 1);
+    let rightMostVisibleCard = null;
+    let rightMostVisibleRect = null;
+
+  cards.forEach(card => {
+    const rect = card.getBoundingClientRect();
+    const isVisible = rect.right > carouselRect.left && rect.left < carouselRect.right;
+
+      card.style.setProperty('--solution-card-scale', '1');
+      card.style.setProperty('--solution-card-opacity', '1');
+      card.style.setProperty('--solution-card-blur', '0px');
+      card.style.setProperty('--solution-card-depth', '0px');
+
+    if (isVisible && (!rightMostVisibleRect || rect.right > rightMostVisibleRect.right)) {
+      rightMostVisibleCard = card;
+      rightMostVisibleRect = rect;
+    }
+  });
+
+  if (solutionCarousel.classList.contains('is-dragging')) {
+    return;
+  }
+
+  cards.forEach((card, index) => {
+    card.style.zIndex = String(100 + (cards.length - index));
+  });
+
+    if (!rightMostVisibleCard) return;
+
+    const cardRect = rightMostVisibleCard.getBoundingClientRect();
+    const cardCenter = cardRect.left + cardRect.width / 2;
+    const signedDistance = Math.max(0, (cardCenter - carouselCenter) / halfWidth);
+    const normalizedDistance = Math.min(signedDistance, 0.95);
+    const distanceCurve = Math.pow(normalizedDistance, 1.1);
+    const scale = Math.max(0.76, 1 - distanceCurve * 0.16);
+    const opacity = Math.max(0.38, 1 - distanceCurve * 0.34);
+    const blur = Math.min(distanceCurve * 1.8, 1.8);
+    const depth = Math.min(Math.round(distanceCurve * 16), 16);
+
+    rightMostVisibleCard.style.setProperty('--solution-card-scale', scale.toFixed(3));
+    rightMostVisibleCard.style.setProperty('--solution-card-opacity', opacity.toFixed(3));
+    rightMostVisibleCard.style.setProperty('--solution-card-blur', `${blur.toFixed(2)}px`);
+    rightMostVisibleCard.style.setProperty('--solution-card-depth', `${depth}px`);
+  };
+
   const updateSolutionCarouselState = () => {
     if (!solutionCarousel || !solutionTrack) return;
 
@@ -836,6 +848,18 @@ document.addEventListener('DOMContentLoaded', () => {
     if (solutionNextButton) {
       solutionNextButton.disabled = !isScrollable;
       solutionNextButton.setAttribute('aria-disabled', String(!isScrollable));
+    }
+
+    if (isScrollable) {
+      updateSolutionCardDepth();
+    } else {
+      Array.from(solutionTrack.querySelectorAll('.solution-card')).forEach(card => {
+        card.style.removeProperty('--solution-card-scale');
+        card.style.removeProperty('--solution-card-opacity');
+        card.style.removeProperty('--solution-card-blur');
+        card.style.removeProperty('--solution-card-depth');
+        card.style.zIndex = '';
+      });
     }
   };
 
@@ -872,6 +896,16 @@ document.addEventListener('DOMContentLoaded', () => {
     let startX = 0;
     let scrollLeft = 0;
     let moved = false;
+    let solutionScrollRaf = 0;
+
+    const scheduleSolutionCardDepthUpdate = () => {
+      if (solutionScrollRaf) return;
+
+      solutionScrollRaf = window.requestAnimationFrame(() => {
+        solutionScrollRaf = 0;
+        updateSolutionCardDepth();
+      });
+    };
 
     solutionCarousel.addEventListener('mousedown', function (event) {
       isDown = true;
@@ -884,11 +918,13 @@ document.addEventListener('DOMContentLoaded', () => {
     solutionCarousel.addEventListener('mouseleave', function () {
       isDown = false;
       solutionCarousel.classList.remove('is-dragging');
+      scheduleSolutionCardDepthUpdate();
     });
 
     solutionCarousel.addEventListener('mouseup', function () {
       isDown = false;
       solutionCarousel.classList.remove('is-dragging');
+      scheduleSolutionCardDepthUpdate();
     });
 
     solutionCarousel.addEventListener('mousemove', function (event) {
@@ -899,6 +935,8 @@ document.addEventListener('DOMContentLoaded', () => {
       if (Math.abs(walk) > 5) moved = true;
       solutionCarousel.scrollLeft = scrollLeft - walk;
     });
+
+    solutionCarousel.addEventListener('scroll', scheduleSolutionCardDepthUpdate, { passive: true });
 
     solutionCarousel.addEventListener('click', function (event) {
       if (!moved) return;

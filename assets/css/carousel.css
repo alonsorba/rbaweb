@@ -1,0 +1,104 @@
+.rb-carousel {
+    position: relative;
+}
+
+.rb-carousel__track {
+    display: grid;
+    gap: var(--rb-space-4);
+}
+
+.rb-carousel-card {
+    background: var(--rb-white);
+    border: 1px solid var(--rb-color-border);
+    box-shadow: var(--rb-shadow-soft);
+    overflow: hidden;
+}
+
+.rb-carousel-nav {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--rb-space-2);
+}
+
+.rb-carousel-button {
+    width: var(--rb-control-height-md);
+    height: var(--rb-control-height-md);
+    border: 1px solid var(--rb-color-border-strong);
+    border-radius: 50%;
+    background: var(--rb-white);
+    color: var(--rb-color-primary-900);
+    transition:
+        transform var(--rb-duration-fast) var(--rb-easing-standard),
+        box-shadow var(--rb-duration-fast) var(--rb-easing-standard);
+}
+
+.rb-carousel-button:hover,
+.rb-carousel-button:focus-visible {
+    transform: translateY(-1px);
+    box-shadow: var(--rb-shadow-soft);
+}
+
+.rb-carousel-indicator {
+    width: var(--rb-indicator-size);
+    height: var(--rb-indicator-size);
+    border-radius: 50%;
+    background: rgba(12, 50, 89, 0.18);
+}
+
+.rb-carousel-indicator.is-active {
+    background: var(--rb-color-primary-500);
+}
+
+.rb-solutions__viewport {
+    position: relative;
+    touch-action: pan-y;
+    cursor: grab;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.rb-solutions__viewport::-webkit-scrollbar {
+    display: none;
+}
+
+.rb-solutions__viewport.is-dragging {
+    cursor: grabbing;
+    user-select: none;
+}
+
+.rb-solutions__track {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: var(--rb-solutions-track-gap);
+    align-items: stretch;
+    padding-right: var(--rb-solutions-viewport-padding-end);
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    scroll-padding-inline: var(--rb-space-4);
+}
+
+.rb-solutions__track > * {
+    flex: 0 0 var(--rb-solutions-card-width);
+    width: var(--rb-solutions-card-width);
+    scroll-snap-align: start;
+}
+
+.rb-solutions__nav {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--rb-space-2);
+}
+
+.rb-solutions__nav-button {
+    transition:
+        transform var(--rb-duration-fast) var(--rb-easing-standard),
+        background-color var(--rb-duration-fast) var(--rb-easing-standard),
+        opacity var(--rb-duration-fast) var(--rb-easing-standard);
+}
+
+.rb-solutions__nav-button:disabled {
+    opacity: 0.4;
+    transform: none;
+    box-shadow: none;
+}

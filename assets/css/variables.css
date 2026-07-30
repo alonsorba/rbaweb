@@ -1,0 +1,202 @@
+:root {
+    --rb-color-primary-900: #0c3259;
+    --rb-color-primary-700: #153f6d;
+    --rb-color-primary-500: #228bd1;
+    --rb-color-primary-100: #daf2ff;
+
+    --rb-color-secondary-700: #1d699e;
+    --rb-color-secondary-500: #2f9de8;
+    --rb-color-secondary-100: #eaf7ff;
+
+    --rb-color-surface: #ffffff;
+    --rb-color-surface-alt: #f4f8fb;
+    --rb-color-page: #fafafa;
+    --rb-color-border: rgba(12, 50, 89, 0.08);
+    --rb-color-border-strong: rgba(12, 50, 89, 0.18);
+    --rb-color-text: #15324f;
+    --rb-color-text-muted: #4f6a82;
+    --rb-color-text-soft: #6c8096;
+    --rb-white: #ffffff;
+    --rb-color-navbar-ink: #ffffff;
+    --rb-color-navbar-ink-scrolled: var(--rb-color-primary-900);
+    --rb-color-navbar-surface: rgba(8, 25, 45, 0.18);
+    --rb-color-navbar-surface-scrolled: rgba(255, 255, 255, 0.96);
+
+    --rb-gradient-brand: linear-gradient(135deg, var(--rb-color-primary-900) 0%, #154b82 45%, var(--rb-color-primary-500) 100%);
+    --rb-gradient-soft: linear-gradient(135deg, rgba(12, 50, 89, 0.06), rgba(34, 139, 209, 0.10));
+    --rb-gradient-hero-overlay: linear-gradient(180deg, rgba(8, 25, 45, 0.72) 0%, rgba(8, 25, 45, 0.28) 48%, rgba(8, 25, 45, 0.76) 100%);
+
+    --rb-space-0: 0;
+    --rb-space-1: 0.25rem;
+    --rb-space-2: 0.5rem;
+    --rb-space-3: 0.75rem;
+    --rb-space-4: 1rem;
+    --rb-space-5: 1.5rem;
+    --rb-space-6: 2rem;
+    --rb-space-7: 3rem;
+    --rb-space-8: 4rem;
+    --rb-space-9: 5rem;
+    --rb-space-10: 6rem;
+
+    --rb-breakpoint-sm: 576px;
+    --rb-breakpoint-md: 768px;
+    --rb-breakpoint-lg: 992px;
+    --rb-breakpoint-xl: 1200px;
+    --rb-breakpoint-xxl: 1400px;
+
+    --rb-radius-none: 0;
+    --rb-radius-sm: 0.75rem;
+    --rb-radius-md: 1rem;
+    --rb-radius-lg: 1.5rem;
+    --rb-radius-xl: 2rem;
+    --rb-radius-pill: 999px;
+
+    --rb-shadow-none: none;
+    --rb-shadow-soft: 0 16px 40px rgba(12, 50, 89, 0.08);
+    --rb-shadow-card: 0 10px 28px rgba(12, 50, 89, 0.12);
+    --rb-shadow-elevated: 0 22px 50px rgba(12, 50, 89, 0.14);
+    --rb-shadow-focus: 0 0 0 0.25rem rgba(34, 139, 209, 0.2);
+
+    --rb-glass-bg: rgba(255, 255, 255, 0.72);
+    --rb-glass-border: rgba(12, 50, 89, 0.08);
+    --rb-glass-blur: 18px;
+
+    --rb-blur-none: 0;
+    --rb-blur-sm: 6px;
+    --rb-blur-md: 14px;
+    --rb-blur-lg: 18px;
+
+    --rb-duration-fast: 140ms;
+    --rb-duration-normal: 220ms;
+    --rb-duration-slow: 320ms;
+    --rb-easing-standard: ease-in-out;
+
+    --rb-z-base: 1;
+    --rb-z-raised: 10;
+    --rb-z-sticky: 100;
+    --rb-z-dropdown: 200;
+    --rb-z-overlay: 300;
+    --rb-z-modal: 400;
+    --rb-z-tooltip: 500;
+
+    --rb-font-family-interface: "Montserrat", "Segoe UI", Arial, sans-serif;
+    --rb-font-family-display: "Montserrat", "Segoe UI", Arial, sans-serif;
+    --rb-font-weight-light: 300;
+    --rb-font-weight-regular: 400;
+    --rb-font-weight-medium: 500;
+    --rb-font-weight-semibold: 600;
+    --rb-font-weight-bold: 700;
+    --rb-font-weight-extrabold: 800;
+
+    --rb-font-size-xs: 0.75rem;
+    --rb-font-size-sm: 0.875rem;
+    --rb-font-size-md: 1rem;
+    --rb-font-size-lg: 1.125rem;
+    --rb-font-size-xl: 1.25rem;
+    --rb-font-size-2xl: 1.5rem;
+    --rb-font-size-3xl: 1.875rem;
+    --rb-font-size-4xl: 2.25rem;
+    --rb-font-size-5xl: 3rem;
+
+    --rb-line-height-tight: 1.15;
+    --rb-line-height-base: 1.6;
+    --rb-line-height-loose: 1.85;
+
+    --rb-control-height-sm: 2.5rem;
+    --rb-control-height-md: 3rem;
+    --rb-control-height-lg: 3.5rem;
+    --rb-control-padding-x: 1.25rem;
+    --rb-control-padding-y: 0.8rem;
+
+    --rb-navbar-height: 6rem;
+    --rb-hero-media-min-height: 18rem;
+    --rb-hero-min-height: clamp(43rem, 80vh, 48.75rem);
+    --rb-hero-content-max-width: 36.25rem;
+    --rb-hero-floating-max-width: 19rem;
+    --rb-stats-panel-padding: clamp(1.75rem, 3vw, 2.75rem);
+    --rb-stats-grid-gap: clamp(1.5rem, 3vw, 2.75rem);
+    --rb-presence-shell-padding: clamp(2rem, 3.5vw, 3rem);
+    --rb-presence-gap: clamp(2rem, 3vw, 3rem);
+    --rb-presence-map-min-height: clamp(31rem, 48vw, 44rem);
+    --rb-presence-location-max-width: 18rem;
+    --rb-presence-marker-size: 1rem;
+    --rb-presence-marker-x: 19%;
+    --rb-presence-marker-y: 29%;
+    --rb-presence-connector-left: -24%;
+    --rb-presence-connector-top: 14%;
+    --rb-presence-connector-width: 46%;
+    --rb-presence-connector-height: 24%;
+    --rb-presence-connector-angle: 14deg;
+    --rb-esr-shell-padding: clamp(2.75rem, 4vw, 4rem);
+    --rb-esr-gap: clamp(2rem, 3.5vw, 3.5rem);
+    --rb-esr-copy-max-width: clamp(30rem, 45vw, 39rem);
+    --rb-esr-visual-min-height: clamp(31rem, 38vw, 34rem);
+    --rb-esr-visual-max-width: clamp(26rem, 36vw, 31rem);
+    --rb-esr-pillars-gap: 1rem;
+    --rb-esr-pillars-padding: 1.1rem 1.25rem;
+    --rb-esr-pillars-icon-size: clamp(2.75rem, 3.2vw, 3.35rem);
+    --rb-esr-secondary-badge-max-width: clamp(9.5rem, 13vw, 13.5rem);
+    --rb-esr-description-max-width: 39rem;
+    --rb-commitment-gap: clamp(2rem, 3.5vw, 3.5rem);
+    --rb-commitment-shell-padding: clamp(4.5rem, 6vw, 5.75rem);
+    --rb-commitment-copy-max-width: clamp(31rem, 46vw, 38rem);
+    --rb-commitment-visual-min-height: clamp(24rem, 32vw, 30rem);
+    --rb-commitment-media-max-width: clamp(27rem, 39vw, 35rem);
+    --rb-solutions-shell-padding: clamp(2rem, 3.5vw, 3rem);
+    --rb-solutions-gap: clamp(1.25rem, 2.5vw, 2rem);
+    --rb-solutions-tabs-gap: 1rem;
+    --rb-solutions-panel-gap: 1.25rem;
+    --rb-solutions-track-gap: clamp(1rem, 1.8vw, 1.5rem);
+    --rb-solutions-card-width: clamp(19rem, 22vw, 21rem);
+    --rb-solutions-card-min-height: clamp(27rem, 33vw, 31rem);
+    --rb-solutions-media-height: clamp(9rem, 11vw, 11.75rem);
+    --rb-solutions-viewport-padding-end: clamp(1rem, 4vw, 3rem);
+    --rb-why-grid-gap: clamp(1.75rem, 2.6vw, 2.75rem);
+    --rb-why-card-min-height: clamp(28rem, 34vw, 31rem);
+    --rb-why-visual-min-height: clamp(21rem, 26vw, 24.5rem);
+    --rb-why-caption-min-height: 6rem;
+    --rb-why-caption-overlap: 1.5rem;
+    --rb-why-image-padding: var(--rb-space-2);
+    --rb-partners-shell-padding: clamp(5rem, 6vw, 6.75rem);
+    --rb-partners-inner-gap: clamp(2rem, 4vw, 4rem);
+    --rb-partners-copy-max-width: clamp(20rem, 24vw, 24rem);
+    --rb-partners-message-max-width: clamp(28rem, 36vw, 38rem);
+    --rb-partners-visual-min-height: clamp(40rem, 52vw, 47.5rem);
+    --rb-partners-logo-opacity: 0.78;
+    --rb-partners-logo-base-opacity: 0.78;
+    --rb-partners-logo-size-sm: clamp(6rem, 8vw, 8.5rem);
+    --rb-partners-logo-size-md: clamp(7rem, 10vw, 10rem);
+    --rb-partners-logo-size-lg: clamp(8rem, 12vw, 13rem);
+    --rb-partners-logo-size-xl: clamp(9rem, 13vw, 15rem);
+    --rb-testimonials-shell-padding: clamp(3rem, 4vw, 4.5rem);
+    --rb-testimonials-grid-gap: clamp(1rem, 1.8vw, 1.5rem);
+    --rb-testimonials-card-padding: clamp(1.5rem, 2.8vw, 2rem);
+    --rb-testimonials-card-min-height: clamp(14.5rem, 17vw, 17.5rem);
+    --rb-testimonials-avatar-size: 4rem;
+    --rb-testimonials-avatar-size-sm: 3.5rem;
+    --rb-testimonials-star-size: 1rem;
+    --rb-testimonials-title-max-width: 18ch;
+    --rb-testimonials-shell-radius: 3.5rem;
+    --rb-testimonials-card-radius: 1.5rem;
+    --rb-testimonials-card-bg: linear-gradient(180deg, #1a4d7f 0%, #12406c 100%);
+    --rb-testimonials-card-bg-alt: #215f95;
+    --rb-testimonials-star-color: var(--rb-color-secondary-500);
+    --rb-testimonials-star-muted: rgba(47, 157, 232, 0.18);
+    --rb-textarea-min-height: 9rem;
+    --rb-indicator-size: 0.75rem;
+    --rb-icon-circle-size: 3rem;
+    --rb-card-padding: 1.5rem;
+    --rb-grid-min-column: 16rem;
+    --rb-text-measure: 65ch;
+
+    --rb-container-sm: 720px;
+    --rb-container-md: 960px;
+    --rb-container-lg: 1140px;
+    --rb-container-max: 1320px;
+    --rb-container-padding-x: 1.5rem;
+    --rb-section-space-y: 4rem;
+
+    --bs-body-font-family: var(--rb-font-family-interface);
+    --bs-body-color: var(--rb-color-text);
+    --bs-body-bg: var(--rb-color-page);
+}

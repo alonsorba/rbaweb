@@ -1,4 +1,4 @@
-﻿<?php
+<?php
   $siteTitle = 'RBA Seguros y Fianzas';
   $phone = '+52 55 1234 5678';
   $email = 'contacto@rbaseguros.mx';
@@ -23,7 +23,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="assets/css/style.css?v=18">
+    <link rel="stylesheet" href="assets/css/style.css?v=26">
 </head>
 <body class="home-index">
   <!-- Header global: logo, navegacion y acceso a usuarios -->
@@ -76,7 +76,7 @@
       </div>
     </section>
 
-    <section id="indicadores" class="counter-section">
+    <section id="trust-bar" class="infographic-section infographic-section--presence">
       <div class="container">
         <div class="counter-stage">
           <div class="infographic-stats counter-stats reveal-on-scroll">
@@ -94,11 +94,7 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <section id="trust-bar" class="infographic-section">
-      <div class="container">
         <div class="infographic-shell">
           <div class="infographic-layout">
             <div class="infographic-copy">
@@ -140,13 +136,13 @@
       <div class="container">
           <div class="infographic-esr infographic-esr--standalone reveal-on-scroll">
             <div class="infographic-esr__content">
-              <div class="infographic-esr__eyebrow">XV años <span>de ser</span></div>
+              <div class="infographic-esr__eyebrow">XV a&ntilde;os <span>de ser</span></div>
               <h2 class="infographic-esr__title">
                   <span>Empresa</span>
                   <span>Socialmente</span>
                   <span>Responsable</span>
               </h2>
-              <p class="infographic-esr__copy">Seguimos construyendo un futuro <span>más responsable</span> todos los días.</p>
+              <p class="infographic-esr__copy">Seguimos construyendo un futuro <span>m&aacute;s responsable</span> todos los d&iacute;as.</p>
 
               <div class="infographic-esr__bar">
                   <span class="infographic-esr__bar-item">
@@ -269,6 +265,11 @@
           <article class="why-us-card why-us-card--portrait">
             <div class="why-us-card__visual">
               <img src="assets/img/itzel.png" alt="Asesoría personalizada" class="why-us-card__image" loading="lazy" decoding="async">
+              <div class="why-us-card__panel" aria-hidden="true">
+                <h3>Asesoría personalizada</h3>
+                <p>Te guiamos para elegir el seguro ideal según tus necesidades, estilo de vida y presupuesto.</p>
+                <p>Simplificamos lo complejo para que tomes decisiones con claridad y confianza.</p>
+              </div>
             </div>
             <div class="why-us-card__label">Asesoría<br>personalizada</div>
           </article>
@@ -276,6 +277,11 @@
           <article class="why-us-card why-us-card--scene">
             <div class="why-us-card__visual">
               <img src="assets/img/nose.png" alt="Prevención de riesgos" class="why-us-card__image" loading="lazy" decoding="async">
+              <div class="why-us-card__panel" aria-hidden="true">
+                <h3>Prevención de riesgos</h3>
+                <p>Nos anticipamos a posibles riesgos que puedan afectar tu patrimonio o bienestar.</p>
+                <p>Diseñamos soluciones para que estés preparado antes de que ocurra cualquier imprevisto.</p>
+              </div>
             </div>
             <div class="why-us-card__label">Prevención<br>de riesgos</div>
           </article>
@@ -283,6 +289,11 @@
           <article class="why-us-card why-us-card--portrait">
             <div class="why-us-card__visual">
               <img src="assets/img/jenny.png" alt="Análisis inteligente" class="why-us-card__image" loading="lazy" decoding="async">
+              <div class="why-us-card__panel" aria-hidden="true">
+                <h3>Análisis inteligente</h3>
+                <p>Evaluamos distintas opciones del mercado para ofrecerte las mejores coberturas y condiciones.</p>
+                <p>Comparamos por ti para que tomes decisiones informadas sin complicaciones.</p>
+              </div>
             </div>
             <div class="why-us-card__label">Análisis<br>inteligente</div>
           </article>
@@ -290,6 +301,11 @@
           <article class="why-us-card why-us-card--portrait">
             <div class="why-us-card__visual">
               <img src="assets/img/misa.png" alt="Acompañamiento constante" class="why-us-card__image" loading="lazy" decoding="async">
+              <div class="why-us-card__panel" aria-hidden="true">
+                <h3>Acompañamiento constante</h3>
+                <p>Estamos contigo en todo momento.</p>
+                <p>Desde la contratación hasta un siniestro, te brindamos respaldo, orientación y apoyo para que nunca enfrentes el proceso solo.</p>
+              </div>
             </div>
             <div class="why-us-card__label">Acompañamiento<br>constante</div>
           </article>
@@ -522,7 +538,7 @@
   <?php include __DIR__ . '/partials/footer.php'; ?>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-  <script src="assets/js/main.js?v=8"></script>
+<script src="assets/js/main.js?v=14"></script>
 </body>
 </html>
 

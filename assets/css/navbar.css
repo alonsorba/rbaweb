@@ -1,0 +1,213 @@
+.rb-header {
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: var(--rb-z-sticky);
+}
+
+.rb-navbar {
+    position: relative;
+    width: 100%;
+    min-height: var(--rb-navbar-height);
+    padding-block: 0.5rem;
+    color: var(--rb-color-navbar-ink);
+    background: linear-gradient(180deg, rgba(8, 25, 45, 0.68) 0%, rgba(8, 25, 45, 0.18) 68%, rgba(8, 25, 45, 0) 100%);
+    border-bottom: 1px solid transparent;
+    backdrop-filter: blur(0);
+    -webkit-backdrop-filter: blur(0);
+    transition:
+        background-color var(--rb-duration-normal) var(--rb-easing-standard),
+        border-color var(--rb-duration-normal) var(--rb-easing-standard),
+        box-shadow var(--rb-duration-normal) var(--rb-easing-standard),
+        backdrop-filter var(--rb-duration-normal) var(--rb-easing-standard);
+}
+
+.rb-navbar--scrolled {
+    background: var(--rb-color-navbar-surface-scrolled);
+    border-bottom-color: var(--rb-color-border);
+    box-shadow: var(--rb-shadow-soft);
+    backdrop-filter: blur(var(--rb-glass-blur));
+    -webkit-backdrop-filter: blur(var(--rb-glass-blur));
+}
+
+.rb-navbar--internal {
+    color: var(--rb-color-primary-900);
+    background: var(--rb-color-navbar-surface-scrolled);
+    border-bottom-color: var(--rb-color-border);
+    box-shadow: var(--rb-shadow-soft);
+    backdrop-filter: blur(var(--rb-glass-blur));
+    -webkit-backdrop-filter: blur(var(--rb-glass-blur));
+}
+
+.rb-navbar__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--rb-space-4);
+    min-height: calc(var(--rb-navbar-height) - 0.5rem);
+}
+
+.rb-navbar__brand {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.rb-brand-logo {
+    width: auto;
+    max-width: clamp(16rem, 22vw, 21.25rem);
+    max-height: 4.75rem;
+    object-fit: contain;
+}
+
+.rb-brand-logo--scrolled {
+    display: none;
+}
+
+.rb-navbar--scrolled .rb-brand-logo--default {
+    display: none;
+}
+
+.rb-navbar--scrolled .rb-brand-logo--scrolled {
+    display: block;
+}
+
+.rb-navbar__toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    padding: 0;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: var(--rb-radius-pill);
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--rb-color-navbar-ink);
+    box-shadow: none;
+}
+
+.rb-navbar__toggle:focus-visible {
+    box-shadow: var(--rb-shadow-focus);
+}
+
+.rb-navbar__toggle-lines {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.rb-navbar__toggle-lines span {
+    display: block;
+    width: 1.1rem;
+    height: 2px;
+    border-radius: 999px;
+    background: currentColor;
+}
+
+.rb-navbar__collapse {
+    width: 100%;
+    flex: 1 1 auto;
+}
+
+.rb-navbar__collapse:not(.rb-navbar__collapse--open) {
+    display: none;
+}
+
+.rb-navbar__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--rb-space-5);
+    width: 100%;
+}
+
+.rb-navbar__nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: clamp(1rem, 2vw, 1.75rem);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.rb-navbar__link {
+    display: inline-flex;
+    align-items: center;
+    min-height: var(--rb-control-height-md);
+    font-size: var(--rb-font-size-md);
+    letter-spacing: 0.01em;
+    color: var(--rb-color-navbar-ink);
+    font-weight: var(--rb-font-weight-semibold);
+    text-decoration: none;
+    transition:
+        color var(--rb-duration-fast) var(--rb-easing-standard),
+        opacity var(--rb-duration-fast) var(--rb-easing-standard);
+}
+
+.rb-navbar__link:hover,
+.rb-navbar__link:focus-visible {
+    color: var(--rb-color-primary-100);
+}
+
+.rb-navbar__link--active {
+    position: relative;
+}
+
+.rb-navbar__link--active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0.25rem;
+    height: 2px;
+    border-radius: 999px;
+    background: currentColor;
+}
+
+.rb-navbar--scrolled .rb-navbar__link {
+    color: var(--rb-color-navbar-ink-scrolled);
+}
+
+.rb-navbar--scrolled .rb-navbar__link:hover,
+.rb-navbar--scrolled .rb-navbar__link:focus-visible {
+    color: var(--rb-color-primary-500);
+}
+
+.rb-navbar--internal .rb-navbar__link {
+    color: var(--rb-color-navbar-ink-scrolled);
+}
+
+.rb-navbar--internal .rb-navbar__link:hover,
+.rb-navbar--internal .rb-navbar__link:focus-visible {
+    color: var(--rb-color-primary-500);
+}
+
+.rb-navbar__actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--rb-space-3);
+    margin-left: auto;
+}
+
+.rb-navbar__menu .rb-button {
+    white-space: nowrap;
+}
+
+.rb-navbar--internal .rb-navbar__toggle {
+    border-color: var(--rb-color-border-strong);
+    background: rgba(255, 255, 255, 0.92);
+    color: var(--rb-color-primary-900);
+}
+
+@media (min-width: 992px) {
+    .rb-navbar__brand {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

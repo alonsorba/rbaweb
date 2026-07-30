@@ -1,0 +1,967 @@
+@media (max-width: 1399.98px) {
+    .rb-container {
+        --rb-container-padding-x: var(--rb-space-5);
+    }
+
+    .rb-stats > .rb-container,
+    .rb-presence > .rb-container {
+        width: min(100% - 3rem, 1360px);
+    }
+
+    .rb-hero__stage {
+        padding-inline: var(--rb-space-5);
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .rb-hero__title,
+    .rb-section-title {
+        font-size: var(--rb-font-size-4xl);
+    }
+
+    .rb-hero__content {
+        max-width: 34rem;
+    }
+
+    .rb-stats__panel {
+        min-height: 12.5rem;
+    }
+
+    .rb-stats__value {
+        font-size: clamp(3rem, 5.5vw, 4.5rem);
+    }
+
+    .rb-stats__label {
+        font-size: clamp(1.1rem, 1.4vw, 1.35rem);
+    }
+
+    .rb-presence {
+        --rb-presence-connector-left: -28%;
+        --rb-presence-connector-top: 18%;
+        --rb-presence-connector-width: 50%;
+        --rb-presence-marker-x: 19%;
+        --rb-presence-marker-y: 29%;
+    }
+
+    .rb-presence__shell {
+        grid-template-columns: minmax(16rem, 0.82fr) minmax(0, 1.18fr);
+        min-height: clamp(36rem, 54vw, 42rem);
+    }
+
+    .rb-presence__visual {
+        min-height: clamp(28rem, 46vw, 39rem);
+    }
+
+    .rb-presence__value {
+        font-size: clamp(5rem, 7vw, 7rem);
+    }
+
+    .rb-presence__label {
+        font-size: clamp(1.65rem, 2.3vw, 2.1rem);
+    }
+
+    .rb-esr__shell {
+        grid-template-columns: minmax(0, 1.08fr) minmax(22rem, 0.92fr);
+        min-height: clamp(32rem, 46vw, 37rem);
+    }
+
+    .rb-esr__visual {
+        min-height: clamp(28rem, 36vw, 32rem);
+    }
+
+    .rb-esr__trophy {
+        width: min(100%, 29rem);
+    }
+
+    .rb-commitment__inner {
+        grid-template-columns: minmax(0, 1fr) minmax(22rem, 0.95fr);
+    }
+
+    .rb-commitment__text {
+        font-size: clamp(2rem, 3vw, 3rem);
+    }
+
+    .rb-commitment__visual {
+        min-height: clamp(22rem, 30vw, 28rem);
+    }
+
+    .rb-commitment__media {
+        width: min(100%, 32rem);
+    }
+
+    .rb-solutions__title {
+        font-size: clamp(2rem, 3vw, 3rem);
+    }
+
+    .rb-solutions__tabs {
+        gap: var(--rb-space-2);
+    }
+
+    .rb-solutions__track {
+        --rb-solutions-card-width: clamp(17.5rem, 24vw, 19.5rem);
+        padding-right: var(--rb-space-5);
+    }
+
+    .rb-internal-hero__inner,
+    .rb-about-intro__inner {
+        grid-template-columns: 1fr;
+    }
+
+    .rb-internal-hero__visual {
+        min-height: clamp(18rem, 30vw, 24rem);
+    }
+
+    .rb-about-differentiators__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .rb-internal-cta__shell {
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .rb-navbar {
+        padding-block: 0.5rem;
+    }
+
+    .rb-navbar__brand {
+        position: static;
+        transform: none;
+    }
+
+    .rb-brand-logo {
+        max-width: clamp(11rem, 42vw, 15rem);
+        max-height: 3.25rem;
+    }
+
+    .rb-navbar__collapse {
+        width: 100%;
+        margin-top: var(--rb-space-3);
+    }
+
+    .rb-navbar__menu {
+        flex-direction: column;
+        align-items: stretch;
+        gap: var(--rb-space-4);
+        padding: var(--rb-space-4);
+        border: 1px solid var(--rb-color-border);
+        border-radius: var(--rb-radius-xl);
+        background: var(--rb-color-navbar-surface-scrolled);
+        box-shadow: var(--rb-shadow-soft);
+    }
+
+    .rb-navbar__nav,
+    .rb-navbar__actions {
+        width: 100%;
+    }
+
+    .rb-navbar__nav {
+        flex-direction: column;
+        align-items: stretch;
+        gap: var(--rb-space-2);
+    }
+
+    .rb-navbar__link {
+        width: 100%;
+        min-height: 2.75rem;
+        padding-inline: var(--rb-space-2);
+        color: var(--rb-color-primary-900);
+    }
+
+    .rb-navbar__link:hover,
+    .rb-navbar__link:focus-visible {
+        color: var(--rb-color-primary-500);
+    }
+
+    .rb-navbar__actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .rb-navbar__actions .rb-button {
+        width: 100%;
+        white-space: normal;
+    }
+
+    .rb-navbar__toggle {
+        border-color: rgba(255, 255, 255, 0.38);
+    }
+
+    .rb-navbar--scrolled .rb-navbar__toggle {
+        border-color: var(--rb-color-border-strong);
+        background: var(--rb-white);
+        color: var(--rb-color-primary-900);
+    }
+
+    .rb-main {
+        padding-block: var(--rb-space-7);
+    }
+
+    .rb-section {
+        padding-block: var(--rb-space-7);
+    }
+
+    .rb-hero {
+        padding-bottom: var(--rb-space-5);
+    }
+
+    .rb-hero__content {
+        width: 100%;
+    }
+
+    .rb-hero__title {
+        max-width: 100%;
+        font-size: clamp(1.95rem, 8vw, 2.55rem);
+    }
+
+    .rb-hero__subtitle {
+        max-width: 100%;
+    }
+
+    .rb-hero__stage {
+        min-height: clamp(30rem, 84vw, 40rem);
+        padding: var(--rb-space-4);
+    }
+
+    .rb-hero__actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: var(--rb-space-2);
+    }
+
+    .rb-hero__actions .rb-button {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .rb-hero__floating-card {
+        position: static;
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .rb-stats {
+        padding-block: 3.75rem;
+    }
+
+    .rb-stats > .rb-container {
+        width: min(100% - 2rem, 1240px);
+    }
+
+    .rb-stats__grid {
+        grid-template-columns: 1fr;
+        gap: var(--rb-space-4);
+    }
+
+    .rb-stats__panel {
+        min-height: auto;
+        padding: var(--rb-space-5);
+    }
+
+    .rb-stats__value {
+        font-size: clamp(2.75rem, 14vw, 4rem);
+    }
+
+    .rb-stats__label {
+        font-size: 1rem;
+    }
+
+    .rb-presence {
+        padding-block: 3.75rem;
+    }
+
+    .rb-presence > .rb-container {
+        width: min(100% - 2rem, 1360px);
+    }
+
+    .rb-presence__shell {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "copy"
+            "visual"
+            "stat";
+        min-height: 0;
+    }
+
+    .rb-presence__visual {
+        min-height: clamp(18rem, 64vw, 26rem);
+        background-position: center center;
+    }
+
+    .rb-presence__map {
+        object-position: center center;
+    }
+
+    .rb-presence__stat {
+        max-width: 100%;
+        width: 100%;
+        padding: var(--rb-space-4);
+    }
+
+    .rb-presence__value {
+        font-size: clamp(4rem, 18vw, 5.75rem);
+    }
+
+    .rb-presence__label {
+        font-size: clamp(1.2rem, 4.8vw, 1.55rem);
+    }
+
+    .rb-why {
+        --rb-why-card-min-height: clamp(23rem, 30vw, 27rem);
+        --rb-why-visual-min-height: clamp(16rem, 22vw, 20rem);
+    }
+
+    .rb-why__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .rb-partners {
+        --rb-partners-visual-min-height: clamp(34rem, 52vw, 42rem);
+        --rb-partners-copy-max-width: 18rem;
+        --rb-partners-message-max-width: 28rem;
+    }
+
+    .rb-partners__logo--aig {
+        --rb-partners-logo-width: 9.5rem;
+        --rb-partners-logo-height: 4rem;
+    }
+
+    .rb-partners__logo--axa {
+        --rb-partners-logo-width: 6.4rem;
+        --rb-partners-logo-height: 6.4rem;
+    }
+
+    .rb-partners__logo--chubb {
+        --rb-partners-logo-width: 10.4rem;
+        --rb-partners-logo-height: 3.4rem;
+    }
+
+    .rb-partners__logo--hdi {
+        --rb-partners-logo-width: 7rem;
+        --rb-partners-logo-height: 4.4rem;
+    }
+
+    .rb-partners__logo--gnp {
+        --rb-partners-logo-width: 10.8rem;
+        --rb-partners-logo-height: 4.2rem;
+    }
+
+    .rb-partners__logo--mapfre {
+        --rb-partners-logo-width: 8.6rem;
+        --rb-partners-logo-height: 3.4rem;
+    }
+
+    .rb-partners__logo--qualitas {
+        --rb-partners-logo-width: 10.2rem;
+        --rb-partners-logo-height: 3.8rem;
+    }
+
+    .rb-partners__logo--zurich {
+        --rb-partners-logo-width: 8.8rem;
+        --rb-partners-logo-height: 3.4rem;
+    }
+
+    .rb-testimonials__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .rb-testimonials__shell {
+        padding: clamp(2.5rem, 4vw, 3.5rem);
+    }
+
+    .rb-testimonials__title {
+        font-size: clamp(2rem, 3.5vw, 3rem);
+    }
+}
+
+@media (min-width: 992px) {
+    .rb-navbar__toggle {
+        display: none;
+    }
+
+    .rb-navbar__collapse {
+        display: block !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .rb-container {
+        --rb-container-padding-x: var(--rb-space-4);
+    }
+
+    .rb-grid--2,
+    .rb-grid--3,
+    .rb-grid--4 {
+        grid-template-columns: 1fr;
+    }
+
+    .rb-hero__title,
+    .rb-section-title {
+        font-size: clamp(2rem, 7.5vw, 2.75rem);
+    }
+
+    .rb-navbar__inner {
+        gap: var(--rb-space-3);
+    }
+
+    .rb-hero__stage {
+        min-height: clamp(28rem, 88vw, 36rem);
+        padding: var(--rb-space-4);
+    }
+
+    .rb-presence__shell {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "copy"
+            "visual"
+            "stat";
+    }
+
+    .rb-presence__visual {
+        min-height: clamp(17rem, 78vw, 24rem);
+        background-position: center center;
+    }
+
+    .rb-presence__connector {
+        display: none;
+    }
+
+    .rb-presence__stat {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .rb-presence__value {
+        font-size: clamp(3.5rem, 18vw, 5rem);
+    }
+
+    .rb-presence__label {
+        font-size: clamp(1.1rem, 5vw, 1.35rem);
+    }
+
+    .rb-esr__shell {
+        grid-template-columns: 1fr;
+        gap: var(--rb-space-5);
+    }
+
+    .rb-esr__copy {
+        max-width: 100%;
+    }
+
+    .rb-esr__pillars {
+        grid-template-columns: 1fr;
+    }
+
+    .rb-esr__secondary-badge {
+        max-width: 9.5rem;
+    }
+
+    .rb-esr__visual {
+        min-height: clamp(24rem, 86vw, 32rem);
+    }
+
+    .rb-commitment__inner {
+        grid-template-columns: 1fr;
+        gap: var(--rb-space-5);
+    }
+
+    .rb-commitment__copy {
+        max-width: 100%;
+    }
+
+    .rb-commitment__text {
+        font-size: clamp(1.95rem, 8vw, 2.65rem);
+    }
+
+    .rb-commitment__visual {
+        min-height: clamp(19rem, 82vw, 28rem);
+    }
+
+    .rb-commitment__media {
+        width: min(100%, 32rem);
+    }
+
+    .rb-solutions__header {
+        margin-bottom: var(--rb-space-5);
+    }
+
+    .rb-solutions__tabs {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: var(--rb-space-2);
+        scroll-snap-type: x proximity;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .rb-solutions__tabs::-webkit-scrollbar {
+        display: none;
+    }
+
+    .rb-solutions__tab {
+        flex: 0 0 auto;
+        min-width: 8.5rem;
+        min-height: 3.2rem;
+        font-size: 0.95rem;
+        white-space: nowrap;
+    }
+
+    .rb-solutions__controls {
+        justify-content: space-between;
+    }
+
+    .rb-solutions__track {
+        --rb-solutions-card-width: min(84vw, 20rem);
+        padding-right: var(--rb-space-4);
+    }
+
+    .rb-solutions__card {
+        min-height: 24rem;
+    }
+
+    .rb-why {
+        --rb-why-card-min-height: 26rem;
+        --rb-why-visual-min-height: clamp(17rem, 58vw, 21rem);
+        --rb-why-caption-min-height: 5.5rem;
+    }
+
+    .rb-why__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rb-partners {
+        --rb-partners-visual-min-height: auto;
+    }
+
+    .rb-partners__inner {
+        grid-template-columns: 1fr;
+        min-height: 0;
+        padding-block: var(--rb-space-5);
+    }
+
+    .rb-partners__copy {
+        max-width: 100%;
+    }
+
+    .rb-partners__message {
+        justify-self: start;
+        max-width: 100%;
+        margin-top: calc(var(--rb-space-4) * -0.1);
+    }
+
+    .rb-partners__logos {
+        position: static;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--rb-space-4);
+        margin-top: var(--rb-space-5);
+        pointer-events: auto;
+    }
+
+    .rb-partners__logo {
+        position: relative;
+        inset: auto;
+        width: 100%;
+        height: 3.75rem;
+        opacity: 0.92;
+    }
+
+    .rb-partners__logo--aig,
+    .rb-partners__logo--axa,
+    .rb-partners__logo--chubb,
+    .rb-partners__logo--hdi,
+    .rb-partners__logo--gnp,
+    .rb-partners__logo--mapfre,
+    .rb-partners__logo--qualitas,
+    .rb-partners__logo--zurich {
+        --rb-partners-logo-width: auto;
+        --rb-partners-logo-height: 3.75rem;
+    }
+
+    .rb-testimonials__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rb-testimonials__card {
+        min-height: 0;
+    }
+
+    .rb-testimonials__shell {
+        padding: var(--rb-space-5);
+        border-radius: var(--rb-radius-xl);
+    }
+
+    .rb-testimonials__header {
+        margin-bottom: var(--rb-space-5);
+    }
+
+    .rb-testimonials__title {
+        font-size: clamp(1.75rem, 7vw, 2.4rem);
+    }
+
+    .rb-testimonials__card-header {
+        gap: var(--rb-space-3);
+    }
+
+    .rb-testimonials__rating {
+        padding-left: var(--rb-space-3);
+    }
+
+    .rb-final-cta__inner {
+        grid-template-columns: 1fr;
+    }
+
+    .rb-final-cta__actions {
+        justify-self: start;
+        justify-content: flex-start;
+    }
+
+    .rb-footer__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .rb-footer__brand {
+        grid-column: 1 / -1;
+    }
+
+    .rb-internal-hero__content {
+        padding: var(--rb-space-4);
+    }
+
+    .rb-internal-hero__title {
+        font-size: clamp(2rem, 7vw, 3rem);
+    }
+
+    .rb-about-intro__body p,
+    .rb-internal-cta__description {
+        font-size: var(--rb-font-size-md);
+    }
+
+    .rb-internal-cta__shell {
+        flex-direction: column;
+    }
+
+    .rb-internal-cta__actions {
+        justify-content: flex-start;
+        width: 100%;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .rb-main {
+        padding-block: var(--rb-space-6);
+    }
+
+    .rb-section {
+        padding-block: var(--rb-space-6);
+    }
+
+    .rb-card__header,
+    .rb-card__body,
+    .rb-card__footer,
+    .rb-stat-card {
+        padding: var(--rb-space-4);
+    }
+
+    .rb-brand-logo {
+        max-width: 11.5rem;
+        max-height: 3.25rem;
+    }
+
+    .rb-hero__stage {
+        padding: var(--rb-space-4);
+        border-radius: 0;
+    }
+
+    .rb-hero__content,
+    .rb-hero__floating-card {
+        padding: var(--rb-space-4);
+        border-radius: var(--rb-radius-lg);
+    }
+
+    .rb-hero__title {
+        font-size: clamp(1.35rem, 6vw, 1.8rem);
+    }
+
+    .rb-presence__shell {
+        padding: var(--rb-space-4);
+    }
+
+    .rb-presence__location {
+        width: 100%;
+        max-width: none;
+    }
+
+    .rb-presence__location-line {
+        font-size: var(--rb-font-size-md);
+    }
+
+    .rb-stats {
+        padding-block: 3rem;
+    }
+
+    .rb-stats > .rb-container,
+    .rb-presence > .rb-container {
+        width: min(100% - 1rem, 1360px);
+    }
+
+    .rb-stats__panel {
+        padding: var(--rb-space-4);
+    }
+
+    .rb-stats__value {
+        font-size: clamp(2.75rem, 18vw, 3.75rem);
+    }
+
+    .rb-stats__label {
+        font-size: 1rem;
+    }
+
+    .rb-presence {
+        padding-block: 3rem;
+    }
+
+    .rb-presence__title {
+        max-width: 100%;
+        font-size: clamp(1.8rem, 8vw, 2.35rem);
+    }
+
+    .rb-presence__location {
+        width: 100%;
+        max-width: none;
+    }
+
+    .rb-presence__visual {
+        min-height: clamp(16rem, 82vw, 22rem);
+    }
+
+    .rb-presence__connector {
+        display: none;
+    }
+
+    .rb-presence__stat {
+        padding: var(--rb-space-4);
+    }
+
+    .rb-presence__value {
+        font-size: clamp(3.1rem, 20vw, 4.4rem);
+    }
+
+    .rb-presence__label {
+        font-size: 1rem;
+    }
+
+    .rb-esr__shell {
+        padding: var(--rb-space-4);
+    }
+
+    .rb-esr__years {
+        font-size: clamp(1.85rem, 10vw, 2.5rem);
+    }
+
+    .rb-esr__suffix {
+        font-size: clamp(1rem, 5vw, 1.2rem);
+    }
+
+    .rb-esr__title {
+        font-size: clamp(1.8rem, 8vw, 2.4rem);
+    }
+
+    .rb-esr__description {
+        font-size: var(--rb-font-size-md);
+    }
+
+    .rb-esr__visual {
+        min-height: clamp(18rem, 78vw, 25rem);
+        padding: 0;
+    }
+
+    .rb-commitment__inner {
+        padding: var(--rb-space-4);
+    }
+
+    .rb-commitment__text {
+        font-size: clamp(1.55rem, 7.4vw, 2rem);
+    }
+
+    .rb-commitment__visual {
+        min-height: clamp(16rem, 72vw, 22rem);
+    }
+
+    .rb-solutions {
+        padding: var(--rb-space-4);
+    }
+
+    .rb-solutions__title {
+        font-size: clamp(1.8rem, 8vw, 2.4rem);
+    }
+
+    .rb-solutions__track {
+        --rb-solutions-card-width: min(85vw, 18.5rem);
+        gap: var(--rb-space-3);
+        padding-right: var(--rb-space-3);
+    }
+
+    .rb-solutions__card-title {
+        font-size: 1.2rem;
+    }
+
+    .rb-solutions__description {
+        font-size: 0.93rem;
+    }
+
+    .rb-contact__layout--split {
+        grid-template-columns: 1fr;
+    }
+
+    .rb-why__header {
+        margin-bottom: var(--rb-space-5);
+    }
+
+    .rb-why__caption {
+        padding-inline: var(--rb-space-3);
+    }
+
+    .rb-why__caption-line {
+        font-size: 1rem;
+    }
+
+    .rb-partners__inner {
+        padding-block: var(--rb-space-4);
+    }
+
+    .rb-partners__counter {
+        gap: 0.1rem;
+    }
+
+    .rb-partners__value {
+        font-size: clamp(3.75rem, 18vw, 5rem);
+    }
+
+    .rb-partners__label {
+        font-size: clamp(1.35rem, 6vw, 1.75rem);
+    }
+
+    .rb-partners__message {
+        font-size: clamp(1.15rem, 5vw, 1.45rem);
+    }
+
+    .rb-partners__logos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--rb-space-3);
+    }
+
+    .rb-partners__logo {
+        height: 3.25rem;
+    }
+
+    .rb-testimonials__header {
+        margin-bottom: var(--rb-space-5);
+    }
+
+    .rb-testimonials__shell {
+        padding: var(--rb-space-4);
+    }
+
+    .rb-testimonials__title {
+        font-size: clamp(1.6rem, 8vw, 2.2rem);
+    }
+
+    .rb-testimonials__card {
+        padding: var(--rb-space-4);
+    }
+
+    .rb-testimonials__avatar {
+        width: var(--rb-testimonials-avatar-size-sm);
+        height: var(--rb-testimonials-avatar-size-sm);
+    }
+
+    .rb-testimonials__quote {
+        font-size: 0.95rem;
+    }
+
+    .rb-contact__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rb-contact__layout {
+        gap: var(--rb-space-5);
+    }
+
+    .rb-contact__actions {
+        justify-content: stretch;
+    }
+
+    .rb-contact__submit {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .rb-final-cta__shell {
+        padding: var(--rb-space-4);
+        border-radius: var(--rb-radius-lg);
+    }
+
+    .rb-final-cta__title {
+        max-width: 100%;
+        font-size: clamp(1.8rem, 8vw, 2.4rem);
+    }
+
+    .rb-final-cta__description {
+        font-size: var(--rb-font-size-md);
+    }
+
+    .rb-final-cta__actions {
+        width: 100%;
+    }
+
+    .rb-final-cta__action {
+        width: 100%;
+    }
+
+    .rb-footer__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rb-footer__brand {
+        gap: var(--rb-space-3);
+    }
+
+    .rb-footer__brand-logo {
+        max-width: 16.5rem;
+    }
+
+    .rb-footer__meta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .rb-page--internal .rb-main {
+        padding-top: calc(var(--rb-navbar-height) + var(--rb-space-4));
+    }
+
+    .rb-internal-hero__content {
+        border-radius: var(--rb-radius-lg);
+    }
+
+    .rb-internal-hero__visual,
+    .rb-internal-cta__shell {
+        border-radius: var(--rb-radius-lg);
+    }
+
+    .rb-about-differentiators__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .rb-about-differentiators__card,
+    .rb-about-intro__note {
+        padding: var(--rb-space-4);
+    }
+
+    .rb-internal-cta__action {
+        width: 100%;
+    }
+}
